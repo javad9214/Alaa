@@ -71,7 +71,7 @@
             android:minHeight="?actionBarSize"
             app:tabBackground="@color/pureWhite"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/alaa1"
+            app:tabIndicatorColor="@color/alaa2"
             app:tabIndicatorHeight="4dp"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/pureWhite"

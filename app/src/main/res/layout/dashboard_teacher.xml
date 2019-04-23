@@ -58,10 +58,10 @@
         android:minHeight="?actionBarSize"
         app:tabBackground="@color/pureWhite"
         app:tabGravity="fill"
-        app:tabIndicatorColor="@color/alaa2"
+        app:tabIndicatorColor="@color/alaa3"
         app:tabIndicatorHeight="4dp"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@color/alaa1"
+        app:tabSelectedTextColor="@color/alaa2"
         app:tabTextColor="@color/blackTitle">
 
     </com.google.android.material.tabs.TabLayout>

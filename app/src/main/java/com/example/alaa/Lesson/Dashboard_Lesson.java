@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.alaa.Dashboard.BookmarkFragment;
-import com.example.alaa.Dashboard.Info_Fragment;
 import com.example.alaa.Dashboard.TabAdapter;
 import com.example.alaa.R;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
@@ -15,7 +14,6 @@ import com.google.android.material.tabs.TabLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.core.widget.ImageViewCompat;
 import androidx.viewpager.widget.ViewPager;
 
 
@@ -68,7 +66,7 @@ public class Dashboard_Lesson extends BottomSheetDialogFragment {
 
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_video_play);
 
-        tabLayout.getTabAt(0).getIcon().setColorFilter(getResources().getColor(R.color.alaa0) , PorterDuff.Mode.MULTIPLY);
+        tabLayout.getTabAt(0).getIcon().setColorFilter(getResources().getColor(R.color.alaa1) , PorterDuff.Mode.MULTIPLY);
 
 
         viewPager.setCurrentItem(1);
@@ -88,7 +86,7 @@ public class Dashboard_Lesson extends BottomSheetDialogFragment {
 
                     case 0:
                         tabLayout.getTabAt(tab.getPosition()).setIcon(R.drawable.ic_video_play);
-                        tabLayout.getTabAt(tab.getPosition()).getIcon().setColorFilter(getResources().getColor(R.color.alaa0) , PorterDuff.Mode.MULTIPLY);
+                        tabLayout.getTabAt(tab.getPosition()).getIcon().setColorFilter(getResources().getColor(R.color.alaa1) , PorterDuff.Mode.MULTIPLY);
                         break;
 
 

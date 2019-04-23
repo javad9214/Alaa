@@ -3,8 +3,8 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/alaa4</item>
-        <item name="colorPrimaryDark">@color/alaa4</item>
+        <item name="colorPrimary">@color/alaa5</item>
+        <item name="colorPrimaryDark">@color/alaa5</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -13,9 +13,9 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
-        <item name="colorPrimary">@color/alaa0</item>
-        <item name="colorPrimaryDark">@color/alaa4</item>
-        <item name="colorAccent">@color/alaa4</item>
+        <item name="colorPrimary">@color/alaa1</item>
+        <item name="colorPrimaryDark">@color/alaa5</item>
+        <item name="colorAccent">@color/alaa5</item>
 
 
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
@@ -31,6 +31,11 @@
     <style name="AppModalStyle"
         parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/corner_radius</item>
+    </style>
+
+    <style name="IconOnlyButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
     </style>
 
 </resources>

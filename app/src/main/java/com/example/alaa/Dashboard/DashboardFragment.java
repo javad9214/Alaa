@@ -1,9 +1,7 @@
 package com.example.alaa.Dashboard;
 
-import android.app.Dialog;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,7 +65,7 @@ public class DashboardFragment extends BottomSheetDialogFragment {
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_personal_info_colored);
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_cart);
 
-        tabLayout.getTabAt(1).getIcon().setColorFilter(getResources().getColor(R.color.alaa0) , PorterDuff.Mode.MULTIPLY);
+        tabLayout.getTabAt(1).getIcon().setColorFilter(getResources().getColor(R.color.alaa1) , PorterDuff.Mode.MULTIPLY);
 
 
         viewPager.setCurrentItem(1);
@@ -87,12 +85,12 @@ public class DashboardFragment extends BottomSheetDialogFragment {
 
                     case 0:
                         tabLayout.getTabAt(tab.getPosition()).setIcon(R.drawable.ic_cart);
-                        tabLayout.getTabAt(tab.getPosition()).getIcon().setColorFilter(getResources().getColor(R.color.alaa0) , PorterDuff.Mode.MULTIPLY);
+                        tabLayout.getTabAt(tab.getPosition()).getIcon().setColorFilter(getResources().getColor(R.color.alaa1) , PorterDuff.Mode.MULTIPLY);
                         break;
 
                     case 1:
                         tabLayout.getTabAt(tab.getPosition()).setIcon(R.drawable.ic_personal_info_colored);
-                        tabLayout.getTabAt(tab.getPosition()).getIcon().setColorFilter(getResources().getColor(R.color.alaa0) , PorterDuff.Mode.MULTIPLY);
+                        tabLayout.getTabAt(tab.getPosition()).getIcon().setColorFilter(getResources().getColor(R.color.alaa1) , PorterDuff.Mode.MULTIPLY);
                         break;
 
                 }

@@ -8,9 +8,10 @@ import android.util.AttributeSet;
 import com.example.alaa.R;
 
 import androidx.appcompat.widget.AppCompatTextView;
+import at.blogc.android.views.ExpandableTextView;
 
 
-public class MyTextView extends AppCompatTextView {
+public class MyTextView extends ExpandableTextView {
 
     public MyTextView(Context context) {
         super(context);

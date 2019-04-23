@@ -11,11 +11,12 @@
     <color name="gray">#D2726E6E</color>
 
     <!-- Alaa colors -->
-    <color name="alaa0">#ffa837</color>
-    <color name="alaa1">#ff9e21</color>
-    <color name="alaa2">#ff9a17</color>
-    <color name="alaa3">#ff950b</color>
-    <color name="alaa4">#ff9000</color>
+   <color name="alaa0">#B9FFA837</color>
+    <color name="alaa1">#ffa837</color>
+    <color name="alaa2">#ff9e21</color>
+    <color name="alaa3">#ff9a17</color>
+    <color name="alaa4">#ff950b</color>
+    <color name="alaa5">#ff9000</color>
 
 
     <color name="blue">#ED20A1D3</color>

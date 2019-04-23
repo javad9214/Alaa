@@ -36,5 +36,7 @@ dependencies {
 
     implementation 'com.asksira.android:loopingviewpager:1.0.1'
 
+    implementation 'at.blogc:expandabletextview:1.0.5'
+
 
 }

@@ -4,11 +4,12 @@
 
 
     <gradient
-        android:centerColor="@color/alaa2"
-        android:endColor="@color/alaa1"
-        android:startColor="@color/alaa4" />
+        android:centerColor="@color/alaa3"
+        android:endColor="@color/alaa2"
+        android:startColor="@color/alaa5" />
 
 
+    
 
 
 
