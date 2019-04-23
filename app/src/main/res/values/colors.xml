@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3AF3DF</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="pureWhite">#ffffff</color>
+    <color name="grayWhite">#eeeeee</color>
+    <color name="blackTitle">#CD000000</color>
+    <color name="black">#000</color>
+    <color name="gray">#D2726E6E</color>
+
+    <!-- Alaa colors -->
+    <color name="alaa0">#ffa837</color>
+    <color name="alaa1">#ff9e21</color>
+    <color name="alaa2">#ff9a17</color>
+    <color name="alaa3">#ff950b</color>
+    <color name="alaa4">#ff9000</color>
+
+
+    <color name="blue">#ED20A1D3</color>
+    <color name="blueDark">#ED1D88B3</color>
+
+</resources>

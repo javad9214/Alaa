@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/card_dimen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <com.example.alaa.CustomViews.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/proName"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:txtFont="IRANSans_Light" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:id="@+id/tx_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:text="سید محمد جواد سادات حسینی "
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:txtFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_full_name"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/card_dimen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <com.example.alaa.CustomViews.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/ProMajor"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:txtFont="IRANSans_Light" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:id="@+id/tx_major"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:text="ریاضی و فیزیک"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:txtFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_books_colord"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/card_dimen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <com.example.alaa.CustomViews.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/preGender"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:txtFont="IRANSans_Light" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:id="@+id/tx_gender"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:text="مرد"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:txtFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_genders_colored"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/card_dimen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <com.example.alaa.CustomViews.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/proPhone"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:txtFont="IRANSans_Light" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:id="@+id/tx_phone"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:gravity="right"
+                    android:layout_marginEnd="16dp"
+                    android:text="09390091027"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:txtFont="estedad" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone_colored"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/card_dimen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <com.example.alaa.CustomViews.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/proMail"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:txtFont="IRANSans_Light" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:id="@+id/tx_mail"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:gravity="right"
+                    android:layout_marginEnd="16dp"
+                    android:text="JavadHosseini14@gmail.com"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:txtFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email_colored"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/card_dimen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <com.example.alaa.CustomViews.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/proPostalCode"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:txtFont="IRANSans_Light" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:id="@+id/tx_postalCode"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:gravity="right"
+                    android:layout_marginEnd="16dp"
+                    android:text="1456492310"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:txtFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_postalcode_colored"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/card_dimen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <com.example.alaa.CustomViews.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/ProAddress"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:txtFont="IRANSans_Light" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:id="@+id/tx_address"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:gravity="right"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="5dp"
+                    android:text="تهران - فردوس غرب - خیابان سازمان برنامه جنوبی - کوچه شهید محمد علی بهرامی نیا - پ 12"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:txtFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home_location"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
