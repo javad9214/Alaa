@@ -47,6 +47,7 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
        // return CustomPagerEnum.values().length;
 
         return imageList.size() == 0 ? 0 : imageList.size() + 2;
+        //return  imageList.size() ;
     }
 
     @Override

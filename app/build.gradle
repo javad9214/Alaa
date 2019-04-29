@@ -38,5 +38,11 @@ dependencies {
 
     implementation 'at.blogc:expandabletextview:1.0.5'
 
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
+
+    implementation 'androidx.transition:transition:1.1.0-beta01'
+
+    implementation "com.andkulikov:transitionseverywhere:2.0.0-beta01"
+
 
 }

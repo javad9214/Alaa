@@ -3,4 +3,16 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="card_dimen">5dp</dimen>
+
+
+    <!-- view pager dimens -->
+    <dimen name="view_pager_height">180dp</dimen>
+
+
+    <dimen name="box_corner_radius">10dp</dimen>
+    <dimen name="padding_editBox">10dp</dimen>
+
+
+
+
 </resources>

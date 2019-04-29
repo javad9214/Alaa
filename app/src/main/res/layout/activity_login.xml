@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/loginContainer"
+    tools:context=".Login">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/backgroundtoolbar"
+        android:gravity="center_horizontal"
+        android:id="@+id/transition_logo"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/img_logo"
+            android:layout_marginTop="30dp"
+            android:contentDescription="TODO"
+            android:scaleType="fitCenter"
+            android:src="@drawable/alaa_logo_colored" />
+
+        <com.example.alaa.CustomViews.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_describe1"
+            android:layout_marginTop="5dp"
+            android:text="@string/describe01"
+            android:textColor="@color/pureWhite"
+            android:textSize="20sp"
+            app:txtFont="IRANSans_Bold" />
+
+
+        <com.example.alaa.CustomViews.MyTextView
+            android:id="@+id/login_describe2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/describe02"
+            android:textColor="@color/pureWhite"
+            app:txtFont="IRANSans_Medium" />
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:id="@+id/card_login"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/card_dimen">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_account_large" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/blackTitle"
+                    android:textSize="14sp"
+                    app:txtFont="IRANSans_Bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_edittext_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/padding_editBox"
+                android:paddingBottom="@dimen/padding_editBox">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/done_icon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@drawable/ic_done" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_phoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:gravity="end"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_phoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@drawable/ic_mobile" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/personal_code"
+                    android:textColor="@color/blackTitle"
+                    android:textSize="14sp"
+                    app:txtFont="IRANSans_Bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_edittext_box"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/padding_editBox"
+                android:paddingBottom="@dimen/padding_editBox">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/done_icon2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@drawable/ic_done" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_personalNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:gravity="end"
+                    android:inputType="phone"
+                    android:maxLength="10" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_personalNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@drawable/ic_personal_code" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="16dp"
+            android:enabled="true"
+            android:gravity="center"
+            android:onClick="login"
+            android:text="@string/enter" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

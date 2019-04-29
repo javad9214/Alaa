@@ -13,6 +13,7 @@ import com.example.alaa.ViewPager.ImageSlider;
 import com.example.alaa.ViewPager.PagerAdapter;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,6 +21,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
@@ -33,11 +35,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements Adapter.ItemClickListener{
 
-
-    int currentPage = 0;
-    int NUM_PAGES = 0;
-    ViewPager viewPager;
-    PagerAdapter adapter;
 
     public static final String TAG = "===>";
 
@@ -87,9 +84,19 @@ public class MainActivity extends AppCompatActivity implements Adapter.ItemClick
 
         PagerAdapter pagerAdapter = new PagerAdapter(this, getImageList());
         LoopingViewPager loopingViewPager = findViewById(R.id.viewpager);
+
+       // loopingViewPager.setClipToPadding(false);
+        //loopingViewPager.setPadding(50 , 0 , 50 , 0);
+       // loopingViewPager.setPageMargin(-50);
+
+        DotsIndicator dotsIndicator = findViewById(R.id.dots_indicator);
+
+
         loopingViewPager.setAdapter(pagerAdapter);
 
         loopingViewPager.resumeAutoScroll();
+       // dotsIndicator.setViewPager(loopingViewPager);
+
 
         try {
             Field mScroller;
@@ -102,6 +109,8 @@ public class MainActivity extends AppCompatActivity implements Adapter.ItemClick
         } catch (IllegalArgumentException e) {
         } catch (IllegalAccessException e) {
         }
+
+
 
     }
 
