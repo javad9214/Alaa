@@ -1,8 +1,14 @@
 <resources>
+
     <string name="app_name">Alaa</string>
+
+    //navigation button
     <string name="title_home">خانه</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_Products">محصولات</string>
+    <string name="title_forum">انجمن</string>
+    <string name="title_MyProfile">پروفایل من</string>
+
+    //Home Page
     <string name="more">بیشتر</string>
 
 
@@ -22,12 +28,55 @@
     <string name="previous">قسمت قبلی</string>
 
 
-
     //login page
     <string name="describe01">خدمات نوین آموزش</string>
     <string name="describe02">مجری توسعه عدالت آموزشی</string>
     <string name="phone_number">شماره موبایل</string>
     <string name="personal_code">کد ملی</string>
-    <string name="enter">ورود</string>
+    <string name="Login">ورود</string>
+    <string name="GoToSignUp">تابحال در آلاء ثبت نام نکردم</string>
+    <string name="GoToLogin">بازگشت به صفحه ورود</string>
+    <string name="phoneHint">09** *** ****</string>
+    <string name="personalHint">(ده رقم)</string>
+
+    //Sign Up
+    <string name="SignUp">ثبت نام</string>
+    <string name="signUp_Name">نام</string>
+    <string name="signUp_LastName">نام خانوادگی</string>
+    <string name="signUp_Email">پست الکترونیکی</string>
+    <string name="gender">جنسیت : </string>
+    <string name="EmailHint">Example@gmail.com</string>
+    <string name="major">رشته تحصیلی</string>
+    <string name="math">ریاضی</string>
+    <string name="ensani">انسانی</string>
+    <string name="tajrobi">تجربی</string>
+
+
+
+    //product page
+    <string name="Buy">خرید</string>
+    <string name="property">ویژگی ها </string>
+    <string name="konkoor">کنکور</string>
+    <string name="Pr_Teacher">دبیر</string>
+    <string name="nezam_old">نظام قدیم</string>
+    <string name="nezam_new">نظام جدید</string>
+    <string name="ChooseProduct">انتخاب محصول</string>
+    <string name="studyProduct">بررسی محصول</string>
+    <string name="sampleBooklet">نمونه جزوه</string>
+    <string name="introduction_video">کلیپ معرفی</string>
+
+    <string name="demoTitle1">همایش طلایی دین و زندگی خانم کاغذی</string>
+    <string name="demoText1"> مدرس: وحیده کاغذی
+در این جمع بندی درس به درس ، نکات مهم و کلیدی سه کتاب کنکور 97 یعنی دوم، سوم و چهارم(پیش) مطرح می شود. از آنجایی که عمده تست ها را آیات و احایث تشکیل می دهند تاکید بر این موارد بیشتر انجام خواهد شد. بعد از بیان نکات مهم و کلیدی هر درس، تست های پر چالش از کنکور سراسری همراه با تحلیلی کامل و جذاب ارائه می گردد.
+عناوین فیلم ها:
+درس اول تا شانزدهم دین و زندگی(2)
+درس اول تا شانزدهم دین و زندگی(3)
+درس اول تا دهم دین و زندگی(۴)
+جزوه:
+دانلود جزوه دینی 2
+دانلود جزوه دینی 3
+دانلود جزوه دینی 4 </string>
+
+
 
 </resources>

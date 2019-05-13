@@ -5,57 +5,70 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
 import androidx.interpolator.view.animation.FastOutLinearInInterpolator;
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
-import androidx.transition.AutoTransition;
 import androidx.transition.ChangeBounds;
 import androidx.transition.Fade;
-import androidx.transition.PathMotion;
 import androidx.transition.Transition;
 import androidx.transition.TransitionManager;
 import androidx.transition.TransitionSet;
 
-import com.transitionseverywhere.Rotate;
+import com.example.alaa.Tools.KeyboardHeightObserver;
+import com.example.alaa.Tools.KeyboardHeightProvider;
+import com.example.alaa.Transitions.MyTransition;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 import com.transitionseverywhere.extra.Scale;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.Path;
+import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.MotionEvent;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.alaa.CustomViews.MyTextView;
 import com.google.android.material.textfield.TextInputEditText;
 
-public class Login extends AppCompatActivity {
+public class Login extends AppCompatActivity implements View.OnClickListener, ChipGroup.OnCheckedChangeListener , View.OnFocusChangeListener , KeyboardHeightObserver {
 
     public static final String TAG = "===>";
-    private TextInputEditText ed_phoneNumber, ed_personalNumber;
+    private TextInputEditText ed_phoneNumber, ed_personalNumber  , ed_NameSignUp , ed_LastNameSignUp , ed_PhoneSignUp , ed_PersonalNumberSignUp , ed_EmailSignUp ;
     private AppCompatImageView img_phoneNumber, img_personalNumber;
-    private AppCompatImageView doneIcon , doneIcon2 ;
-    private ImageView img_logo;
+    private AppCompatImageView img_NameSignUp , img_LastNameSignUp , img_PhoneSignUp , img_PersonalNumberSignUp , img_EmailSignUp ;
+    private AppCompatImageView doneIcon, doneIcon2;
+    private AppCompatImageView img_profile, img_profile_Boy, img_profile_Girl;
+    private ImageView img_Alaa_logo;
     private MyTextView describe1, describe2;
-    private CardView transitionCardViewLogin;
-
+    private CardView cardLogin, cardSignUp;
+    private MaterialButton btn_login, btn_GoToSignUp, btn_GoToLogin;
     private ViewGroup transitionLogoContainer;
     private ViewGroup loginContainer;
-    boolean visible ;
+    private MyTransition myTransition;
+    private ChipGroup chipGroup; // chip group for select major
+    private Chip chip_math, chip_tajrobi, chip_ensani;
+    private ColorStateList chipBgColor ;
+
+    /** The keyboard height provider */
+    private KeyboardHeightProvider keyboardHeightProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE| WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 
         init();
+        myTransition = new MyTransition();
         editTextCounter();
     }
 
@@ -70,23 +83,80 @@ public class Login extends AppCompatActivity {
 
 
         transitionLogoContainer = findViewById(R.id.transition_logo);
-        img_logo = transitionLogoContainer.findViewById(R.id.img_logo);
+        img_Alaa_logo = transitionLogoContainer.findViewById(R.id.alaa_logo);
         describe1 = transitionLogoContainer.findViewById(R.id.login_describe1);
         describe2 = transitionLogoContainer.findViewById(R.id.login_describe2);
 
 
         loginContainer = findViewById(R.id.loginContainer);
-        transitionCardViewLogin = loginContainer.findViewById(R.id.card_login);
-
-        doneIcon = transitionCardViewLogin.findViewById(R.id.done_icon);
-        doneIcon2 = transitionCardViewLogin.findViewById(R.id.done_icon2);
+        cardLogin = loginContainer.findViewById(R.id.card_login);
+        cardSignUp = loginContainer.findViewById(R.id.card_signUp);
 
 
+        doneIcon = cardLogin.findViewById(R.id.done_icon);
+        doneIcon2 = cardLogin.findViewById(R.id.done_icon2);
+        img_profile = cardLogin.findViewById(R.id.img_profile);
+
+        btn_login = cardLogin.findViewById(R.id.btn_login);
+        btn_GoToSignUp = cardLogin.findViewById(R.id.btn_GoToSignUpCard);
+        btn_GoToSignUp.setOnClickListener(this);
+        btn_GoToLogin = cardSignUp.findViewById(R.id.btn_GoToLoginCard);
+        btn_GoToLogin.setOnClickListener(this);
+
+
+        //SignUp
+        img_profile_Boy = cardSignUp.findViewById(R.id.img_profile_Boy_signUp);
+        img_profile_Boy.setOnClickListener(this);
+        img_profile_Girl = cardSignUp.findViewById(R.id.img_profile_Girl_signUp);
+        img_profile_Girl.setOnClickListener(this);
+        chipGroup = findViewById(R.id.chipGroup_Major);
+        chipGroup.setOnCheckedChangeListener(this);
+        chip_math = findViewById(R.id.chip_math);
+        chip_tajrobi = findViewById(R.id.chip_tajrobi);
+        chip_ensani = findViewById(R.id.chip_ensani);
+        chipBgColor = chip_math.getChipBackgroundColor();
+
+        ed_NameSignUp = findViewById(R.id.ed_Name_signUp);
+        ed_LastNameSignUp = findViewById(R.id.ed_LastName_signUp);
+        ed_PhoneSignUp = findViewById(R.id.ed_phoneNumber_signUp);
+        ed_PersonalNumberSignUp = findViewById(R.id.ed_personalNumber_signUp);
+        ed_EmailSignUp = findViewById(R.id.ed_Email_signUp);
+
+        img_NameSignUp = findViewById(R.id.img_Name_signUp);
+        img_LastNameSignUp = findViewById(R.id.img_LastName_signUp);
+        img_PhoneSignUp = findViewById(R.id.img_phoneNumber_signUp);
+        img_PersonalNumberSignUp = findViewById(R.id.img_personalNumber_signUp);
+        img_EmailSignUp = findViewById(R.id.img_Email_signUp);
+
+
+        keyboardHeightProvider = new KeyboardHeightProvider(this);
+
+        // make sure to start the keyboard height provider after the onResume
+        // of this activity. This is because a popup window must be initialised
+        // and attached to the activity root view.
+        View view = findViewById(R.id.loginContainer);
+        view.post(new Runnable() {
+            public void run() {
+                keyboardHeightProvider.start();
+            }
+        });
     }
 
     public void login(View view) {
-        Intent intent = new Intent(this , MainActivity.class);
-         startActivity(intent);
+
+//        EasyTransitionOptions options =
+//                EasyTransitionOptions.makeTransitionOptions(
+//                        Login.this,
+//                        findViewById(R.id.alaa_logo),
+//                        findViewById(R.id.img_profile));
+//
+//
+//        Intent intent = new Intent(Login.this , MainActivity.class);
+//        EasyTransition.startActivity(intent , options);
+
+
+        Intent intent = new Intent(Login.this, MainActivity.class);
+        startActivity(intent);
 
     }
 
@@ -103,50 +173,65 @@ public class Login extends AppCompatActivity {
         return set;
     }
 
-    private void cardTransition(boolean visible){
+    private void cardTransition(boolean visible) {
 
-        transitionCardViewLogin.animate().translationY(visible ? -700 : 0).setDuration(500);
+        final View root = getWindow().getDecorView().findViewById(android.R.id.content);
+        int height = root.getHeight() - root.getRootView().getHeight();
+        height = root.getHeight() - cardLogin.getHeight() + height*2 ;
+        height = height + cardLogin.getHeight() - root.getHeight() ;
+
+
+        int height2 = root.getRootView().getHeight() - cardLogin.getMeasuredHeight() + height ;
+
+        int height3 = cardLogin.getMeasuredHeight() / 2 ;
+
+        cardLogin.animate().translationY(visible ? -(height3)  : 0 ).setDuration(600) ;
+        Log.i(TAG, "cardTransition: " + (visible ?  visible + "true" :  visible + "false" ));
+
         TransitionManager.beginDelayedTransition(transitionLogoContainer, logoTransition(visible));
-        img_logo.setVisibility(visible ? View.GONE : View.VISIBLE);
-        describe1.setVisibility(visible ? View.GONE : View.VISIBLE);
-        describe2.setVisibility(visible ? View.GONE : View.VISIBLE);
+        img_Alaa_logo.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
+        describe1.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
+        describe2.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
     }
 
-    private void DoneIconTransition(AppCompatImageView iconDone , boolean visible ){
-
+    private void IconScaleTransition(View view, boolean visible) {
 
 
         TransitionSet set = new TransitionSet()
                 .addTransition(new Scale(0.7f))
-                .addTransition(new Rotate())
                 .setInterpolator(!visible ? new LinearOutSlowInInterpolator() :
                         new FastOutLinearInInterpolator())
-                .setDuration(1000);
+                .setDuration(400);
 
 
-        TransitionManager.beginDelayedTransition(transitionCardViewLogin , set );
+        TransitionManager.beginDelayedTransition(cardLogin, set);
 
-        iconDone.setVisibility(!visible ?  View.GONE : View.VISIBLE);
-        iconDone.setRotation(!visible ? 135 : 0 );
+        view.setVisibility(!visible ? View.GONE : View.VISIBLE);
+
+    }
+
+    private void trans() {
+
+        TransitionManager.beginDelayedTransition(loginContainer, new ChangeBounds().setDuration(1000));
+        //TransitionManager.beginDelayedTransition(loginContainer , new Slide());
+
+        ViewGroup.LayoutParams layoutParams = transitionLogoContainer.getLayoutParams();
+
+        final TypedArray styledAttributes = this.getTheme().obtainStyledAttributes(
+                new int[]{android.R.attr.actionBarSize});
+        int mActionBarSize = (int) styledAttributes.getDimension(0, 0);
+        styledAttributes.recycle();
+
+        Log.i(TAG, "trans: " + mActionBarSize);
+        layoutParams.height = mActionBarSize;
+        transitionLogoContainer.setLayoutParams(layoutParams);
 
     }
 
     private void editTextCounter() {
 
-        ed_phoneNumber.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-               cardTransition(true);
-
-            }
-        });
-
-        ed_personalNumber.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                cardTransition(true);
-            }
-        });
+        ed_phoneNumber.setOnFocusChangeListener(this);
+        ed_personalNumber.setOnFocusChangeListener(this);
 
         ed_phoneNumber.addTextChangedListener(new TextWatcher() {
             @Override
@@ -165,12 +250,14 @@ public class Login extends AppCompatActivity {
 
                 if (ed_phoneNumber.getText().length() == 11) {
                     img_phoneNumber.setImageResource(R.drawable.ic_mobile_color);
-                    DoneIconTransition(doneIcon , true);
+                    IconScaleTransition(doneIcon, true);
 
-                } else img_phoneNumber.setImageResource(R.drawable.ic_mobile);
+                } else {
+                    img_phoneNumber.setImageResource(R.drawable.ic_mobile);
+                    IconScaleTransition(doneIcon, false);
+                }
             }
         });
-
         ed_personalNumber.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -187,10 +274,111 @@ public class Login extends AppCompatActivity {
 
                 if (ed_personalNumber.getText().length() == 10) {
                     img_personalNumber.setImageResource(R.drawable.ic_personal_code_colored);
-                    DoneIconTransition(doneIcon2 , true);
+                    IconScaleTransition(doneIcon2, true);
                     hideKeyboard(Login.this);
                     cardTransition(false);
-                } else img_personalNumber.setImageResource(R.drawable.ic_personal_code);
+                    IconScaleTransition(btn_login, true);
+
+                } else {
+                    img_personalNumber.setImageResource(R.drawable.ic_personal_code);
+                    IconScaleTransition(doneIcon2, false);
+                }
+            }
+        });
+
+        ed_NameSignUp.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+                if (ed_NameSignUp.getText().length() >= 1)
+                    img_NameSignUp.setImageResource(R.drawable.ic_name_signup_colored);
+                 else img_NameSignUp.setImageResource(R.drawable.ic_name_signup);
+
+
+            }
+        });
+        ed_LastNameSignUp.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (ed_LastNameSignUp.getText().length() >= 1)
+                    img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup_colored);
+                else img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup);
+            }
+        });
+        ed_PhoneSignUp.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (ed_PhoneSignUp.getText().length() == 11)
+                    img_PhoneSignUp.setImageResource(R.drawable.ic_mobile_color);
+                 else img_PhoneSignUp.setImageResource(R.drawable.ic_mobile);
+
+
+            }
+        });
+        ed_PersonalNumberSignUp.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (ed_PersonalNumberSignUp.getText().length() == 10)
+                    img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code_colored);
+                else img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code);
+            }
+        });
+        ed_EmailSignUp.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (ed_EmailSignUp.getText().length() >= 1)
+                    img_EmailSignUp.setImageResource(R.drawable.ic_email_colored);
+                else img_EmailSignUp.setImageResource(R.drawable.ic_mail_signup);
             }
         });
 
@@ -206,7 +394,120 @@ public class Login extends AppCompatActivity {
             view = new View(activity);
         }
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-       // imm.showSoftInput(view , 0);
+
+        // imm.showSoftInput(view , 0);
         view.clearFocus();
     }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+
+            case R.id.btn_GoToSignUpCard:
+                myTransition.ScaleTransition(loginContainer, cardLogin, false);
+                myTransition.ScaleTransition(loginContainer, cardSignUp, true);
+                break;
+
+            case R.id.btn_GoToLoginCard:
+                myTransition.ScaleTransition(loginContainer, cardSignUp, false);
+                myTransition.ScaleTransition(loginContainer, cardLogin, true);
+                cardTransition(false);
+                break;
+
+
+            case R.id.img_profile_Boy_signUp:
+                img_profile_Boy.setImageResource(R.drawable.ic_account_large);
+                img_profile_Girl.setImageResource(R.drawable.ic_girl_profile_black);
+                break;
+
+
+            case R.id.img_profile_Girl_signUp:
+                img_profile_Girl.setImageResource(R.drawable.ic_girl_profile);
+                img_profile_Boy.setImageResource(R.drawable.ic_profile_boy_black);
+                break;
+
+
+
+        }
+    }
+
+    @Override
+    public void onCheckedChanged(ChipGroup chipGroup, int checkedId) {
+
+
+
+        switch (checkedId) {
+
+            case R.id.chip_math:
+                chip_math.setChipBackgroundColorResource(R.color.alaa1);
+                chip_tajrobi.setChipBackgroundColor(chipBgColor);
+                chip_ensani.setChipBackgroundColor(chipBgColor);
+                Log.i(TAG, "onCheckedChanged: " + chip_math.isChecked());
+                break;
+
+
+            case R.id.chip_tajrobi:
+                chip_tajrobi.setChipBackgroundColorResource(R.color.alaa1);
+                chip_ensani.setChipBackgroundColor(chipBgColor);
+                chip_math.setChipBackgroundColor(chipBgColor);
+                break;
+
+
+            case R.id.chip_ensani:
+                chip_ensani.setChipBackgroundColorResource(R.color.alaa1);
+                chip_math.setChipBackgroundColor(chipBgColor);
+                chip_tajrobi.setChipBackgroundColor(chipBgColor);
+                break;
+        }
+    }
+
+    @Override
+    public void onFocusChange(View view, boolean b) {
+
+        switch (view.getId()){
+
+            case R.id.ed_phoneNumber :
+                cardTransition(true);
+                break;
+
+
+            case R.id.ed_personalNumber :
+                cardTransition(true);
+                break;
+        }
+
+    }
+
+    @Override
+    public void onKeyboardHeightChanged(int height, int orientation) {
+        if (height == 0 ) cardTransition(false);
+            else cardTransition(true);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        keyboardHeightProvider.setKeyboardHeightObserver(null);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        keyboardHeightProvider.setKeyboardHeightObserver(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        keyboardHeightProvider.close();
+    }
+
+    public static float convertPixelsToDp(float px, Context context){
+        return px / ((float) context.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+    }
+
+    public static int dpToPx(float dp, Context context) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
+    }
+
 }

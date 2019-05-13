@@ -13,6 +13,7 @@ import com.example.alaa.ViewPager.ImageSlider;
 import com.example.alaa.ViewPager.PagerAdapter;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.hzn.lib.EasyTransition;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -47,11 +48,16 @@ public class MainActivity extends AppCompatActivity implements Adapter.ItemClick
                 case R.id.navigation_home:
 
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.navigation_Product:
+                        Intent intent  = new Intent(MainActivity.this , ProductPage.class);
+                        startActivity(intent);
+                    return true;
+
+                case R.id.navigation_forum:
 
                     return true;
 
-                case R.id.navigation_notifications:
+                case R.id.navigation_MyProfile:
 
                     return true;
             }
@@ -63,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements Adapter.ItemClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        EasyTransition.enter(MainActivity.this);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -188,6 +196,12 @@ public class MainActivity extends AppCompatActivity implements Adapter.ItemClick
             // Ignore received duration, use fixed one instead
             super.startScroll(startX, startY, dx, dy, mDuration);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        EasyTransition.exit(MainActivity.this);
     }
 
 

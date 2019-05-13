@@ -3,7 +3,9 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="card_dimen">5dp</dimen>
-
+    <dimen name="floatMargin">16dp</dimen>
+    <dimen name="Margin16">16dp</dimen>
+    <dimen name="Margin10">10dp</dimen>
 
     <!-- view pager dimens -->
     <dimen name="view_pager_height">180dp</dimen>
@@ -12,7 +14,9 @@
     <dimen name="box_corner_radius">10dp</dimen>
     <dimen name="padding_editBox">10dp</dimen>
 
-
+    <dimen name="chipRadius">7dp</dimen>
+    <dimen name="cardLoginMargin">30dp</dimen>
+    <dimen name="cardNavMargin">10dp</dimen>
 
 
 </resources>

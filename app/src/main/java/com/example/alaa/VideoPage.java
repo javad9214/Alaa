@@ -19,6 +19,7 @@ import com.example.alaa.Teacher.Dashboard_Teacher;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.chip.Chip;
+import com.hzn.lib.EasyTransition;
 
 public class VideoPage extends AppCompatActivity implements View.OnClickListener {
 
@@ -39,6 +40,8 @@ public class VideoPage extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_page);
+
+        EasyTransition.enter(VideoPage.this);
 
         initButtons();
         init_bottomSheet();
