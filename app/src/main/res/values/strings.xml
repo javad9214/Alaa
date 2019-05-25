@@ -54,17 +54,19 @@
 
 
     //product page
-    <string name="Buy">خرید</string>
-    <string name="property">ویژگی ها </string>
+    <string name="AddToCart">افزودن به سبد خرید</string>
+    <string name="buy">خرید</string>
+    <string name="features">ویژگی ها </string>
     <string name="konkoor">کنکور</string>
     <string name="Pr_Teacher">دبیر</string>
     <string name="nezam_old">نظام قدیم</string>
     <string name="nezam_new">نظام جدید</string>
     <string name="ChooseProduct">انتخاب محصول</string>
-    <string name="studyProduct">بررسی محصول</string>
+    <string name="studyProduct">بررسی</string>
     <string name="sampleBooklet">نمونه جزوه</string>
     <string name="introduction_video">کلیپ معرفی</string>
     <string name="Toman">تومان</string>
+    <string name="finalPrice">قیمت نهایی :</string>
 
     <string name="demoPriceAll">همه دین و زندگی نظام قدیم</string>
     <string name="demoTitle1">همایش طلایی دین و زندگی خانم کاغذی</string>
@@ -78,7 +80,7 @@
 دانلود جزوه دینی 2
 دانلود جزوه دینی 3
 دانلود جزوه دینی 4 </string>
-
+    <string name="product_image">Product image</string>
 
 
 </resources>

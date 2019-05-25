@@ -2,6 +2,8 @@ package com.example.alaa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
@@ -12,7 +14,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ProductPage extends AppCompatActivity {
 
-    private MyTextView myTextView;
+    private MyTextView tx_realPrice , tx_realFinalPrice;
     private Chip btnMore;
 
     @Override
@@ -21,7 +23,7 @@ public class ProductPage extends AppCompatActivity {
         setContentView(R.layout.activity_product_page);
 
        init();
-      // expandableTextView();
+
 
     }
 
@@ -30,28 +32,20 @@ public class ProductPage extends AppCompatActivity {
 
     private void init(){
 
-       // myTextView = findViewById(R.id.text1);
+        tx_realPrice = findViewById(R.id.realPrice);
+        StrikeThrough(tx_realPrice);
+
+        tx_realFinalPrice =findViewById(R.id.realFinalPrice);
+        StrikeThrough(tx_realFinalPrice);
     }
 
-    private void expandableTextView() {
+    private void StrikeThrough(MyTextView textView){
 
-
-        //btnMore = findViewById(R.id.viewMore);
-
-        myTextView.setAnimationDuration(750L);
-
-        // set interpolators for both expanding and collapsing animations
-        myTextView.setInterpolator(new OvershootInterpolator());
-
-        btnMore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btnMore.setChipIconResource(myTextView.isExpanded() ? R.drawable.ic_keyboard_arrow_down_black_24dp : R.drawable.ic_keyboard_arrow_up_black_24dp);
-                btnMore.setText(myTextView.isExpanded() ? "ادامه ... " : "بستن");
-                myTextView.toggle();
-            }
-        });
-
+        textView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
     }
 
+    public void GoHome(View view) {
+        Intent intent = new Intent(ProductPage.this , MainActivity.class);
+        startActivity(intent);
+    }
 }

@@ -11,8 +11,10 @@ import androidx.transition.Transition;
 import androidx.transition.TransitionManager;
 import androidx.transition.TransitionSet;
 
-import com.example.alaa.Tools.KeyboardHeightObserver;
-import com.example.alaa.Tools.KeyboardHeightProvider;
+import com.example.alaa.Tools.KeyboardHeight.KeyboardHeightObserver;
+import com.example.alaa.Tools.KeyboardHeight.KeyboardHeightProvider;
+import com.example.alaa.Tools.TextWatcher.MultiTextWatcher;
+import com.example.alaa.Tools.TextWatcher.TextWatcherWithInstance;
 import com.example.alaa.Transitions.MyTransition;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.chip.Chip;
@@ -32,19 +34,21 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.alaa.CustomViews.MyTextView;
 import com.google.android.material.textfield.TextInputEditText;
 
-public class Login extends AppCompatActivity implements View.OnClickListener, ChipGroup.OnCheckedChangeListener , View.OnFocusChangeListener , KeyboardHeightObserver {
+import java.util.Objects;
+
+public class Login extends AppCompatActivity implements View.OnClickListener, ChipGroup.OnCheckedChangeListener, View.OnFocusChangeListener, KeyboardHeightObserver {
 
     public static final String TAG = "===>";
-    private TextInputEditText ed_phoneNumber, ed_personalNumber  , ed_NameSignUp , ed_LastNameSignUp , ed_PhoneSignUp , ed_PersonalNumberSignUp , ed_EmailSignUp ;
+    private TextInputEditText ed_phoneNumber, ed_personalNumber, ed_NameSignUp, ed_LastNameSignUp, ed_PhoneSignUp, ed_PersonalNumberSignUp, ed_EmailSignUp;
     private AppCompatImageView img_phoneNumber, img_personalNumber;
-    private AppCompatImageView img_NameSignUp , img_LastNameSignUp , img_PhoneSignUp , img_PersonalNumberSignUp , img_EmailSignUp ;
+    private AppCompatImageView img_NameSignUp, img_LastNameSignUp, img_PhoneSignUp, img_PersonalNumberSignUp, img_EmailSignUp;
     private AppCompatImageView doneIcon, doneIcon2;
     private AppCompatImageView img_profile, img_profile_Boy, img_profile_Girl;
     private ImageView img_Alaa_logo;
@@ -56,10 +60,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
     private MyTransition myTransition;
     private ChipGroup chipGroup; // chip group for select major
     private Chip chip_math, chip_tajrobi, chip_ensani;
-    private ColorStateList chipBgColor ;
-
-    /** The keyboard height provider */
+    private ColorStateList chipBgColor;
     private KeyboardHeightProvider keyboardHeightProvider;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,7 +137,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         // make sure to start the keyboard height provider after the onResume
         // of this activity. This is because a popup window must be initialised
         // and attached to the activity root view.
-        View view = findViewById(R.id.loginContainer);
+        View view = loginContainer;
         view.post(new Runnable() {
             public void run() {
                 keyboardHeightProvider.start();
@@ -177,16 +180,15 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
 
         final View root = getWindow().getDecorView().findViewById(android.R.id.content);
         int height = root.getHeight() - root.getRootView().getHeight();
-        height = root.getHeight() - cardLogin.getHeight() + height*2 ;
-        height = height + cardLogin.getHeight() - root.getHeight() ;
+        height = root.getHeight() - cardLogin.getHeight() + height * 2;
+        height = height + cardLogin.getHeight() - root.getHeight();
 
 
-        int height2 = root.getRootView().getHeight() - cardLogin.getMeasuredHeight() + height ;
+        int height2 = root.getRootView().getHeight() - cardLogin.getMeasuredHeight() + height;
 
-        int height3 = cardLogin.getMeasuredHeight() / 2 ;
+        int height3 = cardLogin.getMeasuredHeight() / 2;
 
-        cardLogin.animate().translationY(visible ? -(height3)  : 0 ).setDuration(600) ;
-        Log.i(TAG, "cardTransition: " + (visible ?  visible + "true" :  visible + "false" ));
+        cardLogin.animate().translationY(visible ? -(height3) : 0).setDuration(600);
 
         TransitionManager.beginDelayedTransition(transitionLogoContainer, logoTransition(visible));
         img_Alaa_logo.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
@@ -233,154 +235,89 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         ed_phoneNumber.setOnFocusChangeListener(this);
         ed_personalNumber.setOnFocusChangeListener(this);
 
-        ed_phoneNumber.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        new MultiTextWatcher().registerEditText(ed_phoneNumber)
+                .setCallBack(new TextWatcherWithInstance() {
+                    @Override
+                    public void afterTextChanged(EditText editText, Editable editable) {
+
+                        if (Objects.requireNonNull(ed_phoneNumber.getText()).length() == 11) {
+                            img_phoneNumber.setImageResource(R.drawable.ic_mobile_color);
+                            IconScaleTransition(doneIcon, true);
+
+                        } else {
+                            img_phoneNumber.setImageResource(R.drawable.ic_mobile);
+                            IconScaleTransition(doneIcon, false);
+                        }
+
+                    }
+                });
 
 
-            }
+        new MultiTextWatcher().registerEditText(ed_personalNumber)
+                .setCallBack(new TextWatcherWithInstance() {
+                    @Override
+                    public void afterTextChanged(EditText editText, Editable editable) {
+                        if (Objects.requireNonNull(ed_personalNumber.getText()).length() == 10) {
+                            img_personalNumber.setImageResource(R.drawable.ic_personal_code_colored);
+                            IconScaleTransition(doneIcon2, true);
+                            hideKeyboard(Login.this);
+                            cardTransition(false);
+                            IconScaleTransition(btn_login, true);
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-                if (ed_phoneNumber.getText().length() == 11) {
-                    img_phoneNumber.setImageResource(R.drawable.ic_mobile_color);
-                    IconScaleTransition(doneIcon, true);
-
-                } else {
-                    img_phoneNumber.setImageResource(R.drawable.ic_mobile);
-                    IconScaleTransition(doneIcon, false);
-                }
-            }
-        });
-        ed_personalNumber.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-                if (ed_personalNumber.getText().length() == 10) {
-                    img_personalNumber.setImageResource(R.drawable.ic_personal_code_colored);
-                    IconScaleTransition(doneIcon2, true);
-                    hideKeyboard(Login.this);
-                    cardTransition(false);
-                    IconScaleTransition(btn_login, true);
-
-                } else {
-                    img_personalNumber.setImageResource(R.drawable.ic_personal_code);
-                    IconScaleTransition(doneIcon2, false);
-                }
-            }
-        });
-
-        ed_NameSignUp.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-                if (ed_NameSignUp.getText().length() >= 1)
-                    img_NameSignUp.setImageResource(R.drawable.ic_name_signup_colored);
-                 else img_NameSignUp.setImageResource(R.drawable.ic_name_signup);
+                        } else {
+                            img_personalNumber.setImageResource(R.drawable.ic_personal_code);
+                            IconScaleTransition(doneIcon2, false);
+                        }
+                    }
+                });
 
 
-            }
-        });
-        ed_LastNameSignUp.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        new MultiTextWatcher().registerEditText(ed_NameSignUp)
+                .setCallBack(new TextWatcherWithInstance() {
+                    @Override
+                    public void afterTextChanged(EditText editText, Editable editable) {
+                        if (Objects.requireNonNull(ed_NameSignUp.getText()).length() >= 1) img_NameSignUp.setImageResource(R.drawable.ic_name_signup_colored);
+                        else img_NameSignUp.setImageResource(R.drawable.ic_name_signup);
+                    }
+                });
 
-            }
+        new MultiTextWatcher().registerEditText(ed_LastNameSignUp)
+                .setCallBack(new TextWatcherWithInstance() {
+                    @Override
+                    public void afterTextChanged(EditText editText, Editable editable) {
+                        if (Objects.requireNonNull(ed_LastNameSignUp.getText()).length() >= 1) img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup_colored);
+                        else img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup);
+                    }
+                });
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        new MultiTextWatcher().registerEditText(ed_PhoneSignUp)
+                .setCallBack(new TextWatcherWithInstance() {
+                    @Override
+                    public void afterTextChanged(EditText editText, Editable editable) {
+                        if (Objects.requireNonNull(ed_PhoneSignUp.getText()).length() == 11) img_PhoneSignUp.setImageResource(R.drawable.ic_mobile_color);
+                        else img_PhoneSignUp.setImageResource(R.drawable.ic_mobile);
+                    }
+                });
 
-            }
+        new MultiTextWatcher().registerEditText(ed_PersonalNumberSignUp)
+                .setCallBack(new TextWatcherWithInstance() {
+                    @Override
+                    public void afterTextChanged(EditText editText, Editable editable) {
+                        if (Objects.requireNonNull(ed_PersonalNumberSignUp.getText()).length() == 10) img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code_colored);
+                        else img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code);
+                    }
+                });
 
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (ed_LastNameSignUp.getText().length() >= 1)
-                    img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup_colored);
-                else img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup);
-            }
-        });
-        ed_PhoneSignUp.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        new MultiTextWatcher().registerEditText(ed_EmailSignUp)
+                .setCallBack(new TextWatcherWithInstance() {
+                    @Override
+                    public void afterTextChanged(EditText editText, Editable editable) {
+                        if (Objects.requireNonNull(ed_EmailSignUp.getText()).length() >= 1) img_EmailSignUp.setImageResource(R.drawable.ic_email_colored);
+                        else img_EmailSignUp.setImageResource(R.drawable.ic_mail_signup);
+                    }
+                });
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (ed_PhoneSignUp.getText().length() == 11)
-                    img_PhoneSignUp.setImageResource(R.drawable.ic_mobile_color);
-                 else img_PhoneSignUp.setImageResource(R.drawable.ic_mobile);
-
-
-            }
-        });
-        ed_PersonalNumberSignUp.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (ed_PersonalNumberSignUp.getText().length() == 10)
-                    img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code_colored);
-                else img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code);
-            }
-        });
-        ed_EmailSignUp.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (ed_EmailSignUp.getText().length() >= 1)
-                    img_EmailSignUp.setImageResource(R.drawable.ic_email_colored);
-                else img_EmailSignUp.setImageResource(R.drawable.ic_mail_signup);
-            }
-        });
 
 
     }
@@ -427,13 +364,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 break;
 
 
-
         }
     }
 
     @Override
     public void onCheckedChanged(ChipGroup chipGroup, int checkedId) {
-
 
 
         switch (checkedId) {
@@ -442,7 +377,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 chip_math.setChipBackgroundColorResource(R.color.alaa1);
                 chip_tajrobi.setChipBackgroundColor(chipBgColor);
                 chip_ensani.setChipBackgroundColor(chipBgColor);
-                Log.i(TAG, "onCheckedChanged: " + chip_math.isChecked());
                 break;
 
 
@@ -464,14 +398,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
     @Override
     public void onFocusChange(View view, boolean b) {
 
-        switch (view.getId()){
+        switch (view.getId()) {
 
-            case R.id.ed_phoneNumber :
+            case R.id.ed_phoneNumber:
                 cardTransition(true);
                 break;
 
 
-            case R.id.ed_personalNumber :
+            case R.id.ed_personalNumber:
                 cardTransition(true);
                 break;
         }
@@ -480,8 +414,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
 
     @Override
     public void onKeyboardHeightChanged(int height, int orientation) {
-        if (height == 0 ) cardTransition(false);
-            else cardTransition(true);
+        if (height == 0) cardTransition(false);
+        else cardTransition(true);
     }
 
     @Override
@@ -502,7 +436,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         keyboardHeightProvider.close();
     }
 
-    public static float convertPixelsToDp(float px, Context context){
+    public static float convertPixelsToDp(float px, Context context) {
         return px / ((float) context.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT);
     }
 

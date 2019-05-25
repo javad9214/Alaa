@@ -25,11 +25,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/ic_search" />
+                android:src="@drawable/ic_back" />
 
 
             <ImageView
                 android:id="@+id/alaa_logo"
+                android:onClick="GoHome"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"

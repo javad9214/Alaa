@@ -90,6 +90,18 @@ public class MyTextView extends ExpandableTextView {
                 face = Typeface.createFromAsset(context.getAssets(), "Font/Shekasteh.ttf");
                 this.setTypeface(face);
                 break;
+
+
+            case 11 :
+                face = Typeface.createFromAsset(context.getAssets() , "Font/BYekan.ttf");
+                this.setTypeface(face);
+                break;
+
+
+            case 12 :
+                face = Typeface.createFromAsset(context.getAssets() , "Font/BYekan_Bold.ttf");
+                this.setTypeface(face);
+                break;
         }
         a.recycle();
     }

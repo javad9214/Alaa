@@ -10,7 +10,13 @@
     <color name="blackTitle">#CD000000</color>
     <color name="black">#000</color>
     <color name="gray">#D2726E6E</color>
+    <color name="gray2">#D2201F1F</color>
     <color name="green">#4CAF50</color>
+    <color name="darkGreen">#065A08</color>
+    <color name="saddleBrown">#8B4513</color>
+    <color name="DarkOliveGreen">#556B2F</color>
+    <color name="purple">#9816f4</color>
+    <color name="Red">#f4516c</color>
 
     <!-- Alaa colors -->
    <color name="alaa0">#B9FFA837</color>
@@ -25,6 +31,7 @@
     <color name="blueDark">#ED1D88B3</color>
     
     <color name="editTextColor">#295055</color>
+
 
 
 

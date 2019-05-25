@@ -6,6 +6,7 @@
     <dimen name="floatMargin">16dp</dimen>
     <dimen name="Margin16">16dp</dimen>
     <dimen name="Margin10">10dp</dimen>
+    <dimen name="Margin5">5dp</dimen>
 
     <!-- view pager dimens -->
     <dimen name="view_pager_height">180dp</dimen>
