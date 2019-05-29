@@ -31,6 +31,16 @@
         <item name="android:background">@drawable/corner_radius</item>
     </style>
 
+    <style name="ProfileBottomSheet" parent="AppBottomSheetDialogTheme">
+        <item name="android:background">@drawable/corner_radius</item>
+        <item name="android:backgroundTint">@color/alaa5</item>
+    </style>
+
+    <style name="RegularRoundBottomSheet" parent="AppBottomSheetDialogTheme">
+        <item name="android:background">@drawable/corner_radius</item>
+        <item name="android:backgroundTint">@color/pureWhite</item>
+    </style>
+
     <style name="IconOnlyButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="iconPadding">0dp</item>
         <item name="iconGravity">textStart</item>

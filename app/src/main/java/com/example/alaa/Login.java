@@ -28,7 +28,6 @@ import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
@@ -154,11 +153,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
 //                        findViewById(R.id.img_profile));
 //
 //
-//        Intent intent = new Intent(Login.this , MainActivity.class);
+//        Intent intent = new Intent(Login.this , HomeActivity.class);
 //        EasyTransition.startActivity(intent , options);
 
 
-        Intent intent = new Intent(Login.this, MainActivity.class);
+        Intent intent = new Intent(Login.this, HomeActivity.class);
         startActivity(intent);
 
     }

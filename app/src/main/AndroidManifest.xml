@@ -3,6 +3,8 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.example.alaa">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <dist:module dist:instant="true" />
 
     <application
@@ -12,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".ProductPage"
+        <activity android:name=".ProductPage.ProductPage"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Login"
@@ -27,7 +29,7 @@
         <activity android:name=".VideoPage"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".HomeActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
     </application>

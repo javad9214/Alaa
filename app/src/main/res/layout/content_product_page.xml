@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
+    android:layoutDirection="rtl"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -22,22 +23,127 @@
 
 
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/Margin10"
-                android:layout_marginBottom="@dimen/Margin10"
+                android:layout_margin="@dimen/Margin10"
                 app:cardCornerRadius="@dimen/box_corner_radius">
 
-                <ImageView
+                <com.example.alaa.CustomViews.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bg_discount_persent"
+                    android:paddingStart="@dimen/Margin10"
+                    android:paddingEnd="@dimen/Margin10"
+                    android:text="تخفیف  40 %"
+                    android:textColor="@color/blackTitle"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    app:txtFont="estedad" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="end|bottom"
+                    android:gravity="center_vertical">
+
+                    <com.example.alaa.CustomViews.MyTextView
+                        android:id="@+id/realPriceAllProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Margin10"
+                        android:layout_marginBottom="@dimen/Margin5"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:text="(49,000)"
+                        android:textColor="@color/Red"
+                        android:textSize="22sp"
+                        app:txtFont="IranSansNumUltraLight" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginBottom="@dimen/Margin16"
+                        android:layout_marginEnd="@dimen/Margin16"
+                        android:gravity="end|center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.example.alaa.CustomViews.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/Margin16"
+                            android:paddingEnd="@dimen/Margin5"
+                            android:gravity="center"
+                            android:text="29,400"
+                            android:textColor="@color/green"
+                            android:textSize="26sp"
+                            app:txtFont="IranSansNumLight" />
+
+                        <com.example.alaa.CustomViews.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/Margin5"
+                            android:layout_marginEnd="@dimen/Margin10"
+                            android:gravity="center"
+                            android:text="@string/Toman"
+                            android:textColor="@color/blackTitle"
+                            android:textSize="16sp"
+                            app:txtFont="estedad" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/product_image"
-                    android:scaleType="fitXY"
-                    android:scaleX="1"
-                    android:scaleY="1"
-                    android:src="@drawable/dum05" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_margin="@dimen/Margin5" />
+
+                        <com.example.alaa.CustomViews.MyTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/Margin10"
+                            android:gravity="start"
+                            android:text="@string/demoTitle"
+                            android:textColor="@color/blackTitle"
+                            android:textSize="16sp"
+                            app:txtFont="IRANSans_Bold" />
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/Product_photo"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/product_image"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/dum05" />
+
+                </LinearLayout>
+
 
             </androidx.cardview.widget.CardView>
 
@@ -47,18 +153,18 @@
                 android:layout_marginTop="@dimen/Margin16"
                 android:orientation="horizontal">
 
-
                 <com.google.android.material.button.MaterialButton
-                    style="@style/AppTheme"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
-                    android:text="@string/studyProduct"
-                    app:backgroundTint="@color/blue"
-                    app:icon="@drawable/ic_check_product" />
+                    android:onClick="Onclick_Attribute"
+                    android:text="@string/features"
+                    app:backgroundTint="@color/colorAccent"
+                    app:icon="@drawable/ic_features" />
+
 
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="0dp"
@@ -67,20 +173,22 @@
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
+                    android:onClick="SamplePhotoOnClick"
                     android:text="@string/sampleBooklet"
                     app:backgroundTint="@color/green"
                     app:icon="@drawable/ic_sample_file" />
 
                 <com.google.android.material.button.MaterialButton
+                    style="@style/AppTheme"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:text="@string/features"
-                    app:backgroundTint="@color/colorAccent"
-                    app:icon="@drawable/ic_features" />
+                    android:text="@string/studyProduct"
+                    app:backgroundTint="@color/blue"
+                    app:icon="@drawable/ic_study" />
 
             </LinearLayout>
 
@@ -95,6 +203,7 @@
                 <com.example.alaa.CustomViews.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end"
                     android:background="@drawable/bg_discount_persent"
                     android:paddingStart="@dimen/Margin10"
                     android:paddingEnd="@dimen/Margin10"
@@ -109,96 +218,360 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-
-                        <androidx.appcompat.widget.AppCompatCheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_margin="@dimen/Margin5" />
-
-                    </RelativeLayout>
-
-
-                    <com.example.alaa.CustomViews.MyTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/Margin10"
-                        android:gravity="start"
-                        android:text="همایش های طلایی ریاضی تجربی کنکور آقای امینی راد"
-                        android:textColor="@color/blackTitle"
-                        android:textSize="14sp"
-                        app:txtFont="IRANSans_Bold" />
-
-
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/Margin5">
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
 
-                        <LinearLayout
+                            <androidx.appcompat.widget.AppCompatCheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="@dimen/Margin5" />
+
+                        </RelativeLayout>
+
+
+                        <com.example.alaa.CustomViews.MyTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:orientation="horizontal">
+                            android:layout_marginStart="@dimen/Margin10"
+                            android:gravity="start"
+                            android:text="همایش های طلایی ریاضی تجربی کنکور آقای امینی راد"
+                            android:textColor="@color/blackTitle"
+                            android:textSize="14sp"
+                            app:txtFont="IRANSans_Bold" />
 
 
-                            <com.example.alaa.CustomViews.MyTextView
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/Margin5">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="end|center_vertical"
+                                android:orientation="horizontal">
+
+                                <com.example.alaa.CustomViews.MyTextView
+                                    android:id="@+id/realPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="5dp"
+                                    android:gravity="center"
+                                    android:text="(49,000)"
+                                    android:textColor="@color/Red"
+                                    android:textSize="16sp"
+                                    app:txtFont="IranSansNumUltraLight" />
+
+                                <com.example.alaa.CustomViews.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="29,400"
+                                    android:textColor="@color/green"
+                                    android:textSize="18sp"
+                                    app:txtFont="IranSansNum" />
+
+                                <com.example.alaa.CustomViews.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/Margin5"
+                                    android:layout_marginEnd="@dimen/Margin10"
+                                    android:gravity="center"
+                                    android:text="@string/Toman"
+                                    android:textColor="@color/DarkOliveGreen"
+                                    android:textSize="12sp"
+                                    app:txtFont="estedad" />
+
+
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
                                 android:layout_marginStart="@dimen/Margin10"
-                                android:layout_marginEnd="@dimen/Margin5"
-                                android:gravity="center"
-                                android:text="@string/Toman"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="12sp"
-                                app:txtFont="estedad" />
+                                android:layoutDirection="ltr"
+                                android:text="@string/introduction_video"
+                                app:backgroundTint="@color/purple"
+                                app:icon="@drawable/ic_ondemand_video_24dp"
+                                app:iconSize="18dp" />
 
-                            <com.example.alaa.CustomViews.MyTextView
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/Margin10"
+                app:cardCornerRadius="@dimen/box_corner_radius">
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bg_discount_persent"
+                    android:paddingStart="@dimen/Margin10"
+                    android:paddingEnd="@dimen/Margin10"
+                    android:text="تخفیف  40 %"
+                    android:textColor="@color/blackTitle"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    app:txtFont="estedad" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.appcompat.widget.AppCompatCheckBox
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginEnd="@dimen/Margin10"
-                                android:background="@drawable/bg_price"
-                                android:gravity="center"
-                                android:paddingStart="@dimen/Margin16"
-                                android:paddingEnd="@dimen/Margin16"
-                                android:text="29,400"
-                                android:textColor="@color/pureWhite"
-                                android:textSize="18sp"
-                                app:txtFont="estedad" />
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="@dimen/Margin5" />
 
-                            <com.example.alaa.CustomViews.MyTextView
-                                android:id="@+id/realPrice"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="5dp"
-                                android:gravity="center"
-                                android:text="(49,000)"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="16sp"
-                                app:txtFont="estedad" />
+                        </RelativeLayout>
 
 
-                        </LinearLayout>
-
-                        <com.google.android.material.button.MaterialButton
-                            android:layout_width="wrap_content"
+                        <com.example.alaa.CustomViews.MyTextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginEnd="@dimen/Margin10"
-                            android:text="@string/introduction_video"
-                            app:backgroundTint="@color/purple"
-                            app:icon="@drawable/ic_ondemand_video_24dp"
-                            app:iconSize="18dp" />
+                            android:layout_marginStart="@dimen/Margin10"
+                            android:gravity="start"
+                            android:text="همایش های طلایی ریاضی تجربی کنکور آقای امینی راد"
+                            android:textColor="@color/blackTitle"
+                            android:textSize="14sp"
+                            app:txtFont="IRANSans_Bold" />
 
 
-                    </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/Margin5">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="end|center_vertical"
+                                android:orientation="horizontal">
+
+                                <com.example.alaa.CustomViews.MyTextView
+                                    android:id="@+id/realPrice2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:gravity="center"
+                                    android:text="(49,000)"
+                                    android:textColor="@color/Red"
+                                    android:textSize="16sp"
+                                    app:txtFont="IranSansNumUltraLight" />
+
+                                <com.example.alaa.CustomViews.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingStart="@dimen/Margin5"
+                                    android:paddingEnd="@dimen/Margin5"
+                                    android:text="29,400"
+                                    android:textColor="@color/green"
+                                    android:textSize="18sp"
+                                    app:txtFont="IranSansNum" />
+
+                                <com.example.alaa.CustomViews.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/Margin5"
+                                    android:layout_marginEnd="@dimen/Margin10"
+                                    android:gravity="center"
+                                    android:text="@string/Toman"
+                                    android:textColor="@color/DarkOliveGreen"
+                                    android:textSize="12sp"
+                                    app:txtFont="estedad" />
+
+
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/Margin10"
+                                android:layoutDirection="ltr"
+                                android:text="@string/introduction_video"
+                                app:backgroundTint="@color/purple"
+                                app:icon="@drawable/ic_ondemand_video_24dp"
+                                app:iconSize="18dp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/Margin10"
+                app:cardCornerRadius="@dimen/box_corner_radius">
+
+                <com.example.alaa.CustomViews.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bg_discount_persent"
+                    android:paddingStart="@dimen/Margin10"
+                    android:paddingEnd="@dimen/Margin10"
+                    android:text="تخفیف  40 %"
+                    android:textColor="@color/blackTitle"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    app:txtFont="estedad" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.appcompat.widget.AppCompatCheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="@dimen/Margin5" />
+
+                        </RelativeLayout>
+
+
+                        <com.example.alaa.CustomViews.MyTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/Margin10"
+                            android:gravity="start"
+                            android:text="همایش های طلایی ریاضی تجربی کنکور آقای امینی راد"
+                            android:textColor="@color/blackTitle"
+                            android:textSize="14sp"
+                            app:txtFont="IRANSans_Bold" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/Margin5">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="end|center_vertical"
+                                android:orientation="horizontal">
+
+                                <com.example.alaa.CustomViews.MyTextView
+                                    android:id="@+id/realPrice3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:gravity="center"
+                                    android:text="(49,000)"
+                                    android:textColor="@color/Red"
+                                    android:textSize="16sp"
+                                    app:txtFont="IranSansNumUltraLight" />
+
+                                <com.example.alaa.CustomViews.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingStart="@dimen/Margin5"
+                                    android:paddingEnd="@dimen/Margin5"
+                                    android:text="29,400"
+                                    android:textColor="@color/green"
+                                    android:textSize="18sp"
+                                    app:txtFont="IranSansNum" />
+
+                                <com.example.alaa.CustomViews.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/Margin5"
+                                    android:layout_marginEnd="@dimen/Margin10"
+                                    android:gravity="center"
+                                    android:text="@string/Toman"
+                                    android:textColor="@color/DarkOliveGreen"
+                                    android:textSize="12sp"
+                                    app:txtFont="estedad" />
+
+
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/Margin10"
+                                android:layoutDirection="ltr"
+                                android:text="@string/introduction_video"
+                                app:backgroundTint="@color/purple"
+                                app:icon="@drawable/ic_ondemand_video_24dp"
+                                app:iconSize="18dp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -218,7 +591,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:layout_margin="@dimen/Margin10">
+                    android:layout_margin="@dimen/Margin5"
+                    android:layoutDirection="ltr">
 
                     <com.google.android.material.chip.ChipGroup
                         android:layout_width="wrap_content"
@@ -230,6 +604,7 @@
                             style="@style/Widget.MaterialComponents.Chip.Action"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layoutDirection="ltr"
                             android:text="ریاضی تجربی کنکور نظام قدیم"
                             app:chipBackgroundColor="@color/pureWhite"
                             app:chipStrokeColor="@color/black"
@@ -239,6 +614,7 @@
                             style="@style/Widget.MaterialComponents.Chip.Action"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layoutDirection="ltr"
                             android:text="محصولات آموزشی"
                             app:chipBackgroundColor="@color/pureWhite"
                             app:chipIcon="@drawable/ic_chevron_left_black_24dp"
@@ -249,11 +625,13 @@
                             style="@style/Widget.MaterialComponents.Chip.Action"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layoutDirection="ltr"
                             android:text="@string/title_home"
                             app:chipBackgroundColor="@color/pureWhite"
                             app:chipIcon="@drawable/ic_chevron_left_black_24dp"
                             app:chipStrokeColor="@color/black"
                             app:chipStrokeWidth="1dp" />
+
 
                     </com.google.android.material.chip.ChipGroup>
 
@@ -271,8 +649,8 @@
         android:id="@+id/finalPriceLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/alaa5"
         android:padding="@dimen/Margin10"
+        app:cardBackgroundColor="@color/alaa5"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
@@ -280,57 +658,56 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_weight="1"
-                android:text="@string/buy"
-                app:backgroundTint="@color/darkGreen"
-                app:iconTint="@color/pureWhite"
-                android:textColor="@color/pureWhite"
-                app:icon="@drawable/ic_product_nav"
-                app:iconSize="18dp" />
-
-
             <com.example.alaa.CustomViews.MyTextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:paddingBottom="2dp"
-                android:paddingTop="2dp"
-                android:layout_marginEnd="@dimen/Margin5"
                 android:layout_marginStart="@dimen/Margin10"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:text="64,200 تومان"
-                android:textColor="@color/pureWhite"
-                android:textSize="24sp"
-                app:txtFont= "shabnam_light" />
-
-            <com.example.alaa.CustomViews.MyTextView
-                android:id="@+id/realFinalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/Margin5"
-                android:gravity="center"
-                android:text="(49,000)"
-                android:textColor="@color/colorAccent"
-                android:textSize="20sp"
-                app:txtFont="shabnam_light" />
-
-            <com.example.alaa.CustomViews.MyTextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="@dimen/Margin10"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/finalPrice"
                 android:textColor="@color/blackTitle"
                 android:textSize="14sp"
                 app:txtFont="IRANSans_Bold" />
+
+            <com.example.alaa.CustomViews.MyTextView
+                android:id="@+id/realFinalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/Margin5"
+                android:gravity="center"
+                android:text="(49,000)"
+                android:textColor="@color/Red"
+                android:textSize="20sp"
+                app:txtFont="IranSansNumMedium" />
+
+            <com.example.alaa.CustomViews.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/Margin5"
+                android:layout_marginEnd="@dimen/Margin10"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="64,200 تومان"
+                android:textColor="@color/pureWhite"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:txtFont="IranSansNumBold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="@string/buy"
+                android:textColor="@color/pureWhite"
+                app:backgroundTint="@color/darkGreen"
+                app:icon="@drawable/ic_product_nav"
+                app:iconSize="18dp"
+                app:iconTint="@color/pureWhite" />
+
 
         </LinearLayout>
 

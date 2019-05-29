@@ -8,6 +8,9 @@ import android.util.AttributeSet;
 import com.example.alaa.R;
 
 import androidx.appcompat.widget.AppCompatTextView;
+
+import java.lang.reflect.Type;
+
 import at.blogc.android.views.ExpandableTextView;
 
 
@@ -93,17 +96,35 @@ public class MyTextView extends ExpandableTextView {
 
 
             case 11 :
-                face = Typeface.createFromAsset(context.getAssets() , "Font/BYekan.ttf");
+                face = Typeface.createFromAsset(context.getAssets() , "Font/IRANSansMobile(FaNum).ttf");
                 this.setTypeface(face);
                 break;
 
 
             case 12 :
-                face = Typeface.createFromAsset(context.getAssets() , "Font/BYekan_Bold.ttf");
+                face = Typeface.createFromAsset(context.getAssets() , "Font/IRANSansMobile(FaNum)_Bold.ttf");
+                this.setTypeface(face);
+                break;
+
+            case 13 :
+                face = Typeface.createFromAsset(context.getAssets() , "Font/IRANSansMobile(FaNum)_Light.ttf");
+                this.setTypeface(face);
+                break;
+
+            case 14 :
+                face = Typeface.createFromAsset(context.getAssets() , "Font/IRANSansMobile(FaNum)_Medium.ttf");
+                this.setTypeface(face);
+                break;
+
+
+            case 15 :
+                face = Typeface.createFromAsset(context.getAssets() , "Font/IRANSansMobile(FaNum)_UltraLight.ttf");
                 this.setTypeface(face);
                 break;
         }
         a.recycle();
+
+
     }
 
 

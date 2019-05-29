@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 
 import com.asksira.loopingviewpager.LoopingViewPager;
 import com.example.alaa.Dashboard.DashboardFragment;
+import com.example.alaa.ProductPage.ProductPage;
 import com.example.alaa.ViewPager.ImageSlider;
 import com.example.alaa.ViewPager.PagerAdapter;
 
@@ -22,19 +23,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
-import android.widget.Toast;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements Adapter.ItemClickListener{
+public class HomeActivity extends AppCompatActivity implements Adapter.ItemClickListener{
 
 
     public static final String TAG = "===>";
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.ItemClick
 
                     return true;
                 case R.id.navigation_Product:
-                        Intent intent  = new Intent(MainActivity.this , ProductPage.class);
+                        Intent intent  = new Intent(HomeActivity.this , ProductPage.class);
                         startActivity(intent);
                     return true;
 
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.ItemClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        EasyTransition.enter(MainActivity.this);
+        EasyTransition.enter(HomeActivity.this);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -201,7 +200,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.ItemClick
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        EasyTransition.exit(MainActivity.this);
+        EasyTransition.exit(HomeActivity.this);
     }
 
 

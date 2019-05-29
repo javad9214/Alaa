@@ -13,10 +13,15 @@
             <enum name="estedad" value="8"/>
             <enum name="suls" value="9"/>
             <enum name="shekaste" value="10"/>
-            <enum name="BYekan" value="11"/>
-            <enum name="Byekan_Bold" value="12"/>
+            <enum name="IranSansNum" value="11"/>
+            <enum name="IranSansNumBold" value="12"/>
+            <enum name="IranSansNumLight" value="13"/>
+            <enum name="IranSansNumMedium" value="14"/>
+            <enum name="IranSansNumUltraLight" value="15"/>
         </attr>
     </declare-styleable>
+
+
 
 
 </resources>
