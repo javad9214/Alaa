@@ -67,6 +67,15 @@
     <string name="introduction_video">کلیپ معرفی</string>
     <string name="Toman">تومان</string>
     <string name="finalPrice">قیمت نهایی :</string>
+    <string name="discount">تخفیف</string>
+
+
+
+    //others
+    <string name="BracketLeft"> ( </string>
+    <string name="BracketRight"> ) </string>
+
+
 
     <string name="demoTitle">همه دین و زندگی نظام قدیم</string>
     <string name="demoTitle1">همایش های طلایی ریاضی تحربی نظام قدیم</string>

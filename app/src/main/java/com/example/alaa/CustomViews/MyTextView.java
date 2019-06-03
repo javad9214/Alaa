@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import com.example.alaa.R;
 
@@ -15,6 +16,8 @@ import at.blogc.android.views.ExpandableTextView;
 
 
 public class MyTextView extends ExpandableTextView {
+
+
 
     public MyTextView(Context context) {
         super(context);
@@ -31,6 +34,7 @@ public class MyTextView extends ExpandableTextView {
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.MyTextView, 0, 0);
         int fontOrdinal = a.getInt(R.styleable.MyTextView_txtFont, 0);
+        a.getIndexCount();
 
         Typeface face;
 

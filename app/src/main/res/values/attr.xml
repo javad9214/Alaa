@@ -2,26 +2,44 @@
 <resources>
 
     <declare-styleable name="MyTextView">
-        <attr name="txtFont" format="enum" >
-            <enum name="IRANSans_Light" value="1"/>
-            <enum name="IRANSans_Medium" value="2"/>
-            <enum name="IRANSans_Bold" value="3"/>
-            <enum name="IRANSans_Ultra_Light" value="4"/>
-            <enum name="IRANSans_Light_4.1" value="5"/>
-            <enum name="BSara" value="6"/>
-            <enum name="shabnam_light" value="7"/>
-            <enum name="estedad" value="8"/>
-            <enum name="suls" value="9"/>
-            <enum name="shekaste" value="10"/>
-            <enum name="IranSansNum" value="11"/>
-            <enum name="IranSansNumBold" value="12"/>
-            <enum name="IranSansNumLight" value="13"/>
-            <enum name="IranSansNumMedium" value="14"/>
-            <enum name="IranSansNumUltraLight" value="15"/>
+        <attr name="txtFont" format="enum">
+            <enum name="IRANSans_Light" value="1" />
+            <enum name="IRANSans_Medium" value="2" />
+            <enum name="IRANSans_Bold" value="3" />
+            <enum name="IRANSans_Ultra_Light" value="4" />
+            <enum name="IRANSans_Light_4.1" value="5" />
+            <enum name="BSara" value="6" />
+            <enum name="shabnam_light" value="7" />
+            <enum name="estedad" value="8" />
+            <enum name="suls" value="9" />
+            <enum name="shekaste" value="10" />
+            <enum name="IranSansNum" value="11" />
+            <enum name="IranSansNumBold" value="12" />
+            <enum name="IranSansNumLight" value="13" />
+            <enum name="IranSansNumMedium" value="14" />
+            <enum name="IranSansNumUltraLight" value="15" />
         </attr>
+
+        <attr name="learning" format="string" />
+
+    </declare-styleable>
+
+    <declare-styleable name="CardProduct">
+
+        <attr name="Title" format="string" />
+        <attr name="RealPrice" format="string" />
+        <attr name="salePrice" format="string" />
+        <attr name="Discount" format="string" />
+
     </declare-styleable>
 
 
+    <declare-styleable name="TotalPriceDialog">
+
+        <attr name="finalRealPrice" format="string" />
+        <attr name="finalSalePrice" format="string" />
+
+    </declare-styleable>
 
 
 </resources>
