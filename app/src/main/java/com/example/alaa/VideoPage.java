@@ -29,7 +29,7 @@ public class VideoPage extends AppCompatActivity implements View.OnClickListener
     private AppCompatImageView upNext_arrow;
     private RecyclerView recyclerView;
     private MyTextView myTextView;
-    private Chip btnMore;
+    private MaterialButton btnMore;
     private MaterialButton btn_bookmark, btn_download, btn_share;
 
 
@@ -164,7 +164,7 @@ public class VideoPage extends AppCompatActivity implements View.OnClickListener
         btnMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnMore.setChipIconResource(myTextView.isExpanded() ? R.drawable.ic_keyboard_arrow_down_black_24dp : R.drawable.ic_keyboard_arrow_up_black_24dp);
+                btnMore.setIconResource(myTextView.isExpanded() ? R.drawable.ic_keyboard_arrow_down_black_24dp : R.drawable.ic_keyboard_arrow_up_black_24dp);
                 btnMore.setText(myTextView.isExpanded() ? "ادامه ... " : "بستن");
                 myTextView.toggle();
             }

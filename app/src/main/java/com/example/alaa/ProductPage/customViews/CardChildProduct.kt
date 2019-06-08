@@ -17,7 +17,7 @@ class CardChildProduct(context: Context, attributeSet: AttributeSet) : CardView(
 
     init {
 
-        inflate(context, R.layout.card_child_product, this)
+        inflate(context, R.layout.card_child_product_component, this)
 
         val res: Resources = resources
 

@@ -3,7 +3,7 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.example.alaa">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <dist:module dist:instant="true" />
 
@@ -14,8 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".ProductPage.ProductPage"
-            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ProductPage.ProductPage"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Login"
             android:screenOrientation="portrait"
@@ -26,8 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VideoPage"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".VideoPage"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/app_name"

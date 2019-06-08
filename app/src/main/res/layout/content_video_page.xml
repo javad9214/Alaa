@@ -176,15 +176,18 @@
                 android:ellipsize="end"
                 app:animation_duration="750"/>
 
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Action"
-                android:text="ادامه..."
-                android:id="@+id/viewMore"
-                app:chipIcon="@drawable/ic_keyboard_arrow_down_black_24dp"
-                app:chipIconTint="@color/gray"
-                android:layout_gravity="center_horizontal" />
+           <com.google.android.material.button.MaterialButton
+               android:id="@+id/viewMore"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="@string/Continue"
+               android:textColor="@color/blackTitle"
+               app:backgroundTint="@color/grayWhite"
+               android:layout_marginEnd="@dimen/Margin10"
+               android:layout_marginStart="@dimen/Margin10"
+               app:icon="@drawable/ic_keyboard_arrow_down_black_24dp"
+               app:iconTint="@color/blackTitle"
+               app:iconGravity="textStart"/>
 
 
 
