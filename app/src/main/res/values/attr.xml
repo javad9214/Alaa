@@ -34,7 +34,7 @@
     </declare-styleable>
 
 
-    <declare-styleable name="TotalPriceDialog">
+    <declare-styleable name="TotalPrice_Component">
 
         <attr name="finalRealPrice" format="string" />
         <attr name="finalSalePrice" format="string" />

@@ -1,4 +1,4 @@
-package com.example.alaa.Dashboard;
+package com.example.alaa.Views.Dashboard;
 
 import java.util.ArrayList;
 import java.util.List;

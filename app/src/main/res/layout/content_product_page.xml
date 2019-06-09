@@ -23,7 +23,7 @@
             android:orientation="vertical">
 
 
-          <com.example.alaa.ProductPage.customViews.CardParentProduct
+          <com.example.alaa.Views.UI.ProductPage.customViews.MainProduct_Component
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_margin="@dimen/Margin10"
@@ -80,7 +80,7 @@
             </LinearLayout>
 
 
-            <com.example.alaa.ProductPage.customViews.CardChildProduct
+            <com.example.alaa.Views.UI.ProductPage.customViews.ChildProduct_Component
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/Margin10"
@@ -89,9 +89,9 @@
                 app:cardCornerRadius="@dimen/box_corner_radius"
                 app:salePrice="54500">
 
-            </com.example.alaa.ProductPage.customViews.CardChildProduct>
+            </com.example.alaa.Views.UI.ProductPage.customViews.ChildProduct_Component>
 
-            <com.example.alaa.ProductPage.customViews.CardChildProduct
+            <com.example.alaa.Views.UI.ProductPage.customViews.ChildProduct_Component
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/Margin10"
@@ -100,7 +100,7 @@
                 app:cardCornerRadius="@dimen/box_corner_radius"
                 app:salePrice="54500">
 
-            </com.example.alaa.ProductPage.customViews.CardChildProduct>
+            </com.example.alaa.Views.UI.ProductPage.customViews.ChildProduct_Component>
 
 
             <androidx.cardview.widget.CardView
@@ -121,7 +121,7 @@
 
 
 
-                <com.example.alaa.CustomViews.MyTextView
+                <com.example.alaa.Views.UI.CustomViews.MyTextView
                     android:id="@+id/Description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -221,7 +221,7 @@
     </ScrollView>
 
 
-   <com.example.alaa.ProductPage.customViews.TotalPriceDialog
+   <com.example.alaa.Views.UI.ProductPage.customViews.TotalPrice_Component
        android:id="@+id/finalPriceDialog"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
@@ -234,7 +234,7 @@
        app:finalSalePrice="98000"
        app:cardCornerRadius="@dimen/box_corner_radius"
        android:elevation="@dimen/card_dimen">
-   </com.example.alaa.ProductPage.customViews.TotalPriceDialog>
+   </com.example.alaa.Views.UI.ProductPage.customViews.TotalPrice_Component>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_buy"

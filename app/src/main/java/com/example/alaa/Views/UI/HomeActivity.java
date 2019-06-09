@@ -1,4 +1,4 @@
-package com.example.alaa;
+package com.example.alaa.Views.UI;
 
 
 import android.content.Context;
@@ -8,11 +8,13 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 
 import com.asksira.loopingviewpager.LoopingViewPager;
-import com.example.alaa.Dashboard.DashboardFragment;
-import com.example.alaa.ProductPage.ProductPage;
-import com.example.alaa.ViewPager.ImageSlider;
-import com.example.alaa.ViewPager.PagerAdapter;
+import com.example.alaa.Views.Dashboard.DashboardFragment;
+import com.example.alaa.Views.UI.ProductPage.ProductPage;
+import com.example.alaa.R;
+import com.example.alaa.Views.ViewPager.ImageSlider;
+import com.example.alaa.Views.ViewPager.PagerAdapter;
 
+import com.example.alaa.Views.Adapters.Adapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.hzn.lib.EasyTransition;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;

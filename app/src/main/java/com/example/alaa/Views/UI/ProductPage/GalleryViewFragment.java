@@ -1,4 +1,4 @@
-package com.example.alaa.ProductPage;
+package com.example.alaa.Views.UI.ProductPage;
 
 import android.net.Uri;
 import android.os.Bundle;

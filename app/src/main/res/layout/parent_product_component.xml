@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    app:cardCornerRadius="@dimen/box_corner_radius">
+
+
+
+    <com.example.alaa.Views.UI.CustomViews.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/discount_parent"
+        android:layout_gravity="end"
+        android:paddingStart="@dimen/Margin10"
+        android:paddingEnd="@dimen/Margin10"
+        android:text="تخفیف  40 %"
+        android:textColor="@color/alaa5"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:txtFont="estedad" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="@dimen/Margin5" />
+
+            </RelativeLayout>
+
+
+            <com.example.alaa.Views.UI.CustomViews.MyTextView
+                android:id="@+id/title_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin10"
+                android:gravity="start"
+                android:text="همایش های طلایی ریاضی تجربی کنکور آقای امینی راد"
+                android:textColor="@color/blackTitle"
+                android:textSize="14sp"
+                app:txtFont="IRANSans_Bold" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/Margin5">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.example.alaa.Views.UI.CustomViews.MyTextView
+                        android:id="@+id/realPrice_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center"
+                        android:text="(49,000)"
+                        android:textColor="@color/Red"
+                        android:textSize="16sp"
+                        app:txtFont="IranSansNumUltraLight" />
+
+                    <com.example.alaa.Views.UI.CustomViews.MyTextView
+                        android:id="@+id/finalPrice_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="29,400"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"
+                        app:txtFont="IranSansNum" />
+
+                    <com.example.alaa.Views.UI.CustomViews.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/Margin5"
+                        android:layout_marginEnd="@dimen/Margin10"
+                        android:gravity="center"
+                        android:text="@string/Toman"
+                        android:textColor="@color/DarkOliveGreen"
+                        android:textSize="12sp"
+                        app:txtFont="estedad" />
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/childProduct_recycler"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_margin="@dimen/Margin5">
+
+       </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

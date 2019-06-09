@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:animateLayoutChanges="true"
-    tools:context=".Login">
+    tools:context=".Views.UI.Login">
 
 
     <LinearLayout
@@ -47,7 +47,7 @@
                 android:src="@drawable/alaa_logo_colored"
                 android:visibility="visible" />
 
-            <com.example.alaa.CustomViews.MyTextView
+            <com.example.alaa.Views.UI.CustomViews.MyTextView
                 android:id="@+id/login_describe1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                 app:txtFont="IRANSans_Bold" />
 
 
-            <com.example.alaa.CustomViews.MyTextView
+            <com.example.alaa.Views.UI.CustomViews.MyTextView
                 android:id="@+id/login_describe2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
                         android:orientation="horizontal">
 
 
-                        <com.example.alaa.CustomViews.MyTextView
+                        <com.example.alaa.Views.UI.CustomViews.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
@@ -184,7 +184,7 @@
                         android:gravity="end"
                         android:orientation="horizontal">
 
-                        <com.example.alaa.CustomViews.MyTextView
+                        <com.example.alaa.Views.UI.CustomViews.MyTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
@@ -339,7 +339,7 @@
                             android:layout_weight="1"
                             android:src="@drawable/ic_girl_profile_black" />
 
-                        <com.example.alaa.CustomViews.MyTextView
+                        <com.example.alaa.Views.UI.CustomViews.MyTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -367,7 +367,7 @@
                             android:gravity="end"
                             android:orientation="horizontal">
 
-                            <com.example.alaa.CustomViews.MyTextView
+                            <com.example.alaa.Views.UI.CustomViews.MyTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
@@ -423,7 +423,7 @@
                             android:gravity="end"
                             android:orientation="horizontal">
 
-                            <com.example.alaa.CustomViews.MyTextView
+                            <com.example.alaa.Views.UI.CustomViews.MyTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
@@ -479,7 +479,7 @@
                             android:orientation="horizontal">
 
 
-                            <com.example.alaa.CustomViews.MyTextView
+                            <com.example.alaa.Views.UI.CustomViews.MyTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
@@ -545,7 +545,7 @@
                             android:gravity="end"
                             android:orientation="horizontal">
 
-                            <com.example.alaa.CustomViews.MyTextView
+                            <com.example.alaa.Views.UI.CustomViews.MyTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
@@ -610,7 +610,7 @@
                             android:gravity="end"
                             android:orientation="horizontal">
 
-                            <com.example.alaa.CustomViews.MyTextView
+                            <com.example.alaa.Views.UI.CustomViews.MyTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
@@ -667,7 +667,7 @@
                             android:gravity="end"
                             android:orientation="horizontal">
 
-                            <com.example.alaa.CustomViews.MyTextView
+                            <com.example.alaa.Views.UI.CustomViews.MyTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"

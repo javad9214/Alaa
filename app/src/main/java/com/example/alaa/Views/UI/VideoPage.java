@@ -1,4 +1,4 @@
-package com.example.alaa;
+package com.example.alaa.Views.UI;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,13 +12,13 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
 
-import com.example.alaa.CustomViews.MyTextView;
-import com.example.alaa.Dashboard.Adapter_shop;
-import com.example.alaa.Dashboard.DashboardFragment;
-import com.example.alaa.Teacher.Dashboard_Teacher;
+import com.example.alaa.Views.UI.CustomViews.MyTextView;
+import com.example.alaa.Views.Dashboard.Adapter_shop;
+import com.example.alaa.Views.Dashboard.DashboardFragment;
+import com.example.alaa.R;
+import com.example.alaa.Views.Teacher.Dashboard_Teacher;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.chip.Chip;
 import com.hzn.lib.EasyTransition;
 
 public class VideoPage extends AppCompatActivity implements View.OnClickListener {

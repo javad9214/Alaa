@@ -1,4 +1,4 @@
-package com.example.alaa;
+package com.example.alaa.Views.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -11,11 +11,12 @@ import androidx.transition.Transition;
 import androidx.transition.TransitionManager;
 import androidx.transition.TransitionSet;
 
+import com.example.alaa.R;
 import com.example.alaa.Tools.KeyboardHeight.KeyboardHeightObserver;
 import com.example.alaa.Tools.KeyboardHeight.KeyboardHeightProvider;
 import com.example.alaa.Tools.TextWatcher.MultiTextWatcher;
 import com.example.alaa.Tools.TextWatcher.TextWatcherWithInstance;
-import com.example.alaa.Transitions.MyTransition;
+import com.example.alaa.Tools.Transitions.MyTransition;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
@@ -37,7 +38,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.alaa.CustomViews.MyTextView;
+import com.example.alaa.Views.UI.CustomViews.MyTextView;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Objects;

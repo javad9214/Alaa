@@ -1,11 +1,10 @@
-package com.example.alaa.Dashboard;
+package com.example.alaa.Views.Dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.alaa.Adapter;
 import com.example.alaa.R;
 
 import androidx.annotation.NonNull;

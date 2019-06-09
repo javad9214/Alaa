@@ -1,4 +1,4 @@
-package com.example.alaa.ProductPage.customViews
+package com.example.alaa.Views.UI.ProductPage.customViews
 
 
 import android.content.Context
@@ -6,24 +6,24 @@ import android.content.res.Resources
 import android.graphics.Paint
 import android.util.AttributeSet
 import androidx.cardview.widget.CardView
-import com.example.alaa.CustomViews.MyTextView
+import com.example.alaa.Views.UI.CustomViews.MyTextView
 import com.example.alaa.R
 import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.*
 
-class CardChildProduct(context: Context, attributeSet: AttributeSet) : CardView(context, attributeSet) {
+class ChildProduct_Component(context: Context, attributeSet: AttributeSet) : CardView(context, attributeSet) {
 
 
     init {
 
-        inflate(context, R.layout.card_child_product_component, this)
+        inflate(context, R.layout.child_product_component, this)
 
         val res: Resources = resources
 
         val title: MyTextView = findViewById(R.id.title)
         val realPrice: MyTextView = findViewById(R.id.realPrice)
-        val salePrice: MyTextView = findViewById(R.id.Price)
+        val salePrice: MyTextView = findViewById(R.id.SalePrice)
         val discount: MyTextView = findViewById(R.id.discount)
 
         val bracketLeft: String = res.getString(R.string.BracketLeft)
@@ -34,7 +34,7 @@ class CardChildProduct(context: Context, attributeSet: AttributeSet) : CardView(
         title.text = attributes.getString(R.styleable.CardProduct_Title)
         realPrice.text = bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_RealPrice))) + bracketRight
         salePrice.text = setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_RealPrice)))
-        discount.text =  res.getString(R.string.discount) + "  " +  calculateDiscount(68700.0, 54500.0 )
+        discount.text = res.getString(R.string.discount) + "  " + calculateDiscount(68700.0, 54500.0)
 
 
 
@@ -48,25 +48,24 @@ class CardChildProduct(context: Context, attributeSet: AttributeSet) : CardView(
         textView.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
     }
 
+    private fun calculateDiscount(realPrice: Double, salePrice: Double): String {
 
-    private fun calculateDiscount(realPrice: Double , salePrice: Double): String {
-
-        val discount: Double  = 1 - (salePrice / realPrice)
+        val discount: Double = 1 - (salePrice / realPrice)
 
         val format: NumberFormat = NumberFormat.getPercentInstance(Locale.US)
 
         return format.format(discount)
     }
 
-    private fun setCurrency (price : Double) : String {
+    private fun setCurrency(price: Double): String {
 
-        val  format = DecimalFormat("###,###,###")
+        val format = DecimalFormat("###,###,###")
 
         return format.format(price)
     }
 
     private fun toDouble(string: String): Double {
 
-       return string.toDouble()
+        return string.toDouble()
     }
 }

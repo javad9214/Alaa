@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    app:cardCornerRadius="@dimen/box_corner_radius"
+    android:elevation="@dimen/card_dimen">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        app:cardBackgroundColor="@color/alaa5"
+        android:padding="@dimen/Margin10">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/Margin5"
+            android:paddingBottom="@dimen/Margin5"
+            android:paddingEnd="@dimen/Margin5"
+            android:paddingStart="@dimen/Margin5">
+
+
+
+            <com.example.alaa.Views.UI.CustomViews.MyTextView
+                android:id="@+id/realFinalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/Margin5"
+                android:gravity="center"
+                android:text="(49,000)"
+                android:textColor="@color/Red"
+                android:textSize="18sp"
+                app:txtFont="IranSansNumMedium" />
+
+            <com.example.alaa.Views.UI.CustomViews.MyTextView
+                android:id="@+id/finalSalePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/Margin5"
+                android:layout_marginEnd="@dimen/Margin10"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="64,200 تومان"
+                android:textColor="@color/darkGreen"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                app:txtFont="IranSansNumBold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

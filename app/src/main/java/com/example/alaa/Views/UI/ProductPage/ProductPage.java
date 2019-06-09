@@ -1,22 +1,19 @@
-package com.example.alaa.ProductPage;
+package com.example.alaa.Views.UI.ProductPage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ScrollView;
 
-import com.example.alaa.CustomViews.MyTextView;
-import com.example.alaa.HomeActivity;
-import com.example.alaa.ProductPage.customViews.CardParentProduct;
+import com.example.alaa.Views.UI.CustomViews.MyTextView;
+import com.example.alaa.Views.UI.HomeActivity;
 import com.example.alaa.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.chip.Chip;
 
 public class ProductPage extends AppCompatActivity {
 

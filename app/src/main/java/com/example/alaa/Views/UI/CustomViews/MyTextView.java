@@ -1,4 +1,4 @@
-package com.example.alaa.CustomViews;
+package com.example.alaa.Views.UI.CustomViews;
 
 import android.content.Context;
 import android.content.res.TypedArray;

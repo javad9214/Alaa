@@ -1,4 +1,4 @@
-package com.example.alaa.ViewPager;
+package com.example.alaa.Views.ViewPager;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,7 +11,6 @@ import com.example.alaa.R;
 import java.util.List;
 
 import androidx.annotation.NonNull;
-import androidx.viewpager.widget.ViewPager;
 
 public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
 

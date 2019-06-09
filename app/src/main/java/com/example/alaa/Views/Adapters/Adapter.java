@@ -1,4 +1,4 @@
-package com.example.alaa.Dashboard;
+package com.example.alaa.Views.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,19 +6,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.alaa.R;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class Adapter_shop extends RecyclerView.Adapter<Adapter_shop.ViewHolder>{
+import com.example.alaa.R;
+
+public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
     private LayoutInflater mInflater;
     private Context context ;
     private int pos ;
     private int resource ;
+    private ItemClickListener mClickListener;
+    public static final String TAG = "===>" ;
 
-    public Adapter_shop(Context context , int resource) {
+    public Adapter(Context context , int resource) {
         this.context = context;
         this.mInflater = LayoutInflater.from(context);
         this.resource  = resource ;
@@ -44,10 +46,10 @@ public class Adapter_shop extends RecyclerView.Adapter<Adapter_shop.ViewHolder>{
 
     @Override
     public int getItemCount() {
-        return 2 ;
+        return 5 ;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
         TextView textView ;
@@ -57,7 +59,27 @@ public class Adapter_shop extends RecyclerView.Adapter<Adapter_shop.ViewHolder>{
 
             textView = itemView.findViewById(R.id.tx_title);
 
+            itemView.setOnClickListener(this);
+
         }
+
+        @Override
+        public void onClick(View view) {
+            if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
+        }
+    }
+
+
+
+    // allows clicks events to be caught
+    public void setClickListener(ItemClickListener itemClickListener) {
+        this.mClickListener = itemClickListener;
+    }
+
+
+    // parent activity will implement this method to respond to click events
+    public interface ItemClickListener {
+        void onItemClick(View view, int position  );
     }
 
 }

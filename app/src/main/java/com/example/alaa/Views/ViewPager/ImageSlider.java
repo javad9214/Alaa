@@ -1,4 +1,4 @@
-package com.example.alaa.ViewPager;
+package com.example.alaa.Views.ViewPager;
 
 import androidx.annotation.DrawableRes;
 
