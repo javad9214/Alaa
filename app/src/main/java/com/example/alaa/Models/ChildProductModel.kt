@@ -6,4 +6,6 @@ class ChildProductModel {
     val realPrice : Long = -1
     val salePrice : Long = -1
 
+
+
 }

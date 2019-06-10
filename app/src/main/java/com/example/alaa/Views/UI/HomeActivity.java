@@ -14,7 +14,7 @@ import com.example.alaa.R;
 import com.example.alaa.Views.ViewPager.ImageSlider;
 import com.example.alaa.Views.ViewPager.PagerAdapter;
 
-import com.example.alaa.Views.Adapters.Adapter;
+import com.example.alaa.Views.Adapters.HomeRecyclerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.hzn.lib.EasyTransition;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
@@ -35,7 +35,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity implements Adapter.ItemClickListener{
+public class HomeActivity extends AppCompatActivity implements HomeRecyclerAdapter.ItemClickListener{
 
 
     public static final String TAG = "===>";
@@ -125,7 +125,7 @@ public class HomeActivity extends AppCompatActivity implements Adapter.ItemClick
 
     private void setAdapters() {
 
-        final Adapter adapter = new Adapter(this , R.layout.content_recycler);
+        final HomeRecyclerAdapter homeRecyclerAdapter = new HomeRecyclerAdapter(this , R.layout.content_recycler);
 
         RecyclerView recyclerView01 = findViewById(R.id.recycler01);
         RecyclerView recyclerView02 = findViewById(R.id.recycler02);
@@ -137,12 +137,12 @@ public class HomeActivity extends AppCompatActivity implements Adapter.ItemClick
         recyclerView03.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true));
         recyclerView04.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true));
 
-        recyclerView01.setAdapter(adapter);
-        recyclerView02.setAdapter(adapter);
-        recyclerView03.setAdapter(adapter);
-        recyclerView04.setAdapter(adapter);
+        recyclerView01.setAdapter(homeRecyclerAdapter);
+        recyclerView02.setAdapter(homeRecyclerAdapter);
+        recyclerView03.setAdapter(homeRecyclerAdapter);
+        recyclerView04.setAdapter(homeRecyclerAdapter);
 
-        adapter.setClickListener(this);
+        homeRecyclerAdapter.setClickListener(this);
 
 
     }

@@ -1,4 +1,4 @@
-package com.example.alaa.Views.UI.ProductPage.customViews
+package com.example.alaa.Views.UI.ProductPage.Components
 
 
 import android.content.Context

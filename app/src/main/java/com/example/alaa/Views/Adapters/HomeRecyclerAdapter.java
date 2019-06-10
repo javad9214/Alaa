@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alaa.R;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
+public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapter.ViewHolder>{
 
     private LayoutInflater mInflater;
     private Context context ;
@@ -20,7 +20,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
     private ItemClickListener mClickListener;
     public static final String TAG = "===>" ;
 
-    public Adapter(Context context , int resource) {
+    public HomeRecyclerAdapter(Context context , int resource) {
         this.context = context;
         this.mInflater = LayoutInflater.from(context);
         this.resource  = resource ;
