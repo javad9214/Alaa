@@ -68,4 +68,6 @@ class ChildProduct_Component(context: Context, attributeSet: AttributeSet) : Car
 
         return string.toDouble()
     }
+
+
 }

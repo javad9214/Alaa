@@ -11,6 +11,7 @@ import com.asksira.loopingviewpager.LoopingViewPager;
 import com.example.alaa.Views.Dashboard.DashboardFragment;
 import com.example.alaa.Views.UI.ProductPage.ProductPage;
 import com.example.alaa.R;
+import com.example.alaa.Views.UI.SearchPage.SearchActivity;
 import com.example.alaa.Views.ViewPager.ImageSlider;
 import com.example.alaa.Views.ViewPager.PagerAdapter;
 
@@ -166,6 +167,11 @@ public class HomeActivity extends AppCompatActivity implements HomeRecyclerAdapt
     public void onItemClick(View view, int position) {
 
         Intent intent  = new Intent(this , VideoPage.class);
+        startActivity(intent);
+    }
+
+    public void GoTOSearch(View view) {
+        Intent intent = new Intent(this , SearchActivity.class);
         startActivity(intent);
     }
 

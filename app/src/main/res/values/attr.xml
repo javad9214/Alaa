@@ -41,5 +41,10 @@
 
     </declare-styleable>
 
+    <declare-styleable name="SearchBar_Component">
+
+        <attr name="searchbarHint" format="string"/>
+
+    </declare-styleable>
 
 </resources>

@@ -70,6 +70,11 @@
     <string name="discount">تخفیف</string>
 
 
+
+    //Search Page
+    <string name="SearchHint"> دنبال چی میگردی ؟ </string>
+
+
     //others
     <string name="BracketLeft"> ( </string>
     <string name="BracketRight"> ) </string>
