@@ -55,7 +55,7 @@
                     android:text="درس سیزدهم منطق : مغالطه "
                     android:textColor="@color/blackTitle"
                     android:textSize="16sp"
-                    app:txtFont="IRANSans_Bold" />
+                    app:MyTextViewFont="IRANSans_Bold" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
@@ -143,7 +143,7 @@
                             android:text="مهدی صنیعی "
                             android:textColor="@color/blackTitle"
                             android:textSize="16sp"
-                            app:txtFont="IRANSans_Bold" />
+                            app:MyTextViewFont="IRANSans_Bold" />
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="wrap_content"
@@ -171,7 +171,7 @@
                 android:text="@string/description"
                 android:textColor="@color/gray"
                 android:textSize="16sp"
-                app:txtFont="IRANSans_Medium"
+                app:MyTextViewFont="IRANSans_Medium"
                 android:maxLines="5"
                 android:ellipsize="end"
                 app:animation_duration="750"/>

@@ -51,7 +51,7 @@
                             android:textColor="@color/pureWhite"
                             android:textSize="20sp"
                             android:textStyle="bold"
-                            app:txtFont="suls" />
+                            app:MyTextViewFont="suls" />
 
 
                     </LinearLayout>

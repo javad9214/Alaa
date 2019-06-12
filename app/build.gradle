@@ -63,6 +63,9 @@ dependencies {
 
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
 
+    implementation 'com.airbnb.android:lottie:3.0.6'
+
+
 }
 repositories {
     mavenCentral()

@@ -80,7 +80,7 @@
                         android:text="کنکور نظام جدید"
                         android:textColor="@color/blackTitle"
                         android:textSize="16sp"
-                        app:txtFont="IRANSans_Light" />
+                        app:MyTextViewFont="IRANSans_Light" />
 
                 </LinearLayout>
 
@@ -124,7 +124,7 @@
                         android:text="کنکور نظام قدیم"
                         android:textColor="@color/blackTitle"
                         android:textSize="16sp"
-                        app:txtFont="IRANSans_Light" />
+                        app:MyTextViewFont="IRANSans_Light" />
 
                 </LinearLayout>
 
@@ -168,7 +168,7 @@
                         android:text="پایه دهم"
                         android:textColor="@color/blackTitle"
                         android:textSize="16sp"
-                        app:txtFont="IRANSans_Light" />
+                        app:MyTextViewFont="IRANSans_Light" />
 
                 </LinearLayout>
 
@@ -212,7 +212,7 @@
                         android:text="پایه یازدهم"
                         android:textColor="@color/blackTitle"
                         android:textSize="16sp"
-                        app:txtFont="IRANSans_Light" />
+                        app:MyTextViewFont="IRANSans_Light" />
 
                 </LinearLayout>
 

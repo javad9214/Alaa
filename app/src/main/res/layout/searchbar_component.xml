@@ -1,38 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg_edittext_searchbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:layoutDirection="rtl">
 
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/Margin5"
+            android:layout_marginEnd="@dimen/Margin16"
+            android:layout_toStartOf="@+id/btn_back"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_edittext_searchbar"
+            android:orientation="horizontal">
 
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleX="-1"
-                app:srcCompat="@drawable/ic_search"
                 android:layout_marginStart="@dimen/Margin10"
                 android:layout_marginTop="@dimen/Margin10"
-                android:layout_marginBottom="@dimen/Margin10"/>
+                android:layout_marginBottom="@dimen/Margin10"
+                android:scaleX="-1"
+                app:srcCompat="@drawable/ic_search" />
 
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ed_searchbar"
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:gravity="start"
-                android:background="@android:color/transparent"
-                android:hint="@string/SearchHint"
-                android:textColorHint="@color/pureWhite"
                 android:layout_marginStart="@dimen/Margin16"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                android:hint="@string/SearchHint"
+                android:textCursorDrawable="@null"
                 android:inputType="text"
+                android:textStyle="bold"
+                android:textColor="@color/pureWhite"
+                android:textColorHint="@color/pureWhite"
                 android:textDirection="rtl" />
 
         </LinearLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_back"
+            android:layout_marginEnd="@dimen/Margin16"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_left_arrow" />
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
 
 

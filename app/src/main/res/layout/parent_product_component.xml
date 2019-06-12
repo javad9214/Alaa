@@ -20,7 +20,7 @@
         android:textColor="@color/alaa5"
         android:textSize="12sp"
         android:visibility="visible"
-        app:txtFont="estedad" />
+        app:MyTextViewFont="estedad" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                 android:text="همایش های طلایی ریاضی تجربی کنکور آقای امینی راد"
                 android:textColor="@color/blackTitle"
                 android:textSize="14sp"
-                app:txtFont="IRANSans_Bold" />
+                app:MyTextViewFont="IRANSans_Bold" />
 
 
             <RelativeLayout
@@ -80,7 +80,7 @@
                         android:text="(49,000)"
                         android:textColor="@color/Red"
                         android:textSize="16sp"
-                        app:txtFont="IranSansNumUltraLight" />
+                        app:MyTextViewFont="IranSansNumUltraLight" />
 
                     <com.example.alaa.Views.UI.CustomViews.MyTextView
                         android:id="@+id/finalPrice_parent"
@@ -90,7 +90,7 @@
                         android:text="29,400"
                         android:textColor="@color/green"
                         android:textSize="18sp"
-                        app:txtFont="IranSansNum" />
+                        app:MyTextViewFont="IranSansNum" />
 
                     <com.example.alaa.Views.UI.CustomViews.MyTextView
                         android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
                         android:text="@string/Toman"
                         android:textColor="@color/DarkOliveGreen"
                         android:textSize="12sp"
-                        app:txtFont="estedad" />
+                        app:MyTextViewFont="estedad" />
 
 
                 </LinearLayout>

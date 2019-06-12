@@ -13,7 +13,7 @@
         android:textColor="@color/blackTitle"
         android:background="@drawable/bg_final_price"
         android:textSize="22sp"
-        app:txtFont="IRANSans_Light" />
+        app:MyTextViewFont="IRANSans_Light" />
 
 <ImageView
     android:layout_width="match_parent"

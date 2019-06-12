@@ -36,7 +36,7 @@
                 android:text="صفر تا صد فیزیک کنکور"
                 android:textColor="@color/black"
                 android:textSize="12sp"
-                app:txtFont="IRANSans_Medium" />
+                app:MyTextViewFont="IRANSans_Medium" />
 
 
             <LinearLayout
@@ -67,7 +67,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_marginEnd="5dp"
                     android:text="26"
-                    app:txtFont="estedad"
+                    app:MyTextViewFont="estedad"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -86,7 +86,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_marginEnd="5dp"
                     android:text="کازرانیان"
-                    app:txtFont="IRANSans_Light_4.1"
+                    app:MyTextViewFont="IRANSans_Light_4.1"
                     android:textColor="#000"
                     android:textSize="14sp" />
 
