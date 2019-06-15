@@ -47,4 +47,9 @@
 
     </declare-styleable>
 
+
+    <declare-styleable name="CheckableCardView">
+        <attr name="card_text" format="string|reference" />
+    </declare-styleable>
+
 </resources>

@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.res.Resources
 import android.graphics.Paint
 import android.util.AttributeSet
+import android.widget.Checkable
 import androidx.cardview.widget.CardView
 import com.example.alaa.Views.UI.CustomViews.MyTextView
 import com.example.alaa.R
@@ -13,6 +14,7 @@ import java.text.NumberFormat
 import java.util.*
 
 class ChildProduct_Component(context: Context, attributeSet: AttributeSet) : CardView(context, attributeSet) {
+
 
 
     init {
