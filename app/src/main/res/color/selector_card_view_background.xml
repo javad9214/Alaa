@@ -8,6 +8,6 @@
     <item android:color="#E1BEE7"
         android:state_checked="true" />
 
-    <item android:color="#F3E5F5" />
+    <item android:color="@color/pureWhite" />
 
 </selector>
