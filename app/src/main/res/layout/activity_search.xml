@@ -22,7 +22,7 @@
             android:layout_height="wrap_content">
 
 
-                <com.example.alaa.Views.UI.SearchPage.SearchbarComponent
+                <com.example.alaa.Views.UI.SearchPage.SearchBarComponent
                     android:id="@+id/search_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -49,7 +49,7 @@
 
 
     <declare-styleable name="CheckableCard">
-        <attr name="card_text" format="string" />
+        <attr name="card_text" format="string|reference" />
     </declare-styleable>
 
 </resources>
