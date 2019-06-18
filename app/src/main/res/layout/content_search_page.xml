@@ -1,65 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/tools"
     android:layoutDirection="rtl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/Margin16"
+        android:layout_marginTop="@dimen/Margin16"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr"
+                android:layout_marginStart="@dimen/Margin10"
+                android:text="@string/EducationSystem"
+                app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layoutDirection="ltr"
+                android:text="@string/major"
+                app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layoutDirection="ltr"
+                android:text="@string/Grade"
+                app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
 
 
-
-        <com.example.alaa.Tools.CheckableCard
+        <com.example.alaa.Tools.SelectableCard
+            android:id="@+id/selectableA"
             android:layout_width="250dp"
             android:layout_height="150dp"
-            android:layout_marginTop="@dimen/Margin10"
             android:layout_gravity="center"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:card_text="Unselected"
+            android:layout_marginTop="@dimen/Margin10"
             android:clickable="true"
-            android:focusable="true" />
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:SelectableCard_text="@string/EducationSystem" />
 
 
-        <com.example.alaa.Tools.CheckableCard
-            android:id="@+id/card_view_pressed"
+        <com.example.alaa.Tools.SelectableCard
+            android:id="@+id/selectableB"
             android:layout_width="250dp"
             android:layout_height="150dp"
-            android:layout_marginTop="@dimen/Margin10"
             android:layout_gravity="center"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:card_text="Pressed"
+            android:layout_marginTop="@dimen/Margin10"
             android:clickable="true"
-            android:focusable="true" />
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:SelectableCard_text="@string/NewSystem" />
 
 
-        <com.example.alaa.Tools.CheckableCard
-            android:id="@+id/checkedCard"
+        <com.example.alaa.Tools.SelectableCard
+            android:id="@+id/selectableC"
             android:layout_width="250dp"
             android:layout_height="150dp"
-            android:layout_marginTop="@dimen/Margin10"
             android:layout_gravity="center"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:card_text="Checked"
+            android:layout_marginTop="@dimen/Margin10"
             android:clickable="true"
-            android:focusable="true" />
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:SelectableCard_text="@string/OldSystem" />
 
 
     </LinearLayout>
 
 
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="@dimen/Margin16"
-        android:src="@drawable/ic_set_filter"/>
+        android:src="@drawable/ic_set_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

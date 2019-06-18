@@ -18,6 +18,7 @@
     <dimen name="chipRadius">7dp</dimen>
     <dimen name="cardLoginMargin">30dp</dimen>
     <dimen name="cardNavMargin">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 
 </resources>

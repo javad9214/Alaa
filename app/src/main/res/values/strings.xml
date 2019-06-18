@@ -70,9 +70,15 @@
     <string name="discount">تخفیف</string>
 
 
-
     //Search Page
     <string name="SearchHint"> دنبال چی میگردی ؟ </string>
+
+    //Filter
+    <string name="EducationSystem">نظام آموزشی</string>
+    <string name="NewSystem">نظام جدید</string>
+    <string name="OldSystem">نظام قدیم</string>
+    <string name="Grade">مقطع</string>
+    <string name="Major">رشته</string>
 
 
     //others
@@ -96,6 +102,10 @@
 دانلود جزوه دینی 3
 دانلود جزوه دینی 4 </string>
     <string name="product_image">Product image</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 
 </resources>
