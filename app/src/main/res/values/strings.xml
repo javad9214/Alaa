@@ -79,6 +79,8 @@
     <string name="OldSystem">نظام قدیم</string>
     <string name="Grade">مقطع</string>
     <string name="Major">رشته</string>
+    <string name="Lesson">درس</string>
+    <string name="teacher">دبیر</string>
 
 
     //others

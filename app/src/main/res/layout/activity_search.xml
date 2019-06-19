@@ -7,7 +7,6 @@
     android:layoutDirection="rtl"
     tools:context=".Views.UI.SearchPage.SearchActivity">
 
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -22,12 +21,51 @@
             android:layout_height="wrap_content">
 
 
-                <com.example.alaa.Views.UI.SearchPage.SearchBarComponent
-                    android:id="@+id/search_bar"
-                    android:layout_width="match_parent"
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin16"
+                android:layout_marginTop="@dimen/Margin16"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    app:searchbarHint="@string/SearchHint"/>
+                    android:orientation="horizontal">
+
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="ltr"
+                        android:layout_marginStart="@dimen/Margin10"
+                        android:text="@string/EducationSystem"
+                        app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Margin10"
+                        android:layoutDirection="ltr"
+                        android:text="@string/major"
+                        android:enabled="false"
+                        app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Margin10"
+                        android:layoutDirection="ltr"
+                        android:text="@string/Grade"
+                        android:enabled="false"
+                        app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
 
 
 
@@ -37,6 +75,14 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_search_page"/>
+
+    <fragment
+        android:id="@+id/mainNavigationFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/filter_nav_graph" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
