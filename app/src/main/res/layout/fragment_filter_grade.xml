@@ -1,15 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.UI.SearchPage.Filter.Grade.FilterGrade">
+    android:layoutDirection="rtl"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Views.UI.SearchPage.Filter.Grade.FilterGrade"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/pureWhite">
+
+
+    <HorizontalScrollView
+        android:id="@+id/FilterPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/Margin16"
+        android:layout_marginTop="@dimen/Margin16"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layoutDirection="ltr"
+                android:text="@string/EducationSystem"
+                app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layoutDirection="ltr"
+                android:text="@string/Grade"
+                app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin10"
+                android:enabled="false"
+                android:layoutDirection="ltr"
+                android:text="@string/major"
+                app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layoutDirection="ltr"
+                android:enabled="false"
+                android:text="@string/Lesson"
+                app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layoutDirection="ltr"
+                android:enabled="false"
+                android:text="@string/teacher"
+                app:icon="@drawable/ic_chevron_left_black_24dp" />
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerFilterGrade"
+        app:layout_constraintTop_toBottomOf="@+id/FilterPath"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/Margin16">
 
     </androidx.recyclerview.widget.RecyclerView>
 
-</FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/Margin16"
+        app:backgroundTint="@color/green"
+        android:src="@drawable/ic_done_filter"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

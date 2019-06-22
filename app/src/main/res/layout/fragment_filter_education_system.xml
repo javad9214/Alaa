@@ -11,6 +11,7 @@
     android:background="@color/pureWhite">
 
     <HorizontalScrollView
+        android:id="@+id/FilterPath"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/Margin16"
@@ -36,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/Margin10"
                 android:layoutDirection="ltr"
+                android:enabled="false"
                 android:text="@string/Grade"
                 app:icon="@drawable/ic_chevron_left_black_24dp" />
 
@@ -43,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/Margin10"
-
+                android:enabled="false"
                 android:layoutDirection="ltr"
                 android:text="@string/major"
                 app:icon="@drawable/ic_chevron_left_black_24dp" />
@@ -55,8 +57,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/Margin10"
                 android:layoutDirection="ltr"
-                android:text="@string/Lesson"
                 android:enabled="false"
+                android:text="@string/Lesson"
                 app:icon="@drawable/ic_chevron_left_black_24dp" />
 
 
@@ -65,8 +67,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/Margin10"
                 android:layoutDirection="ltr"
-                android:text="@string/teacher"
                 android:enabled="false"
+                android:text="@string/teacher"
                 app:icon="@drawable/ic_chevron_left_black_24dp" />
 
         </LinearLayout>
@@ -82,39 +84,26 @@
 
 
         <com.example.alaa.Tools.SelectableCard
-            android:id="@+id/card_Major_Riazi"
+            android:id="@+id/card_newSystem"
             android:layout_width="250dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginBottom="@dimen/Margin10"
             android:foreground="?android:attr/selectableItemBackground"
-            app:SelectableCard_text="@string/Major_Riazi"
+            app:SelectableCard_text="@string/NewSystem"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="@dimen/Margin10"/>
 
 
         <com.example.alaa.Tools.SelectableCard
-            android:id="@+id/card_Major_Tajrobi"
-            android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="@dimen/Margin10"
-            android:layout_marginBottom="@dimen/Margin10"
-            android:layout_gravity="center"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:SelectableCard_text="@string/tajrobi"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="@dimen/Margin10"/>
-
-        <com.example.alaa.Tools.SelectableCard
-            android:id="@+id/card_Major_Ensani"
+            android:id="@+id/card_oldSystem"
             android:layout_width="250dp"
             android:layout_height="150dp"
             android:layout_marginTop="@dimen/Margin10"
             android:layout_gravity="center"
             android:foreground="?android:attr/selectableItemBackground"
-            app:SelectableCard_text="@string/Major_Ensani"
+            app:SelectableCard_text="@string/OldSystem"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="@dimen/Margin10"/>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.example.alaa.Tools.SelectableCard
+        android:id="@+id/filter_selectableCard"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/Margin10"
+        android:layout_marginTop="@dimen/Margin10"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:SelectableCard_text="@string/NewSystem"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="@dimen/Margin10"/>
+
+</LinearLayout>
