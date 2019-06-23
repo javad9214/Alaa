@@ -10,6 +10,7 @@
     tools:context=".Views.UI.SearchPage.Filter.FilterEducationSystem"
     android:background="@color/pureWhite">
 
+
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/Margin10"
-
+                app:backgroundTint="@color/purple"
                 android:layoutDirection="ltr"
                 android:text="@string/major"
                 app:icon="@drawable/ic_chevron_left_black_24dp" />
@@ -81,7 +82,7 @@
         android:orientation="vertical">
 
 
-        <com.example.alaa.Tools.SelectableCard
+        <com.example.alaa.Views.UI.CustomViews.SelectableCard
             android:id="@+id/card_Major_Riazi"
             android:layout_width="250dp"
             android:layout_height="150dp"
@@ -94,7 +95,7 @@
             app:cardCornerRadius="@dimen/Margin10"/>
 
 
-        <com.example.alaa.Tools.SelectableCard
+        <com.example.alaa.Views.UI.CustomViews.SelectableCard
             android:id="@+id/card_Major_Tajrobi"
             android:layout_width="250dp"
             android:layout_height="150dp"
@@ -107,7 +108,7 @@
             android:focusable="true"
             app:cardCornerRadius="@dimen/Margin10"/>
 
-        <com.example.alaa.Tools.SelectableCard
+        <com.example.alaa.Views.UI.CustomViews.SelectableCard
             android:id="@+id/card_Major_Ensani"
             android:layout_width="250dp"
             android:layout_height="150dp"

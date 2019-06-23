@@ -53,4 +53,15 @@
         <attr name="SelectableCard_id" format="string"/>
     </declare-styleable>
 
+
+    <declare-styleable name="FilterNavigation">
+        <attr name="NavCurrentStep" format="enum">
+            <enum name="NavEducationSystem" value="1"/>
+            <enum name="NavGrade" value="2"/>
+            <enum name="NavMajor" value="3"/>
+            <enum name="NavLesson" value="4"/>
+            <enum name="NavTeacher" value="5"/>
+        </attr>
+    </declare-styleable>
+
 </resources>

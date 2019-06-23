@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
 
-        <com.example.alaa.Tools.SelectableCard
+        <com.example.alaa.Views.UI.CustomViews.SelectableCard
             android:id="@+id/selectableA"
             android:layout_width="250dp"
             android:layout_height="150dp"
@@ -28,7 +28,7 @@
             app:SelectableCard_text="@string/EducationSystem" />
 
 
-        <com.example.alaa.Tools.SelectableCard
+        <com.example.alaa.Views.UI.CustomViews.SelectableCard
             android:id="@+id/selectableB"
             android:layout_width="250dp"
             android:layout_height="150dp"
@@ -40,7 +40,7 @@
             app:SelectableCard_text="@string/NewSystem" />
 
 
-        <com.example.alaa.Tools.SelectableCard
+        <com.example.alaa.Views.UI.CustomViews.SelectableCard
             android:id="@+id/selectableC"
             android:layout_width="250dp"
             android:layout_height="150dp"

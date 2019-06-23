@@ -7,9 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.Navigation
 import com.example.alaa.R
-import com.example.alaa.Tools.SelectableCard
+import com.example.alaa.Views.UI.CustomViews.SelectableCard
 
 
 // TODO: Rename parameter arguments, choose names that match

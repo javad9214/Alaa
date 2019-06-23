@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.example.alaa.Tools.SelectableCard
+    <com.example.alaa.Views.UI.CustomViews.SelectableCard
         android:id="@+id/filter_selectableCard"
         android:layout_width="250dp"
         android:layout_height="150dp"

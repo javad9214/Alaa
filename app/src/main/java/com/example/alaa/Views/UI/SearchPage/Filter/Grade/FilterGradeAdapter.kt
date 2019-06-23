@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alaa.R
-import com.example.alaa.Tools.SelectableCard
+import com.example.alaa.Views.UI.CustomViews.SelectableCard
 
 class FilterGradeAdapter(private val list: ArrayList<String> , val listener: SelectableCard.CardSelectListener) : RecyclerView.Adapter<FilterGradeAdapter.ViewHolder>()  {
 

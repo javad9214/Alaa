@@ -10,71 +10,15 @@
     tools:context=".Views.UI.SearchPage.Filter.FilterEducationSystem"
     android:background="@color/pureWhite">
 
-    <HorizontalScrollView
-        android:id="@+id/FilterPath"
+
+    <com.example.alaa.Views.UI.CustomViews.FilterNavigation
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/Margin16"
-        android:layout_marginTop="@dimen/Margin16"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        app:layout_constraintTop_toTopOf="parent"
+        app:NavCurrentStep="NavEducationSystem"/>
 
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:text="@string/EducationSystem"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:enabled="false"
-                android:text="@string/Grade"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:enabled="false"
-                android:layoutDirection="ltr"
-                android:text="@string/major"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:enabled="false"
-                android:text="@string/Lesson"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:enabled="false"
-                android:text="@string/teacher"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-        </LinearLayout>
-
-
-    </HorizontalScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,7 +27,7 @@
         android:orientation="vertical">
 
 
-        <com.example.alaa.Tools.SelectableCard
+        <com.example.alaa.Views.UI.CustomViews.SelectableCard
             android:id="@+id/card_newSystem"
             android:layout_width="250dp"
             android:layout_height="150dp"
@@ -96,7 +40,7 @@
             app:cardCornerRadius="@dimen/Margin10"/>
 
 
-        <com.example.alaa.Tools.SelectableCard
+        <com.example.alaa.Views.UI.CustomViews.SelectableCard
             android:id="@+id/card_oldSystem"
             android:layout_width="250dp"
             android:layout_height="150dp"

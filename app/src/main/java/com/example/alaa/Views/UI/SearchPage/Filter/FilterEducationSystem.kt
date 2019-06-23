@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.alaa.R
-import com.example.alaa.Tools.SelectableCard
+import com.example.alaa.Views.UI.CustomViews.SelectableCard
 
 class FilterEducationSystem() : Fragment() , SelectableCard.CardSelectListener {
 
