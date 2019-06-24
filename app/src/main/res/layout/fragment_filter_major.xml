@@ -11,69 +11,12 @@
     android:background="@color/pureWhite">
 
 
-    <HorizontalScrollView
+    <com.example.alaa.Views.UI.CustomViews.FilterNavigation
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/Margin16"
-        android:layout_marginTop="@dimen/Margin16"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:text="@string/EducationSystem"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:text="@string/Grade"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                app:backgroundTint="@color/purple"
-                android:layoutDirection="ltr"
-                android:text="@string/major"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:text="@string/Lesson"
-                android:enabled="false"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:text="@string/teacher"
-                android:enabled="false"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-        </LinearLayout>
-
-
-    </HorizontalScrollView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:NavCurrentStep="NavMajor"/>
 
     <LinearLayout
         android:layout_width="match_parent"

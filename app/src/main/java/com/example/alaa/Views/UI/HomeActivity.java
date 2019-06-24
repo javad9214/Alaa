@@ -159,8 +159,6 @@ public class HomeActivity extends AppCompatActivity implements HomeRecyclerAdapt
     public void Onclick_dashboard(View view) {
         DashboardFragment dashboardFragment = new DashboardFragment();
         dashboardFragment.show(getSupportFragmentManager(), dashboardFragment.getTag());
-
-
     }
 
     @Override

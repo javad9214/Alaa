@@ -1,98 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pureWhite"
     android:layoutDirection="rtl"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Views.UI.SearchPage.Filter.Grade.FilterGrade"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:background="@color/pureWhite">
+    tools:context=".Views.UI.SearchPage.Filter.Grade.FilterGrade">
 
-
-    <HorizontalScrollView
-        android:id="@+id/FilterPath"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/Margin16"
-        android:layout_marginTop="@dimen/Margin16"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <com.example.alaa.Views.UI.CustomViews.FilterNavigation
+            android:id="@+id/filter_nav_path"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginStart="@dimen/Margin16"
+            app:NavCurrentStep="NavGrade" />
 
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:text="@string/EducationSystem"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerFilterGrade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/Margin16"
+            android:layout_marginStart="@dimen/Margin16"
+            android:layout_marginEnd="@dimen/Margin16">
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:text="@string/Grade"
-                app:backgroundTint="@color/purple"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
+        </androidx.recyclerview.widget.RecyclerView>
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:enabled="false"
-                android:layoutDirection="ltr"
-                android:text="@string/major"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:enabled="false"
-                android:text="@string/Lesson"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                android:enabled="false"
-                android:text="@string/teacher"
-                app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-        </LinearLayout>
-
-
-    </HorizontalScrollView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerFilterGrade"
-        app:layout_constraintTop_toBottomOf="@+id/FilterPath"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/Margin16">
-
-    </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="@dimen/Margin16"
-        app:backgroundTint="@color/green"
-        android:src="@drawable/ic_done_filter"/>
+        android:src="@drawable/ic_done_filter"
+        app:backgroundTint="@color/alaa5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

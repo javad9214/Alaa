@@ -2,6 +2,7 @@
     <HorizontalScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layoutDirection="rtl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/Margin16"
@@ -21,6 +22,7 @@
                 android:layout_marginStart="@dimen/Margin10"
                 android:layoutDirection="ltr"
                 android:text="@string/EducationSystem"
+                android:enabled="true"
                 app:icon="@drawable/ic_chevron_left_black_24dp" />
 
             <com.google.android.material.button.MaterialButton

@@ -7,8 +7,6 @@
     android:layoutDirection="rtl"
     tools:context=".Views.UI.SearchPage.SearchActivity">
 
-
-
     <fragment
         android:id="@+id/mainNavigationFragment"
         android:name="androidx.navigation.fragment.NavHostFragment"

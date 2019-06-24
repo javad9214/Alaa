@@ -19,6 +19,8 @@
     <dimen name="cardLoginMargin">30dp</dimen>
     <dimen name="cardNavMargin">10dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
 
 
 </resources>
