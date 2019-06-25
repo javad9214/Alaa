@@ -3,23 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/pureWhite"
     android:layoutDirection="rtl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Views.UI.SearchPage.Filter.Grade.FilterGrade">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <com.example.alaa.Views.UI.CustomViews.FilterNavigation
-            android:id="@+id/filter_nav_path"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/Margin16"
-            app:NavCurrentStep="NavGrade" />
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -27,21 +15,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/Margin16"
-            android:layout_marginStart="@dimen/Margin16"
-            android:layout_marginEnd="@dimen/Margin16">
+            android:layout_marginStart="@dimen/Margin5"
+            android:layout_marginEnd="@dimen/Margin5"
+            android:paddingBottom="20dp">
 
         </androidx.recyclerview.widget.RecyclerView>
 
-    </LinearLayout>
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/Margin16"
-        android:src="@drawable/ic_done_filter"
-        app:backgroundTint="@color/alaa5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

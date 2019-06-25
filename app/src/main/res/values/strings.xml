@@ -73,6 +73,14 @@
     //Search Page
     <string name="SearchHint"> دنبال چی میگردی ؟ </string>
 
+    //Tab layout
+    <string name="tabLesson">دروس</string>
+    <string name="tabProducts">محصولات</string>
+    <string name="tabVideos">ویدئو</string>
+    <string name="tabPamphlet">جزوه</string>
+    <string name="tabArticle">مقاله</string>
+
+
     //Filter
     <string name="EducationSystem">نظام آموزشی</string>
     <string name="NewSystem">نظام جدید</string>

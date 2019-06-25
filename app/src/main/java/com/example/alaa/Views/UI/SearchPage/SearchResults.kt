@@ -7,13 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
 
 import com.example.alaa.R
+import com.example.alaa.Views.UI.SearchPage.Filter.BaseFilterDialog
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class SearchResults : Fragment()  , SearchBarComponent.BackListener {
 
@@ -24,12 +24,17 @@ class SearchResults : Fragment()  , SearchBarComponent.BackListener {
         // Inflate the layout for this fragment
         myView = inflater.inflate(R.layout.fragment_search_results, container, false)
 
-        return myView
-    }
-
-    init {
         val btnBack : SearchBarComponent  = myView.findViewById(R.id.search_bar)
         btnBack.setOnBackClickListener(this)
+
+
+        val openFilter : FloatingActionButton  = myView.findViewById(R.id.openFilter)
+        openFilter.setOnClickListener{
+           val baseFilterDialog : BaseFilterDialog = BaseFilterDialog()
+            activity?.supportFragmentManager?.let { it1 -> baseFilterDialog.show(it1, baseFilterDialog.tag) }
+        }
+
+        return myView
     }
 
     override fun onBackClicked() {

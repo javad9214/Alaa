@@ -5,8 +5,7 @@
         android:layoutDirection="rtl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/Margin16"
-        android:layout_marginTop="@dimen/Margin16"
+        android:layout_marginTop="@dimen/Margin5"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
@@ -23,6 +22,10 @@
                 android:layoutDirection="ltr"
                 android:text="@string/EducationSystem"
                 android:enabled="true"
+                app:backgroundTint="@color/purple"
+                android:textColor="@color/pureWhite"
+                app:iconTint="@color/pureWhite"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 app:icon="@drawable/ic_chevron_left_black_24dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -32,6 +35,10 @@
                 android:layout_marginStart="@dimen/Margin10"
                 android:layoutDirection="ltr"
                 android:text="@string/Grade"
+                app:backgroundTint="@color/pureWhite"
+                android:textColor="@color/blackTitle"
+                app:iconTint="@color/black"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 app:icon="@drawable/ic_chevron_left_black_24dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -41,6 +48,10 @@
                 android:layout_marginStart="@dimen/Margin10"
                 android:layoutDirection="ltr"
                 android:text="@string/major"
+                app:backgroundTint="@color/pureWhite"
+                android:textColor="@color/blackTitle"
+                app:iconTint="@color/black"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 app:icon="@drawable/ic_chevron_left_black_24dp" />
 
 
@@ -53,6 +64,7 @@
                 android:layoutDirection="ltr"
                 android:text="@string/Lesson"
                 android:enabled="false"
+
                 app:icon="@drawable/ic_chevron_left_black_24dp" />
 
 

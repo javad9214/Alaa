@@ -29,9 +29,6 @@
                 android:layout_gravity="center"
                 app:searchbarHint="@string/SearchHint"/>
 
-
-
-
         </androidx.appcompat.widget.Toolbar>
 
 

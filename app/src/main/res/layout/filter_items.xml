@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <com.example.alaa.Views.UI.CustomViews.SelectableCard
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/filter_selectableCard"
-        android:layout_width="150dp"
-        android:layout_height="250dp"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/Margin10"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:SelectableCard_text="@string/NewSystem"
-        android:clickable="true"
-        android:focusable="true"
-        app:cardCornerRadius="@dimen/Margin10"/>
-
+<com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:id="@+id/filterItem"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/Margin16"
+    android:layout_marginEnd="@dimen/Margin5"
+    android:text="@string/NewSystem" />

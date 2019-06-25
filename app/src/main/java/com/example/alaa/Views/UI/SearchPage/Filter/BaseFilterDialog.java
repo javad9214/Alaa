@@ -10,14 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.alaa.R;
-
-/**
- * A simple {@link Fragment} subclass.
- */
-public class FilterDialog extends Fragment {
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.android.material.button.MaterialButton;
 
 
-    public FilterDialog() {
+public class BaseFilterDialog extends BottomSheetDialogFragment {
+
+    private View view ;
+
+    public BaseFilterDialog() {
         // Required empty public constructor
     }
 
@@ -26,7 +27,13 @@ public class FilterDialog extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_filter_education_system, container, false);
+
+        view = inflater.inflate(R.layout.fragment_base_filter_dialog, container, false);
+
+        return view ;
     }
+
+
+
 
 }
