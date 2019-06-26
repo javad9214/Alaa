@@ -13,8 +13,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
-        <item name="colorPrimary">@color/alaa5</item>
-        <item name="colorPrimaryDark">@color/alaa5</item>
+        <item name="colorPrimary">@color/alaa1</item>
+        <item name="colorPrimaryDark">@color/alaa1</item>
         <item name="colorAccent">@color/alaa5</item>
 
 

@@ -27,6 +27,11 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/Margin5"
+                app:backgroundTint="@color/pureWhite"
+                android:textColor="@color/blackTitle"
+                app:iconTint="@color/black"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/alaa2"
                 android:text="@string/NewSystem"/>
 
             <com.google.android.material.button.MaterialButton
@@ -35,6 +40,11 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/Margin5"
+                app:backgroundTint="@color/pureWhite"
+                android:textColor="@color/blackTitle"
+                app:iconTint="@color/black"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/alaa2"
                 android:text="@string/OldSystem"/>
 
 

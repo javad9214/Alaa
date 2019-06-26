@@ -14,11 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity
-            android:name=".Views.UI.SearchPage.Filter.Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar.NoActionBar"></activity>
-        <activity android:name=".Views.UI.SearchPage.SearchActivity" />
+        <activity android:name=".Views.UI.SearchPage.SearchActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Views.UI.ProductPage.ProductPage"
             android:screenOrientation="portrait" />

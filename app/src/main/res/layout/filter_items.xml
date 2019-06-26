@@ -8,4 +8,8 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/Margin16"
     android:layout_marginEnd="@dimen/Margin5"
+    app:backgroundTint="@color/pureWhite"
+    android:textColor="@color/blackTitle"
+    app:iconTint="@color/black"
+    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
     android:text="@string/NewSystem" />

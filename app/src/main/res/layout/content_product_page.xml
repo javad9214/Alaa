@@ -247,7 +247,7 @@
         android:layout_marginStart="@dimen/Margin16"
         android:layout_marginBottom="@dimen/Margin10"
         android:src="@drawable/ic_product_nav"
-        app:backgroundTint="@color/alaa5"
+        app:backgroundTint="@color/green"
         app:fabSize="normal"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

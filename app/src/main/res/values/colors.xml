@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3AF3DF</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#FD0863</color>
 
     <color name="pureWhite">#ffffff</color>
     <color name="grayWhite">#A1EEEEEE</color>
@@ -13,14 +13,18 @@
     <color name="gray2">#D2201F1F</color>
     <color name="green">#4CAF50</color>
     <color name="lightGreen">#09EB10</color>
+    <color name="customGreen">#09EB10</color>
     <color name="darkGreen">#065A08</color>
     <color name="saddleBrown">#8B4513</color>
     <color name="DarkOliveGreen">#556B2F</color>
-    <color name="purple">#9816f4</color>
+    <color name="purple">#C6A855E4</color>
     <color name="Red">#8A0505</color>
+    <color name="RedLight">#E91E1E</color>
+    <color name="custom">#F84613</color>
 
     <!-- Alaa colors -->
    <color name="alaa0">#B9FFA837</color>
+   <color name="alaa">#D5F7B999</color>
     <color name="alaa1">#ffa837</color>
     <color name="alaa2">#ff9e21</color>
     <color name="alaa3">#ff9a17</color>

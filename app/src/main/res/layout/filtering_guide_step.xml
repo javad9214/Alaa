@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/Margin10"
+    android:layout_marginTop="@dimen/Margin10"
+    android:layout_marginEnd="@dimen/Margin10"
+    android:layout_marginBottom="@dimen/Margin10"
+    android:layoutDirection="rtl">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_filter_tracker_path"
+            android:gravity="center_vertical"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/Margin5"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="horizontal">
+
+                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/alaa5"
+                    android:text="@string/EducationSystem"
+                    app:MyTextViewFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/border_leftside_step_filter_path"
+                    android:layoutDirection="ltr"
+                    android:paddingStart="@dimen/Margin10"
+                    android:paddingEnd="@dimen/Margin5"
+                    android:src="@drawable/ic_chevron_left_black_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/Margin10"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="horizontal">
+
+                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/Grade"
+                    app:MyTextViewFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/border_leftside_step_filter_path"
+                    android:layoutDirection="ltr"
+                    android:paddingStart="@dimen/Margin10"
+                    android:paddingEnd="@dimen/Margin5"
+                    android:src="@drawable/ic_chevron_left_black_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/Margin10"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="horizontal">
+
+                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/major"
+                    app:MyTextViewFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/border_leftside_step_filter_path"
+                    android:layoutDirection="ltr"
+                    android:paddingStart="@dimen/Margin10"
+                    android:paddingEnd="@dimen/Margin5"
+
+                    android:src="@drawable/ic_chevron_left_black_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/Margin10"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="horizontal">
+
+                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/Lesson"
+                    app:MyTextViewFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/border_leftside_step_filter_path"
+                    android:layoutDirection="ltr"
+                    android:paddingStart="@dimen/Margin10"
+                    android:paddingEnd="@dimen/Margin5"
+                    android:src="@drawable/ic_chevron_left_black_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layout_marginEnd="@dimen/Margin5"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="horizontal">
+
+                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/teacher"
+                    app:MyTextViewFont="IRANSans_Light" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/border_leftside_step_filter_path"
+                    android:layoutDirection="ltr"
+                    android:paddingStart="@dimen/Margin10"
+                    android:paddingEnd="@dimen/Margin5"
+                    android:src="@drawable/ic_chevron_left_black_24dp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin5"
+                android:text="@string/ApplyFilter"
+                android:layoutDirection="ltr"
+                app:backgroundTint="@color/green"
+                android:textColor="@color/pureWhite"
+                app:icon="@drawable/ic_done_filter"
+                app:iconTint="@color/pureWhite"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</RelativeLayout>
+

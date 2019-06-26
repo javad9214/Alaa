@@ -18,6 +18,8 @@
             <enum name="IranSansNumLight" value="13" />
             <enum name="IranSansNumMedium" value="14" />
             <enum name="IranSansNumUltraLight" value="15" />
+            <enum name="MaliBoldItalic" value="16" />
+            <enum name="RubiKMono" value="17" />
         </attr>
 
         <attr name="learning" format="string" />
@@ -62,6 +64,19 @@
             <enum name="NavLesson" value="4"/>
             <enum name="NavTeacher" value="5"/>
         </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="FilteringStepGuide" >
+
+        <attr name="FilterGuideCurrentStep" format="enum">
+            <enum name="NavEducationSystem" value="1"/>
+            <enum name="NavGrade" value="2"/>
+            <enum name="NavMajor" value="3"/>
+            <enum name="NavLesson" value="4"/>
+            <enum name="NavTeacher" value="5"/>
+        </attr>
+
     </declare-styleable>
 
 </resources>

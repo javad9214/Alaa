@@ -3,24 +3,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Views.UI.SearchPage.Filter.BaseFilterDialog"
     android:background="@color/pureWhite">
 
-    <com.example.alaa.Views.UI.CustomViews.FilterNavigation
-        android:id="@+id/NavFilterPath"
-        android:layoutDirection="rtl"
+
+
+    <com.example.alaa.Views.UI.CustomViews.FilteringStepGuide
+        android:id="@+id/FilteringStepGuide"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/Margin10"
-        android:layout_marginBottom="@dimen/Margin16"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layoutDirection="rtl"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <fragment
         android:id="@+id/mainNavigationFragment"
-        app:layout_constraintTop_toBottomOf="@id/NavFilterPath"
-        android:layout_marginTop="@dimen/Margin16"
+        app:layout_constraintTop_toBottomOf="@id/FilteringStepGuide"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
