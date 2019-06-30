@@ -2,6 +2,7 @@ package com.example.alaa.Views.UI.SearchPage
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -38,9 +39,16 @@ class SearchResults : Fragment()  , SearchBarComponent.BackListener {
     }
 
     override fun onBackClicked() {
-        Toast.makeText(context , "please fucking show ... " , Toast.LENGTH_SHORT).show()
+
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("===>" , "dialog fragment destroyed")
+    }
 
-
+    override fun onDetach() {
+        super.onDetach()
+        Log.i("===>" , "dialog fragment Detach")
+    }
 }

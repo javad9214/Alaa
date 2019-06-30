@@ -19,5 +19,8 @@ public class SearchActivity extends AppCompatActivity {
                 getSupportFragmentManager(), new SearchResults() , android.R.id.content);
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

@@ -38,13 +38,13 @@
 
             <ImageView
                 android:id="@+id/alaa_logo"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
                 android:contentDescription="TODO"
                 android:scaleType="fitCenter"
-                android:src="@drawable/alaa_logo_colored"
+                android:src="@drawable/alaa_logo_black"
                 android:visibility="visible" />
 
             <com.example.alaa.Views.UI.CustomViews.MyTextView
@@ -52,7 +52,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
                 android:text="@string/describe01"
                 android:textColor="@color/pureWhite"
                 android:textSize="20sp"

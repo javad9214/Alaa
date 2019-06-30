@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/app_name"
                     android:layout_centerVertical="true"
-                    android:textColor="@color/RedLight"
+                    android:textColor="@color/black"
                     android:layout_toEndOf="@id/alaa_logo"
                    app:MyTextViewFont="MaliBoldItalic"
                     android:textSize="25sp"/>

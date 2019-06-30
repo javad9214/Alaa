@@ -4,6 +4,9 @@ package com.example.alaa.Views.UI.SearchPage.Filter;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.NavHostController;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +32,10 @@ public class BaseFilterDialog extends BottomSheetDialogFragment {
         // Inflate the layout for this fragment
 
         view = inflater.inflate(R.layout.fragment_base_filter_dialog, container, false);
+
+        NavHostFragment hostFragment = (NavHostFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.mainNavigationFragment);
+        NavController navController = hostFragment.getNavController();
+        navController.popBackStack();
 
         return view ;
     }
