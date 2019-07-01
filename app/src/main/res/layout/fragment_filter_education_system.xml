@@ -28,12 +28,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/Margin5"
                 app:backgroundTint="@color/pureWhite"
-                android:textColor="@color/blackTitle"
+                android:textColor="@color/alaa5"
                 app:iconTint="@color/black"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                app:strokeColor="@color/alaa5"
                 android:text="@string/NewSystem"
-                app:MyButtonFont="IRANSans_Light"/>
+                app:MyButtonFont="IRANSans_Medium"/>
 
             <com.example.alaa.Views.UI.CustomViews.MyButton
                 android:id="@+id/FilterItemOldSystem"
@@ -42,12 +41,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/Margin5"
                 app:backgroundTint="@color/pureWhite"
-                android:textColor="@color/blackTitle"
+                android:textColor="@color/alaa5"
                 app:iconTint="@color/black"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                app:strokeColor="@color/alaa5"
                 android:text="@string/OldSystem"
-                app:MyButtonFont="IRANSans_Light"/>
+                app:MyButtonFont="IRANSans_Medium"/>
 
 
 

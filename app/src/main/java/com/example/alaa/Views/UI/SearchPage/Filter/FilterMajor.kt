@@ -7,50 +7,51 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.NavHostFragment
 import com.example.alaa.R
+import com.example.alaa.Views.UI.CustomViews.MyButton
 import com.example.alaa.Views.UI.CustomViews.SelectableCard
+import com.google.android.material.button.MaterialButton
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-
-class FilterMajor : Fragment() , SelectableCard.CardSelectListener {
+class FilterMajor : Fragment()  {
 
     private val TAG = "===>"
     private lateinit var myView : View
+    private lateinit var allMajor : MyButton
+    private lateinit var riazi : MyButton
+    private lateinit var tajrobi : MyButton
+    private lateinit var ensani : MyButton
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         myView = inflater.inflate(R.layout.fragment_filter_major, container, false)
 
+        allMajor = myView.findViewById(R.id.ItemMajorAll)
+        riazi = myView.findViewById(R.id.ItemMajorMath)
+        tajrobi = myView.findViewById(R.id.filterMajorItem_Tajrobi)
+        ensani = myView.findViewById(R.id.FilterItemMajor_Ensani)
 
-        initCards()
+
+        allMajor.setOnClickListener{
+            NavHostFragment.findNavController(this).navigate(R.id.filterLesson)
+        }
+
+        riazi.setOnClickListener{
+            NavHostFragment.findNavController(this).navigate(R.id.filterLesson)
+        }
+
+        tajrobi.setOnClickListener{
+            NavHostFragment.findNavController(this).navigate(R.id.filterLesson)
+        }
+
+        ensani.setOnClickListener{
+            NavHostFragment.findNavController(this).navigate(R.id.filterLesson)
+        }
+
         return myView
     }
 
 
-    private fun initCards (){
-
-        val cardMajorRiazi : SelectableCard = myView.findViewById(R.id.card_Major_Riazi)
-        val cardMajorTajrobi : SelectableCard = myView.findViewById(R.id.card_Major_Tajrobi)
-        val cardMajorEnsani : SelectableCard = myView.findViewById(R.id.card_Major_Ensani)
-
-
-        cardMajorRiazi.setCardSelectListener(this)
-        cardMajorTajrobi.setCardSelectListener(this)
-        cardMajorEnsani.setCardSelectListener(this)
-
-        cardMajorRiazi.setText(cardMajorRiazi.getText())
-        cardMajorTajrobi.setText(cardMajorTajrobi.getText())
-        cardMajorEnsani.setText(cardMajorEnsani.getText())
-    }
-
-    override fun onCardSelected(text: String?) {
-       // Navigation.findNavController(myView).navigate(R.id.action_filterGrade_to_filterMajor)
-        Toast.makeText(context , text , Toast.LENGTH_SHORT).show()
-    }
 
 }

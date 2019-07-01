@@ -5,10 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alaa.R
-import com.example.alaa.Views.UI.CustomViews.SelectableCard
-import com.google.android.material.button.MaterialButton
+import com.example.alaa.Views.UI.CustomViews.MyButton
 
-class FilterGradeAdapter(private val list: ArrayList<String>) : RecyclerView.Adapter<FilterGradeAdapter.ViewHolder>()  {
+class FilterItemAdapter(private val list: ArrayList<String>, private val listener: FilterItemListener) : RecyclerView.Adapter<FilterItemAdapter.ViewHolder>()  {
 
 
 
@@ -25,12 +24,18 @@ class FilterGradeAdapter(private val list: ArrayList<String>) : RecyclerView.Ada
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.button.text = list[position]
+        holder.button.setOnClickListener{
+            listener.itemClicked(list[position])
+        }
     }
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val button : MaterialButton = itemView.findViewById(R.id.filterItem)
+        val button : MyButton = itemView.findViewById(R.id.filterItem)
     }
 
+    interface FilterItemListener{
+        fun itemClicked(itemName : String)
+    }
 
 }

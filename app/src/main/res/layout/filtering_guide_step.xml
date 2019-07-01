@@ -22,6 +22,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/step_educationSystem"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/Margin5"
@@ -31,15 +32,17 @@
                 android:orientation="horizontal">
 
                 <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    android:id="@+id/textView_step_educationSystem"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:textColor="@color/alaa5"
+                    android:textColor="@color/green"
                     android:text="@string/EducationSystem"
-                    app:MyTextViewFont="IRANSans_Bold" />
+                    app:MyTextViewFont="IRANSans_Light" />
 
 
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_step_educationSystem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -47,12 +50,13 @@
                     android:layoutDirection="ltr"
                     android:paddingStart="@dimen/Margin10"
                     android:paddingEnd="@dimen/Margin5"
-                    android:tint="@color/alaa5"
+                    android:tint="@color/green"
                     android:src="@drawable/ic_chevron_left_black_24dp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/step_Grade"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/Margin10"
@@ -62,13 +66,16 @@
                 android:orientation="horizontal">
 
                 <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    android:id="@+id/textView_step_Grade"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:text="@string/Grade"
+                    android:textColor="@color/green"
                     app:MyTextViewFont="IRANSans_Light" />
 
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_step_Grade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -76,11 +83,13 @@
                     android:layoutDirection="ltr"
                     android:paddingStart="@dimen/Margin10"
                     android:paddingEnd="@dimen/Margin5"
+                    android:tint="@color/green"
                     android:src="@drawable/ic_chevron_left_black_24dp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/step_Major"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/Margin10"
@@ -90,13 +99,16 @@
                 android:orientation="horizontal">
 
                 <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    android:id="@+id/textView_step_major"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:text="@string/major"
-                    app:MyTextViewFont="IRANSans_Light" />
+                    android:textColor="@color/purple"
+                    app:MyTextViewFont="IRANSans_Medium" />
 
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_step_major"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -104,12 +116,13 @@
                     android:layoutDirection="ltr"
                     android:paddingStart="@dimen/Margin10"
                     android:paddingEnd="@dimen/Margin5"
-
+                    android:tint="@color/purple"
                     android:src="@drawable/ic_chevron_left_black_24dp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/step_lesson"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/Margin10"
@@ -119,13 +132,15 @@
                 android:orientation="horizontal">
 
                 <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    android:id="@+id/textView_step_lesson"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:text="@string/Lesson"
                     app:MyTextViewFont="IRANSans_Light" />
 
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_step_lesson"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -138,6 +153,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/step_teacher"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/Margin10"
@@ -148,13 +164,15 @@
                 android:orientation="horizontal">
 
                 <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    android:id="@+id/textView_step_teacher"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:text="@string/teacher"
                     app:MyTextViewFont="IRANSans_Light" />
 
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_step_teacher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -167,6 +185,7 @@
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/applyFiltering"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/Margin5"

@@ -4,76 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layoutDirection="rtl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Views.UI.SearchPage.Filter.FilterEducationSystem"
+    tools:context=".Views.UI.SearchPage.Filter.FilterMajor"
     android:background="@color/pureWhite">
 
 
-    <com.example.alaa.Views.UI.CustomViews.FilterNavigation
+    <LinearLayout
+        android:id="@+id/topRowMajor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/Margin16"
         app:layout_constraintTop_toTopOf="parent"
-        app:NavCurrentStep="NavMajor"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/Margin10"
+        android:layout_marginStart="@dimen/Margin10"
+        android:paddingBottom="@dimen/Margin10">
+
+        <com.example.alaa.Views.UI.CustomViews.MyButton
+            android:id="@+id/ItemMajorAll"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/Margin5"
+            app:backgroundTint="@color/pureWhite"
+            android:textColor="@color/alaa5"
+            app:iconTint="@color/black"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="@string/MajorAll"
+            app:MyButtonFont="IRANSans_Medium"/>
+
+        <com.example.alaa.Views.UI.CustomViews.MyButton
+            android:id="@+id/ItemMajorMath"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/Margin5"
+            app:backgroundTint="@color/pureWhite"
+            android:textColor="@color/alaa5"
+            app:iconTint="@color/black"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="@string/Major_Riazi"
+            app:MyButtonFont="IRANSans_Medium"/>
+
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/topRowMajor"
+        android:orientation="horizontal"
         android:gravity="center"
-        android:orientation="vertical">
+        android:layout_marginEnd="@dimen/Margin10"
+        android:layout_marginStart="@dimen/Margin10"
+        android:paddingBottom="@dimen/Margin10">
 
+        <com.example.alaa.Views.UI.CustomViews.MyButton
+            android:id="@+id/filterMajorItem_Tajrobi"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/Margin5"
+            app:backgroundTint="@color/pureWhite"
+            android:textColor="@color/alaa5"
+            app:iconTint="@color/black"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="@string/Major_Tajrobi"
+            app:MyButtonFont="IRANSans_Medium"/>
 
-        <com.example.alaa.Views.UI.CustomViews.SelectableCard
-            android:id="@+id/card_Major_Riazi"
-            android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/Margin10"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:SelectableCard_text="@string/Major_Riazi"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="@dimen/Margin10"/>
+        <com.example.alaa.Views.UI.CustomViews.MyButton
+            android:id="@+id/FilterItemMajor_Ensani"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/Margin5"
+            app:backgroundTint="@color/pureWhite"
+            android:textColor="@color/alaa5"
+            app:iconTint="@color/black"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="@string/Major_Ensani"
+            app:MyButtonFont="IRANSans_Medium"/>
 
-
-        <com.example.alaa.Views.UI.CustomViews.SelectableCard
-            android:id="@+id/card_Major_Tajrobi"
-            android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="@dimen/Margin10"
-            android:layout_marginBottom="@dimen/Margin10"
-            android:layout_gravity="center"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:SelectableCard_text="@string/tajrobi"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="@dimen/Margin10"/>
-
-        <com.example.alaa.Views.UI.CustomViews.SelectableCard
-            android:id="@+id/card_Major_Ensani"
-            android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="@dimen/Margin10"
-            android:layout_gravity="center"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:SelectableCard_text="@string/Major_Ensani"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="@dimen/Margin10"/>
 
 
     </LinearLayout>
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="@dimen/Margin16"
-        app:backgroundTint="@color/green"
-        android:src="@drawable/ic_done_filter"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
