@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alaa.R
-import com.example.alaa.Views.UI.SearchPage.Filter.Grade.FilterItemAdapter
 
 
 class FilterLesson : Fragment() , FilterItemAdapter.FilterItemListener {
@@ -36,7 +35,7 @@ class FilterLesson : Fragment() , FilterItemAdapter.FilterItemListener {
         val recyclerFilterLesson : RecyclerView = myView.findViewById(R.id.recyclerFilterLesson)
         recyclerFilterLesson.layoutManager = GridLayoutManager(context , 2 , RecyclerView.HORIZONTAL , false)
 
-        val adapter = FilterItemAdapter(lessonList , this)
+        val adapter = FilterItemAdapter(lessonList, this)
         recyclerFilterLesson.adapter = adapter
 
     }

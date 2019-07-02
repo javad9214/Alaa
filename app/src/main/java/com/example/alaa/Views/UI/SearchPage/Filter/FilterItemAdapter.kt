@@ -1,4 +1,4 @@
-package com.example.alaa.Views.UI.SearchPage.Filter.Grade
+package com.example.alaa.Views.UI.SearchPage.Filter
 
 import android.view.LayoutInflater
 import android.view.View
