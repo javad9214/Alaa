@@ -5,6 +5,7 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
+import android.widget.HorizontalScrollView
 import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
 import com.example.alaa.R
@@ -76,7 +77,7 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
     }
 
     fun updateFilterStep(step: Int) {
-        setStepActive(stepList[step])
+        scrollToCurrentStep(stepList[step])
         when (step) {
             0 -> {
                 setStepActive(stepList[0])
@@ -119,6 +120,11 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
             }
         }
 
+    }
+
+    private fun scrollToCurrentStep(myButton: MyButton){
+       val scrollview : HorizontalScrollView = myView.findViewById(R.id.scrollViewFilteringStep)
+        scrollview.smoothScrollTo(myButton.left , myView.top)
     }
 
     interface StepSelectListener {

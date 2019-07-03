@@ -1,6 +1,7 @@
 package com.example.alaa.Views.UI.SearchPage.Filter
 
 import android.os.Bundle
+import android.text.style.TextAppearanceSpan
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -18,13 +19,16 @@ import com.example.alaa.Views.UI.CustomViews.SelectableCard
 import com.google.android.material.button.MaterialButton
 import kotlinx.android.synthetic.main.fragment_base_filter_dialog.view.*
 
-class FilterEducationSystem() : Fragment()  {
+class FilterEducationSystem() : Fragment() , View.OnClickListener {
+
 
 
     private val TAG = "===>"
     private lateinit var myView : View
     private lateinit var NewSystem : MyButton
     private lateinit var OldSystem : MyButton
+    private lateinit var listener : FilterItemSelected
+
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -33,21 +37,30 @@ class FilterEducationSystem() : Fragment()  {
         NewSystem = myView.findViewById(R.id.FilterItemNewSystem)
         OldSystem = myView.findViewById(R.id.FilterItemOldSystem)
 
-        NewSystem.setOnClickListener{
+        NewSystem.setOnClickListener(this)
+        OldSystem.setOnClickListener(this)
 
+        Log.i(TAG , "what tha ...")
+        // Log.i(TAG  , NavHostFragment.findNavController(this).currentDestination?.id.toString())
+        // Navigation.createNavigateOnClickListener(R.id.action_filter_EducationSystem_to_filterGrade)
+        // NavHostFragment.findNavController(this).navigate(R.id.action_filter_EducationSystem_to_filterGrade)
 
-           // Log.i(TAG  , NavHostFragment.findNavController(this).currentDestination?.id.toString())
-           // Navigation.createNavigateOnClickListener(R.id.action_filter_EducationSystem_to_filterGrade)
-           // NavHostFragment.findNavController(this).navigate(R.id.action_filter_EducationSystem_to_filterGrade)
-            Navigation.findNavController(myView).navigate(R.id.filterGrade)
-        }
-
-        OldSystem.setOnClickListener{
-           // NavHostFragment.findNavController(this).navigate(R.id.action_filter_EducationSystem_to_filterGrade)
-        }
 
         return myView
     }
 
+    override fun onClick(v: View?) {
+
+
+        when(v?.id){
+            R.id.FilterItemNewSystem -> Navigation.findNavController(myView).navigate(R.id.filterGrade)
+            R.id.FilterItemOldSystem -> Navigation.findNavController(myView).navigate(R.id.filterGrade)
+        }
+    }
+
+    fun filterItemSelectListener (listener : FilterItemSelected , intTest : String){
+        this.listener = listener
+
+    }
 
 }

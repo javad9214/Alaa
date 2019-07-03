@@ -12,6 +12,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.alaa.R;
 import com.example.alaa.Views.UI.CustomViews.FilteringStepGuide;
@@ -22,12 +23,13 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 
 
-public class BaseFilterDialog extends BottomSheetDialogFragment implements FilteringStepGuide.StepSelectListener {
+public class BaseFilterDialog extends BottomSheetDialogFragment implements FilteringStepGuide.StepSelectListener , FilterItemSelected {
 
     private View view ;
     private FilteringStepGuide stepGuide ;
     public static final String TAG = "===>" ;
     private NavController navController ;
+    private FilterEducationSystem filterEducationSystem ;
 
     public BaseFilterDialog() {
         // Required empty public constructor
@@ -47,6 +49,8 @@ public class BaseFilterDialog extends BottomSheetDialogFragment implements Filte
 
         stepGuide = view.findViewById(R.id.FilteringStepGuide);
         stepGuide.setStepSelectListener(this);
+        filterEducationSystem = new FilterEducationSystem();
+        filterEducationSystem.filterItemSelectListener(this , "Fucking Kidding me ?");
 
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
@@ -102,4 +106,11 @@ public class BaseFilterDialog extends BottomSheetDialogFragment implements Filte
 
         }
     }
+
+    @Override
+    public void onItemSelected(String item) {
+        Toast.makeText(getContext() , item , Toast.LENGTH_SHORT).show();
+    }
+
+
 }
