@@ -5,16 +5,20 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.alaa.R;
+import com.example.alaa.ViewModels.FilteringViewModel;
 import com.example.alaa.Views.UI.CustomViews.FilteringStepGuide;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -25,11 +29,13 @@ import java.util.Objects;
 
 public class BaseFilterDialog extends BottomSheetDialogFragment implements FilteringStepGuide.StepSelectListener , FilterItemSelected {
 
+
     private View view ;
     private FilteringStepGuide stepGuide ;
     public static final String TAG = "===>" ;
     private NavController navController ;
     private FilterEducationSystem filterEducationSystem ;
+    private FilteringViewModel model ;
 
     public BaseFilterDialog() {
         // Required empty public constructor
@@ -42,6 +48,10 @@ public class BaseFilterDialog extends BottomSheetDialogFragment implements Filte
         // Inflate the layout for this fragment
 
         view = inflater.inflate(R.layout.fragment_base_filter_dialog, container, false);
+
+        model = ViewModelProviders.of(this).get(FilteringViewModel.class);
+        Log.i(TAG, "onCreateView: " + model.getCurrentStep() );
+
 
         NavHostFragment hostFragment = (NavHostFragment) Objects.requireNonNull(getActivity()).getSupportFragmentManager().findFragmentById(R.id.mainNavigationFragment);
         navController = Objects.requireNonNull(hostFragment).getNavController();

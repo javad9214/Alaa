@@ -1,23 +1,20 @@
 package com.example.alaa.Views.UI.SearchPage.Filter
 
+import android.app.Activity
 import android.os.Bundle
-import android.text.style.TextAppearanceSpan
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.NavDirections
-import androidx.navigation.Navigation
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.example.alaa.R
-import com.example.alaa.Views.UI.CustomViews.FilteringStepGuide
+import com.example.alaa.ViewModels.FilteringViewModel
 import com.example.alaa.Views.UI.CustomViews.MyButton
-import com.example.alaa.Views.UI.CustomViews.SelectableCard
-import com.google.android.material.button.MaterialButton
-import kotlinx.android.synthetic.main.fragment_base_filter_dialog.view.*
+import java.lang.ClassCastException
+
+
 
 class FilterEducationSystem() : Fragment() , View.OnClickListener {
 
@@ -28,6 +25,8 @@ class FilterEducationSystem() : Fragment() , View.OnClickListener {
     private lateinit var NewSystem : MyButton
     private lateinit var OldSystem : MyButton
     private lateinit var listener : FilterItemSelected
+    private var intTest: String = null.toString()
+    private lateinit var model : FilteringViewModel
 
 
 
@@ -40,7 +39,11 @@ class FilterEducationSystem() : Fragment() , View.OnClickListener {
         NewSystem.setOnClickListener(this)
         OldSystem.setOnClickListener(this)
 
-        Log.i(TAG , "what tha ...")
+        model = ViewModelProviders.of(this).get(FilteringViewModel ::class.java)
+        model.setCurrentStep(0)
+        Log.i(TAG , model.currentStep)
+
+
         // Log.i(TAG  , NavHostFragment.findNavController(this).currentDestination?.id.toString())
         // Navigation.createNavigateOnClickListener(R.id.action_filter_EducationSystem_to_filterGrade)
         // NavHostFragment.findNavController(this).navigate(R.id.action_filter_EducationSystem_to_filterGrade)
@@ -49,18 +52,35 @@ class FilterEducationSystem() : Fragment() , View.OnClickListener {
         return myView
     }
 
+    override fun onAttach(activity: Activity) {
+        super.onAttach(activity)
+
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception
+
+        try {
+            //listener = targetFragment as FilterItemSelected
+            Log.i(TAG , targetFragment.toString())
+        } catch (e: ClassCastException) {
+            throw ClassCastException("$activity must implement FilterItemSelected")
+        }
+
+    }
+
     override fun onClick(v: View?) {
 
 
         when(v?.id){
-            R.id.FilterItemNewSystem -> Navigation.findNavController(myView).navigate(R.id.filterGrade)
-            R.id.FilterItemOldSystem -> Navigation.findNavController(myView).navigate(R.id.filterGrade)
+            R.id.FilterItemNewSystem -> NavHostFragment.findNavController(this).navigate(R.id.filterGrade)
+            R.id.FilterItemOldSystem -> NavHostFragment.findNavController(this).navigate(R.id.filterGrade)
         }
     }
 
     fun filterItemSelectListener (listener : FilterItemSelected , intTest : String){
         this.listener = listener
+        this.intTest = intTest
 
     }
+
 
 }
