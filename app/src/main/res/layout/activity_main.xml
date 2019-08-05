@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.UI.HomeActivity">
+    tools:context=".views.ui.HomeActivity">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -53,7 +53,7 @@
                     android:src="@drawable/alaa_logo_black" />
 
 
-                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                <com.example.alaa.customViews.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/app_name"

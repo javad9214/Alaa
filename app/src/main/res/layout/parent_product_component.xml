@@ -9,7 +9,7 @@
 
 
 
-    <com.example.alaa.Views.UI.CustomViews.MyTextView
+    <com.example.alaa.customViews.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/discount_parent"
@@ -46,7 +46,7 @@
             </RelativeLayout>
 
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:id="@+id/title_parent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
                     android:gravity="end|center_vertical"
                     android:orientation="horizontal">
 
-                    <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    <com.example.alaa.customViews.MyTextView
                         android:id="@+id/realPrice_parent"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -82,7 +82,7 @@
                         android:textSize="16sp"
                         app:MyTextViewFont="IranSansNumUltraLight" />
 
-                    <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    <com.example.alaa.customViews.MyTextView
                         android:id="@+id/finalPrice_parent"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -92,7 +92,7 @@
                         android:textSize="18sp"
                         app:MyTextViewFont="IranSansNum" />
 
-                    <com.example.alaa.Views.UI.CustomViews.MyTextView
+                    <com.example.alaa.customViews.MyTextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"

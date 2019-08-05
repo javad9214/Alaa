@@ -6,18 +6,20 @@
     android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.UI.SearchPage.Filter.BaseFilterDialog"
+    tools:context=".views.ui.SearchPage.Filter.BaseFilterDialog"
     android:background="@color/pureWhite">
 
 
 
-    <com.example.alaa.Views.UI.CustomViews.FilteringStepGuide
+    <com.example.alaa.customViews.FilteringStepGuide
         android:id="@+id/FilteringStepGuide"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layoutDirection="rtl"
         app:layout_constraintTop_toTopOf="parent"
         app:FilterGuideCurrentStep="NavEducationSystem"/>
+
+
 
     <fragment
         android:id="@+id/mainNavigationFragment"

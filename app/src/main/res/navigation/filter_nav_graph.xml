@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filter_nav_graph"
+    app:startDestination="@id/filter_EducationSystem">
+
+    <fragment
+        android:id="@+id/filter_EducationSystem"
+        android:name="com.example.alaa.views.ui.SearchPage.Filter.FilterEducationSystem"
+        android:label="fragment_filter_EducationSystem"
+        tools:layout="@layout/fragment_filter_education_system">
+        <action
+            android:id="@+id/action_filter_EducationSystem_to_filterGrade"
+            app:destination="@id/filterGrade"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/filter_EducationSystem"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_filter_EducationSystem_to_filterMajor"
+            app:destination="@id/filterMajor"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterGrade"
+        android:name="com.example.alaa.views.ui.SearchPage.Filter.FilterGrade"
+        android:label="fragment_filter_grade"
+        tools:layout="@layout/fragment_filter_grade" >
+        <action
+            android:id="@+id/action_filterGrade_to_filterMajor"
+            app:destination="@id/filterMajor"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterMajor"
+        android:name="com.example.alaa.views.ui.SearchPage.Filter.FilterMajor"
+        android:label="fragment_filter_major"
+        tools:layout="@layout/fragment_filter_major" >
+        <action
+            android:id="@+id/action_filterMajor_to_filterLesson"
+            app:destination="@id/filterLesson"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterLesson"
+        android:name="com.example.alaa.views.ui.SearchPage.Filter.FilterLesson"
+        android:label="fragment_filter_lesson"
+        tools:layout="@layout/fragment_filter_lesson" >
+        <action
+            android:id="@+id/action_filterLesson_to_filterTeacher"
+            app:destination="@id/filterTeacher" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterTeacher"
+        android:name="com.example.alaa.views.ui.SearchPage.Filter.FilterTeacher"
+        android:label="fragment_filter_teacher"
+        tools:layout="@layout/fragment_filter_teacher" />
+</navigation>

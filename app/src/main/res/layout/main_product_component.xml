@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="@dimen/Margin10"
+    app:cardCornerRadius="@dimen/box_corner_radius">
+
+
+
+
+        <com.example.alaa.customViews.MyTextView
+            android:id="@+id/discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingStart="@dimen/Margin10"
+            android:paddingEnd="@dimen/Margin10"
+            android:text="تخفیف  40 %"
+            android:textColor="@color/alaa5"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:MyTextViewFont="estedad" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <com.example.alaa.customViews.MyTextView
+                android:id="@+id/realPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layout_marginBottom="@dimen/Margin5"
+                android:gravity="center"
+                android:text=" (49,000) تومان"
+                android:textColor="@color/Red"
+                android:textSize="22sp"
+                app:MyTextViewFont="IranSansNumUltraLight" />
+
+
+            <com.example.alaa.customViews.MyTextView
+                android:id="@+id/salePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/Margin16"
+                android:layout_marginBottom="@dimen/Margin16"
+                android:gravity="center"
+                android:paddingStart="@dimen/Margin16"
+                android:paddingEnd="@dimen/Margin5"
+                android:text="29,400 تومان"
+                android:textColor="@color/green"
+                android:textSize="26sp"
+                app:MyTextViewFont="IranSansNumLight" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="@dimen/Margin5" />
+
+                <com.example.alaa.customViews.MyTextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/Margin10"
+                    android:gravity="start"
+                    android:text="@string/demoTitle"
+                    android:textColor="@color/blackTitle"
+                    android:textSize="16sp"
+                    app:MyTextViewFont="IRANSans_Bold" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/Product_photo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/product_image"
+                android:scaleType="fitXY"
+                android:src="@drawable/dum05" />
+
+        </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

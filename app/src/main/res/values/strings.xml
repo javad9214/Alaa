@@ -85,7 +85,7 @@
     <string name="EducationSystem">نظام آموزشی</string>
     <string name="NewSystem">نظام جدید</string>
     <string name="OldSystem">نظام قدیم</string>
-    
+
     <string name="Grade">مقطع</string>
     <string name="GradeNew10th">دهم</string>
     <string name="GradeNew11th">یازدهم</string>
@@ -97,18 +97,17 @@
     <string name="GradeOld3">سوم دبیرستان</string>
     <string name="GradeOld4">چهارم دبیرستان</string>
     <string name="GradeAll">همه مقاطع</string>
-    
+
     <string name="Major">رشته</string>
     <string name="Major_Riazi">ریاضی</string>
     <string name="Major_Tajrobi">تجربی</string>
     <string name="Major_Ensani">انسانی</string>
     <string name="MajorAll">همه رشته ها</string>
-    
+
     <string name="Lesson">درس</string>
     <string name="teacher">دبیر</string>
     <string name="ApplyFilter">اعمال</string>
-    
-    
+
 
     //others
     <string name="BracketLeft"> ( </string>

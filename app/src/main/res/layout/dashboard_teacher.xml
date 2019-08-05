@@ -34,7 +34,7 @@
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_teacher_large" />
 
-        <com.example.alaa.Views.UI.CustomViews.MyTextView
+        <com.example.alaa.customViews.MyTextView
             android:id="@+id/tx_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

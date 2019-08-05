@@ -14,13 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Views.UI.SearchPage.SearchActivity"
-            android:screenOrientation="portrait"/>
+
         <activity
-            android:name=".Views.UI.ProductPage.ProductPage"
+            android:name=".views.ui.SearchPage.SearchActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Views.UI.Login"
+            android:name=".views.ui.ProductPage.ProductPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".views.ui.login.Login"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -30,10 +32,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Views.UI.VideoPage"
+            android:name=".views.ui.VideoPage"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Views.UI.HomeActivity"
+            android:name=".views.ui.HomeActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
     </application>

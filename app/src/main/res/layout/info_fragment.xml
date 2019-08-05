@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -53,7 +53,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                <com.example.alaa.customViews.MyTextView
                     android:id="@+id/tx_name"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -95,7 +95,7 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -120,7 +120,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                <com.example.alaa.customViews.MyTextView
                     android:id="@+id/tx_major"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -161,7 +161,7 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -186,7 +186,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                <com.example.alaa.customViews.MyTextView
                     android:id="@+id/tx_gender"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -227,7 +227,7 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -252,7 +252,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                <com.example.alaa.customViews.MyTextView
                     android:id="@+id/tx_phone"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -300,7 +300,7 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -325,7 +325,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                <com.example.alaa.customViews.MyTextView
                     android:id="@+id/tx_mail"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -373,7 +373,7 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -398,7 +398,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                <com.example.alaa.customViews.MyTextView
                     android:id="@+id/tx_postalCode"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -447,7 +447,7 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -472,7 +472,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                <com.example.alaa.customViews.MyTextView
                     android:id="@+id/tx_address"
                     android:layout_width="0dp"
                     android:layout_weight="3"

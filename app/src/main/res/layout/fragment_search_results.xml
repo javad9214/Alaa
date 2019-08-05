@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
-    tools:context=".Views.UI.SearchPage.SearchResults">
+    tools:context=".views.ui.SearchPage.SearchResults">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content">
 
 
-            <com.example.alaa.Views.UI.SearchPage.SearchBarComponent
+            <com.example.alaa.views.ui.SearchPage.SearchBarComponent
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

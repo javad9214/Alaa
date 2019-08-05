@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.example.alaa.Views.UI.CustomViews.MyButton
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layoutDirection="rtl"
-    android:id="@+id/filterItem"
-    android:layout_width="150dp"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/Margin16"
-    android:layout_marginEnd="@dimen/Margin5"
-    app:backgroundTint="@color/pureWhite"
-    android:textColor="@color/alaa5"
-    app:iconTint="@color/black"
-    app:MyButtonFont="IRANSans_Medium"
-    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-    android:text="@string/NewSystem" />
+<com.example.alaa.customViews.MyButton
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layoutDirection="rtl"
+android:id="@+id/filterItem"
+android:layout_width="150dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="@dimen/Margin16"
+android:layout_marginEnd="@dimen/Margin5"
+app:backgroundTint="@color/pureWhite"
+android:textColor="@color/alaa5"
+app:iconTint="@color/black"
+app:MyButtonFont="IRANSans_Medium"
+style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+android:text="@string/NewSystem" />

@@ -27,7 +27,7 @@
 
 
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:id="@+id/realFinalPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -38,7 +38,7 @@
                 android:textSize="18sp"
                 app:MyTextViewFont="IranSansNumMedium" />
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:id="@+id/finalSalePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"

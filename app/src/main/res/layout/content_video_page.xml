@@ -45,7 +45,7 @@
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/ic_open_book_title" />
 
-                <com.example.alaa.Views.UI.CustomViews.MyTextView
+                <com.example.alaa.customViews.MyTextView
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp">
 
-                        <com.example.alaa.Views.UI.CustomViews.MyTextView
+                        <com.example.alaa.customViews.MyTextView
                             android:id="@+id/teacher"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -160,7 +160,7 @@
 
             </LinearLayout>
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:id="@+id/Description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

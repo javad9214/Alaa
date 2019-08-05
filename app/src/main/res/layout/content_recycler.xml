@@ -23,7 +23,7 @@
 
 
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:id="@+id/tx_title"
                 android:layout_width="0dp"
                 android:layout_weight="2"
@@ -63,7 +63,7 @@
                 android:src="@drawable/ic_video_play_small"
                 android:layout_gravity="center_vertical"/>
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:id="@+id/tx_views"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -82,7 +82,7 @@
 
 
 
-            <com.example.alaa.Views.UI.CustomViews.MyTextView
+            <com.example.alaa.customViews.MyTextView
                 android:id="@+id/tx_teacher"
                 android:layout_width="0dp"
                 android:layout_weight="2"

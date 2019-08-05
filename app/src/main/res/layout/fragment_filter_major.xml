@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layoutDirection="rtl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Views.UI.SearchPage.Filter.FilterMajor"
+    tools:context=".views.ui.SearchPage.Filter.FilterMajor"
     android:background="@color/pureWhite">
 
 
@@ -22,7 +22,7 @@
         android:layout_marginStart="@dimen/Margin10"
         android:paddingBottom="@dimen/Margin10">
 
-        <com.example.alaa.Views.UI.CustomViews.MyButton
+        <com.example.alaa.customViews.MyButton
             android:id="@+id/ItemMajorAll"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -35,7 +35,7 @@
             android:text="@string/MajorAll"
             app:MyButtonFont="IRANSans_Medium"/>
 
-        <com.example.alaa.Views.UI.CustomViews.MyButton
+        <com.example.alaa.customViews.MyButton
             android:id="@+id/ItemMajorMath"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -62,7 +62,7 @@
         android:layout_marginStart="@dimen/Margin10"
         android:paddingBottom="@dimen/Margin10">
 
-        <com.example.alaa.Views.UI.CustomViews.MyButton
+        <com.example.alaa.customViews.MyButton
             android:id="@+id/filterMajorItem_Tajrobi"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -75,7 +75,7 @@
             android:text="@string/Major_Tajrobi"
             app:MyButtonFont="IRANSans_Medium"/>
 
-        <com.example.alaa.Views.UI.CustomViews.MyButton
+        <com.example.alaa.customViews.MyButton
             android:id="@+id/FilterItemMajor_Ensani"
             android:layout_width="0dp"
             android:layout_weight="1"
