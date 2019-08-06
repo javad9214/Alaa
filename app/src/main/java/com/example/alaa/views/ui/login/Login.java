@@ -1,32 +1,5 @@
 package com.example.alaa.views.ui.login;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
-import androidx.databinding.DataBindingUtil;
-import androidx.interpolator.view.animation.FastOutLinearInInterpolator;
-import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.transition.ChangeBounds;
-import androidx.transition.Fade;
-import androidx.transition.Transition;
-import androidx.transition.TransitionManager;
-import androidx.transition.TransitionSet;
-
-import com.example.alaa.R;
-import com.example.alaa.databinding.ActivityLoginBinding;
-import com.example.alaa.tools.KeyboardHeight.KeyboardHeightObserver;
-import com.example.alaa.tools.KeyboardHeight.KeyboardHeightProvider;
-import com.example.alaa.tools.TextWatcher.MultiTextWatcher;
-import com.example.alaa.tools.TextWatcher.TextWatcherWithInstance;
-import com.example.alaa.tools.Transitions.MyTransition;
-import com.example.alaa.views.ui.HomeActivity;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.chip.Chip;
-import com.google.android.material.chip.ChipGroup;
-import com.transitionseverywhere.extra.Scale;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -43,14 +16,40 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.interpolator.view.animation.FastOutLinearInInterpolator;
+import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.transition.ChangeBounds;
+import androidx.transition.Fade;
+import androidx.transition.Transition;
+import androidx.transition.TransitionManager;
+import androidx.transition.TransitionSet;
+
+import com.example.alaa.R;
 import com.example.alaa.customViews.MyTextView;
+import com.example.alaa.databinding.ActivityLoginBinding;
+import com.example.alaa.tools.KeyboardHeight.KeyboardHeightObserver;
+import com.example.alaa.tools.KeyboardHeight.KeyboardHeightProvider;
+import com.example.alaa.tools.TextWatcher.MultiTextWatcher;
+import com.example.alaa.tools.TextWatcher.TextWatcherWithInstance;
+import com.example.alaa.tools.Transitions.MyTransition;
+import com.example.alaa.views.ui.HomeActivity;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.textfield.TextInputEditText;
+import com.transitionseverywhere.extra.Scale;
 
 import java.util.Objects;
 
 public class Login extends AppCompatActivity implements View.OnClickListener, ChipGroup.OnCheckedChangeListener, View.OnFocusChangeListener, KeyboardHeightObserver {
 
-    public static final String TAG = "===>";
+    public static final String TAG = "Alaa\\Login";
     private TextInputEditText ed_phoneNumber, ed_personalNumber, ed_NameSignUp, ed_LastNameSignUp, ed_PhoneSignUp, ed_PersonalNumberSignUp, ed_EmailSignUp;
     private AppCompatImageView img_phoneNumber, img_personalNumber;
     private AppCompatImageView img_NameSignUp, img_LastNameSignUp, img_PhoneSignUp, img_PersonalNumberSignUp, img_EmailSignUp;
@@ -63,26 +62,24 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
     private ViewGroup transitionLogoContainer;
     private ViewGroup loginContainer;
     private MyTransition myTransition;
-    private ChipGroup chipGroup; // chip group for select major
     private Chip chip_math, chip_tajrobi, chip_ensani;
     private ColorStateList chipBgColor;
     private KeyboardHeightProvider keyboardHeightProvider;
 
-    private LoginViewModel viewModel ;
-    private ActivityLoginBinding binding ;
+    private AuthViewModel viewModel;
+    private ActivityLoginBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 
+        viewModel = ViewModelProviders.of(this).get(AuthViewModel.class);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
 
-        viewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
-        binding = DataBindingUtil.setContentView(this , R.layout.activity_login);
-        binding.setLoginViewModel(viewModel);
+        binding.setAuthViewModel(viewModel);
         binding.setLifecycleOwner(this);
 
-        onGenderSelected();
         onGoToSignUpLogin();
 
         init();
@@ -90,29 +87,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         editTextCounter();
 
 
-
     }
 
-    /** Method for select gender in SignUp Form ... */
-    private void onGenderSelected(){
-        viewModel.isMale().observe(this, isMale -> {
-            if (isMale) {
-                binding.imgProfileBoySignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileBoySignUp.getContext() ,R.drawable.ic_account_large));
-                binding.imgProfileGirlSignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileGirlSignUp.getContext(), R.drawable.ic_girl_profile_black));
-            }else{
-                binding.imgProfileGirlSignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileGirlSignUp.getContext(), R.drawable.ic_girl_profile));
-                binding.imgProfileBoySignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileBoySignUp.getContext() ,R.drawable.ic_profile_boy_black));
-            }
-        });
-        binding.imgProfileBoySignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileBoySignUp.getContext() ,R.drawable.ic_profile_boy_black));
+
+
+    /**
+     * method for change visibility from login to signUp or SignUp to Login
+     */
+    private void onGoToSignUpLogin() {
     }
 
-    /** method for change visibility from login to signUp or SignUp to Login */
-    private void onGoToSignUpLogin(){
-        viewModel.isLogin().observe(this , isLogin -> {
-
-        });
-    }
 
     private void init() {
 
@@ -150,8 +134,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         img_profile_Boy.setOnClickListener(this);
         img_profile_Girl = cardSignUp.findViewById(R.id.img_profile_Girl_signUp);
         img_profile_Girl.setOnClickListener(this);
-        chipGroup = findViewById(R.id.chipGroup_Major);
-        chipGroup.setOnCheckedChangeListener(this);
+
+
         chip_math = findViewById(R.id.chip_math);
         chip_tajrobi = findViewById(R.id.chip_tajrobi);
         chip_ensani = findViewById(R.id.chip_ensani);
@@ -198,6 +182,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         Log.i(TAG, "login: " + viewModel.getName().getValue());
         Log.i(TAG, "login: " + viewModel.getLastName().getValue());
         Log.i(TAG, "login: " + viewModel.getPersonalNumber().getValue());
+        Log.i(TAG, "login: " + viewModel.getMajor().toString());
 
         Intent intent = new Intent(Login.this, HomeActivity.class);
         startActivity(intent);
@@ -316,7 +301,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 .setCallBack(new TextWatcherWithInstance() {
                     @Override
                     public void afterTextChanged(EditText editText, Editable editable) {
-                        if (Objects.requireNonNull(ed_NameSignUp.getText()).length() >= 1) img_NameSignUp.setImageResource(R.drawable.ic_name_signup_colored);
+                        if (Objects.requireNonNull(ed_NameSignUp.getText()).length() >= 1)
+                            img_NameSignUp.setImageResource(R.drawable.ic_name_signup_colored);
                         else img_NameSignUp.setImageResource(R.drawable.ic_name_signup);
                     }
                 });
@@ -325,7 +311,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 .setCallBack(new TextWatcherWithInstance() {
                     @Override
                     public void afterTextChanged(EditText editText, Editable editable) {
-                        if (Objects.requireNonNull(ed_LastNameSignUp.getText()).length() >= 1) img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup_colored);
+                        if (Objects.requireNonNull(ed_LastNameSignUp.getText()).length() >= 1)
+                            img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup_colored);
                         else img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup);
                     }
                 });
@@ -334,7 +321,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 .setCallBack(new TextWatcherWithInstance() {
                     @Override
                     public void afterTextChanged(EditText editText, Editable editable) {
-                        if (Objects.requireNonNull(ed_PhoneSignUp.getText()).length() == 11) img_PhoneSignUp.setImageResource(R.drawable.ic_mobile_color);
+                        if (Objects.requireNonNull(ed_PhoneSignUp.getText()).length() == 11)
+                            img_PhoneSignUp.setImageResource(R.drawable.ic_mobile_color);
                         else img_PhoneSignUp.setImageResource(R.drawable.ic_mobile);
                     }
                 });
@@ -343,7 +331,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 .setCallBack(new TextWatcherWithInstance() {
                     @Override
                     public void afterTextChanged(EditText editText, Editable editable) {
-                        if (Objects.requireNonNull(ed_PersonalNumberSignUp.getText()).length() == 10) img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code_colored);
+                        if (Objects.requireNonNull(ed_PersonalNumberSignUp.getText()).length() == 10)
+                            img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code_colored);
                         else img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code);
                     }
                 });
@@ -352,11 +341,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 .setCallBack(new TextWatcherWithInstance() {
                     @Override
                     public void afterTextChanged(EditText editText, Editable editable) {
-                        if (Objects.requireNonNull(ed_EmailSignUp.getText()).length() >= 1) img_EmailSignUp.setImageResource(R.drawable.ic_email_colored);
+                        if (Objects.requireNonNull(ed_EmailSignUp.getText()).length() >= 1)
+                            img_EmailSignUp.setImageResource(R.drawable.ic_email_colored);
                         else img_EmailSignUp.setImageResource(R.drawable.ic_mail_signup);
                     }
                 });
-
 
 
     }
