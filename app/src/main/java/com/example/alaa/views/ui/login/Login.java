@@ -80,11 +80,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         binding.setAuthViewModel(viewModel);
         binding.setLifecycleOwner(this);
 
-        onGoToSignUpLogin();
+        //onGoToSignUpLogin();
 
-        init();
-        myTransition = new MyTransition();
-        editTextCounter();
+       // init();
+       // myTransition = new MyTransition();
+       // editTextCounter();
 
 
     }
@@ -99,60 +99,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
 
 
     private void init() {
-
-        ed_personalNumber = findViewById(R.id.ed_personalNumber);
-        ed_phoneNumber = findViewById(R.id.ed_phoneNumber);
-
-        img_personalNumber = findViewById(R.id.img_personalNumber);
-        img_phoneNumber = findViewById(R.id.img_phoneNumber);
-
-
-        transitionLogoContainer = findViewById(R.id.transition_logo);
-        img_Alaa_logo = transitionLogoContainer.findViewById(R.id.alaa_logo);
-        describe1 = transitionLogoContainer.findViewById(R.id.login_describe1);
-        describe2 = transitionLogoContainer.findViewById(R.id.login_describe2);
-
-
-        loginContainer = findViewById(R.id.loginContainer);
-        cardLogin = loginContainer.findViewById(R.id.card_login);
-        cardSignUp = loginContainer.findViewById(R.id.card_signUp);
-
-
-        doneIcon = cardLogin.findViewById(R.id.done_icon);
-        doneIcon2 = cardLogin.findViewById(R.id.done_icon2);
-        img_profile = cardLogin.findViewById(R.id.img_profile);
-
-        btn_login = cardLogin.findViewById(R.id.btn_login);
-        btn_GoToSignUp = cardLogin.findViewById(R.id.btn_GoToSignUpCard);
-        btn_GoToSignUp.setOnClickListener(this);
-        btn_GoToLogin = cardSignUp.findViewById(R.id.btn_GoToLoginCard);
-        btn_GoToLogin.setOnClickListener(this);
-
-
-        //SignUp
-        img_profile_Boy = cardSignUp.findViewById(R.id.img_profile_Boy_signUp);
-        img_profile_Boy.setOnClickListener(this);
-        img_profile_Girl = cardSignUp.findViewById(R.id.img_profile_Girl_signUp);
-        img_profile_Girl.setOnClickListener(this);
-
-
-        chip_math = findViewById(R.id.chip_math);
-        chip_tajrobi = findViewById(R.id.chip_tajrobi);
-        chip_ensani = findViewById(R.id.chip_ensani);
-        chipBgColor = chip_math.getChipBackgroundColor();
-
-        ed_NameSignUp = findViewById(R.id.ed_Name_signUp);
-        ed_LastNameSignUp = findViewById(R.id.ed_LastName_signUp);
-        ed_PhoneSignUp = findViewById(R.id.ed_phoneNumber_signUp);
-        ed_PersonalNumberSignUp = findViewById(R.id.ed_personalNumber_signUp);
-        ed_EmailSignUp = findViewById(R.id.ed_Email_signUp);
-
-        img_NameSignUp = findViewById(R.id.img_Name_signUp);
-        img_LastNameSignUp = findViewById(R.id.img_LastName_signUp);
-        img_PhoneSignUp = findViewById(R.id.img_phoneNumber_signUp);
-        img_PersonalNumberSignUp = findViewById(R.id.img_personalNumber_signUp);
-        img_EmailSignUp = findViewById(R.id.img_Email_signUp);
-
 
         keyboardHeightProvider = new KeyboardHeightProvider(this);
 
@@ -433,17 +379,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         else cardTransition(true);
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        keyboardHeightProvider.setKeyboardHeightObserver(null);
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        keyboardHeightProvider.setKeyboardHeightObserver(this);
-    }
 
     @Override
     protected void onDestroy() {
