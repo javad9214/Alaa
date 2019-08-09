@@ -11,7 +11,9 @@ import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.*
 
-class TotalPrice_Component (context: Context, attributeSet: AttributeSet) : CardView(context , attributeSet){
+class TotalPriceComponent (context: Context, attributeSet: AttributeSet) : CardView(context , attributeSet){
+
+    private var isDiscounted = false
 
     init {
         View.inflate(context , R.layout.total_price_component , this)
@@ -21,13 +23,23 @@ class TotalPrice_Component (context: Context, attributeSet: AttributeSet) : Card
         val realPrice : com.example.alaa.customViews.MyTextView = findViewById(R.id.realFinalPrice)
         val salePrice : com.example.alaa.customViews.MyTextView = findViewById(R.id.finalSalePrice)
 
+
         val bracketLeft: String = res.getString(R.string.BracketLeft)
         val bracketRight: String = res.getString(R.string.BracketRight)
 
-        val attributes = context.obtainStyledAttributes(attributeSet , R.styleable.TotalPrice_Component)
+        val attributes = context.obtainStyledAttributes(attributeSet , R.styleable.TotalPriceComponent)
 
-        realPrice.text =  bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.TotalPrice_Component_finalRealPrice))) + bracketRight
-        salePrice.text =  setCurrency(toDouble(attributes.getString(R.styleable.TotalPrice_Component_finalSalePrice))) + " " +  res.getString(R.string.Toman)
+        isDiscounted = attributes.getBoolean(R.styleable.TotalPriceComponent_isDiscounted , false)
+        val realPriceSize = attributes.getDimension(R.styleable.TotalPriceComponent_realPriceSize , 18F)
+        val salePriceSize = attributes.getDimension(R.styleable.TotalPriceComponent_realPriceSize , 21F)
+
+        if (isDiscounted) realPrice.visibility = View.GONE else View.VISIBLE
+
+        realPrice.text =  bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalRealPrice))) + bracketRight
+        salePrice.text =  setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalSalePrice))) + " " +  res.getString(R.string.Toman)
+
+        realPrice.textSize = realPriceSize
+        salePrice.textSize = salePriceSize
 
         strikeThrough(realPrice)
 

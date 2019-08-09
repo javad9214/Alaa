@@ -10,7 +10,7 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.ScrollView;
 
 import com.example.alaa.customViews.MyTextView;
-import com.example.alaa.views.ui.HomeActivity;
+import com.example.alaa.views.ui.MainActivity;
 import com.example.alaa.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
@@ -42,7 +42,7 @@ public class ProductPage extends AppCompatActivity {
     }
 
     public void GoHome(View view) {
-        Intent intent = new Intent(ProductPage.this, HomeActivity.class);
+        Intent intent = new Intent(ProductPage.this, MainActivity.class);
         startActivity(intent);
     }
 

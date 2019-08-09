@@ -3,7 +3,6 @@ package com.example.alaa.views.ui.login;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.text.Editable;
@@ -19,8 +18,8 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
-import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.interpolator.view.animation.FastOutLinearInInterpolator;
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
 import androidx.lifecycle.ViewModelProviders;
@@ -32,13 +31,12 @@ import androidx.transition.TransitionSet;
 
 import com.example.alaa.R;
 import com.example.alaa.customViews.MyTextView;
-import com.example.alaa.databinding.ActivityLoginBinding;
 import com.example.alaa.tools.KeyboardHeight.KeyboardHeightObserver;
 import com.example.alaa.tools.KeyboardHeight.KeyboardHeightProvider;
 import com.example.alaa.tools.TextWatcher.MultiTextWatcher;
 import com.example.alaa.tools.TextWatcher.TextWatcherWithInstance;
 import com.example.alaa.tools.Transitions.MyTransition;
-import com.example.alaa.views.ui.HomeActivity;
+import com.example.alaa.views.ui.MainActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
@@ -63,11 +61,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
     private ViewGroup loginContainer;
     private MyTransition myTransition;
     private Chip chip_math, chip_tajrobi, chip_ensani;
-    private ColorStateList chipBgColor;
+
     private KeyboardHeightProvider keyboardHeightProvider;
 
     private AuthViewModel viewModel;
-    private ActivityLoginBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,26 +73,33 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
 
 
         viewModel = ViewModelProviders.of(this).get(AuthViewModel.class);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+        LoginFragment loginFragment = new LoginFragment();
+        SignUpFragment signUpFragment = new SignUpFragment();
 
-        binding.setAuthViewModel(viewModel);
-        binding.setLifecycleOwner(this);
 
-        //onGoToSignUpLogin();
 
-       // init();
-       // myTransition = new MyTransition();
-       // editTextCounter();
+
+        viewModel.getSelectedPage().observe(this, page -> {
+            if (page == 0){
+                replaceFragment(loginFragment);
+            }else {
+                replaceFragment(signUpFragment);
+            }
+        });
+
+
 
 
     }
 
 
 
-    /**
-     * method for change visibility from login to signUp or SignUp to Login
-     */
-    private void onGoToSignUpLogin() {
+    private void replaceFragment(Fragment fragment){
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out , android.R.animator.fade_in, android.R.animator.fade_out);
+        transaction.replace(android.R.id.content , fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 
@@ -122,7 +127,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
 //                        findViewById(R.id.img_profile));
 //
 //
-//        Intent intent = new Intent(Login.this , HomeActivity.class);
+//        Intent intent = new Intent(Login.this , MainActivity.class);
 //        EasyTransition.startActivity(intent , options);
 
         Log.i(TAG, "login: " + viewModel.getName().getValue());
@@ -130,7 +135,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         Log.i(TAG, "login: " + viewModel.getPersonalNumber().getValue());
         Log.i(TAG, "login: " + viewModel.getMajor().toString());
 
-        Intent intent = new Intent(Login.this, HomeActivity.class);
+        Intent intent = new Intent(Login.this, MainActivity.class);
         startActivity(intent);
 
     }
@@ -336,22 +341,22 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
 
             case R.id.chip_math:
                 chip_math.setChipBackgroundColorResource(R.color.alaa1);
-                chip_tajrobi.setChipBackgroundColor(chipBgColor);
-                chip_ensani.setChipBackgroundColor(chipBgColor);
+                //chip_tajrobi.setChipBackgroundColor(chipBgColor);
+               // chip_ensani.setChipBackgroundColor(chipBgColor);
                 break;
 
 
             case R.id.chip_tajrobi:
                 chip_tajrobi.setChipBackgroundColorResource(R.color.alaa1);
-                chip_ensani.setChipBackgroundColor(chipBgColor);
-                chip_math.setChipBackgroundColor(chipBgColor);
+               // chip_ensani.setChipBackgroundColor(chipBgColor);
+               // chip_math.setChipBackgroundColor(chipBgColor);
                 break;
 
 
             case R.id.chip_ensani:
                 chip_ensani.setChipBackgroundColorResource(R.color.alaa1);
-                chip_math.setChipBackgroundColor(chipBgColor);
-                chip_tajrobi.setChipBackgroundColor(chipBgColor);
+                //chip_math.setChipBackgroundColor(chipBgColor);
+                //chip_tajrobi.setChipBackgroundColor(chipBgColor);
                 break;
         }
     }
@@ -394,5 +399,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
     public static int dpToPx(float dp, Context context) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
     }
+
 
 }

@@ -8,7 +8,6 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.alaa.R
 
-
 class AuthViewModel : ViewModel() {
 
 
@@ -27,6 +26,16 @@ class AuthViewModel : ViewModel() {
 
     var isMale = MutableLiveData(true)
 
+    /**
+     * 0 : Login
+     * 1: signUp
+     */
+    var selectedPage = MutableLiveData(0)
+
+
+    fun select(page: Int) {
+        selectedPage.run { setValue(page) }
+    }
 
     var gender: LiveData<Gender> = Transformations.map(isMale) {
         if (it)
@@ -39,7 +48,7 @@ class AuthViewModel : ViewModel() {
         this.isMale.value = isMale
     }
 
-    fun OnCheckedChangeListener(button: CompoundButton, isChecked: Boolean) {
+    fun onCheckedChangeListener(button: CompoundButton, isChecked: Boolean) {
         when (button.id) {
             R.id.chip_math -> this.major = Major.RIAZI
             R.id.chip_tajrobi -> this.major = Major.TAJROBI

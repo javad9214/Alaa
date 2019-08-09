@@ -56,10 +56,13 @@
     </declare-styleable>
 
 
-    <declare-styleable name="TotalPrice_Component">
+    <declare-styleable name="TotalPriceComponent">
 
         <attr name="finalRealPrice" format="string" />
         <attr name="finalSalePrice" format="string" />
+        <attr name="realPriceSize" format="dimension"/>
+        <attr name="salePriceSize" format="dimension"/>
+        <attr name="isDiscounted" format="boolean"/>
 
     </declare-styleable>
 

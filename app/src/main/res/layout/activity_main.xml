@@ -1,89 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".views.ui.HomeActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+        <variable
+            name="mainViewModel"
+            type="com.example.alaa.views.ui.main.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stateListAnimator="@animator/appbar_always_elevated"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        android:layout_height="match_parent"
+        tools:context=".views.ui.MainActivity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@animator/appbar_always_elevated"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
-            <RelativeLayout
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginRight="20dp">
+                android:layout_height="?attr/actionBarSize">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/search_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleX="-1"
-                    android:layout_marginEnd="20dp"
-                    android:layout_gravity="start"
-                    android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/img_profile"
-                    android:background="?selectableItemBackgroundBorderless"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="GoTOSearch"
-                    android:src="@drawable/ic_searching_btn" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp">
 
-
-                <ImageView
-                    android:id="@+id/alaa_logo"
-                    android:layout_width="70dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="center"
-                    android:scaleType="centerInside"
-                    android:scaleY="3"
-                    android:scaleX="3.75"
-                    android:src="@drawable/alaa_logo_black" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/search_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="-1"
+                        android:layout_marginEnd="20dp"
+                        android:layout_gravity="start"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_profile"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="GoTOSearch"
+                        android:src="@drawable/ic_searching_btn" />
 
 
-                <com.example.alaa.customViews.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    android:layout_centerVertical="true"
-                    android:textColor="@color/black"
-                    android:layout_toEndOf="@id/alaa_logo"
-                   app:MyTextViewFont="MaliBoldItalic"
-                    android:textSize="25sp"/>
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_profile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="5dp"
-                    android:background="?selectableItemBackgroundBorderless"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="Onclick_dashboard"
-                    android:src="@drawable/ic_account" />
-
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/alaa_logo"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:scaleY="3"
+                        android:scaleX="3.75"
+                        android:src="@drawable/alaa_logo_black" />
 
 
-        </androidx.appcompat.widget.Toolbar>
+                    <com.example.alaa.customViews.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:layout_toEndOf="@id/alaa_logo"
+                        app:MyTextViewFont="MaliBoldItalic"
+                        android:textSize="25sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="Onclick_dashboard"
+                        android:src="@drawable/ic_account" />
+
+                </RelativeLayout>
 
 
-    </com.google.android.material.appbar.AppBarLayout>
+            </androidx.appcompat.widget.Toolbar>
 
-    <include layout="@layout/content_main" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/card_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/cardNavMargin"
+            android:layout_marginEnd="@dimen/cardNavMargin"
+            android:layout_marginTop="@dimen/cardNavMargin"
+            android:layout_marginBottom="@dimen/cardNavMargin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/card_dimen">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+                android:background="@color/alaa5"
+                app:itemIconTint="@drawable/bottom_navigation_colors"
+                app:itemTextColor="@drawable/bottom_navigation_colors"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:menu="@menu/navigation" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

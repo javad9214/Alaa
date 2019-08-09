@@ -35,7 +35,7 @@
             android:name=".views.ui.VideoPage"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".views.ui.HomeActivity"
+            android:name=".views.ui.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
     </application>

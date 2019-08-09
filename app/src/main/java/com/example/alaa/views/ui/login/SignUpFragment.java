@@ -1,5 +1,6 @@
 package com.example.alaa.views.ui.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,9 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.alaa.R;
 import com.example.alaa.databinding.SignUpFragmentBinding;
+import com.example.alaa.views.ui.MainActivity;
+
+import java.util.Objects;
 
 public class SignUpFragment extends Fragment {
 
@@ -25,13 +29,19 @@ public class SignUpFragment extends Fragment {
     private AuthViewModel viewModel;
     private SignUpFragmentBinding binding ;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        viewModel = ViewModelProviders.of(Objects.requireNonNull(getActivity())).get(AuthViewModel.class);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.bookmarks, container, false);
 
-        viewModel = ViewModelProviders.of(this).get(AuthViewModel.class);
-        binding = DataBindingUtil.setContentView(getActivity(), R.layout.sign_up_fragment);
+
+        binding = DataBindingUtil.setContentView(Objects.requireNonNull(getActivity()), R.layout.sign_up_fragment);
 
         binding.setAuthViewModel(viewModel);
         binding.setLifecycleOwner(this);
@@ -45,6 +55,10 @@ public class SignUpFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         onGenderSelected();
+        binding.btnSignUp.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), MainActivity.class);
+            startActivity(intent);
+        });
     }
 
 

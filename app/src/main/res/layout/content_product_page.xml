@@ -221,7 +221,7 @@
     </ScrollView>
 
 
-   <com.example.alaa.views.ui.ProductPage.Components.TotalPrice_Component
+   <com.example.alaa.views.ui.ProductPage.Components.TotalPriceComponent
        android:id="@+id/finalPriceDialog"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
@@ -234,7 +234,7 @@
        app:finalSalePrice="98000"
        app:cardCornerRadius="@dimen/box_corner_radius"
        android:elevation="@dimen/card_dimen">
-   </com.example.alaa.views.ui.ProductPage.Components.TotalPrice_Component>
+   </com.example.alaa.views.ui.ProductPage.Components.TotalPriceComponent>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_buy"
