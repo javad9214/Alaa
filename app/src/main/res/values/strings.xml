@@ -116,7 +116,7 @@
 
     <string name="demoTitle">همه دین و زندگی نظام قدیم</string>
     <string name="demoTitle1">همایش های طلایی ریاضی تحربی نظام قدیم</string>
-    <string name="demoTitle2">همایش های 5+1 ریاضی تحربی نظام قدیم</string>
+    <string name="demoTitle2">همایش های 5+1 ریاضی تجربی نظام قدیم</string>
     <string name="demoSample">نمونه جزوه همایش طلایی ریاضی تجربی نظام قدیم اقای امینی</string>
     <string name="demoSubTitle11">همایش های طلایی ریاضی تجربی کنکور آقای امینی راد</string>
     <string name="demoText1"> مدرس: وحیده کاغذی
@@ -134,7 +134,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main2">Main2Activity</string>
-    <string name="titleProductItem">همایش طلایی ریاضی تحربی نظام قدیم کنکور 98</string>
+    <string name="titleProductItem">همایش طلایی ریاضی تجربی نظام قدیم کنکور 98</string>
+    <string name="discountPercent">تخفیف 40 %</string>
+    <string name="delete">حذف</string>
+    <string name="attr_sample">زمان دریافت</string>
+    <string name="tx_attr_value_sample">از لحظه خرید</string>
+    <string name="colon">:</string>
 
 
 </resources>

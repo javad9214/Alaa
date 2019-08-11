@@ -2,6 +2,7 @@ package com.example.alaa.customViews;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 
@@ -18,6 +19,8 @@ public class MyTextView extends ExpandableTextView {
         super(context);
     }
 
+    private boolean isStrikeThrough = false ;
+
     public MyTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
@@ -28,6 +31,11 @@ public class MyTextView extends ExpandableTextView {
 
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.MyTextView, 0, 0);
+
+
+        isStrikeThrough = a.getBoolean( R.styleable.MyTextView_strikeThrough , false);
+        if (isStrikeThrough) strikeThrough();
+
         int fontOrdinal = a.getInt(R.styleable.MyTextView_MyTextViewFont, 0);
         a.getIndexCount();
 
@@ -139,4 +147,7 @@ public class MyTextView extends ExpandableTextView {
     }
 
 
+    private void strikeThrough (){
+        this.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+    }
 }

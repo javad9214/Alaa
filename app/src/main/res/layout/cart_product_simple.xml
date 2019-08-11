@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    android:layoutDirection="rtl">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thumbnail_cart_simple_product"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/dum_product" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_attribute_simple_product"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/thumbnail_cart_simple_product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tx_title_cart_simple_product"
+            android:layout_marginStart="@dimen/Margin10"
+            android:layout_marginEnd="@dimen/Margin10">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.example.alaa.customViews.MyTextView
+            android:id="@+id/tx_title_cart_simple_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/thumbnail_cart_simple_product"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/Margin5"
+            android:gravity="center"
+            android:text="@string/titleProductItem"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:lines="3"
+            app:MyTextViewFont="IRANSans_Medium" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSalePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tx_title_cart_simple_product"
+            app:layout_constraintBottom_toBottomOf="@id/tx_title_cart_simple_product"
+            android:layout_marginEnd="@dimen/Margin5"
+            app:cardBackgroundColor="@color/RedLight"
+            app:cardCornerRadius="@dimen/Margin5"
+            app:cardElevation="@dimen/Margin5"
+            android:layout_marginStart="@dimen/Margin5">
+
+            <com.example.alaa.customViews.MyTextView
+                android:id="@+id/finalSalePrice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layout_marginEnd="@dimen/Margin10"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text=" 654,598 تومان"
+                android:textColor="@color/pureWhite"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:MyTextViewFont="IranSansNumLight" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/thumbnail_cart_simple_product"
+            app:srcCompat="@drawable/ic_delete_black_24dp"
+            app:tint="@color/black"
+            android:clickable="true"
+            android:focusable="true"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layoutDirection="rtl"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="start"
     app:cardCornerRadius="@dimen/box_corner_radius"
@@ -13,7 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|end"
-        app:cardBackgroundColor="@color/alaa5"
+        app:cardBackgroundColor="@color/RedLight"
+        app:cardElevation="@dimen/Margin5"
         android:padding="@dimen/Margin10">
 
         <LinearLayout
@@ -36,7 +37,8 @@
                 android:text="(49,000)"
                 android:textColor="@color/RedLight"
                 android:textSize="18sp"
-                app:MyTextViewFont="IranSansNumMedium" />
+                app:MyTextViewFont="IranSansNumMedium"
+                android:visibility="gone"/>
 
             <com.example.alaa.customViews.MyTextView
                 android:id="@+id/finalSalePrice"
@@ -49,7 +51,7 @@
                 android:paddingTop="2dp"
                 android:paddingBottom="2dp"
                 android:text="64,200 تومان"
-                android:textColor="@color/darkGreen"
+                android:textColor="@color/pureWhite"
                 android:textSize="21sp"
                 android:textStyle="bold"
                 app:MyTextViewFont="IranSansNumBold" />

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.Resources
 import android.graphics.Paint
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import androidx.cardview.widget.CardView
 import com.example.alaa.R
@@ -14,6 +15,7 @@ import java.util.*
 class TotalPriceComponent (context: Context, attributeSet: AttributeSet) : CardView(context , attributeSet){
 
     private var isDiscounted = false
+    private val TAG = "TotalPrice"
 
     init {
         View.inflate(context , R.layout.total_price_component , this)
@@ -33,13 +35,16 @@ class TotalPriceComponent (context: Context, attributeSet: AttributeSet) : CardV
         val realPriceSize = attributes.getDimension(R.styleable.TotalPriceComponent_realPriceSize , 18F)
         val salePriceSize = attributes.getDimension(R.styleable.TotalPriceComponent_realPriceSize , 21F)
 
-        if (isDiscounted) realPrice.visibility = View.GONE else View.VISIBLE
+        Log.i(TAG , salePriceSize.toString())
+
+        if (!isDiscounted) realPrice.visibility = View.GONE else View.VISIBLE
 
         realPrice.text =  bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalRealPrice))) + bracketRight
         salePrice.text =  setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalSalePrice))) + " " +  res.getString(R.string.Toman)
 
         realPrice.textSize = realPriceSize
         salePrice.textSize = salePriceSize
+
 
         strikeThrough(realPrice)
 

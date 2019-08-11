@@ -21,6 +21,7 @@
             <enum name="MaliBoldItalic" value="16" />
             <enum name="RubiKMono" value="17" />
         </attr>
+        <attr name="strikeThrough" format="boolean"/>
     </declare-styleable>
 
     <declare-styleable name="MyButton">

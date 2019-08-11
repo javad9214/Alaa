@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-
+        <activity android:name=".views.ui.cart.Cart"></activity>
         <activity
             android:name=".views.ui.SearchPage.SearchActivity"
             android:screenOrientation="portrait" />

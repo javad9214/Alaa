@@ -43,6 +43,11 @@ public class LoginFragment extends Fragment {
         binding.setAuthViewModel(viewModel);
         binding.setLifecycleOwner(this);
 
+        binding.btnLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext() , MainActivity.class);
+            startActivity(intent);
+        });
+
         return view ;
     }
 
@@ -50,11 +55,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.btnLogin.setOnClickListener(v -> {
-            Log.i(TAG, "onViewCreated: ");
-            Intent intent = new Intent(getContext() , MainActivity.class);
-            startActivity(intent);
-        });
+        Log.i(TAG, "onViewCreated: ");
     }
 
     @Override
