@@ -140,6 +140,11 @@ public class MyTextView extends ExpandableTextView {
                 face = Typeface.createFromAsset(context.getAssets() , "Font/RubikMonoOne_Regular.ttf");
                 this.setTypeface(face);
                 break;
+
+            case 18 :
+                face = Typeface.createFromAsset(context.getAssets() , "Font/Dima.ttf");
+                this.setTypeface(face);
+                break;
         }
         a.recycle();
 

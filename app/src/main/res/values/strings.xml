@@ -53,8 +53,13 @@
     <string name="tajrobi">تجربی</string>
 
 
+    //cart
+    <string name="cart">سبد خریدم :</string>
+
+
     //product page
     <string name="AddToCart">افزودن به سبد خرید</string>
+    <string name="Add">افزودن</string>
     <string name="buy">خرید</string>
     <string name="features">ویژگی ها </string>
     <string name="konkoor">کنکور</string>
@@ -140,6 +145,7 @@
     <string name="attr_sample">زمان دریافت</string>
     <string name="tx_attr_value_sample">از لحظه خرید</string>
     <string name="colon">:</string>
+    <string name="details">جزییات</string>
 
 
 </resources>

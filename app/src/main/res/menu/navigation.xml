@@ -14,7 +14,7 @@
 
     <item
         android:id="@+id/navigation_Product"
-        android:icon="@drawable/ic_product_nav"
+        android:icon="@drawable/ic_shopping_cart"
         android:title="@string/title_Products" />
 
     <item

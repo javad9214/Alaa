@@ -14,7 +14,8 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".views.ui.MainActivity">
+        tools:context=".views.ui.MainActivity"
+        android:layoutDirection="rtl">
 
 
         <com.google.android.material.appbar.AppBarLayout
@@ -30,32 +31,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize">
 
-                <RelativeLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="20dp">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/search_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:scaleX="-1"
-                        android:layout_marginEnd="20dp"
-                        android:layout_gravity="start"
-                        android:layout_centerVertical="true"
-                        android:layout_toStartOf="@+id/img_profile"
-                        android:background="?selectableItemBackgroundBorderless"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:onClick="GoTOSearch"
-                        android:src="@drawable/ic_searching_btn" />
 
 
                     <ImageView
                         android:id="@+id/alaa_logo"
                         android:layout_width="70dp"
                         android:layout_height="50dp"
-                        android:layout_alignParentBottom="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_gravity="center"
                         android:scaleType="centerInside"
                         android:scaleY="3"
@@ -65,7 +54,9 @@
 
                     <com.example.alaa.customViews.MyTextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toStartOf="@id/alaa_logo"
                         android:text="@string/app_name"
                         android:layout_centerVertical="true"
                         android:textColor="@color/black"
@@ -73,10 +64,30 @@
                         app:MyTextViewFont="MaliBoldItalic"
                         android:textSize="25sp" />
 
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/img_profile"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="onclick_cart"
+                        android:src="@drawable/ic_cart" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_profile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="5dp"
@@ -86,7 +97,7 @@
                         android:onClick="Onclick_dashboard"
                         android:src="@drawable/ic_account" />
 
-                </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.appcompat.widget.Toolbar>
@@ -124,6 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
                 android:layout_marginEnd="0dp"
+                android:layoutDirection="ltr"
                 style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
                 android:background="@color/alaa5"
                 app:itemIconTint="@drawable/bottom_navigation_colors"

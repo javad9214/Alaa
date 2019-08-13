@@ -4,7 +4,181 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.alaa.views.ui.cart.Cart">
+    tools:context="com.example.alaa.views.ui.cart.Cart"
+    android:layoutDirection="rtl">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@animator/appbar_always_elevated"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp">
+
+
+
+                <ImageView
+                    android:id="@+id/alaa_logo"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:scaleY="3"
+                    android:scaleX="3.75"
+                    android:src="@drawable/alaa_logo_black" />
+
+
+                <com.example.alaa.customViews.MyButton
+                    android:id="@+id/btn_add_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toEndOf="@id/alaa_logo"
+                    android:layout_marginEnd="@dimen/Margin5"
+                    android:text="@string/Add"
+                    app:backgroundTint="@color/blue"
+                    app:MyButtonFont="IRANSans_Light"
+                    app:icon="@drawable/ic_add"
+                    android:layoutDirection="ltr"/>
+
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/tx_cartTitle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="Onclick_dashboard"
+                    android:src="@drawable/ic_basket" />
+
+                <com.example.alaa.customViews.MyTextView
+                    android:id="@+id/tx_cartTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/Margin10"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@id/img_profile"
+                    android:text="@string/cart"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@id/alaa_logo"
+                    app:MyTextViewFont="IRANSans_Light"
+                    android:textSize="25sp" />
+
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="Onclick_dashboard"
+                    android:src="@drawable/ic_account" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="@dimen/card_dimen"
+        app:cardBackgroundColor="@color/pureWhite">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+
+          <com.example.alaa.customViews.MyButton
+              android:id="@+id/btn_details"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_marginEnd="@dimen/Margin5"
+              android:text="@string/details"
+              app:backgroundTint="@color/blue"
+              app:MyButtonFont="IRANSans_Light" />
+
+
+
+          <com.google.android.material.card.MaterialCardView
+              android:id="@+id/cardSalePrice"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintEnd_toStartOf="@id/btn_details"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginEnd="@dimen/Margin5"
+              android:layout_marginStart="5dp"
+              app:cardBackgroundColor="@color/blackTitle"
+              app:cardCornerRadius="3dp"
+              app:cardElevation="@dimen/Margin5">
+
+              <com.example.alaa.customViews.MyTextView
+                  android:id="@+id/finalPrice"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_gravity="center_vertical"
+                  android:layout_marginStart="@dimen/Margin10"
+                  android:layout_marginEnd="@dimen/Margin10"
+                  android:gravity="center"
+                  android:paddingTop="2dp"
+                  android:paddingBottom="2dp"
+                  android:text=" 654,598 تومان"
+                  android:textColor="@color/pureWhite"
+                  android:textSize="14sp"
+                  app:MyTextViewFont="IranSansNumLight" />
+
+
+          </com.google.android.material.card.MaterialCardView>
+
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
 
 
 
