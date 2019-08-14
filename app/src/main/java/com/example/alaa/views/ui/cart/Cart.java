@@ -17,4 +17,9 @@ public class Cart extends AppCompatActivity {
 
     public void Onclick_dashboard(View view) {
     }
+
+    public void purchase(View view) {
+        CompletePurchase completePurchase = new CompletePurchase();
+        completePurchase.show(getSupportFragmentManager() , completePurchase.getTag());
+    }
 }

@@ -69,9 +69,6 @@
                         android:id="@+id/img_cart"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@id/img_profile"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
@@ -79,7 +76,10 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:onClick="onclick_cart"
-                        android:src="@drawable/ic_cart" />
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/img_profile"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_full_trolley" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/img_profile"

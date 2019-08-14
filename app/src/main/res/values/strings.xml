@@ -54,7 +54,7 @@
 
 
     //cart
-    <string name="cart">سبد خریدم :</string>
+    <string name="cart">سبد خریدم </string>
 
 
     //product page
@@ -146,6 +146,17 @@
     <string name="tx_attr_value_sample">از لحظه خرید</string>
     <string name="colon">:</string>
     <string name="details">جزییات</string>
+    <string name="totalCost">جمع کل خرید </string>
+    <string name="completeYourPurchase">خرید خود را نهایی کنید</string>
+    <string name="discountCode">کد تخفیف دارم</string>
+    <string name="discountHint">مثال : codetakhfif</string>
+    <string name="applyDiscount">ثبت تخفیف</string>
+    <string name="wallet_uses">استفاده از کیف پول </string>
+    <string name="helpForAlaa">به آلاء کمک</string>
+    <string name="alaaHelpAmount">5,000 تومان</string>
+    <string name="IdoNotHelp">نمی کنم</string>
+    <string name="IdoHelp">می کنم</string>
+    <string name="purchase">پرداخت و تکمیل خرید</string>
 
 
 </resources>
