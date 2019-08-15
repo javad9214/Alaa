@@ -154,9 +154,12 @@
     <string name="wallet_uses">استفاده از کیف پول </string>
     <string name="helpForAlaa">به آلاء کمک</string>
     <string name="alaaHelpAmount">5,000 تومان</string>
-    <string name="IdoNotHelp">نمی کنم</string>
-    <string name="IdoHelp">می کنم</string>
+    <string name="IdoNotDonate">نمی کنم</string>
+    <string name="IdoDonate">می کنم</string>
     <string name="purchase">پرداخت و تکمیل خرید</string>
+    <string name="realPriceDemo">654,598 تومان</string>
+    <string name="salePriceDemo">654,598 تومان</string>
+    <string name="walletPriceDemo">30,000 تومان</string>
 
 
 </resources>

@@ -3,7 +3,6 @@ package com.example.alaa.views.ui.login;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,12 +21,13 @@ import java.util.Objects;
 
 public class LoginFragment extends Fragment {
 
-    public  LoginFragment(){}
+    public LoginFragment() {
+    }
 
-    private View view ;
+    private View view;
     private AuthViewModel viewModel;
-    private LoginFragmentBinding binding ;
-    public static final String TAG = "Alaa\\LoginFragment" ;
+    private LoginFragmentBinding binding;
+    public static final String TAG = "Alaa\\LoginFragment";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,23 +39,24 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        binding = DataBindingUtil.setContentView(Objects.requireNonNull(getActivity()), R.layout.login_fragment);
+        binding = DataBindingUtil.inflate(inflater, R.layout.login_fragment, container, false);
+        view = binding.getRoot();
         binding.setAuthViewModel(viewModel);
         binding.setLifecycleOwner(this);
 
-        binding.btnLogin.setOnClickListener(v -> {
-            Intent intent = new Intent(getContext() , MainActivity.class);
-            startActivity(intent);
-        });
 
-        return view ;
+        return view;
     }
 
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.i(TAG, "onViewCreated: ");
+
+        binding.btnLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), MainActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override

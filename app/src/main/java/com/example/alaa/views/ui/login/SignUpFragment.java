@@ -38,10 +38,9 @@ public class SignUpFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.bookmarks, container, false);
 
-
-        binding = DataBindingUtil.setContentView(Objects.requireNonNull(getActivity()), R.layout.sign_up_fragment);
+        binding = DataBindingUtil.inflate(inflater , R.layout.sign_up_fragment , container , false);
+        view = binding.getRoot() ;
 
         binding.setAuthViewModel(viewModel);
         binding.setLifecycleOwner(this);
