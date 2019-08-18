@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tx_title_cart_simple_product"
+        android:layout_margin="5dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/ic_delete_black_24dp"
+        app:tint="@color/black" />
+
+
+    <com.example.alaa.customViews.MyTextView
+        android:id="@+id/tx_title_cart_simple_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/Margin5"
+        android:gravity="center"
+        android:lines="3"
+        android:text="@string/titleProductItem"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:MyTextViewFont="IRANSans_Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/delete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSalePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/Margin5"
+        android:layout_marginEnd="@dimen/Margin5"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/RedLight"
+        app:cardCornerRadius="@dimen/Margin5"
+        app:cardElevation="@dimen/Margin5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx_title_cart_simple_product">
+
+        <com.example.alaa.customViews.MyTextView
+            android:id="@+id/finalSalePrice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/Margin10"
+            android:layout_marginEnd="@dimen/Margin10"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text=" 654,598 تومان"
+            android:textColor="@color/pureWhite"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:MyTextViewFont="IranSansNumLight" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.example.alaa.customViews.MyTextView
+        android:id="@+id/realPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/Margin10"
+        android:layout_marginEnd="@dimen/Margin10"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="@string/realPriceDemo"
+        android:textColor="@color/darkGreen"
+        android:textSize="12sp"
+        app:MyTextViewFont="IranSansNumMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
+        app:layout_constraintTop_toBottomOf="@id/tx_title_cart_simple_product"
+        app:strikeThrough="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

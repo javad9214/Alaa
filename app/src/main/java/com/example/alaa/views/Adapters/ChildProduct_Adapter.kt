@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.alaa.models.ChildProductModel
 import com.example.alaa.R
+import com.example.alaa.models.ChildProductModel
 
-class ChildProduct_Adapter (private val children : ArrayList<ChildProductModel>): RecyclerView.Adapter<ChildProduct_Adapter.ViewHolder>(){
+    class ChildProduct_Adapter (private val children : ArrayList<ChildProductModel>): RecyclerView.Adapter<ChildProduct_Adapter.ViewHolder>(){
 
 
 
@@ -35,4 +35,7 @@ class ChildProduct_Adapter (private val children : ArrayList<ChildProductModel>)
                 val salePrice : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.SalePrice)
 
     }
+
+
+
 }

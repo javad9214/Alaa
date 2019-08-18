@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:layoutDirection="rtl"
-    app:cardBackgroundColor="@color/blue"
-    app:cardCornerRadius="3dp">
+    android:layoutDirection="rtl">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/blueDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_dot"
+            android:background="?selectableItemBackgroundBorderless"
+            app:tint="@color/blueDark"
+            android:clickable="true"
+            android:focusable="true"/>
+
 
         <com.example.alaa.customViews.MyTextView
             android:id="@+id/tx_attribute"
@@ -19,12 +27,15 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/colon"
-            android:layout_margin="@dimen/Margin5"
-            android:textColor="@color/pureWhite"
+            app:layout_constraintStart_toEndOf="@id/blueDot"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/blackTitle"
             android:text="@string/attr_sample"
-            app:MyTextViewFont="IRANSans_Medium"/>
+            android:textSize="12sp"
+            app:MyTextViewFont="IRANSans_Light_4.1"/>
 
 
         <com.example.alaa.customViews.MyTextView
@@ -33,10 +44,12 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_margin="@dimen/Margin5"
-            android:textColor="@color/pureWhite"
+            app:layout_constraintStart_toEndOf="@id/tx_attribute"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/blackTitle"
             android:text="@string/colon"
             app:MyTextViewFont="IRANSans_Medium"/>
 
@@ -47,13 +60,17 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/colon"
-            android:layout_margin="@dimen/Margin5"
-            android:textColor="@color/pureWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/blackTitle"
             android:text="@string/tx_attr_value_sample"
-            app:MyTextViewFont="IRANSans_Medium"/>
+            android:textSize="12sp"
+            app:MyTextViewFont="IRANSans_Light_4.1"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
