@@ -21,11 +21,11 @@ class MainProduct_Component (context: Context, attr : AttributeSet) : CardView(c
 
             val  res : Resources = resources
 
-            val  title : com.example.alaa.customViews.MyTextView = findViewById(R.id.title)
+            val  title : com.example.alaa.customViews.MyTextView = findViewById(R.id.tx_title_product)
             val realPrice : com.example.alaa.customViews.MyTextView = findViewById(R.id.realPrice)
             val salePrice : com.example.alaa.customViews.MyTextView = findViewById(R.id.salePrice)
-            val discount : com.example.alaa.customViews.MyTextView = findViewById(R.id.discount)
-            photoProduct  = findViewById(R.id.Product_photo)
+            val discount : com.example.alaa.customViews.MyTextView = findViewById(R.id.discountPercent)
+            photoProduct  = findViewById(R.id.thumbnail_product_photo)
 
             val bracketLeft: String = res.getString(R.string.BracketLeft)
             val bracketRight: String = res.getString(R.string.BracketRight)

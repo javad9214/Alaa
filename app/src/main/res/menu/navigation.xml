@@ -5,7 +5,7 @@
     <item
         android:id="@+id/navigation_MyProfile"
         android:icon="@drawable/ic_myprofile_navbar"
-        android:title="@string/title_MyProfile" />
+        android:title="@string/title_myDashboard" />
 
     <item
         android:id="@+id/navigation_forum"
@@ -14,7 +14,7 @@
 
     <item
         android:id="@+id/navigation_Product"
-        android:icon="@drawable/ic_shopping_cart"
+        android:icon="@drawable/ic_shop_store_frontal_building"
         android:title="@string/title_Products" />
 
     <item

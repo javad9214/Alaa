@@ -65,8 +65,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/addLine"
+                        <com.example.alaa.customViews.MyButton
+                            android:id="@+id/btnMore"
                             style="@style/Widget.MaterialComponents.Button.TextButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -75,8 +75,8 @@
                             android:text="@string/more"
                             android:textColor="@color/RedLight"
                             android:textStyle="bold"
-                            app:icon="@drawable/ic_chevron_left_black_24dp"
-                            android:onClick="Onclick_more" />
+                            app:MyButtonFont="IRANSans_Light"
+                            app:icon="@drawable/ic_chevron_left_black_24dp" />
 
                         <com.example.alaa.customViews.MyTextView
                             android:id="@+id/topic01"

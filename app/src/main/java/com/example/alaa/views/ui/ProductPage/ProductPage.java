@@ -1,7 +1,5 @@
 package com.example.alaa.views.ui.ProductPage;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,9 +7,11 @@ import android.view.View;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ScrollView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.alaa.R;
 import com.example.alaa.customViews.MyTextView;
 import com.example.alaa.views.ui.MainActivity;
-import com.example.alaa.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 
@@ -64,13 +64,10 @@ public class ProductPage extends AppCompatActivity {
         // set interpolators for both expanding and collapsing animations
         tx_describe.setInterpolator(new OvershootInterpolator());
 
-        btn_continue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btn_continue.setIconResource(tx_describe.isExpanded() ? R.drawable.ic_keyboard_arrow_down_black_24dp : R.drawable.ic_keyboard_arrow_up_black_24dp);
-                btn_continue.setText(tx_describe.isExpanded() ? "ادامه ... " : "بستن");
-                tx_describe.toggle();
-            }
+        btn_continue.setOnClickListener(view -> {
+            btn_continue.setIconResource(tx_describe.isExpanded() ? R.drawable.ic_keyboard_arrow_down_black_24dp : R.drawable.ic_keyboard_arrow_up_black_24dp);
+            btn_continue.setText(tx_describe.isExpanded() ? "ادامه ... " : "بستن");
+            tx_describe.toggle();
         });
 
     }

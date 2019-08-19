@@ -8,6 +8,7 @@
     <color name="grayWhite">#A1EEEEEE</color>
     <color name="default_gray">#EEEEEE</color>
     <color name="blackTitle">#CD000000</color>
+    <color name="blackOpacity">#A1000000</color>
     <color name="black">#000</color>
     <color name="gray">#D2726E6E</color>
     <color name="gray2">#D2201F1F</color>

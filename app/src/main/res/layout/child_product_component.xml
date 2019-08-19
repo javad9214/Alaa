@@ -1,136 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
+    android:layoutDirection="rtl"
     app:cardCornerRadius="@dimen/box_corner_radius">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <com.example.alaa.customViews.MyTextView
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_discount_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/discount"
-            android:layout_gravity="end"
-            android:paddingStart="@dimen/Margin10"
-            android:paddingEnd="@dimen/Margin10"
-            android:text="@string/discountPercent"
-            android:textColor="@color/alaa5"
-            android:textSize="12sp"
-            android:visibility="visible"
-            app:MyTextViewFont="estedad" />
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="@dimen/Margin5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
+            <com.example.alaa.customViews.MyTextView
+                android:id="@+id/discountPercent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-
-                        <androidx.appcompat.widget.AppCompatCheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_margin="@dimen/Margin5" />
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layout_marginEnd="@dimen/Margin10"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="@string/discountPercent"
+                android:textColor="@color/pureWhite"
+                android:textSize="12sp"
+                app:MyTextViewFont="IranSansNum" />
 
 
-                    <com.example.alaa.customViews.MyTextView
-                        android:id="@+id/title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/Margin10"
-                        android:gravity="start"
-                        android:text="همایش های طلایی ریاضی تجربی کنکور آقای امینی راد"
-                        android:textColor="@color/blackTitle"
-                        android:textSize="14sp"
-                        app:MyTextViewFont="IRANSans_Bold" />
+        </com.google.android.material.card.MaterialCardView>
 
-                </LinearLayout>
-
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/Margin5"
+            app:layout_constraintBottom_toBottomOf="@id/tx_title_product"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tx_title_product" />
 
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/Margin5">
+        <com.example.alaa.customViews.MyTextView
+            android:id="@+id/tx_title_product"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/Margin5"
+            android:gravity="center"
+            android:lines="3"
+            android:text="@string/titleProductItem"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:MyTextViewFont="IRANSans_Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/checkbox"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:gravity="end|center_vertical"
-                        android:orientation="horizontal">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSalePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/Margin5"
+            android:layout_marginEnd="@dimen/Margin5"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/RedLight"
+            app:cardCornerRadius="@dimen/Margin5"
+            app:cardElevation="@dimen/Margin5"
+            app:layout_constraintBottom_toBottomOf="@id/tx_title_product"
+            app:layout_constraintStart_toEndOf="@id/realPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tx_title_product">
 
-                        <com.example.alaa.customViews.MyTextView
-                            android:id="@+id/realPrice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginEnd="5dp"
-                            android:gravity="center"
-                            android:text="(49,000)"
-                            android:textColor="@color/Red"
-                            android:textSize="16sp"
-                            app:MyTextViewFont="IranSansNumUltraLight" />
-
-                        <com.example.alaa.customViews.MyTextView
-                            android:id="@+id/SalePrice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="29,400"
-                            android:textColor="@color/green"
-                            android:textSize="18sp"
-                            app:MyTextViewFont="IranSansNum" />
-
-                        <com.example.alaa.customViews.MyTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginStart="@dimen/Margin5"
-                            android:layout_marginEnd="@dimen/Margin10"
-                            android:gravity="center"
-                            android:text="@string/Toman"
-                            android:textColor="@color/DarkOliveGreen"
-                            android:textSize="12sp"
-                            app:MyTextViewFont="estedad" />
+            <com.example.alaa.customViews.MyTextView
+                android:id="@+id/salePrice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layout_marginEnd="@dimen/Margin10"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text=" 654,598 تومان"
+                android:textColor="@color/pureWhite"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:MyTextViewFont="IranSansNumLight" />
 
 
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="@dimen/Margin10"
-                        android:layoutDirection="ltr"
-                        android:text="@string/introduction_video"
-                        app:backgroundTint="@color/purple"
-                        app:icon="@drawable/ic_ondemand_video_24dp"
-                        app:iconSize="18dp" />
+        </com.google.android.material.card.MaterialCardView>
 
 
-                </RelativeLayout>
+        <com.example.alaa.customViews.MyTextView
+            android:id="@+id/realPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/Margin10"
+            android:layout_marginEnd="@dimen/Margin10"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="@string/realPriceDemo"
+            android:textColor="@color/darkGreen"
+            android:textSize="12sp"
+            app:MyTextViewFont="IranSansNumMedium"
+            app:layout_constraintBottom_toBottomOf="@id/tx_title_product"
+            app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
+            app:layout_constraintStart_toStartOf="@id/tx_title_product"
+            app:layout_constraintTop_toBottomOf="@id/tx_title_product"
+            app:strikeThrough="true" />
 
 
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

@@ -21,9 +21,11 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.asksira.loopingviewpager.LoopingViewPager;
 import com.example.alaa.R;
+import com.example.alaa.customViews.MyButton;
 import com.example.alaa.views.Adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ViewPager.PagerAdapter;
-import com.example.alaa.views.ui.VideoPage;
+import com.example.alaa.views.ui.ProductPage.ProductPage;
+import com.example.alaa.views.ui.SearchPage.SearchActivity;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 import org.jetbrains.annotations.NotNull;
@@ -62,6 +64,13 @@ public class ShopFragment extends Fragment  implements HomeRecyclerAdapter.ItemC
         super.onViewCreated(view, savedInstanceState);
         setAdapters();
         initViewPager();
+
+        MyButton btnMore = view.findViewById(R.id.btnMore);
+        btnMore.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext() , SearchActivity.class);
+            startActivity(intent);
+        });
+
     }
 
 
@@ -129,7 +138,7 @@ public class ShopFragment extends Fragment  implements HomeRecyclerAdapter.ItemC
 
     @Override
     public void onItemClick(View view, int position) {
-        Intent intent  = new Intent(getContext() , VideoPage.class);
+        Intent intent  = new Intent(getContext() , ProductPage.class);
         startActivity(intent);
     }
 

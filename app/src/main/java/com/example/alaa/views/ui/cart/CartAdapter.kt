@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alaa.R
 import com.example.alaa.adapters.AttributesAdapter
+import com.example.alaa.adapters.ComplexCartAdapter
 
 class CartAdapter( private val resource : Int) : RecyclerView.Adapter<CartAdapter.ViewHolder>()  {
 
@@ -18,6 +20,7 @@ class CartAdapter( private val resource : Int) : RecyclerView.Adapter<CartAdapte
 
     private lateinit var productList: ArrayList<ModelProduct>
     private lateinit var attrAdapter  :AttributesAdapter
+    private lateinit var childAdapter: ComplexCartAdapter
     private lateinit var context : Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,22 +36,28 @@ class CartAdapter( private val resource : Int) : RecyclerView.Adapter<CartAdapte
 
         val product : ModelProduct = productList[position]
         holder.title.text = product.title
-        holder.finalSalePrice.text = product.salePrice.toString()
+        holder.finalSalePrice.text = product.salePrice
 
         attrAdapter = AttributesAdapter(product.attrList)
-        holder.attrRecyclerView.layoutManager = GridLayoutManager(context , 5)
+        holder.attrRecyclerView.layoutManager = GridLayoutManager(context , 3)
         holder.attrRecyclerView.adapter = attrAdapter
+
+        childAdapter = ComplexCartAdapter(2)
+        holder.childRecyclerView.layoutManager = LinearLayoutManager(context , RecyclerView.VERTICAL , false)
+        holder.childRecyclerView.adapter = childAdapter
 
     }
 
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
-        val title : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.tx_title_cart_simple_product)
+        val title : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.tx_title_product)
         val finalSalePrice : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.finalSalePrice)
 
 
         val attrRecyclerView : RecyclerView = itemView.findViewById(R.id.recycler_attribute_simple_product)
+
+        val childRecyclerView : RecyclerView = itemView.findViewById(R.id.recycler_child_product)
 
 
     }

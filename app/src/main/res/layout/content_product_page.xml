@@ -29,8 +29,7 @@
               android:layout_margin="@dimen/Margin10"
               app:salePrice="24300"
               app:RealPrice="97600"
-              app:Title="@string/demoTitle"
-              app:cardCornerRadius="@dimen/box_corner_radius"/>
+              app:Title="@string/demoTitle" />
 
             <LinearLayout
                 android:layout_width="match_parent"

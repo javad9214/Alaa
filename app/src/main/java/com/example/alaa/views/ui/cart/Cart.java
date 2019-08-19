@@ -32,7 +32,7 @@ public class Cart extends AppCompatActivity {
 
         CartAdapter  adapter = new CartAdapter(R.layout.cart_product_simple , productList, this );
         RecyclerView recyclerView = findViewById(R.id.recyclerCart);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this , RecyclerView.VERTICAL, true));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this , RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(adapter);
     }
 

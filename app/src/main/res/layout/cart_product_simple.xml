@@ -10,7 +10,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_discount_percent"
@@ -64,7 +64,7 @@
 
 
         <com.example.alaa.customViews.MyTextView
-            android:id="@+id/tx_title_cart_simple_product"
+            android:id="@+id/tx_title_product"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/Margin5"
@@ -102,7 +102,6 @@
             app:cardBackgroundColor="@color/RedLight"
             app:cardCornerRadius="@dimen/Margin5"
             app:cardElevation="@dimen/Margin5"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/recycler_attribute_simple_product">
 
@@ -141,10 +140,17 @@
             android:textColor="@color/darkGreen"
             android:textSize="12sp"
             app:MyTextViewFont="IranSansNumMedium"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
             app:layout_constraintTop_toBottomOf="@id/recycler_attribute_simple_product"
             app:strikeThrough="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_child_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cardSalePrice">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
 
 

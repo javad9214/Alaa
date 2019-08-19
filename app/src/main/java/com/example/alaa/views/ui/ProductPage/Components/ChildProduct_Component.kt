@@ -21,10 +21,10 @@ class ChildProduct_Component(context: Context, attributeSet: AttributeSet) : Car
 
         val res: Resources = resources
 
-        val title: com.example.alaa.customViews.MyTextView = findViewById(R.id.title)
+        val title: com.example.alaa.customViews.MyTextView = findViewById(R.id.tx_title_product)
         val realPrice: com.example.alaa.customViews.MyTextView = findViewById(R.id.realPrice)
-        val salePrice: com.example.alaa.customViews.MyTextView = findViewById(R.id.SalePrice)
-        val discount: com.example.alaa.customViews.MyTextView = findViewById(R.id.discount)
+        val salePrice: com.example.alaa.customViews.MyTextView = findViewById(R.id.salePrice)
+        val discount: com.example.alaa.customViews.MyTextView = findViewById(R.id.discountPercent)
 
         val bracketLeft: String = res.getString(R.string.BracketLeft)
         val bracketRight: String = res.getString(R.string.BracketRight)

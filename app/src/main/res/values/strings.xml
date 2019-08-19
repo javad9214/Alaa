@@ -6,7 +6,7 @@
     <string name="title_home">خانه</string>
     <string name="title_Products">محصولات</string>
     <string name="title_forum">انجمن</string>
-    <string name="title_MyProfile">پروفایل من</string>
+    <string name="title_myDashboard">داشبورد من</string>
 
     //Home Page
     <string name="more">بیشتر</string>
