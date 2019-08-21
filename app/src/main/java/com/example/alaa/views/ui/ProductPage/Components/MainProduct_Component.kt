@@ -27,16 +27,18 @@ class MainProduct_Component (context: Context, attr : AttributeSet) : CardView(c
             val discount : com.example.alaa.customViews.MyTextView = findViewById(R.id.discountPercent)
             photoProduct  = findViewById(R.id.thumbnail_product_photo)
 
-            val bracketLeft: String = res.getString(R.string.BracketLeft)
-            val bracketRight: String = res.getString(R.string.BracketRight)
+
 
             val attributes = context.obtainStyledAttributes(attr , R.styleable.CardProduct)
 
-
+            val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_RealPrice))) + " " +  res.getString(R.string.Toman)
+            val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_salePrice))) + " " +  res.getString(R.string.Toman)
+            val discountText =  res.getString(R.string.discount) + "  " +  calculateDiscount(97600.0, 24300.0 )
             title.text = attributes.getString(R.styleable.CardProduct_Title)
-            realPrice.text =  bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_RealPrice)))  + bracketRight + " " + res.getString(R.string.Toman)
-            salePrice.text =  setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_salePrice))) + " " +  res.getString(R.string.Toman)
-            discount.text =  res.getString(R.string.discount) + "  " +  calculateDiscount(97600.0, 24300.0 )
+            realPrice.text =  realPriceText
+            salePrice.text =  salePriceText
+
+            discount.text = discountText
 
 
 

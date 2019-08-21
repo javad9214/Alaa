@@ -160,6 +160,7 @@
     <string name="realPriceDemo">654,598 تومان</string>
     <string name="salePriceDemo">654,598 تومان</string>
     <string name="walletPriceDemo">30,000 تومان</string>
+    <string name="tx_bon">تعداد بن +1</string>
 
 
 </resources>

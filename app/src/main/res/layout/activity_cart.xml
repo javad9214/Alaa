@@ -65,7 +65,6 @@
                     android:background="?selectableItemBackgroundBorderless"
                     android:clickable="true"
                     android:focusable="true"
-                    android:onClick="Onclick_dashboard"
                     android:src="@drawable/ic_full_trolley"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

@@ -32,7 +32,7 @@ import com.example.alaa.models.ChildProductModel
 
                 val title : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.title)
                 val realPrice : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.realPrice)
-                val salePrice : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.SalePrice)
+                val salePrice : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.salePrice)
 
     }
 

@@ -22,25 +22,24 @@ class TotalPriceComponent (context: Context, attributeSet: AttributeSet) : CardV
 
         val  res : Resources = resources
 
-        val realPrice : com.example.alaa.customViews.MyTextView = findViewById(R.id.realFinalPrice)
-        val salePrice : com.example.alaa.customViews.MyTextView = findViewById(R.id.finalSalePrice)
-
-
-        val bracketLeft: String = res.getString(R.string.BracketLeft)
-        val bracketRight: String = res.getString(R.string.BracketRight)
+        val realPrice : com.example.alaa.customViews.MyTextView = findViewById(R.id.realPrice)
+        val salePrice : com.example.alaa.customViews.MyTextView = findViewById(R.id.salePrice)
 
         val attributes = context.obtainStyledAttributes(attributeSet , R.styleable.TotalPriceComponent)
 
         isDiscounted = attributes.getBoolean(R.styleable.TotalPriceComponent_isDiscounted , false)
-        val realPriceSize = attributes.getDimension(R.styleable.TotalPriceComponent_realPriceSize , 18F)
-        val salePriceSize = attributes.getDimension(R.styleable.TotalPriceComponent_realPriceSize , 21F)
+        val realPriceSize = attributes.getDimension(R.styleable.TotalPriceComponent_realPriceSize , 12F)
+        val salePriceSize = attributes.getDimension(R.styleable.TotalPriceComponent_realPriceSize , 14F)
 
         Log.i(TAG , salePriceSize.toString())
 
         if (!isDiscounted) realPrice.visibility = View.GONE else View.VISIBLE
 
-        realPrice.text =  bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalRealPrice))) + bracketRight
-        salePrice.text =  setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalSalePrice))) + " " +  res.getString(R.string.Toman)
+        val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalRealPrice))) + " " +  res.getString(R.string.Toman)
+        val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalSalePrice))) + " " +  res.getString(R.string.Toman)
+
+        realPrice.text =  realPriceText
+        salePrice.text =  salePriceText
 
         realPrice.textSize = realPriceSize
         salePrice.textSize = salePriceSize

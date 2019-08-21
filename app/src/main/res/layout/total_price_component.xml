@@ -3,62 +3,98 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layoutDirection="rtl"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="start"
     app:cardCornerRadius="@dimen/box_corner_radius"
     android:elevation="@dimen/card_dimen">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_total_price"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|end"
-        app:cardBackgroundColor="@color/RedLight"
-        app:cardElevation="@dimen/Margin5"
-        android:padding="@dimen/Margin10">
+        app:cardBackgroundColor="@color/pureWhite"
+        app:cardElevation="@dimen/card_dimen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingTop="@dimen/Margin5"
-            android:paddingBottom="@dimen/Margin5"
-            android:paddingEnd="@dimen/Margin5"
-            android:paddingStart="@dimen/Margin5">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+
+            <com.example.alaa.customViews.MyButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/AddToCart"
+                app:backgroundTint="@color/green"
+                android:layout_marginStart="10dp"
+                app:MyButtonFont="IRANSans_Medium"
+                app:icon="@drawable/ic_add_to_cart"/>
 
 
             <com.example.alaa.customViews.MyTextView
-                android:id="@+id/realFinalPrice"
+                android:id="@+id/realPrice"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="@dimen/Margin5"
-                android:gravity="center"
-                android:text="(49,000)"
-                android:textColor="@color/RedLight"
-                android:textSize="18sp"
-                app:MyTextViewFont="IranSansNumMedium"
-                android:visibility="gone"/>
-
-            <com.example.alaa.customViews.MyTextView
-                android:id="@+id/finalSalePrice"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/Margin5"
+                android:layout_marginStart="@dimen/Margin10"
                 android:layout_marginEnd="@dimen/Margin10"
                 android:gravity="center"
                 android:paddingTop="2dp"
                 android:paddingBottom="2dp"
-                android:text="64,200 تومان"
-                android:textColor="@color/pureWhite"
-                android:textSize="21sp"
-                android:textStyle="bold"
-                app:MyTextViewFont="IranSansNumBold" />
+                android:text=" 654,598 تومان"
+                android:textColor="@color/darkGreen"
+                android:textSize="12sp"
+                app:MyTextViewFont="IranSansNumMedium"
+                app:strikeThrough="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
+                app:layout_constraintTop_toTopOf="parent"/>
 
-        </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSalePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/Red"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="@dimen/Margin5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.example.alaa.customViews.MyTextView
+                    android:id="@+id/salePrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/Margin10"
+                    android:layout_marginEnd="@dimen/Margin10"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text=" 654,598 تومان"
+                    android:textColor="@color/pureWhite"
+                    android:textSize="14sp"
+                    app:MyTextViewFont="IranSansNumMedium" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

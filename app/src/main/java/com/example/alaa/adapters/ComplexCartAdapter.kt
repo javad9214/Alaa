@@ -27,7 +27,7 @@ class ComplexCartAdapter (private val size : Int) : RecyclerView.Adapter<Complex
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
         val title : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.tx_title_product)
-        val finalSalePrice : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.finalSalePrice)
+        val finalSalePrice : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.salePrice)
 
 
 
