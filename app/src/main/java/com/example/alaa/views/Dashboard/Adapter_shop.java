@@ -6,8 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.alaa.R;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -44,7 +42,7 @@ public class Adapter_shop extends RecyclerView.Adapter<Adapter_shop.ViewHolder>{
 
     @Override
     public int getItemCount() {
-        return 2 ;
+        return 5 ;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -55,7 +53,7 @@ public class Adapter_shop extends RecyclerView.Adapter<Adapter_shop.ViewHolder>{
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            textView = itemView.findViewById(R.id.tx_title);
+           // textView = itemView.findViewById(R.id.tx_title);
 
         }
     }

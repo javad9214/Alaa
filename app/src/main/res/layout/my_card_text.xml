@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardSalePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/Red"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="@dimen/Margin5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.alaa.customViews.MyTextView
+            android:id="@+id/salePrice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/Margin10"
+            android:layout_marginEnd="@dimen/Margin10"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text=" 654,598 تومان"
+            android:textColor="@color/pureWhite"
+            android:textSize="14sp"
+            app:MyTextViewFont="IranSansNumMedium" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+

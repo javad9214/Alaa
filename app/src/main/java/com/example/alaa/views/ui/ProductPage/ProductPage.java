@@ -2,7 +2,6 @@ package com.example.alaa.views.ui.ProductPage;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ScrollView;
@@ -14,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.alaa.R;
 import com.example.alaa.customViews.MyTextView;
 import com.example.alaa.models.SampleVideoModel;
+import com.example.alaa.views.Dashboard.Adapter_shop;
 import com.example.alaa.views.ui.MainActivity;
 import com.example.alaa.views.ui.ProductPage.adapters.SampleVideoAdapter;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -28,7 +28,7 @@ public class ProductPage extends AppCompatActivity {
     private MyTextView tx_describe;
     private MaterialButton btn_continue;
     private ScrollView scrollView;
-    private RecyclerView recyclerView_sample_video;
+    private RecyclerView recyclerView_sample_video , recyclerView_sample_booklet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,7 @@ public class ProductPage extends AppCompatActivity {
         tx_describe = findViewById(R.id.Description);
         btn_continue = findViewById(R.id.btn_continue);
         recyclerView_sample_video = findViewById(R.id.recycler_sample_videos);
+        recyclerView_sample_booklet = findViewById(R.id.recycler_sample_booklet);
     }
 
     private void setAdapter(){
@@ -56,9 +57,12 @@ public class ProductPage extends AppCompatActivity {
         }
 
         SampleVideoAdapter adapter = new SampleVideoAdapter(list);
-        recyclerView_sample_video = findViewById(R.id.recycler_sample_videos);
         recyclerView_sample_video.setLayoutManager(new LinearLayoutManager(this , RecyclerView.HORIZONTAL, false));
         recyclerView_sample_video.setAdapter(adapter);
+
+        Adapter_shop bookletAdapter = new Adapter_shop(this , R.layout.sample_booklet);
+        recyclerView_sample_booklet.setLayoutManager(new LinearLayoutManager(this , RecyclerView.HORIZONTAL, false));
+        recyclerView_sample_booklet.setAdapter(bookletAdapter);
     }
 
     private SampleVideoModel setSampleVideo(){
@@ -105,11 +109,14 @@ public class ProductPage extends AppCompatActivity {
 
     public void ScrollToDescription(View view) {
 
-        Log.i(TAG, "ScrollToDescription: " + tx_describe.getTop() + tx_describe.getBottom());
         scrollView.smoothScrollTo(0, tx_describe.getBottom());
 
     }
 
 
+    public void ScrollToSamples(View view){
+
+        scrollView.smoothScrollTo(0 , recyclerView_sample_video.getBottom());
+    }
 
 }

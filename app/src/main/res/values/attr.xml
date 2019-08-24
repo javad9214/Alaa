@@ -70,6 +70,12 @@
         </attr>
     </declare-styleable>
 
+    
+    <declare-styleable name="MyCardText" >
+
+
+
+    </declare-styleable>
 
     <declare-styleable name="CardProduct">
 

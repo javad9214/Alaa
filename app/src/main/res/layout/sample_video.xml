@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layoutDirection="rtl"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_gravity="center_horizontal"
-app:cardCornerRadius="5dp"
-    android:layout_margin="10dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layoutDirection="rtl"
+    app:cardCornerRadius="5dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_sample_video"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_gravity="center_horizontal"
-        app:cardCornerRadius="5dp">
+        app:cardCornerRadius="5dp"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -22,14 +21,14 @@ app:cardCornerRadius="5dp"
 
             <ImageView
                 android:id="@+id/img_sample_video_thumbnail"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/intro_default"
+                android:src="@drawable/thumbnail_sample_video_demo"
                 app:layout_constraintBottom_toTopOf="@id/title_sample_video"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -40,23 +39,24 @@ app:cardCornerRadius="5dp"
                 app:layout_constraintBottom_toTopOf="@id/title_sample_video"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleX="0.7"
+                android:scaleY="0.7"/>
 
 
             <com.example.alaa.customViews.MyTextView
                 android:id="@+id/title_sample_video"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                app:layout_constraintTop_toBottomOf="@id/img_sample_video_thumbnail"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="15dp"
+                android:gravity="center"
                 android:text="@string/demo_title_sample_video"
-                app:MyTextViewFont="IRANSans_Light"/>
-
+                app:MyTextViewFont="IRANSans_Light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_sample_video_thumbnail" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -72,9 +72,9 @@ app:cardCornerRadius="5dp"
         app:cardCornerRadius="3dp"
         app:cardElevation="@dimen/Margin5"
         app:layout_constraintBottom_toBottomOf="@id/card_sample_video"
-        app:layout_constraintTop_toBottomOf="@id/card_sample_video"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_sample_video">
 
         <com.example.alaa.customViews.MyTextView
             android:id="@+id/tx_teacherName"
@@ -93,9 +93,6 @@ app:cardCornerRadius="5dp"
 
 
     </com.google.android.material.card.MaterialCardView>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
