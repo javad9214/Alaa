@@ -1,4 +1,4 @@
-package com.example.alaa.views.ui.ProductPage.Components
+package com.example.alaa.views.ui.productPage.components
 
 import android.content.Context
 import android.content.res.Resources
@@ -12,7 +12,7 @@ import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.*
 
-class MainProduct_Component (context: Context, attr : AttributeSet) : CardView(context , attr){
+class MainProductComponent (context: Context, attr : AttributeSet) : CardView(context , attr){
 
         private val photoProduct : ImageView
 
@@ -28,18 +28,16 @@ class MainProduct_Component (context: Context, attr : AttributeSet) : CardView(c
             photoProduct  = findViewById(R.id.thumbnail_product_photo)
 
 
+            val attributes = context.obtainStyledAttributes(attr , R.styleable.MainProductComponent)
 
-            val attributes = context.obtainStyledAttributes(attr , R.styleable.CardProduct)
-
-            val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_RealPrice))) + " " +  res.getString(R.string.Toman)
-            val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_salePrice))) + " " +  res.getString(R.string.Toman)
+            val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_realPrice_mainProduct))) + " " +  res.getString(R.string.Toman)
+            val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_salePrice_mainProduct))) + " " +  res.getString(R.string.Toman)
             val discountText =  res.getString(R.string.discount) + "  " +  calculateDiscount(97600.0, 24300.0 )
-            title.text = attributes.getString(R.styleable.CardProduct_Title)
+            title.text = attributes.getString(R.styleable.MainProductComponent_title_mainProduct)
             realPrice.text =  realPriceText
             salePrice.text =  salePriceText
 
             discount.text = discountText
-
 
 
             strikeThrough(realPrice)
@@ -64,16 +62,16 @@ class MainProduct_Component (context: Context, attr : AttributeSet) : CardView(c
     }
 
 
-    private fun setCurrency (price : Double) : String {
+    private fun setCurrency (price : Double?) : String {
 
         val  format = DecimalFormat("###,###,###")
 
         return format.format(price)
     }
 
-    private fun toDouble(string: String): Double {
+    private fun toDouble(string: String?): Double? {
 
-        return string.toDouble()
+        return string?.toDouble()
     }
 
     public fun setPicture (resId :Int){

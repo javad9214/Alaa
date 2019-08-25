@@ -19,7 +19,7 @@
             android:name=".views.ui.SearchPage.SearchActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".views.ui.ProductPage.ProductPage"
+            android:name=".views.ui.productPage.ProductPage"
             android:screenOrientation="portrait" />
         <activity
             android:name=".views.ui.login.Login"

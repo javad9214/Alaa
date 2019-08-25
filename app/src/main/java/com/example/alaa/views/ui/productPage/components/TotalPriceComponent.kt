@@ -1,4 +1,4 @@
-package com.example.alaa.views.ui.ProductPage.Components
+package com.example.alaa.views.ui.productPage.components
 
 import android.content.Context
 import android.content.res.Resources

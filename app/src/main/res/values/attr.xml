@@ -99,15 +99,24 @@
 
     </declare-styleable>
 
-    <declare-styleable name="CardProduct">
+    <declare-styleable name="MainProductComponent">
 
-        <attr name="Title" format="string" />
-        <attr name="RealPrice" format="string" />
-        <attr name="salePrice" format="string" />
-        <attr name="Discount" format="string" />
+        <attr name="title_mainProduct" format="string" />
+        <attr name="realPrice_mainProduct" format="string" />
+        <attr name="salePrice_mainProduct" format="string" />
+        <attr name="discount_mainProduct" format="string" />
 
     </declare-styleable>
 
+
+    <declare-styleable name="ChildProductComponent">
+
+        <attr name="title_childProduct" format="string" />
+        <attr name="realPrice_childProduct" format="string" />
+        <attr name="salePrice_childProduct" format="string" />
+        <attr name="discount_childProduct" format="string" />
+
+    </declare-styleable>
 
     <declare-styleable name="TotalPriceComponent">
 

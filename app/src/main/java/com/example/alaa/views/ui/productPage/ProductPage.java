@@ -1,4 +1,4 @@
-package com.example.alaa.views.ui.ProductPage;
+package com.example.alaa.views.ui.productPage;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import com.example.alaa.customViews.MyTextView;
 import com.example.alaa.models.SampleVideoModel;
 import com.example.alaa.views.Dashboard.Adapter_shop;
 import com.example.alaa.views.ui.MainActivity;
-import com.example.alaa.views.ui.ProductPage.adapters.SampleVideoAdapter;
+import com.example.alaa.views.ui.productPage.adapters.SampleVideoAdapter;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 

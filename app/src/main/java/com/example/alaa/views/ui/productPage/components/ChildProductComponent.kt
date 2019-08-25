@@ -1,23 +1,24 @@
-package com.example.alaa.views.ui.ProductPage.Components
+package com.example.alaa.views.ui.productPage.components
 
 
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.Paint
 import android.util.AttributeSet
+import android.view.View
 import androidx.cardview.widget.CardView
 import com.example.alaa.R
 import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.*
 
-class ChildProduct_Component(context: Context, attributeSet: AttributeSet) : CardView(context, attributeSet) {
+class ChildProductComponent(context: Context, attributeSet: AttributeSet) : CardView(context, attributeSet) {
 
 
 
     init {
 
-        inflate(context, R.layout.child_product_component, this)
+        View.inflate(context, R.layout.child_product_component, this)
 
         val res: Resources = resources
 
@@ -26,15 +27,18 @@ class ChildProduct_Component(context: Context, attributeSet: AttributeSet) : Car
         val salePrice: com.example.alaa.customViews.MyTextView = findViewById(R.id.salePrice)
         val discount: com.example.alaa.customViews.MyTextView = findViewById(R.id.discountPercent)
 
-        val bracketLeft: String = res.getString(R.string.BracketLeft)
-        val bracketRight: String = res.getString(R.string.BracketRight)
 
-        val attributes = context.obtainStyledAttributes(attributeSet, R.styleable.CardProduct)
 
-        title.text = attributes.getString(R.styleable.CardProduct_Title)
-        realPrice.text = bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_RealPrice))) + bracketRight
-        salePrice.text = setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_RealPrice)))
-        discount.text = res.getString(R.string.discount) + "  " + calculateDiscount(68700.0, 54500.0)
+        val attributes = context.obtainStyledAttributes(attributeSet , R.styleable.ChildProductComponent)
+
+        val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.ChildProductComponent_realPrice_childProduct))) + " " +  res.getString(R.string.Toman)
+        val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.ChildProductComponent_salePrice_childProduct))) + " " +  res.getString(R.string.Toman)
+        val discountText =  res.getString(R.string.discount) + "  " +  calculateDiscount(97600.0, 24300.0 )
+        title.text = attributes.getString(R.styleable.ChildProductComponent_discount_childProduct)
+        realPrice.text =  realPriceText
+        salePrice.text =  salePriceText
+
+        discount.text = discountText
 
 
 
@@ -57,16 +61,16 @@ class ChildProduct_Component(context: Context, attributeSet: AttributeSet) : Car
         return format.format(discount)
     }
 
-    private fun setCurrency(price: Double): String {
+    private fun setCurrency(price: Double?): String {
 
         val format = DecimalFormat("###,###,###")
 
         return format.format(price)
     }
 
-    private fun toDouble(string: String): Double {
+    private fun toDouble(string: String?): Double? {
 
-        return string.toDouble()
+        return string?.toDouble()
     }
 
 

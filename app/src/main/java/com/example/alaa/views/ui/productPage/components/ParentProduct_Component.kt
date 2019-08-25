@@ -1,4 +1,4 @@
-package com.example.alaa.views.ui.ProductPage.Components
+package com.example.alaa.views.ui.productPage.components
 
 import android.content.Context
 import android.content.res.Resources
@@ -32,11 +32,11 @@ class ParentProduct_Component (context: Context , attributeSet: AttributeSet) : 
         val bracketLeft: String = res.getString(R.string.BracketLeft)
         val bracketRight: String = res.getString(R.string.BracketRight)
 
-        val attributes = context.obtainStyledAttributes(attributeSet, R.styleable.CardProduct)
+        val attributes = context.obtainStyledAttributes(attributeSet, R.styleable.MainProductComponent)
 
-        title.text = attributes.getString(R.styleable.CardProduct_Title)
-        realPrice.text = bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_RealPrice))) + bracketRight
-        salePrice.text = setCurrency(toDouble(attributes.getString(R.styleable.CardProduct_RealPrice)))
+        title.text = attributes.getString(R.styleable.MainProductComponent_title_mainProduct)
+        realPrice.text = bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_realPrice_mainProduct))) + bracketRight
+        salePrice.text = setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_realPrice_mainProduct)))
         discount.text = res.getString(R.string.discount) + "  " + calculateDiscount(68700.0, 54500.0)
 
         strikeThrough(realPrice)

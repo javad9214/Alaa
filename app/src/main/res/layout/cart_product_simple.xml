@@ -115,7 +115,7 @@
                 android:gravity="center"
                 android:paddingTop="2dp"
                 android:paddingBottom="2dp"
-                android:text=" 654,598 تومان"
+                android:text="@string/salePriceDemo"
                 android:textColor="@color/pureWhite"
                 android:textSize="14sp"
                 android:textStyle="bold"

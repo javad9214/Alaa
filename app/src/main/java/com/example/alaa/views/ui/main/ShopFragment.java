@@ -24,7 +24,7 @@ import com.example.alaa.R;
 import com.example.alaa.customViews.MyButton;
 import com.example.alaa.views.Adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ViewPager.PagerAdapter;
-import com.example.alaa.views.ui.ProductPage.ProductPage;
+import com.example.alaa.views.ui.productPage.ProductPage;
 import com.example.alaa.views.ui.SearchPage.SearchActivity;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 

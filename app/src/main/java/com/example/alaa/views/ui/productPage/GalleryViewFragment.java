@@ -1,4 +1,4 @@
-package com.example.alaa.views.ui.ProductPage;
+package com.example.alaa.views.ui.productPage;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

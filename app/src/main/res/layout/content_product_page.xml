@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <HorizontalScrollView
@@ -26,11 +26,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginStart="@dimen/Margin5"
+                android:layout_marginStart="@dimen/Margin10"
                 android:layout_marginTop="@dimen/Margin5"
                 android:layout_marginEnd="@dimen/Margin5"
-                android:layout_marginBottom="@dimen/Margin5"
+                android:layout_marginBottom="@dimen/Margin10"
                 android:layoutDirection="ltr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.chip.ChipGroup
@@ -80,21 +82,23 @@
             </HorizontalScrollView>
 
 
-            <com.example.alaa.views.ui.ProductPage.Components.MainProduct_Component
+            <com.example.alaa.views.ui.productPage.components.MainProductComponent
                 android:id="@+id/mainProduct"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/Margin10"
-                app:RealPrice="97600"
-                app:Title="@string/demoTitle"
+                app:realPrice_mainProduct="@string/realPriceDemo"
+                app:title_mainProduct="@string/demoTitle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/chips_map"
-                app:salePrice="24300" />
+                app:salePrice_mainProduct="@string/salePriceDemo" />
 
             <LinearLayout
                 android:id="@+id/linear_buttons"
-                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@id/mainProduct">
@@ -144,9 +148,12 @@
 
             </LinearLayout>
 
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/introVideo"
-                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
@@ -159,7 +166,7 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content">
 
 
                     <ImageView
@@ -245,7 +252,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_sample_video"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="3dp"
@@ -277,7 +284,9 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_sample_videos"
-                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
@@ -291,9 +300,9 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_sample_booklet"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/Margin10"
                 app:cardCornerRadius="3dp"
                 app:cardElevation="@dimen/card_dimen"
                 app:layout_constraintTop_toBottomOf="@id/recycler_sample_videos"
@@ -319,7 +328,9 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_sample_booklet"
-                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
@@ -338,7 +349,7 @@
     </ScrollView>
 
 
-    <com.example.alaa.views.ui.ProductPage.Components.TotalPriceComponent
+    <com.example.alaa.views.ui.productPage.components.TotalPriceComponent
         android:id="@+id/finalPriceDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
