@@ -16,7 +16,7 @@ class MyButton(context: Context, attrs: AttributeSet) : MaterialButton(context, 
 
         val typed : TypedArray = context.obtainStyledAttributes(attrs , R.styleable.MyButton , 0 , 0)
 
-        val fontOrdinal : Int = typed.getInt(R.styleable.MyButton_MyButtonFont , 0)
+        val fontOrdinal : Int = typed.getInt(R.styleable.MyButton_MyButtonFont , 2)
 
         setFont(fontOrdinal)
 
@@ -125,6 +125,8 @@ class MyButton(context: Context, attrs: AttributeSet) : MaterialButton(context, 
             }
         }
     }
+
+
 }
 
 

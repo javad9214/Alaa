@@ -2,20 +2,17 @@ package com.example.alaa.customViews
 
 import android.content.Context
 import android.content.res.TypedArray
-import android.provider.ContactsContract
 import android.util.AttributeSet
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.HorizontalScrollView
+import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.example.alaa.R
 import com.example.alaa.databinding.FilteringGuideStepBinding
 import kotlinx.android.synthetic.main.filtering_guide_step.view.*
-import androidx.core.content.ContextCompat.getSystemService
-import android.view.LayoutInflater
-import android.view.ViewGroup
 
 
 class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : RelativeLayout(context, attributeSet) {
@@ -130,10 +127,8 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
 
     }
 
-    private fun scrollToCurrentStep(myButton: MyButton){
-       //val scrollview : HorizontalScrollView = myView.findViewById(R.id.scrollViewFilteringStep)
-        //scrollview.smoothScrollTo(myButton.left , myView.top)
-    }
+
+
 
     interface StepSelectListener {
         fun onStepSelected(selectedStep: Int)
