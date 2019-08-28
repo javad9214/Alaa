@@ -11,7 +11,7 @@
         android:id="@+id/my_card_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="3dp"
+        app:cardCornerRadius="5dp"
         app:cardElevation="@dimen/Margin5"
         app:cardBackgroundColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"

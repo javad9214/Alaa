@@ -7,12 +7,14 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alaa.R;
 import com.example.alaa.customViews.MyTextView;
 import com.example.alaa.models.SampleVideoModel;
+import com.example.alaa.models.SelectableProductModel;
 import com.example.alaa.views.Dashboard.Adapter_shop;
 import com.example.alaa.views.ui.MainActivity;
 import com.example.alaa.views.ui.productPage.adapters.SampleVideoAdapter;
@@ -26,9 +28,10 @@ public class ProductPage extends AppCompatActivity {
 
     public static final String TAG = "===>";
     private MyTextView tx_describe;
+    private CardView cardDescription, card_sample_video ;
     private MaterialButton btn_continue;
     private ScrollView scrollView;
-    private RecyclerView recyclerView_sample_video , recyclerView_sample_booklet;
+    private RecyclerView recyclerView_sample_video , recyclerView_sample_booklet ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,16 +47,21 @@ public class ProductPage extends AppCompatActivity {
         scrollView = findViewById(R.id.scrollProduct);
         tx_describe = findViewById(R.id.Description);
         btn_continue = findViewById(R.id.btn_continue);
+        cardDescription = findViewById(R.id.card_txDescription);
+        card_sample_video = findViewById(R.id.card_sample_video);
         recyclerView_sample_video = findViewById(R.id.recycler_sample_videos);
         recyclerView_sample_booklet = findViewById(R.id.recycler_sample_booklet);
+
     }
 
     private void setAdapter(){
 
         ArrayList<SampleVideoModel> list = new ArrayList<>();
 
+
         for (int i = 0 ; i < 5 ; i++){
             list.add(setSampleVideo());
+
         }
 
         SampleVideoAdapter adapter = new SampleVideoAdapter(list);
@@ -63,6 +71,7 @@ public class ProductPage extends AppCompatActivity {
         Adapter_shop bookletAdapter = new Adapter_shop(this , R.layout.sample_booklet);
         recyclerView_sample_booklet.setLayoutManager(new LinearLayoutManager(this , RecyclerView.HORIZONTAL, false));
         recyclerView_sample_booklet.setAdapter(bookletAdapter);
+
     }
 
     private SampleVideoModel setSampleVideo(){
@@ -72,6 +81,16 @@ public class ProductPage extends AppCompatActivity {
 
         return sampleVideoModel ;
     }
+
+    private SelectableProductModel setSelectableProduct(){
+        SelectableProductModel  productModel = new SelectableProductModel();
+        productModel.setTitle(getResources().getString(R.string.titleProductItem));
+        productModel.setSalePrice(getResources().getString(R.string.salePriceDemo));
+        productModel.setRealPrice(getResources().getString(R.string.realPriceDemo));
+        productModel.setHasChild(true);
+        return productModel ;
+    }
+
 
     public void Onclick_dashboard(View view) {
     }
@@ -109,14 +128,13 @@ public class ProductPage extends AppCompatActivity {
 
     public void ScrollToDescription(View view) {
 
-        scrollView.smoothScrollTo(0, tx_describe.getBottom());
+        scrollView.smoothScrollTo(0, cardDescription.getTop());
 
     }
 
-
     public void ScrollToSamples(View view){
 
-        scrollView.smoothScrollTo(0 , recyclerView_sample_video.getBottom());
+        scrollView.smoothScrollTo(0 , card_sample_video.getTop());
     }
 
 }

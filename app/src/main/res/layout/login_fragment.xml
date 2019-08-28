@@ -79,25 +79,7 @@
                     android:textColor="@color/pureWhite"
                     app:MyTextViewFont="IRANSans_Medium" />
 
-               <com.example.alaa.views.ui.productPage.components.ChildProductComponent
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   app:title_childProduct="@string/titleProductItem"
-                   app:realPrice_childProduct="@string/realPriceDemo"
-                   app:salePrice_childProduct="@string/salePriceDemo"
-                   app:discount_childProduct="@string/discountPercent"/>
 
-                <com.example.alaa.views.ui.productPage.components.MainProductComponent
-                    android:id="@+id/mainProduct"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/Margin10"
-                    app:realPrice_mainProduct="97600"
-                    app:title_mainProduct="@string/demoTitle"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/chips_map"
-                    app:salePrice_mainProduct="24300" />
 
             </LinearLayout>
 

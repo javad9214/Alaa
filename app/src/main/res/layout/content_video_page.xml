@@ -82,7 +82,7 @@
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
                     android:layout_marginEnd="5dp"
                     android:layout_marginStart="16dp"
-                    app:icon="@drawable/ic_bookmark_plus"
+                    app:icon="@drawable/ic_bookmark_colored"
                     app:iconTintMode="add"
                     app:iconTint="@android:color/transparent"/>
 
@@ -108,7 +108,7 @@
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
                     android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
-                    app:icon="@drawable/ic_share"
+                    app:icon="@drawable/ic_share2"
                     app:iconTintMode="add"
                     app:iconTint="@android:color/transparent"/>
 

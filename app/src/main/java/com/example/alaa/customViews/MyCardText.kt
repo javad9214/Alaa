@@ -24,14 +24,17 @@ class MyCardText (context: Context, attrs: AttributeSet) : FrameLayout (context 
     private var _textFont : Int = 2
 
 
+    private var textView : MyTextView
+    private var cardView : CardView
 
 
    init {
 
         View.inflate(context , R.layout.my_card_text , this)
 
-        val textView : MyTextView = findViewById(R.id.my_card_textView)
-        val cardView : CardView = findViewById(R.id.my_card_text)
+        textView = findViewById(R.id.my_card_textView)
+        cardView  = findViewById(R.id.my_card_text)
+
         // Load attributes
         val a = context.obtainStyledAttributes(
                 attrs, R.styleable.MyCardText, 0, 0)
@@ -159,6 +162,11 @@ class MyCardText (context: Context, attrs: AttributeSet) : FrameLayout (context 
                 text.typeface = face
             }
         }
+    }
+
+    fun setText (text : String?){
+
+        textView.text = text
     }
 
 }

@@ -115,6 +115,7 @@
         <attr name="realPrice_childProduct" format="string" />
         <attr name="salePrice_childProduct" format="string" />
         <attr name="discount_childProduct" format="string" />
+        <attr name="hasChildren" format="boolean" />
 
     </declare-styleable>
 

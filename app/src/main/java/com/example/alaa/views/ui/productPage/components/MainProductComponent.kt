@@ -30,8 +30,12 @@ class MainProductComponent (context: Context, attr : AttributeSet) : CardView(co
 
             val attributes = context.obtainStyledAttributes(attr , R.styleable.MainProductComponent)
 
-            val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_realPrice_mainProduct))) + " " +  res.getString(R.string.Toman)
-            val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_salePrice_mainProduct))) + " " +  res.getString(R.string.Toman)
+           // val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_realPrice_mainProduct))) + " " +  res.getString(R.string.Toman)
+           // val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_salePrice_mainProduct))) + " " +  res.getString(R.string.Toman)
+
+            val realPriceText = attributes.getString(R.styleable.MainProductComponent_realPrice_mainProduct)
+            val salePriceText = attributes.getString(R.styleable.MainProductComponent_salePrice_mainProduct)
+
             val discountText =  res.getString(R.string.discount) + "  " +  calculateDiscount(97600.0, 24300.0 )
             title.text = attributes.getString(R.styleable.MainProductComponent_title_mainProduct)
             realPrice.text =  realPriceText

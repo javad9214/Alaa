@@ -66,7 +66,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="@color/Red"
+                app:cardBackgroundColor="@color/RedLight"
                 app:cardCornerRadius="3dp"
                 app:cardElevation="@dimen/Margin5"
                 app:layout_constraintBottom_toBottomOf="parent"
