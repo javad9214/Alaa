@@ -3,34 +3,59 @@
 <FrameLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl">
 
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/my_card_text"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="5dp"
+        app:cardCornerRadius="3dp"
         app:cardElevation="@dimen/Margin5"
         app:cardBackgroundColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.example.alaa.customViews.MyTextView
-            android:id="@+id/my_card_textView"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginStart="@dimen/Margin10"
             android:layout_marginEnd="@dimen/Margin10"
             android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:text="@string/app_name"
-            android:textColor="@color/blue"
-            android:textSize="14sp"
-            app:MyTextViewFont="IranSansNumMedium" />
+            android:paddingBottom="2dp">
+
+            <com.example.alaa.customViews.MyTextView
+                android:id="@+id/my_card_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/pureWhite"
+                android:textSize="14sp"
+                app:MyTextViewFont="IranSansNumMedium" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/my_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/my_card_textView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/ic_done_filter"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/Margin5"
+                android:visibility="visible"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
     </com.google.android.material.card.MaterialCardView>

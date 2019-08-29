@@ -165,6 +165,9 @@
     <string name="demo_title_sample_video">تحلیل نمونه تست های مبحث انتگرال</string>
     <string name="demo_teacherName">مهدی صنیعی</string>
     <string name="samples">نمونه ها</string>
+    <string name="banner_product">جمع بندی 80 درصد کنکور</string>
+    <string name="video">فیلم</string>
+    <string name="booklet">جزوه</string>
 
 
 </resources>

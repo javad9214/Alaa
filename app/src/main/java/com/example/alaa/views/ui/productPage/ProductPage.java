@@ -1,5 +1,6 @@
 package com.example.alaa.views.ui.productPage;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +29,7 @@ public class ProductPage extends AppCompatActivity {
 
     public static final String TAG = "===>";
     private MyTextView tx_describe;
-    private CardView cardDescription, card_sample_video ;
+    private CardView cardDescription, card_sample_video , cardIntroVideo;
     private MaterialButton btn_continue;
     private ScrollView scrollView;
     private RecyclerView recyclerView_sample_video , recyclerView_sample_booklet ;
@@ -49,6 +50,7 @@ public class ProductPage extends AppCompatActivity {
         btn_continue = findViewById(R.id.btn_continue);
         cardDescription = findViewById(R.id.card_txDescription);
         card_sample_video = findViewById(R.id.card_sample_video);
+        cardIntroVideo = findViewById(R.id.introVideo);
         recyclerView_sample_video = findViewById(R.id.recycler_sample_videos);
         recyclerView_sample_booklet = findViewById(R.id.recycler_sample_booklet);
 
@@ -128,13 +130,14 @@ public class ProductPage extends AppCompatActivity {
 
     public void ScrollToDescription(View view) {
 
-        scrollView.smoothScrollTo(0, cardDescription.getTop());
+       // scrollView.smoothScrollTo(0, cardDescription.getTop());
+        ObjectAnimator.ofInt(scrollView, "scrollY",  cardIntroVideo.getTop() - 10).setDuration(1000).start();
 
     }
 
     public void ScrollToSamples(View view){
 
-        scrollView.smoothScrollTo(0 , card_sample_video.getTop());
+        ObjectAnimator.ofInt(scrollView, "scrollY",  card_sample_video.getTop() -10).setDuration(1000).start();
     }
 
 }

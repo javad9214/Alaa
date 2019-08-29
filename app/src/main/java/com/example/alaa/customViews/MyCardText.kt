@@ -2,10 +2,12 @@ package com.example.alaa.customViews
 
 import android.content.Context
 import android.graphics.Typeface
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.example.alaa.R
@@ -22,10 +24,13 @@ class MyCardText (context: Context, attrs: AttributeSet) : FrameLayout (context 
     private var _textColor : Int = ContextCompat.getColor(context , R.color.pureWhite)
     private var _textSize : Float = resources.getDimension(R.dimen.textSizeDefault)
     private var _textFont : Int = 2
+    private var _cardRadius : Float = 4f
+    private var _myIcon : Drawable? = ContextCompat.getDrawable(context , R.drawable.ic_done_filter)
 
 
     private var textView : MyTextView
     private var cardView : CardView
+    private var imageView : AppCompatImageView
 
 
    init {
@@ -34,6 +39,8 @@ class MyCardText (context: Context, attrs: AttributeSet) : FrameLayout (context 
 
         textView = findViewById(R.id.my_card_textView)
         cardView  = findViewById(R.id.my_card_text)
+        imageView = findViewById(R.id.my_icon)
+
 
         // Load attributes
         val a = context.obtainStyledAttributes(
@@ -44,6 +51,8 @@ class MyCardText (context: Context, attrs: AttributeSet) : FrameLayout (context 
         _textColor = a.getColor(R.styleable.MyCardText_text_color , _textColor)
         _textSize = a.getDimension(R.styleable.MyCardText_text_size , _textSize)
         _textFont = a.getInt(R.styleable.MyCardText_text_font , 2)
+       _cardRadius = a.getDimension(R.styleable.MyCardText_card_radius , 4f)
+       _myIcon = a.getDrawable(R.styleable.MyCardText_myIcon)
 
         textView.let {
             it.text = _text
@@ -54,6 +63,14 @@ class MyCardText (context: Context, attrs: AttributeSet) : FrameLayout (context 
 
 
         cardView.setCardBackgroundColor(_cardColor)
+        cardView.radius = _cardRadius
+
+
+       if (_myIcon == null) imageView.visibility = View.GONE
+        else {
+           imageView.visibility = View.VISIBLE
+           imageView.setImageDrawable(_myIcon)
+       }
 
 
         a.recycle()

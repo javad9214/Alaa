@@ -13,34 +13,60 @@
         android:layout_height="match_parent">
 
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_discount_percent"
-            android:layout_width="wrap_content"
+
+        <com.example.alaa.customViews.MyCardText
+            android:id="@+id/video"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/alaa5"
-            app:cardCornerRadius="3dp"
-            app:cardElevation="@dimen/Margin5"
+            app:card_color="@color/pureWhite"
+            app:text_color="@color/black"
+            app:card_radius="1dp"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.example.alaa.customViews.MyTextView
-                android:id="@+id/discountPercent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layout_marginEnd="@dimen/Margin10"
-                android:gravity="center"
-                android:paddingTop="2dp"
-                android:paddingBottom="2dp"
-                android:text="@string/discountPercent"
-                android:textColor="@color/pureWhite"
-                android:textSize="12sp"
-                app:MyTextViewFont="IranSansNum" />
+            app:layout_constraintStart_toEndOf="@id/booklet"
+            app:text="@string/video"
+            app:text_font="IranSansNum"
+            app:text_size="5sp"
+            app:myIcon="@drawable/ic_done_black_24dp"/>
 
 
-        </com.google.android.material.card.MaterialCardView>
+        <com.example.alaa.customViews.MyCardText
+            android:id="@+id/booklet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:card_color="@color/pureWhite"
+            app:text_color="@color/black"
+            app:card_radius="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/thumbnail_product_photo"
+            app:layout_constraintEnd_toStartOf="@id/video"
+            app:text="@string/booklet"
+            app:text_font="IRANSans_Light"
+            app:text_size="5sp"
+            app:myIcon="@drawable/ic_close_black_24dp"/>
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thumbnail_product_photo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/dum_product"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.example.alaa.customViews.MyCardText
+            android:id="@+id/bon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:card_color="@color/BonGreen"
+            app:card_radius="1dp"
+            app:layout_constraintEnd_toEndOf="@id/thumbnail_product_photo"
+            app:layout_constraintStart_toStartOf="@id/thumbnail_product_photo"
+            app:layout_constraintTop_toBottomOf="@id/thumbnail_product_photo"
+            app:text="@string/tx_bon"
+            app:text_font="IranSansNumLight"
+            app:text_size="5sp" />
 
         <com.example.alaa.customViews.MyTextView
             android:id="@+id/tx_title_product"
@@ -59,98 +85,18 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/thumbnail_product_photo"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/dum_product"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardSalePrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/Margin5"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@color/RedLight"
-            app:cardCornerRadius="@dimen/Margin5"
-            app:cardElevation="@dimen/Margin5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tx_title_product">
-
-            <com.example.alaa.customViews.MyTextView
-                android:id="@+id/salePrice"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layout_marginEnd="@dimen/Margin10"
-                android:gravity="center"
-                android:paddingTop="2dp"
-                android:paddingBottom="2dp"
-                android:text="@string/salePriceDemo"
-                android:textColor="@color/pureWhite"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:MyTextViewFont="IranSansNumLight" />
-
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardBon"
+        <com.example.alaa.customViews.MyCardText
+            android:id="@+id/banner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/BonGreen"
-            app:cardCornerRadius="2dp"
-            app:cardElevation="@dimen/Margin5"
-            app:layout_constraintTop_toBottomOf="@id/thumbnail_product_photo"
-            app:layout_constraintStart_toStartOf="@id/thumbnail_product_photo"
-            app:layout_constraintEnd_toEndOf="@id/thumbnail_product_photo">
-
-            <com.example.alaa.customViews.MyTextView
-                android:id="@+id/bon"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layout_marginEnd="@dimen/Margin10"
-                android:gravity="center"
-                android:paddingTop="2dp"
-                android:paddingBottom="2dp"
-                android:text="@string/tx_bon"
-                android:textColor="@color/pureWhite"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                app:MyTextViewFont="IranSansNumLight" />
-
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <com.example.alaa.customViews.MyTextView
-            android:id="@+id/realPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/Margin10"
-            android:layout_marginEnd="@dimen/Margin10"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:text="@string/realPriceDemo"
-            android:textColor="@color/darkGreen"
-            android:textSize="12sp"
-            app:MyTextViewFont="IranSansNumMedium"
-            app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
-            app:layout_constraintTop_toBottomOf="@id/tx_title_product"
-            app:strikeThrough="true" />
+            app:card_color="@color/alaa5"
+            app:card_radius="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/thumbnail_product_photo"
+            app:text="@string/banner_product"
+            app:text_font="IranSansNumLight"
+            app:text_size="5sp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
