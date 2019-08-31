@@ -70,7 +70,9 @@ HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapter.ViewHolder>
 
         @Override
         public void onClick(View view) {
-            if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
+            if (mClickListener != null) {
+                mClickListener.onItemClick(view, getAdapterPosition());
+            }
         }
 
 

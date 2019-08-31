@@ -3,6 +3,11 @@ package com.example.alaa.views.ui.search.Filter;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,15 +16,9 @@ import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.fragment.NavHostFragment;
 
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
-
 import com.example.alaa.R;
-import com.example.alaa.viewModels.FilteringViewModel;
 import com.example.alaa.customViews.FilteringStepGuide;
+import com.example.alaa.viewModels.FilteringViewModel;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.jetbrains.annotations.NotNull;
@@ -86,6 +85,9 @@ public class BaseFilterDialog extends BottomSheetDialogFragment implements Filte
                         case "fragment_filter_teacher" :
                             stepGuide.updateFilterStep(4);
                             break;
+                        default:
+                            //TODO:// default ?
+                            break;
                     }
                 }
             }
@@ -119,6 +121,9 @@ public class BaseFilterDialog extends BottomSheetDialogFragment implements Filte
                 break;
 
 
+            default:
+                //TODO:// default ?
+                break;
         }
     }
 

@@ -6,15 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.alaa.views.dashboard.BookmarkFragment;
-import com.example.alaa.views.dashboard.TabAdapter;
-import com.example.alaa.R;
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.google.android.material.tabs.TabLayout;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.viewpager.widget.ViewPager;
+
+import com.example.alaa.R;
+import com.example.alaa.views.dashboard.BookmarkFragment;
+import com.example.alaa.views.dashboard.TabAdapter;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.android.material.tabs.TabLayout;
 
 
 public class DashboardLesson extends BottomSheetDialogFragment {
@@ -90,7 +90,8 @@ public class DashboardLesson extends BottomSheetDialogFragment {
                         break;
 
 
-
+                    default:
+                        //TODO:// default ?
                 }
             }
 
@@ -109,6 +110,8 @@ public class DashboardLesson extends BottomSheetDialogFragment {
                         tabLayout.getTabAt(tab.getPosition()).setIcon(R.drawable.ic_personal_info_black);
                         break;
 
+                    default:
+                        //TODO:// default ?
                 }
 
             }

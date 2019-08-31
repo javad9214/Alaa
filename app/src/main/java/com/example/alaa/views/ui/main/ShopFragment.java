@@ -22,8 +22,8 @@ import androidx.viewpager.widget.ViewPager;
 import com.asksira.loopingviewpager.LoopingViewPager;
 import com.example.alaa.R;
 import com.example.alaa.customViews.MyButton;
-import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ViewPager.PagerAdapter;
+import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ui.product.ProductPage;
 import com.example.alaa.views.ui.search.SearchActivity;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
@@ -150,14 +150,9 @@ public class ShopFragment extends Fragment  implements HomeRecyclerAdapter.ItemC
             super(context);
         }
 
-        public FixedSpeedScroller(Context context, Interpolator interpolator) {
+        FixedSpeedScroller(Context context, Interpolator interpolator) {
             super(context, interpolator);
         }
-
-        public FixedSpeedScroller(Context context, Interpolator interpolator, boolean flywheel) {
-            super(context, interpolator, flywheel);
-        }
-
 
         @Override
         public void startScroll(int startX, int startY, int dx, int dy, int duration) {

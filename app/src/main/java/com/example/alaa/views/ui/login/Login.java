@@ -112,6 +112,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         // and attached to the activity root view.
         View view = loginContainer;
         view.post(new Runnable() {
+            @Override
             public void run() {
                 keyboardHeightProvider.start();
             }
@@ -252,9 +253,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 .setCallBack(new TextWatcherWithInstance() {
                     @Override
                     public void afterTextChanged(EditText editText, Editable editable) {
-                        if (Objects.requireNonNull(ed_NameSignUp.getText()).length() >= 1)
+                        if (Objects.requireNonNull(ed_NameSignUp.getText()).length() >= 1) {
                             img_NameSignUp.setImageResource(R.drawable.ic_name_signup_colored);
-                        else img_NameSignUp.setImageResource(R.drawable.ic_name_signup);
+                        } else {
+                            img_NameSignUp.setImageResource(R.drawable.ic_name_signup);
+                        }
                     }
                 });
 
@@ -262,9 +265,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 .setCallBack(new TextWatcherWithInstance() {
                     @Override
                     public void afterTextChanged(EditText editText, Editable editable) {
-                        if (Objects.requireNonNull(ed_LastNameSignUp.getText()).length() >= 1)
+                        if (Objects.requireNonNull(ed_LastNameSignUp.getText()).length() >= 1) {
                             img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup_colored);
-                        else img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup);
+                        } else {
+                            img_LastNameSignUp.setImageResource(R.drawable.ic_lastname_signup);
+                        }
                     }
                 });
 
@@ -272,9 +277,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 .setCallBack(new TextWatcherWithInstance() {
                     @Override
                     public void afterTextChanged(EditText editText, Editable editable) {
-                        if (Objects.requireNonNull(ed_PhoneSignUp.getText()).length() == 11)
+                        if (Objects.requireNonNull(ed_PhoneSignUp.getText()).length() == 11) {
                             img_PhoneSignUp.setImageResource(R.drawable.ic_mobile_color);
-                        else img_PhoneSignUp.setImageResource(R.drawable.ic_mobile);
+                        } else {
+                            img_PhoneSignUp.setImageResource(R.drawable.ic_mobile);
+                        }
                     }
                 });
 
@@ -282,9 +289,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 .setCallBack(new TextWatcherWithInstance() {
                     @Override
                     public void afterTextChanged(EditText editText, Editable editable) {
-                        if (Objects.requireNonNull(ed_PersonalNumberSignUp.getText()).length() == 10)
+                        if (Objects.requireNonNull(ed_PersonalNumberSignUp.getText()).length() == 10) {
                             img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code_colored);
-                        else img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code);
+                        } else {
+                            img_PersonalNumberSignUp.setImageResource(R.drawable.ic_personal_code);
+                        }
                     }
                 });
 
@@ -292,9 +301,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 .setCallBack(new TextWatcherWithInstance() {
                     @Override
                     public void afterTextChanged(EditText editText, Editable editable) {
-                        if (Objects.requireNonNull(ed_EmailSignUp.getText()).length() >= 1)
+                        if (Objects.requireNonNull(ed_EmailSignUp.getText()).length() >= 1) {
                             img_EmailSignUp.setImageResource(R.drawable.ic_email_colored);
-                        else img_EmailSignUp.setImageResource(R.drawable.ic_mail_signup);
+                        } else {
+                            img_EmailSignUp.setImageResource(R.drawable.ic_mail_signup);
+                        }
                     }
                 });
 
@@ -309,7 +320,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         if (view == null) {
             view = new View(activity);
         }
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        if (imm != null) {
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
 
         // imm.showSoftInput(view , 0);
         view.clearFocus();
@@ -320,17 +333,20 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         switch (view.getId()) {
 
             case R.id.btn_GoToSignUpCard:
-                myTransition.ScaleTransition(loginContainer, cardLogin, false);
-                myTransition.ScaleTransition(loginContainer, cardSignUp, true);
+                myTransition.scaleTransition(loginContainer, cardLogin, false);
+                myTransition.scaleTransition(loginContainer, cardSignUp, true);
                 break;
 
             case R.id.btn_GoToLoginCard:
-                myTransition.ScaleTransition(loginContainer, cardSignUp, false);
-                myTransition.ScaleTransition(loginContainer, cardLogin, true);
+                myTransition.scaleTransition(loginContainer, cardSignUp, false);
+                myTransition.scaleTransition(loginContainer, cardLogin, true);
                 cardTransition(false);
                 break;
 
+            default:
+                break;
         }
+
     }
 
     @Override
@@ -358,13 +374,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
                 //chip_math.setChipBackgroundColor(chipBgColor);
                 //chip_tajrobi.setChipBackgroundColor(chipBgColor);
                 break;
+            default:
+                //TODO:// default ?
         }
     }
 
     @Override
     public void onFocusChange(View view, boolean b) {
 
-        switch (view.getId()) {
+        cardTransition(true);
+        /*switch (view.getId()) {
 
             case R.id.ed_phoneNumber:
                 cardTransition(true);
@@ -374,14 +393,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
             case R.id.ed_personalNumber:
                 cardTransition(true);
                 break;
-        }
+        }*/
 
     }
 
     @Override
     public void onKeyboardHeightChanged(int height, int orientation) {
-        if (height == 0) cardTransition(false);
-        else cardTransition(true);
+        if (height == 0) {
+            cardTransition(false);
+        } else {
+            cardTransition(true);
+        }
     }
 
 

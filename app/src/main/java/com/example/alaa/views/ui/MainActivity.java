@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
 
             case R.id.navigation_forum:
 
-                return true;
-
             case R.id.navigation_MyProfile:
 
                 return true;
+            default:
+                //TODO:// default ?
         }
         return false;
     };
@@ -58,11 +58,11 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
         EasyTransition.enter(MainActivity.this);
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.setSelectedItemId(R.id.navigation_home);
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
     }
 
 
-    public void Onclick_dashboard(View view) {
+    public void onClickDashboard(View view) {
         DashboardFragment dashboardFragment = new DashboardFragment();
         dashboardFragment.show(getSupportFragmentManager(), dashboardFragment.getTag());
     }
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
         startActivity(intent);
     }
 
-    public void GoTOSearch(View view) {
+    public void goToSearch(View view) {
         Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
     }
 
 
-    public void onclick_cart(View view) {
+    public void onClickCart(View view) {
         Intent intent = new Intent(this, Cart.class);
         startActivity(intent);
     }

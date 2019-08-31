@@ -1,19 +1,21 @@
 package com.example.alaa.tools.Transitions;
 
-import androidx.annotation.NonNull;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.viewpager.widget.ViewPager;
 
 public class ZoomOutPageTransformer implements ViewPager.PageTransformer {
     private static final float MIN_SCALE = 0.90f;
     private static final float MIN_ALPHA = 0.5f;
 
+    @Override
     public void transformPage(@NonNull View view, float position) {
         int pageWidth = view.getWidth();
         int pageHeight = view.getHeight();
 
-        if (position < -1) { // [-Infinity,-1)
+        if (position < -1) {
+            // [-Infinity,-1)
             // This page is way off-screen to the left.
             view.setAlpha(0);
         } else if (position <= 1) { // [-1,1]

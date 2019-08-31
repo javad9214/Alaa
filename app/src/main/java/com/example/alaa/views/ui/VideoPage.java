@@ -90,6 +90,12 @@ public class VideoPage extends AppCompatActivity  {
                         Log.i(TAG, "onStateChanged:  state settling");
                         break;
 
+                    case BottomSheetBehavior.STATE_HALF_EXPANDED:
+                        Log.i(TAG, "onStateChanged:  STATE_HALF_EXPANDED");
+                        break;
+
+                    default:
+                        //TODO:// default ?
                 }
             }
 
