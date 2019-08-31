@@ -131,7 +131,7 @@ public class VideoPage extends AppCompatActivity  {
     private void expandableTextView() {
 
 
-        myTextView = findViewById(R.id.Description);
+        myTextView = findViewById(R.id.description);
         btnMore = findViewById(R.id.btn_continue);
 
         myTextView.setAnimationDuration(750L);

@@ -22,17 +22,19 @@ import com.example.alaa.views.ui.productPage.adapters.SampleVideoAdapter;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class ProductPage extends AppCompatActivity {
 
 
     public static final String TAG = "===>";
-    private MyTextView tx_describe;
-    private CardView cardDescription, card_sample_video , cardIntroVideo;
-    private MaterialButton btn_continue;
+    private MyTextView txDescribe;
+    private CardView cardSampleVideo, cardIntroVideo;
+    private MaterialButton btnContinue;
     private ScrollView scrollView;
-    private RecyclerView recyclerView_sample_video , recyclerView_sample_booklet ;
+    private RecyclerView recyclerViewSampleVideo, recyclerViewSampleBooklet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +47,13 @@ public class ProductPage extends AppCompatActivity {
     }
 
     private void init() {
-        scrollView = findViewById(R.id.scrollProduct);
-        tx_describe = findViewById(R.id.Description);
-        btn_continue = findViewById(R.id.btn_continue);
-        cardDescription = findViewById(R.id.card_txDescription);
-        card_sample_video = findViewById(R.id.card_sample_video);
-        cardIntroVideo = findViewById(R.id.introVideo);
-        recyclerView_sample_video = findViewById(R.id.recycler_sample_videos);
-        recyclerView_sample_booklet = findViewById(R.id.recycler_sample_booklet);
+        scrollView = findViewById(R.id.scroll_product);
+        txDescribe = findViewById(R.id.description);
+        btnContinue = findViewById(R.id.btn_continue);
+        cardSampleVideo = findViewById(R.id.card_sample_video);
+        cardIntroVideo = findViewById(R.id.intro_video);
+        recyclerViewSampleVideo = findViewById(R.id.recycler_sample_videos);
+        recyclerViewSampleBooklet = findViewById(R.id.recycler_sample_booklet);
 
     }
 
@@ -67,12 +68,12 @@ public class ProductPage extends AppCompatActivity {
         }
 
         SampleVideoAdapter adapter = new SampleVideoAdapter(list);
-        recyclerView_sample_video.setLayoutManager(new LinearLayoutManager(this , RecyclerView.HORIZONTAL, false));
-        recyclerView_sample_video.setAdapter(adapter);
+        recyclerViewSampleVideo.setLayoutManager(new LinearLayoutManager(this , RecyclerView.HORIZONTAL, false));
+        recyclerViewSampleVideo.setAdapter(adapter);
 
         Adapter_shop bookletAdapter = new Adapter_shop(this , R.layout.sample_booklet);
-        recyclerView_sample_booklet.setLayoutManager(new LinearLayoutManager(this , RecyclerView.HORIZONTAL, false));
-        recyclerView_sample_booklet.setAdapter(bookletAdapter);
+        recyclerViewSampleBooklet.setLayoutManager(new LinearLayoutManager(this , RecyclerView.HORIZONTAL, false));
+        recyclerViewSampleBooklet.setAdapter(bookletAdapter);
 
     }
 
@@ -94,50 +95,60 @@ public class ProductPage extends AppCompatActivity {
     }
 
 
-    public void Onclick_dashboard(View view) {
+    public void onClickDashboard(View view) {
     }
 
-    public void GoHome(View view) {
+    public void goHome(View view) {
         Intent intent = new Intent(ProductPage.this, MainActivity.class);
         startActivity(intent);
     }
 
-    public void Onclick_Attribute(View view) {
+    public void onClickAttribute(View view) {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         bottomSheetDialog.setContentView(R.layout.attributes_product);
         bottomSheetDialog.show();
     }
 
-    public void SamplePhotoOnClick(View view) {
+    public void samplePhotoOnClick(View view) {
         GalleryViewFragment galleryViewFragment = new GalleryViewFragment();
         galleryViewFragment.show(getSupportFragmentManager(), galleryViewFragment.getTag());
     }
 
+    public void scrollToDescription(View view) {
+        scrollToView(cardIntroVideo);
+    }
+
+    public void scrollToSamples(View view){
+
+        scrollToView(cardSampleVideo);
+    }
+
     private void expandableTextView() {
 
-        tx_describe.setAnimationDuration(750L);
+        txDescribe.setAnimationDuration(750L);
 
         // set interpolators for both expanding and collapsing animations
-        tx_describe.setInterpolator(new OvershootInterpolator());
+        txDescribe.setInterpolator(new OvershootInterpolator());
 
-        btn_continue.setOnClickListener(view -> {
-            btn_continue.setIconResource(tx_describe.isExpanded() ? R.drawable.ic_keyboard_arrow_down_black_24dp : R.drawable.ic_keyboard_arrow_up_black_24dp);
-            btn_continue.setText(tx_describe.isExpanded() ? "ادامه ... " : "بستن");
-            tx_describe.toggle();
+        btnContinue.setOnClickListener(view -> {
+            btnContinue.setIconResource(getIconOfContinueBtn());
+            btnContinue.setText(getTextOfContinueBtn());
+            txDescribe.toggle();
         });
 
     }
 
-    public void ScrollToDescription(View view) {
-
-       // scrollView.smoothScrollTo(0, cardDescription.getTop());
-        ObjectAnimator.ofInt(scrollView, "scrollY",  cardIntroVideo.getTop() - 10).setDuration(1000).start();
-
+    private int getIconOfContinueBtn() {
+        return txDescribe.isExpanded() ? R.drawable.ic_keyboard_arrow_down_black_24dp : R.drawable.ic_keyboard_arrow_up_black_24dp;
     }
 
-    public void ScrollToSamples(View view){
+    @NotNull
+    private String getTextOfContinueBtn() {
+        return txDescribe.isExpanded() ? getString(R.string.countinue) : getString(R.string.close);
+    }
 
-        ObjectAnimator.ofInt(scrollView, "scrollY",  card_sample_video.getTop() -10).setDuration(1000).start();
+    private void scrollToView(CardView cardIntroVideo) {
+        ObjectAnimator.ofInt(scrollView, "scrollY", cardIntroVideo.getTop() - 10).setDuration(1000).start();
     }
 
 }

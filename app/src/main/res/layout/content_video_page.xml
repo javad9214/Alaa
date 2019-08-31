@@ -68,7 +68,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_txDescription"
+                android:id="@+id/card_txt_description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -135,7 +135,7 @@
                         android:textColor="@color/blueDark"/>
 
                     <com.example.alaa.customViews.MyTextView
-                        android:id="@+id/Description"
+                        android:id="@+id/description"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintBottom_toTopOf="@id/btn_continue"

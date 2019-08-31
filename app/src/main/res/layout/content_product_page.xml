@@ -10,7 +10,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <ScrollView
-        android:id="@+id/scrollProduct"
+        android:id="@+id/scroll_product"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="5dp"
@@ -111,7 +111,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
-                    android:onClick="Onclick_Attribute"
+                    android:onClick="onClickAttribute"
                     android:text="@string/features"
                     app:MyButtonFont="IRANSans_Light"
                     app:backgroundTint="@color/redAttribute"
@@ -129,7 +129,7 @@
                     app:MyButtonFont="IRANSans_Light"
                     app:backgroundTint="@color/SampleVideoGreen"
                     app:icon="@drawable/ic_sample_file"
-                    android:onClick="ScrollToSamples"/>
+                    android:onClick="scrollToSamples"/>
 
                 <com.example.alaa.customViews.MyButton
                     android:id="@+id/describe_product"
@@ -140,7 +140,7 @@
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
-                    android:onClick="ScrollToDescription"
+                    android:onClick="scrollToDescription"
                     android:text="@string/studyProduct"
                     app:MyButtonFont="IRANSans_Light"
                     app:backgroundTint="@color/blue"
@@ -174,7 +174,7 @@
 
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/introVideo"
+                android:id="@+id/intro_video"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="0dp"
@@ -221,7 +221,7 @@
 
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/card_txDescription"
+                android:id="@+id/card_txt_description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -233,7 +233,7 @@
                 app:cardElevation="@dimen/card_dimen"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/introVideo">
+                app:layout_constraintTop_toBottomOf="@id/intro_video">
 
 
                 <LinearLayout
@@ -243,7 +243,7 @@
                     android:orientation="vertical">
 
                     <com.example.alaa.customViews.MyTextView
-                        android:id="@+id/Description"
+                        android:id="@+id/description"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -283,7 +283,7 @@
                 android:layout_margin="10dp"
                 app:cardCornerRadius="3dp"
                 app:cardElevation="@dimen/card_dimen"
-                app:layout_constraintTop_toBottomOf="@id/card_txDescription"
+                app:layout_constraintTop_toBottomOf="@id/card_txt_description"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:cardBackgroundColor="@color/SampleVideoGreen">

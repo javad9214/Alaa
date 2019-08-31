@@ -30,7 +30,7 @@
 
             <ImageView
                 android:id="@+id/alaa_logo"
-                android:onClick="GoHome"
+                android:onClick="goHome"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginEnd="20dp"
-                android:onClick="Onclick_dashboard"
+                android:onClick="onClickDashboard"
                 android:src="@drawable/ic_account" />
 
 
