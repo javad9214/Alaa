@@ -19,8 +19,6 @@ public class MyTextView extends ExpandableTextView  {
         super(context);
     }
 
-    private boolean isStrikeThrough = false ;
-
     public MyTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
@@ -33,7 +31,7 @@ public class MyTextView extends ExpandableTextView  {
                 R.styleable.MyTextView, 0, 0);
 
 
-        isStrikeThrough = a.getBoolean( R.styleable.MyTextView_strikeThrough , false);
+        boolean isStrikeThrough = a.getBoolean(R.styleable.MyTextView_strikeThrough, false);
         if (isStrikeThrough) strikeThrough();
 
         int fontOrdinal = a.getInt(R.styleable.MyTextView_MyTextViewFont, 0);

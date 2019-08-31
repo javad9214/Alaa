@@ -35,8 +35,9 @@ class ParentProduct_Component (context: Context , attributeSet: AttributeSet) : 
         val attributes = context.obtainStyledAttributes(attributeSet, R.styleable.MainProductComponent)
 
         title.text = attributes.getString(R.styleable.MainProductComponent_title_mainProduct)
-        realPrice.text = bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_realPrice_mainProduct))) + bracketRight
-        salePrice.text = setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_realPrice_mainProduct)))
+        //TODO:// handle
+        realPrice.text = bracketLeft + setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_realPrice_mainProduct).toString())) + bracketRight
+        salePrice.text = setCurrency(toDouble(attributes.getString(R.styleable.MainProductComponent_realPrice_mainProduct).toString()))
         discount.text = res.getString(R.string.discount) + "  " + calculateDiscount(68700.0, 54500.0)
 
         strikeThrough(realPrice)

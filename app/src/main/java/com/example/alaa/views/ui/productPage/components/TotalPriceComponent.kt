@@ -35,8 +35,8 @@ class TotalPriceComponent (context: Context, attributeSet: AttributeSet) : CardV
 
         if (!isDiscounted) realPrice.visibility = View.GONE else View.VISIBLE
 
-        val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalRealPrice))) + " " +  res.getString(R.string.Toman)
-        val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalSalePrice))) + " " +  res.getString(R.string.Toman)
+        val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalRealPrice).toString())) + " " +  res.getString(R.string.Toman)
+        val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.TotalPriceComponent_finalSalePrice).toString())) + " " +  res.getString(R.string.Toman)
 
         realPrice.text =  realPriceText
         salePrice.text =  salePriceText
