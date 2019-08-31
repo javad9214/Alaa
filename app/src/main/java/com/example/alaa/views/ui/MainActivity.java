@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.alaa.R;
-import com.example.alaa.views.Adapters.HomeRecyclerAdapter;
-import com.example.alaa.views.Dashboard.DashboardFragment;
-import com.example.alaa.views.ui.SearchPage.SearchActivity;
+import com.example.alaa.views.adapters.HomeRecyclerAdapter;
+import com.example.alaa.views.dashboard.DashboardFragment;
+import com.example.alaa.views.ui.search.SearchActivity;
 import com.example.alaa.views.ui.cart.Cart;
 import com.example.alaa.views.ui.main.HomeFragment;
 import com.example.alaa.views.ui.main.ShopFragment;

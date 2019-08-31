@@ -20,7 +20,7 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
 
     private val TAG: String = "===>"
 
-    // 1 : Education System   2 : Grade   3 : Major   4 : Lesson   5 : Teacher
+    // 1 : Education System   2 : Grade   3 : Major   4 : lesson   5 : teacher
     private var currentStep: Int = 0
     private var stepList = listOf<MyButton>()
     private lateinit var listener: StepSelectListener

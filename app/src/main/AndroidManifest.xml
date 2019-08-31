@@ -16,10 +16,10 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".views.ui.cart.Cart"></activity>
         <activity
-            android:name=".views.ui.SearchPage.SearchActivity"
+            android:name=".views.ui.search.SearchActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".views.ui.productPage.ProductPage"
+            android:name=".views.ui.product.ProductPage"
             android:screenOrientation="portrait" />
         <activity
             android:name=".views.ui.login.Login"

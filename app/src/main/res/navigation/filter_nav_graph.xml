@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/filter_EducationSystem"
-        android:name="com.example.alaa.views.ui.SearchPage.Filter.FilterEducationSystem"
+        android:name="com.example.alaa.views.ui.search.Filter.FilterEducationSystem"
         android:label="fragment_filter_EducationSystem"
         tools:layout="@layout/fragment_filter_education_system">
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/filterGrade"
-        android:name="com.example.alaa.views.ui.SearchPage.Filter.FilterGrade"
+        android:name="com.example.alaa.views.ui.search.Filter.FilterGrade"
         android:label="fragment_filter_grade"
         tools:layout="@layout/fragment_filter_grade" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/filterMajor"
-        android:name="com.example.alaa.views.ui.SearchPage.Filter.FilterMajor"
+        android:name="com.example.alaa.views.ui.search.Filter.FilterMajor"
         android:label="fragment_filter_major"
         tools:layout="@layout/fragment_filter_major" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/filterLesson"
-        android:name="com.example.alaa.views.ui.SearchPage.Filter.FilterLesson"
+        android:name="com.example.alaa.views.ui.search.Filter.FilterLesson"
         android:label="fragment_filter_lesson"
         tools:layout="@layout/fragment_filter_lesson" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/filterTeacher"
-        android:name="com.example.alaa.views.ui.SearchPage.Filter.FilterTeacher"
+        android:name="com.example.alaa.views.ui.search.Filter.FilterTeacher"
         android:label="fragment_filter_teacher"
         tools:layout="@layout/fragment_filter_teacher" />
 </navigation>

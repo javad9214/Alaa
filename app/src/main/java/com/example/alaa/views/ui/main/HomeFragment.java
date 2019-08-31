@@ -21,7 +21,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.asksira.loopingviewpager.LoopingViewPager;
 import com.example.alaa.R;
-import com.example.alaa.views.Adapters.HomeRecyclerAdapter;
+import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ViewPager.PagerAdapter;
 import com.example.alaa.views.ui.VideoPage;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;

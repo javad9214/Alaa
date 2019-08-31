@@ -22,10 +22,10 @@ import androidx.viewpager.widget.ViewPager;
 import com.asksira.loopingviewpager.LoopingViewPager;
 import com.example.alaa.R;
 import com.example.alaa.customViews.MyButton;
-import com.example.alaa.views.Adapters.HomeRecyclerAdapter;
+import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ViewPager.PagerAdapter;
-import com.example.alaa.views.ui.productPage.ProductPage;
-import com.example.alaa.views.ui.SearchPage.SearchActivity;
+import com.example.alaa.views.ui.product.ProductPage;
+import com.example.alaa.views.ui.search.SearchActivity;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 import org.jetbrains.annotations.NotNull;

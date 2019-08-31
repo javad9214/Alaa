@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alaa.R;
 import com.example.alaa.customViews.MyTextView;
-import com.example.alaa.views.Dashboard.Adapter_shop;
+import com.example.alaa.views.dashboard.Adapter_shop;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
 import com.hzn.lib.EasyTransition;

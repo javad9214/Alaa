@@ -83,7 +83,7 @@
             </HorizontalScrollView>
 
 
-            <com.example.alaa.views.ui.productPage.components.MainProductComponent
+            <com.example.alaa.views.ui.product.components.MainProductComponent
                 android:id="@+id/mainProduct"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -162,7 +162,7 @@
                 app:cardCornerRadius="5dp"
                 app:cardElevation="@dimen/card_dimen">
 
-            <com.example.alaa.views.ui.productPage.components.ChildProductComponent
+            <com.example.alaa.views.ui.product.components.ChildProductComponent
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:title_childProduct="@string/titleProductItem"
@@ -374,7 +374,7 @@
     </ScrollView>
 
 
-    <com.example.alaa.views.ui.productPage.components.TotalPriceComponent
+    <com.example.alaa.views.ui.product.components.TotalPriceComponent
         android:id="@+id/finalPriceDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

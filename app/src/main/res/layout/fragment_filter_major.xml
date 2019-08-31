@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layoutDirection="rtl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".views.ui.SearchPage.Filter.FilterMajor"
+    tools:context=".views.ui.search.Filter.FilterMajor"
     android:background="@color/pureWhite">
 
 

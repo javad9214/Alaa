@@ -6,7 +6,7 @@
     android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.ui.SearchPage.Filter.BaseFilterDialog"
+    tools:context=".views.ui.search.Filter.BaseFilterDialog"
     android:background="@color/pureWhite">
 
 
