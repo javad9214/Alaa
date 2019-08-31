@@ -45,6 +45,9 @@ import com.transitionseverywhere.extra.Scale;
 
 import java.util.Objects;
 
+/**
+ * @author Alaaa2
+ */
 public class Login extends AppCompatActivity implements View.OnClickListener, ChipGroup.OnCheckedChangeListener, View.OnFocusChangeListener, KeyboardHeightObserver {
 
     public static final String TAG = "Alaa\\Login";
@@ -77,8 +80,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         SignUpFragment signUpFragment = new SignUpFragment();
 
 
-
-
         viewModel.getSelectedPage().observe(this, page -> {
             if (page == 0){
                 replaceFragment(loginFragment);
@@ -88,10 +89,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         });
 
 
-
-
     }
-
 
 
     private void replaceFragment(Fragment fragment){
@@ -358,14 +356,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
             case R.id.chip_math:
                 chip_math.setChipBackgroundColorResource(R.color.alaa1);
                 //chip_tajrobi.setChipBackgroundColor(chipBgColor);
-               // chip_ensani.setChipBackgroundColor(chipBgColor);
+                // chip_ensani.setChipBackgroundColor(chipBgColor);
                 break;
 
 
             case R.id.chip_tajrobi:
                 chip_tajrobi.setChipBackgroundColorResource(R.color.alaa1);
-               // chip_ensani.setChipBackgroundColor(chipBgColor);
-               // chip_math.setChipBackgroundColor(chipBgColor);
+                // chip_ensani.setChipBackgroundColor(chipBgColor);
+                // chip_math.setChipBackgroundColor(chipBgColor);
                 break;
 
 
@@ -407,11 +405,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
     }
 
 
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        keyboardHeightProvider.close();
+        if (keyboardHeightProvider != null) {
+            keyboardHeightProvider.close();
+        }
     }
 
     public static float convertPixelsToDp(float px, Context context) {
