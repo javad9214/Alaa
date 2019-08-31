@@ -30,7 +30,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:text="@string/AddToCart"
-                app:backgroundTint="@color/green"
+                app:backgroundTint="@color/lightGreen"
                 android:layout_marginStart="10dp"
                 app:MyButtonFont="IRANSans_Medium"
                 app:icon="@drawable/ic_add_to_cart"/>

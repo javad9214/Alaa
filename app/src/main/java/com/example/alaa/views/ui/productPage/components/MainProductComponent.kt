@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import com.example.alaa.R
-import com.example.alaa.customViews.MyCardText
 import java.text.NumberFormat
 import java.util.*
 
@@ -21,17 +20,17 @@ class MainProductComponent (context: Context, attr : AttributeSet) : CardView(co
             val  res : Resources = resources
 
             val  title : com.example.alaa.customViews.MyTextView = findViewById(R.id.tx_title_product)
-            val discount : MyCardText = findViewById(R.id.discountPercent)
+           // val discount : MyCardText = findViewById(R.id.discountPercent)
             photoProduct  = findViewById(R.id.thumbnail_product_photo)
 
 
             val attributes = context.obtainStyledAttributes(attr , R.styleable.MainProductComponent)
 
-            val discountText =  res.getString(R.string.discount) + "  " +  calculateDiscount(97600.0, 24300.0 )
+           // val discountText =  res.getString(R.string.discount) + "  " +  calculateDiscount(97600.0, 24300.0 )
             title.text = attributes.getString(R.styleable.MainProductComponent_title_mainProduct)
 
 
-            discount.setText(discountText)
+           // discount.setText(discountText)
 
 
 

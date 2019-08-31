@@ -25,12 +25,14 @@ class MyCardText (context: Context, attrs: AttributeSet) : FrameLayout (context 
     private var _textSize : Float = resources.getDimension(R.dimen.textSizeDefault)
     private var _textFont : Int = 2
     private var _cardRadius : Float = 4f
-    private var _myIcon : Drawable? = ContextCompat.getDrawable(context , R.drawable.ic_done_filter)
+    private var _leftIcon : Drawable? = ContextCompat.getDrawable(context , R.drawable.ic_left_quote)
+    private var _rightIcon : Drawable? = ContextCompat.getDrawable(context , R.drawable.ic_right_quote)
 
 
     private var textView : MyTextView
     private var cardView : CardView
-    private var imageView : AppCompatImageView
+    private var leftImageView : AppCompatImageView
+    private var rightImageView : AppCompatImageView
 
 
    init {
@@ -39,7 +41,8 @@ class MyCardText (context: Context, attrs: AttributeSet) : FrameLayout (context 
 
         textView = findViewById(R.id.my_card_textView)
         cardView  = findViewById(R.id.my_card_text)
-        imageView = findViewById(R.id.my_icon)
+        leftImageView = findViewById(R.id.left_icon)
+        rightImageView = findViewById(R.id.right_icon)
 
 
         // Load attributes
@@ -52,7 +55,8 @@ class MyCardText (context: Context, attrs: AttributeSet) : FrameLayout (context 
         _textSize = a.getDimension(R.styleable.MyCardText_text_size , _textSize)
         _textFont = a.getInt(R.styleable.MyCardText_text_font , 2)
        _cardRadius = a.getDimension(R.styleable.MyCardText_card_radius , 4f)
-       _myIcon = a.getDrawable(R.styleable.MyCardText_myIcon)
+       _leftIcon = a.getDrawable(R.styleable.MyCardText_leftIcon)
+       _rightIcon = a.getDrawable(R.styleable.MyCardText_rightIcon)
 
         textView.let {
             it.text = _text
@@ -66,12 +70,18 @@ class MyCardText (context: Context, attrs: AttributeSet) : FrameLayout (context 
         cardView.radius = _cardRadius
 
 
-       if (_myIcon == null) imageView.visibility = View.GONE
+       if (_leftIcon == null) leftImageView.visibility = View.GONE
         else {
-           imageView.visibility = View.VISIBLE
-           imageView.setImageDrawable(_myIcon)
+           leftImageView.visibility = View.VISIBLE
+           leftImageView.setImageDrawable(_leftIcon)
        }
 
+
+       if (_rightIcon == null) rightImageView.visibility = View.GONE
+       else {
+           rightImageView.visibility = View.VISIBLE
+           rightImageView.setImageDrawable(_rightIcon)
+       }
 
         a.recycle()
     }

@@ -11,7 +11,7 @@ import com.example.alaa.R;
 import at.blogc.android.views.ExpandableTextView;
 
 
-public class MyTextView extends ExpandableTextView {
+public class MyTextView extends ExpandableTextView  {
 
 
 

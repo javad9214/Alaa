@@ -77,7 +77,8 @@
         <attr name="text_color" format="color|reference" />
         <attr name="text_size" format="dimension"/>
         <attr name="card_radius" format="dimension"/>
-        <attr name="myIcon" format="reference"/>
+        <attr name="leftIcon" format="reference"/>
+        <attr name="rightIcon" format="reference"/>
         <attr name="text_font" format="enum" >
             <enum name="IRANSans_Light" value="1" />
             <enum name="IRANSans_Medium" value="2" />
