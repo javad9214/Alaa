@@ -1,403 +1,360 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
-    android:layoutDirection="rtl"
-    android:orientation="vertical"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
-        android:id="@+id/scroll_product"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="5dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toTopOf="@id/finalPriceDialog"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <ScrollView
+            android:id="@+id/scroll_product"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@id/finalPriceDialog"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <HorizontalScrollView
-                android:id="@+id/chips_map"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layout_marginTop="@dimen/Margin5"
-                android:layout_marginEnd="@dimen/Margin5"
-                android:layout_marginBottom="@dimen/Margin10"
-                android:layoutDirection="ltr"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:singleLine="true"
-                    app:singleSelection="true">
-
-                    <com.example.alaa.customViews.MyChip
-                        style="@style/Widget.MaterialComponents.Chip.Action"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layoutDirection="ltr"
-                        android:text="ریاضی تجربی کنکور نظام قدیم"
-                        app:MyChipFont="IRANSans_Light"
-                        app:chipBackgroundColor="@color/pureWhite"
-                        app:chipStrokeColor="@color/black"
-                        app:chipStrokeWidth="1dp" />
-
-                    <com.example.alaa.customViews.MyChip
-                        style="@style/Widget.MaterialComponents.Chip.Action"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layoutDirection="ltr"
-                        android:text="محصولات آموزشی"
-                        app:MyChipFont="IRANSans_Light"
-                        app:chipBackgroundColor="@color/pureWhite"
-                        app:chipIcon="@drawable/ic_chevron_left_black_24dp"
-                        app:chipStrokeColor="@color/black"
-                        app:chipStrokeWidth="1dp" />
-
-                    <com.example.alaa.customViews.MyChip
-                        style="@style/Widget.MaterialComponents.Chip.Action"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layoutDirection="ltr"
-                        android:text="@string/title_home"
-                        app:MyChipFont="IRANSans_Light"
-                        app:chipBackgroundColor="@color/pureWhite"
-                        app:chipIcon="@drawable/ic_chevron_left_black_24dp"
-                        app:chipStrokeColor="@color/black"
-                        app:chipStrokeWidth="1dp" />
-
-
-                </com.google.android.material.chip.ChipGroup>
-
-            </HorizontalScrollView>
-
-
-            <com.example.alaa.views.ui.product.components.MainProductComponent
-                android:id="@+id/mainProduct"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/Margin10"
-                app:realPrice_mainProduct="@string/realPriceDemo"
-                app:title_mainProduct="@string/demoTitle"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/chips_map"
-                app:salePrice_mainProduct="@string/salePriceDemo" />
-
-            <LinearLayout
-                android:id="@+id/linear_buttons"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/mainProduct">
-
-                <com.example.alaa.customViews.MyButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="2dp"
-                    android:layout_weight="1"
-                    android:onClick="onClickAttribute"
-                    android:text="@string/features"
-                    app:MyButtonFont="IRANSans_Light"
-                    app:backgroundTint="@color/redAttribute"
-                    app:icon="@drawable/ic_features" />
-
-
-                <com.example.alaa.customViews.MyButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginEnd="2dp"
-                    android:layout_weight="1"
-                    android:text="@string/samples"
-                    app:MyButtonFont="IRANSans_Light"
-                    app:backgroundTint="@color/SampleVideoGreen"
-                    app:icon="@drawable/ic_sample_file"
-                    android:onClick="scrollToSamples"/>
-
-                <com.example.alaa.customViews.MyButton
-                    android:id="@+id/describe_product"
-                    style="@style/AppTheme"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:onClick="scrollToDescription"
-                    android:text="@string/studyProduct"
-                    app:MyButtonFont="IRANSans_Light"
-                    app:backgroundTint="@color/blue"
-                    app:icon="@drawable/ic_study" />
-
-
-            </LinearLayout>
-
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardRecycler_selectableProduct"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/recycler_sample_booklet"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_margin="@dimen/Margin10"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="@dimen/card_dimen">
-
-            <com.example.alaa.views.ui.product.components.ChildProductComponent
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:title_childProduct="@string/titleProductItem"
-                app:salePrice_childProduct="@string/salePriceDemo"
-                app:realPrice_childProduct="@string/realPriceDemo"
-                app:hasChildren="true"/>
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/intro_video"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/Margin10"
-                android:layout_marginBottom="@dimen/Margin10"
-                android:padding="@dimen/Margin10"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="@dimen/card_dimen"
-                app:layout_constraintTop_toBottomOf="@id/linear_buttons">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <HorizontalScrollView
+                    android:id="@+id/chips_map"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/Margin10"
+                    android:layout_marginTop="@dimen/Margin5"
+                    android:layout_marginEnd="@dimen/Margin5"
+                    android:layout_marginBottom="@dimen/Margin10"
+                    android:layoutDirection="ltr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/intro_demo_video"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0"
-                        tools:layout_editor_absoluteX="0dp" />
-
-
-                    <androidx.appcompat.widget.AppCompatImageView
+                    <com.google.android.material.chip.ChipGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_play_button"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:singleLine="true"
+                        app:singleSelection="true">
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        <com.example.alaa.custom_views.ChipWithFont
+                            style="@style/Widget.MaterialComponents.Chip.Action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layoutDirection="ltr"
+                            android:text="ریاضی تجربی کنکور نظام قدیم"
+                            app:MyChipFont="IRANSans_Light"
+                            app:chipBackgroundColor="@color/pureWhite"
+                            app:chipStrokeColor="@color/black"
+                            app:chipStrokeWidth="1dp" />
 
-            </com.google.android.material.card.MaterialCardView>
+                        <com.example.alaa.custom_views.ChipWithFont
+                            style="@style/Widget.MaterialComponents.Chip.Action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layoutDirection="ltr"
+                            android:text="محصولات آموزشی"
+                            app:MyChipFont="IRANSans_Light"
+                            app:chipBackgroundColor="@color/pureWhite"
+                            app:chipIcon="@drawable/ic_chevron_left_black_24dp"
+                            app:chipStrokeColor="@color/black"
+                            app:chipStrokeWidth="1dp" />
+
+                        <com.example.alaa.custom_views.ChipWithFont
+                            style="@style/Widget.MaterialComponents.Chip.Action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layoutDirection="ltr"
+                            android:text="@string/title_home"
+                            app:MyChipFont="IRANSans_Light"
+                            app:chipBackgroundColor="@color/pureWhite"
+                            app:chipIcon="@drawable/ic_chevron_left_black_24dp"
+                            app:chipStrokeColor="@color/black"
+                            app:chipStrokeWidth="1dp" />
 
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_txt_description"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/Margin10"
-                android:layout_marginBottom="10dp"
-                android:padding="@dimen/Margin10"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="@dimen/card_dimen"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/intro_video">
+                    </com.google.android.material.chip.ChipGroup>
+
+                </HorizontalScrollView>
 
 
                 <LinearLayout
-                    android:id="@+id/linear_description"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/linear_buttons"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mainProduct">
 
-                    <com.example.alaa.customViews.TextViewWithFont
-                        android:id="@+id/description"
-                        android:layout_width="wrap_content"
+                    <com.example.alaa.custom_views.ButtonWithFont
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:ellipsize="end"
-                        android:maxLines="5"
-                        android:padding="@dimen/Margin10"
-                        android:text="@string/description"
-                        android:textColor="@color/gray"
-                        android:textSize="16sp"
-                        app:MyTextViewFont="IRANSans_Light_4.1"
-                        app:animation_duration="750" />
+                        android:layout_gravity="start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:onClick="onClickAttribute"
+                        android:text="@string/features"
+                        app:MyButtonFont="IRANSans_Light"
+                        app:backgroundTint="@color/redAttribute"
+                        app:icon="@drawable/ic_features" />
 
 
-                    <com.example.alaa.customViews.MyButton
-                        android:id="@+id/btn_continue"
-                        android:layout_width="match_parent"
+                    <com.example.alaa.custom_views.ButtonWithFont
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/Margin5"
-                        android:layout_marginEnd="@dimen/Margin5"
-                        android:text="@string/Continue"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        app:MyButtonFont="IRANSans_Medium"
-                        app:backgroundTint="@color/grayWhite"
-                        app:iconGravity="textStart"
-                        app:iconTint="@color/blackTitle" />
+                        android:layout_gravity="start"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:onClick="scrollToSamples"
+                        android:text="@string/samples"
+                        app:MyButtonFont="IRANSans_Light"
+                        app:backgroundTint="@color/SampleVideoGreen"
+                        app:icon="@drawable/ic_sample_file" />
+
+                    <com.example.alaa.custom_views.ButtonWithFont
+                        android:id="@+id/describe_product"
+                        style="@style/AppTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:onClick="scrollToDescription"
+                        android:text="@string/studyProduct"
+                        app:MyButtonFont="IRANSans_Light"
+                        app:backgroundTint="@color/blue"
+                        app:icon="@drawable/ic_study" />
+
 
                 </LinearLayout>
 
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_sample_booklet"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/title_sample_booklet">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_sample_videos"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/card_sample_video">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-
-            <com.example.alaa.customViews.MyCardText
-                android:id="@+id/title_sample_booklet"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/Margin10"
-                app:card_color="@color/SampleVideoGreen"
-                app:card_radius="3dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_sample_booklet"
-                app:text="@string/sampleBooklet"
-                app:text_color="@color/pureWhite"
-                app:text_font="IRANSans_Medium"
-                app:text_size="5sp" />
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_sample_video"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:cardCornerRadius="3dp"
-                app:cardElevation="@dimen/card_dimen"
-                app:layout_constraintTop_toBottomOf="@id/card_txt_description"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:cardBackgroundColor="@color/SampleVideoGreen">
-
-                <com.example.alaa.customViews.TextViewWithFont
-
-                    android:layout_width="match_parent"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_txt_description"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="25dp"
-                    android:gravity="start"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:text="@string/sample_videos"
-                    android:textColor="@color/pureWhite"
-                    android:textSize="14sp"
-                    app:MyTextViewFont="IRANSans_Medium" />
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/Margin10"
+                    android:layout_marginBottom="10dp"
+                    android:padding="@dimen/Margin10"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="@dimen/card_dimen"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/intro_video">
 
 
+                    <LinearLayout
+                        android:id="@+id/linear_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.example.alaa.custom_views.ButtonWithFont
+                            android:id="@+id/btn_continue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/Margin5"
+                            android:layout_marginEnd="@dimen/Margin5"
+                            android:text="@string/Continue"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            app:MyButtonFont="IRANSans_Medium"
+                            app:backgroundTint="@color/grayWhite"
+                            app:iconGravity="textStart"
+                            app:iconTint="@color/blackTitle" />
 
 
-            </com.google.android.material.card.MaterialCardView>
+                        <com.example.alaa.custom_views.TextViewWithFont
+                            android:id="@+id/description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:padding="@dimen/Margin10"
+                            android:text="@string/description"
+                            android:textColor="@color/gray"
+                            android:textSize="16sp"
+                            app:MyTextViewFont="IRANSans_Light_4.1"
+                            app:animation_duration="750" />
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_sample_booklet"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/Margin10"
-                app:cardCornerRadius="3dp"
-                app:cardElevation="@dimen/card_dimen"
-                app:layout_constraintTop_toBottomOf="@id/recycler_sample_videos"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:cardBackgroundColor="@color/SampleVideoGreen">
+                    </LinearLayout>
 
-                <com.example.alaa.customViews.TextViewWithFont
-                    android:layout_width="match_parent"
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_sample_booklet"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="25dp"
-                    android:gravity="start"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:text="@string/sampleBooklet"
-                    android:textColor="@color/pureWhite"
-                    android:textSize="14sp"
-                    app:MyTextViewFont="IRANSans_Medium" />
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header_sample_booklet">
 
-            </com.google.android.material.card.MaterialCardView>
-
+                </androidx.recyclerview.widget.RecyclerView>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_sample_videos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header_sample_videos">
 
-    </ScrollView>
+                </androidx.recyclerview.widget.RecyclerView>
 
 
-    <com.example.alaa.views.ui.product.components.TotalPriceComponent
-        android:id="@+id/finalPriceDialog"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:elevation="@dimen/card_dimen"
-        app:finalRealPrice="148000"
-        app:finalSalePrice="98000"
-        app:isDiscounted="true"
-        app:layout_constraintBottom_toBottomOf="parent" />
+                <com.example.alaa.custom_views.HeaderWithLine
+                    android:id="@+id/header_sample_videos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:header_text="@string/sample_videos"
+                    app:header_textColor="@color/black"
+                    app:header_textFont="IRANSans_Medium"
+                    app:header_textSize="6sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_txt_description" />
+
+                <com.example.alaa.custom_views.HeaderWithLine
+                    android:id="@+id/header_sample_booklet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:header_text="@string/sampleBooklet"
+                    app:header_textColor="@color/black"
+                    app:header_textFont="IRANSans_Medium"
+                    app:header_textSize="6sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_sample_videos" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.example.alaa.views.ui.product.components.MainProductComponent
+                    android:id="@+id/mainProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/Margin10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chips_map"
+                    app:realPrice_mainProduct="@string/realPriceDemo"
+                    app:salePrice_mainProduct="@string/salePriceDemo"
+                    app:title_mainProduct="@string/demoTitle" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRecycler_selectableProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/Margin10"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="@dimen/card_dimen"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_sample_booklet">
+
+                    <com.example.alaa.views.ui.product.components.ChildProductComponent
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hasChildren="true"
+                        app:realPrice_childProduct="@string/realPriceDemo"
+                        app:salePrice_childProduct="@string/salePriceDemo"
+                        app:title_childProduct="@string/titleProductItem" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/intro_video"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/Margin10"
+                    android:layout_marginBottom="@dimen/Margin10"
+                    android:padding="@dimen/Margin10"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="@dimen/card_dimen"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linear_buttons">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/intro_demo_video"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0"
+                            tools:layout_editor_absoluteX="0dp" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_play_button"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+        <com.example.alaa.views.ui.product.components.TotalPriceComponent
+            android:id="@+id/finalPriceDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:elevation="@dimen/card_dimen"
+            app:finalRealPrice="148000"
+            app:finalSalePrice="98000"
+            app:isDiscounted="true"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+    </data>
+</layout>

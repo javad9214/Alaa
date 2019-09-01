@@ -58,7 +58,7 @@
                     android:src="@drawable/alaa_logo_black"
                     android:visibility="visible" />
 
-                <com.example.alaa.customViews.TextViewWithFont
+                <com.example.alaa.custom_views.TextViewWithFont
                     android:id="@+id/login_describe1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                     app:MyTextViewFont="IRANSans_Bold" />
 
 
-                <com.example.alaa.customViews.TextViewWithFont
+                <com.example.alaa.custom_views.TextViewWithFont
                     android:id="@+id/login_describe2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
                         android:orientation="horizontal">
 
 
-                        <com.example.alaa.customViews.TextViewWithFont
+                        <com.example.alaa.custom_views.TextViewWithFont
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
@@ -199,7 +199,7 @@
                         android:gravity="end"
                         android:orientation="horizontal">
 
-                        <com.example.alaa.customViews.TextViewWithFont
+                        <com.example.alaa.custom_views.TextViewWithFont
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"

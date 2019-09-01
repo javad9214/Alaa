@@ -38,7 +38,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guidelineLeft">
 
-            <com.example.alaa.customViews.TextViewWithFont
+            <com.example.alaa.custom_views.TextViewWithFont
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -47,7 +47,7 @@
                 app:MyTextViewFont="IranSansNumLight" />
 
 
-            <com.example.alaa.customViews.TextViewWithFont
+            <com.example.alaa.custom_views.TextViewWithFont
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="محتوا"
@@ -70,7 +70,7 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.40" />
 
-        <com.example.alaa.customViews.TextViewWithFont
+        <com.example.alaa.custom_views.TextViewWithFont
             android:id="@+id/tx_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

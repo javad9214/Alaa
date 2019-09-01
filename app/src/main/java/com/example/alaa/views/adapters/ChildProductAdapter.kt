@@ -30,9 +30,9 @@ import com.example.alaa.models.SelectableProductModel
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
-        val title: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.title)
-        val realPrice: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.realPrice)
-        val salePrice: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.salePrice)
+        val title: com.example.alaa.custom_views.TextViewWithFont = itemView.findViewById(R.id.title)
+        val realPrice: com.example.alaa.custom_views.TextViewWithFont = itemView.findViewById(R.id.realPrice)
+        val salePrice: com.example.alaa.custom_views.TextViewWithFont = itemView.findViewById(R.id.salePrice)
 
     }
 

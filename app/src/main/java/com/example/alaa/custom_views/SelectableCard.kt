@@ -1,4 +1,4 @@
-package com.example.alaa.customViews
+package com.example.alaa.custom_views
 
 import android.content.Context
 import android.content.res.TypedArray
@@ -21,7 +21,7 @@ class SelectableCard (context: Context, attributeSet: AttributeSet ) : CardView(
 
     private var text : String?
 
-    private val textViewWithFont: com.example.alaa.customViews.TextViewWithFont
+    private val textViewWithFont: com.example.alaa.custom_views.TextViewWithFont
 
     private val TAG  = "K===>O"
 

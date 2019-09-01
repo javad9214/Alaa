@@ -3,7 +3,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".customViews.FilteringStepGuide">
+    tools:context=".custom_views.FilteringStepGuide">
 
     <data>
         <variable
@@ -33,7 +33,7 @@
                 android:orientation="horizontal">
 
 
-                <com.example.alaa.customViews.MyButton
+                <com.example.alaa.custom_views.ButtonWithFont
                     android:id="@+id/Step_EducationSystem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/alaa5" />
 
-                <com.example.alaa.customViews.MyButton
+                <com.example.alaa.custom_views.ButtonWithFont
                     android:id="@+id/Step_Grade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/alaa5" />
 
-                <com.example.alaa.customViews.MyButton
+                <com.example.alaa.custom_views.ButtonWithFont
                     android:id="@+id/Step_Major"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
                     android:background="@color/alaa5" />
 
 
-                <com.example.alaa.customViews.MyButton
+                <com.example.alaa.custom_views.ButtonWithFont
                     android:id="@+id/Step_Lesson"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/alaa5" />
 
-                <com.example.alaa.customViews.MyButton
+                <com.example.alaa.custom_views.ButtonWithFont
                     android:id="@+id/Step_Teacher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -150,7 +150,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/alaa5" />
 
-                <com.example.alaa.customViews.MyButton
+                <com.example.alaa.custom_views.ButtonWithFont
                     android:id="@+id/applyFiltering"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

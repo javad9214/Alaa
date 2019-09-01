@@ -10,8 +10,7 @@
     android:background="@color/pureWhite">
 
 
-
-    <com.example.alaa.customViews.FilteringStepGuide
+    <com.example.alaa.custom_views.FilteringStepGuide
         android:id="@+id/FilteringStepGuide"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

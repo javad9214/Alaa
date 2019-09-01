@@ -2,23 +2,23 @@ package com.example.alaa.views.ui.search.Filter
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.example.alaa.R
-import com.example.alaa.customViews.MyButton
+import com.example.alaa.custom_views.ButtonWithFont
 
 
 class FilterMajor : Fragment()  {
 
     private val TAG = "===>"
     private lateinit var myView : View
-    private lateinit var allMajor : MyButton
-    private lateinit var riazi : MyButton
-    private lateinit var tajrobi : MyButton
-    private lateinit var ensani : MyButton
+    private lateinit var allMajor: ButtonWithFont
+    private lateinit var riazi: ButtonWithFont
+    private lateinit var tajrobi: ButtonWithFont
+    private lateinit var ensani: ButtonWithFont
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {

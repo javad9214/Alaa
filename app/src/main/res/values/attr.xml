@@ -25,7 +25,7 @@
         <attr name="strikeThrough" format="boolean" />
     </declare-styleable>
 
-    <declare-styleable name="MyButton">
+    <declare-styleable name="ButtonWithFont">
         <attr name="MyButtonFont" format="enum">
             <enum name="IRANSans_Light" value="1" />
             <enum name="IRANSans_Medium" value="2" />
@@ -47,7 +47,7 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="MyChip">
+    <declare-styleable name="ChipWithFont">
 
         <attr name="MyChipFont" format="enum">
             <enum name="IRANSans_Light" value="1" />
@@ -70,8 +70,7 @@
         </attr>
     </declare-styleable>
 
-
-    <declare-styleable name="MyCardText">
+    <declare-styleable name="TextViewWithCardBackground">
         <attr name="text" format="string" />
         <attr name="card_color" format="color|reference" />
         <attr name="text_color" format="color|reference" />
@@ -102,6 +101,35 @@
 
     </declare-styleable>
 
+    <declare-styleable name="HeaderWithLine">
+        <attr name="header_buttonText" format="string" />
+        <attr name="header_hasButton" format="boolean" />
+        <attr name="header_buttonColor" format="color|reference" />
+        <attr name="header_text" format="string" />
+        <attr name="header_textColor" format="color|reference" />
+        <attr name="header_textSize" format="dimension" />
+        <attr name="header_textFont" format="enum">
+            <enum name="IRANSans_Light" value="1" />
+            <enum name="IRANSans_Medium" value="2" />
+            <enum name="IRANSans_Bold" value="3" />
+            <enum name="IRANSans_Ultra_Light" value="4" />
+            <enum name="IRANSans_Light_4.1" value="5" />
+            <enum name="BSara" value="6" />
+            <enum name="shabnam_light" value="7" />
+            <enum name="estedad" value="8" />
+            <enum name="suls" value="9" />
+            <enum name="shekaste" value="10" />
+            <enum name="IranSansNum" value="11" />
+            <enum name="IranSansNumBold" value="12" />
+            <enum name="IranSansNumLight" value="13" />
+            <enum name="IranSansNumMedium" value="14" />
+            <enum name="IranSansNumUltraLight" value="15" />
+            <enum name="MaliBoldItalic" value="16" />
+            <enum name="RubiKMono" value="17" />
+        </attr>
+
+    </declare-styleable>
+
     <declare-styleable name="MainProductComponent">
 
         <attr name="title_mainProduct" format="string" />
@@ -110,7 +138,6 @@
         <attr name="discount_mainProduct" format="string" />
 
     </declare-styleable>
-
 
     <declare-styleable name="ChildProductComponent">
 
@@ -138,13 +165,10 @@
 
     </declare-styleable>
 
-
-
     <declare-styleable name="SelectableCard">
         <attr name="SelectableCard_text" format="string|reference" />
         <attr name="SelectableCard_id" format="string" />
     </declare-styleable>
-
 
     <declare-styleable name="FilterNavigation">
         <attr name="NavCurrentStep" format="enum">
@@ -155,7 +179,6 @@
             <enum name="NavTeacher" value="5" />
         </attr>
     </declare-styleable>
-
 
     <declare-styleable name="FilteringStepGuide">
 

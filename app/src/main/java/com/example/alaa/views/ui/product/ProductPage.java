@@ -8,12 +8,13 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alaa.R;
-import com.example.alaa.customViews.TextViewWithFont;
+import com.example.alaa.custom_views.TextViewWithFont;
+import com.example.alaa.databinding.ContentProductPageBinding;
 import com.example.alaa.models.SampleVideoModel;
 import com.example.alaa.models.SelectableProductModel;
 import com.example.alaa.views.dashboard.Adapter_shop;
@@ -34,15 +35,16 @@ public class ProductPage extends AppCompatActivity {
 
     public static final String TAG = "===>";
     private TextViewWithFont txDescribe;
-    private CardView cardSampleVideo, cardIntroVideo;
     private MaterialButton btnContinue;
     private ScrollView scrollView;
     private RecyclerView recyclerViewSampleVideo, recyclerViewSampleBooklet;
 
+    private ContentProductPageBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_page);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_product_page);
 
         init();
         expandableTextView();
@@ -50,11 +52,11 @@ public class ProductPage extends AppCompatActivity {
     }
 
     private void init() {
+
+
         scrollView = findViewById(R.id.scroll_product);
         txDescribe = findViewById(R.id.description);
         btnContinue = findViewById(R.id.btn_continue);
-        cardSampleVideo = findViewById(R.id.card_sample_video);
-        cardIntroVideo = findViewById(R.id.intro_video);
         recyclerViewSampleVideo = findViewById(R.id.recycler_sample_videos);
         recyclerViewSampleBooklet = findViewById(R.id.recycler_sample_booklet);
 
@@ -65,7 +67,7 @@ public class ProductPage extends AppCompatActivity {
         ArrayList<SampleVideoModel> list = new ArrayList<>();
 
 
-        for (int i = 0 ; i < 5 ; i++){
+        for (int i = 0; i < 5; i++) {
             list.add(setSampleVideo());
 
         }
@@ -118,12 +120,11 @@ public class ProductPage extends AppCompatActivity {
     }
 
     public void scrollToDescription(View view) {
-        scrollToView(cardIntroVideo);
+        scrollToView(binding.introVideo);
     }
 
     public void scrollToSamples(View view){
-
-        scrollToView(cardSampleVideo);
+        scrollToView(binding.headerSampleVideos);
     }
 
     private void expandableTextView() {

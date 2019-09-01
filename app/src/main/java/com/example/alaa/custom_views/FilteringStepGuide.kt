@@ -1,4 +1,4 @@
-package com.example.alaa.customViews
+package com.example.alaa.custom_views
 
 import android.content.Context
 import android.content.res.TypedArray
@@ -22,7 +22,7 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
 
     // 1 : Education System   2 : Grade   3 : Major   4 : lesson   5 : teacher
     private var currentStep: Int = 0
-    private var stepList = listOf<MyButton>()
+    private var stepList = listOf<ButtonWithFont>()
     private lateinit var listener: StepSelectListener
 
      private var myView = View.inflate(context, R.layout.filtering_guide_step, this)
@@ -58,27 +58,26 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
     }
 
 
-
-    private fun setStepActive(myButton: MyButton) {
-        myButton.backgroundTintList = ContextCompat.getColorStateList(context, R.color.colorAccent)
-        myButton.setTextColor(ContextCompat.getColorStateList(context, R.color.pureWhite))
-        myButton.iconTint = ContextCompat.getColorStateList(context, R.color.pureWhite)
-        myButton.isEnabled = true
+    private fun setStepActive(buttonWithFont: ButtonWithFont) {
+        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.colorAccent)
+        buttonWithFont.setTextColor(ContextCompat.getColorStateList(context, R.color.pureWhite))
+        buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.pureWhite)
+        buttonWithFont.isEnabled = true
     }
 
-    private fun setStepPassed(myButton: MyButton) {
-        myButton.backgroundTintList = ContextCompat.getColorStateList(context, R.color.pureWhite)
-        myButton.setTextColor(ContextCompat.getColorStateList(context, R.color.green))
-        myButton.iconTint = ContextCompat.getColorStateList(context, R.color.green)
-        myButton.strokeColor = ContextCompat.getColorStateList(context, R.color.default_gray)
+    private fun setStepPassed(buttonWithFont: ButtonWithFont) {
+        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.pureWhite)
+        buttonWithFont.setTextColor(ContextCompat.getColorStateList(context, R.color.green))
+        buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.green)
+        buttonWithFont.strokeColor = ContextCompat.getColorStateList(context, R.color.default_gray)
     }
 
-    private fun setStepDisable(myButton: MyButton) {
-        myButton.backgroundTintList = ContextCompat.getColorStateList(context, R.color.pureWhite)
-        myButton.setTextColor(ContextCompat.getColorStateList(context, R.color.blackTitle))
-        myButton.iconTint = ContextCompat.getColorStateList(context, R.color.blackTitle)
-        myButton.strokeColor = ContextCompat.getColorStateList(context, R.color.pureWhite)
-        myButton.isEnabled = false
+    private fun setStepDisable(buttonWithFont: ButtonWithFont) {
+        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.pureWhite)
+        buttonWithFont.setTextColor(ContextCompat.getColorStateList(context, R.color.blackTitle))
+        buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.blackTitle)
+        buttonWithFont.strokeColor = ContextCompat.getColorStateList(context, R.color.pureWhite)
+        buttonWithFont.isEnabled = false
     }
 
     fun updateFilterStep(step: Int) {

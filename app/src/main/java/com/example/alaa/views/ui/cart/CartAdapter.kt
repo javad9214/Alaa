@@ -51,8 +51,8 @@ class CartAdapter( private val resource : Int) : RecyclerView.Adapter<CartAdapte
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
-        val title: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.tx_title_product)
-        val finalSalePrice: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.finalSalePrice)
+        val title: com.example.alaa.custom_views.TextViewWithFont = itemView.findViewById(R.id.tx_title_product)
+        val finalSalePrice: com.example.alaa.custom_views.TextViewWithFont = itemView.findViewById(R.id.finalSalePrice)
 
 
         val attrRecyclerView : RecyclerView = itemView.findViewById(R.id.recycler_attribute_simple_product)

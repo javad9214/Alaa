@@ -2,7 +2,6 @@ package com.example.alaa.views.ui.product.components
 
 
 import android.content.Context
-import android.content.res.Resources
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
@@ -10,7 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alaa.R
-import com.example.alaa.customViews.MyCardText
+import com.example.alaa.custom_views.TextViewWithCardBackground
 import com.example.alaa.models.SelectableProductModel
 import com.example.alaa.views.ui.product.adapters.SelectableProductAdapter
 import java.text.DecimalFormat
@@ -25,13 +24,12 @@ class ChildProductComponent(context: Context, attributeSet: AttributeSet) : Cons
 
         View.inflate(context, R.layout.child_product_component, this)
 
-        val res: Resources = resources
 
-        val title: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.tx_title_product)
-        val realPrice: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.realPrice)
-        val salePrice: MyCardText = findViewById(R.id.salePrice)
+        val title: com.example.alaa.custom_views.TextViewWithFont = findViewById(R.id.tx_title_product)
+        val realPrice: com.example.alaa.custom_views.TextViewWithFont = findViewById(R.id.realPrice)
+        val salePrice: TextViewWithCardBackground = findViewById(R.id.salePrice)
 
-        //  val discount: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.discountPercent)
+        //  val discount: com.example.alaa.custom_views.TextViewWithFont = findViewById(R.id.discountPercent)
         recycler  = findViewById(R.id.recycler_loops)
 
 
@@ -86,7 +84,7 @@ class ChildProductComponent(context: Context, attributeSet: AttributeSet) : Cons
         recycler.adapter = productAdapter
     }
 
-    private fun strikeThrough(textViewWithFont: com.example.alaa.customViews.TextViewWithFont) {
+    private fun strikeThrough(textViewWithFont: com.example.alaa.custom_views.TextViewWithFont) {
         textViewWithFont.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
     }
 

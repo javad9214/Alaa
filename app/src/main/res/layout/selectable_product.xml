@@ -17,20 +17,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.example.alaa.customViews.TextViewWithFont
-            android:id="@+id/title"
+        <com.example.alaa.custom_views.TextViewWithCardBackground
+            android:id="@+id/salePrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/titleProductItem"
-            android:textColor="@color/black"
-            app:MyTextViewFont="IRANSans_Medium"
-            app:layout_constraintBottom_toBottomOf="@id/checkbox"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/checkbox"
-            app:layout_constraintTop_toTopOf="@id/checkbox" />
+            app:card_color="@color/RedLight"
+            app:layout_constraintEnd_toEndOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:text="@string/salePriceDemo"
+            app:text_color="@color/pureWhite"
+            app:text_font="IranSansNumLight"
+            app:text_size="6sp" />
 
-        <com.example.alaa.customViews.TextViewWithFont
+        <com.example.alaa.custom_views.TextViewWithFont
             android:id="@+id/realPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,17 +46,18 @@
             app:layout_constraintTop_toBottomOf="@id/title"
             app:strikeThrough="true" />
 
-        <com.example.alaa.customViews.MyCardText
-            android:id="@+id/salePrice"
+        <com.example.alaa.custom_views.TextViewWithFont
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:card_color="@color/RedLight"
-            app:layout_constraintEnd_toEndOf="@id/title"
-            app:layout_constraintTop_toBottomOf="@id/title"
-            app:text="@string/salePriceDemo"
-            app:text_color="@color/pureWhite"
-            app:text_font="IranSansNumLight"
-            app:text_size="6sp" />
+            android:layout_marginEnd="5dp"
+            android:text="@string/titleProductItem"
+            android:textColor="@color/black"
+            app:MyTextViewFont="IRANSans_Medium"
+            app:layout_constraintBottom_toBottomOf="@id/checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/checkbox"
+            app:layout_constraintTop_toTopOf="@id/checkbox" />
 
 
         <androidx.recyclerview.widget.RecyclerView

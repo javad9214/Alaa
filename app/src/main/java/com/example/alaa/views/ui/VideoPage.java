@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alaa.R;
-import com.example.alaa.customViews.TextViewWithFont;
+import com.example.alaa.custom_views.TextViewWithFont;
 import com.example.alaa.views.dashboard.Adapter_shop;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;

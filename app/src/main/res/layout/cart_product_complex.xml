@@ -22,7 +22,7 @@
         app:tint="@color/black" />
 
 
-    <com.example.alaa.customViews.TextViewWithFont
+    <com.example.alaa.custom_views.TextViewWithFont
         android:id="@+id/tx_title_product"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <com.example.alaa.customViews.TextViewWithFont
+    <com.example.alaa.custom_views.TextViewWithFont
         android:id="@+id/realPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tx_title_product">
 
-        <com.example.alaa.customViews.TextViewWithFont
+        <com.example.alaa.custom_views.TextViewWithFont
             android:id="@+id/salePrice"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

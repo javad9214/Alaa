@@ -8,7 +8,7 @@
     app:cardCornerRadius="5dp">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_sample_video"
+        android:id="@+id/header_sample_videos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -44,7 +44,7 @@
                 android:scaleY="0.7"/>
 
 
-            <com.example.alaa.customViews.TextViewWithFont
+            <com.example.alaa.custom_views.TextViewWithFont
                 android:id="@+id/title_sample_video"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,12 +71,12 @@
         app:cardBackgroundColor="@color/blue"
         app:cardCornerRadius="3dp"
         app:cardElevation="@dimen/Margin5"
-        app:layout_constraintBottom_toBottomOf="@id/card_sample_video"
+        app:layout_constraintBottom_toBottomOf="@id/header_sample_videos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_sample_video">
+        app:layout_constraintTop_toBottomOf="@id/header_sample_videos">
 
-        <com.example.alaa.customViews.TextViewWithFont
+        <com.example.alaa.custom_views.TextViewWithFont
             android:id="@+id/tx_teacherName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

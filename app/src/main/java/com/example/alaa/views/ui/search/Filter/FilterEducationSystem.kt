@@ -10,20 +10,18 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment
 import com.example.alaa.R
+import com.example.alaa.custom_views.ButtonWithFont
 import com.example.alaa.viewModels.FilteringViewModel
-import com.example.alaa.customViews.MyButton
-import java.lang.ClassCastException
 
 
-
-class FilterEducationSystem() : Fragment() , View.OnClickListener {
+class FilterEducationSystem : Fragment(), View.OnClickListener {
 
 
 
     private val TAG = "===>"
     private lateinit var myView : View
-    private lateinit var NewSystem : MyButton
-    private lateinit var OldSystem : MyButton
+    private lateinit var newSystem: ButtonWithFont
+    private lateinit var oldSystem: ButtonWithFont
     private lateinit var listener : FilterItemSelected
     private var intTest: String = null.toString()
     private lateinit var model : FilteringViewModel
@@ -33,11 +31,11 @@ class FilterEducationSystem() : Fragment() , View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         myView = inflater.inflate(R.layout.fragment_filter_education_system, container, false)
 
-        NewSystem = myView.findViewById(R.id.FilterItemNewSystem)
-        OldSystem = myView.findViewById(R.id.FilterItemOldSystem)
+        newSystem = myView.findViewById(R.id.FilterItemNewSystem)
+        oldSystem = myView.findViewById(R.id.FilterItemOldSystem)
 
-        NewSystem.setOnClickListener(this)
-        OldSystem.setOnClickListener(this)
+        newSystem.setOnClickListener(this)
+        oldSystem.setOnClickListener(this)
 
         model = ViewModelProviders.of(this).get(FilteringViewModel ::class.java)
         model.setCurrentStep(0)

@@ -17,7 +17,7 @@ import androidx.navigation.NavDestination;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.alaa.R;
-import com.example.alaa.customViews.FilteringStepGuide;
+import com.example.alaa.custom_views.FilteringStepGuide;
 import com.example.alaa.viewModels.FilteringViewModel;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 

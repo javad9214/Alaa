@@ -13,8 +13,7 @@
         android:layout_height="match_parent">
 
 
-
-        <com.example.alaa.customViews.MyCardText
+        <com.example.alaa.custom_views.TextViewWithCardBackground
             android:id="@+id/video"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -30,7 +29,7 @@
             app:rightIcon="@drawable/ic_youtube_black"/>
 
 
-        <com.example.alaa.customViews.MyCardText
+        <com.example.alaa.custom_views.TextViewWithCardBackground
             android:id="@+id/booklet"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -55,7 +54,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <com.example.alaa.customViews.MyCardText
+        <com.example.alaa.custom_views.TextViewWithCardBackground
             android:id="@+id/bon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -68,24 +67,7 @@
             app:text_font="IranSansNumLight"
             app:text_size="5sp" />
 
-        <com.example.alaa.customViews.TextViewWithFont
-            android:id="@+id/tx_title_product"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/Margin5"
-            android:gravity="center"
-            android:lines="3"
-            android:text="@string/titleProductItem"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:MyTextViewFont="IRANSans_Bold"
-            app:layout_constraintBottom_toTopOf="@id/banner"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/thumbnail_product_photo"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <com.example.alaa.customViews.MyCardText
+        <com.example.alaa.custom_views.TextViewWithCardBackground
             android:id="@+id/banner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -100,6 +82,23 @@
             app:text_size="5sp"
             app:leftIcon="@drawable/ic_left_quote"
             app:rightIcon="@drawable/ic_right_quote"/>
+
+
+        <com.example.alaa.custom_views.TextViewWithFont
+            android:id="@+id/tx_title_product"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/Margin5"
+            android:gravity="center"
+            android:lines="3"
+            android:text="@string/titleProductItem"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:MyTextViewFont="IRANSans_Bold"
+            app:layout_constraintBottom_toTopOf="@id/banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/thumbnail_product_photo"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

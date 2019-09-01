@@ -18,110 +18,18 @@
         tools:context="com.example.alaa.views.ui.cart.CompletePurchase">
 
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_final_price"
-            android:layout_width="0dp"
+        <com.example.alaa.custom_views.ButtonWithFont
+            android:id="@+id/byn_complete_purchase"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/pureWhite"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="@dimen/card_dimen"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/help_for_alaa">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <com.example.alaa.customViews.TextViewWithFont
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="@dimen/Margin10"
-                    android:layout_marginEnd="@dimen/Margin10"
-                    android:gravity="center"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:text="@string/totalCost"
-                    android:textColor="@color/green"
-                    android:textSize="14sp"
-                    app:MyTextViewFont="IRANSans_Medium"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardRealPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="@dimen/Margin5"
-                    app:cardBackgroundColor="@color/blackTitle"
-                    app:cardCornerRadius="3dp"
-                    app:cardElevation="@dimen/Margin5"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.example.alaa.customViews.TextViewWithFont
-                        android:id="@+id/realPrice"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="@dimen/Margin10"
-                        android:layout_marginEnd="@dimen/Margin10"
-                        android:gravity="center"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
-                        android:text="@string/realPriceDemo"
-                        android:textColor="@color/pureWhite"
-                        android:textSize="12sp"
-                        app:MyTextViewFont="IranSansNumMedium"
-                        app:strikeThrough="true" />
-
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardSalePrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    app:cardBackgroundColor="@color/Red"
-                    app:cardCornerRadius="3dp"
-                    app:cardElevation="@dimen/Margin5"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.example.alaa.customViews.TextViewWithFont
-                        android:id="@+id/finalPrice"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="@dimen/Margin10"
-                        android:layout_marginEnd="@dimen/Margin10"
-                        android:gravity="center"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
-                        android:text="@string/salePriceDemo"
-                        android:textColor="@color/pureWhite"
-                        android:textSize="14sp"
-                        app:MyTextViewFont="IranSansNumMedium" />
-
-
-                </com.google.android.material.card.MaterialCardView>
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </com.google.android.material.card.MaterialCardView>
+            android:layout_margin="@dimen/Margin10"
+            android:layoutDirection="ltr"
+            android:text="@string/purchase"
+            app:MyButtonFont="IRANSans_Medium"
+            app:backgroundTint="@color/darkGreen"
+            app:icon="@drawable/ic_chevron_left_black_24dp"
+            app:iconGravity="textStart"
+            app:layout_constraintTop_toBottomOf="@id/card_final_price" />
 
 
         <com.google.android.material.card.MaterialCardView
@@ -141,24 +49,19 @@
                 android:layout_height="wrap_content">
 
 
-                <com.example.alaa.customViews.TextViewWithFont
+                <com.example.alaa.custom_views.ButtonWithFont
+                    android:id="@+id/btn_apply_discount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="@dimen/Margin10"
-                    android:layout_marginEnd="@dimen/Margin10"
-                    android:gravity="center"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:text="@string/discountCode"
-                    android:textColor="@color/blackTitle"
-                    android:textSize="14sp"
-                    app:MyTextViewFont="IRANSans_Medium"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/btn_apply_discount"/>
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/applyDiscount"
+                    android:visibility="gone"
+                    app:MyButtonFont="IRANSans_Light"
+                    app:backgroundTint="@color/alaa5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ed_discount"
+                    app:layout_constraintTop_toBottomOf="@id/discountCodeSwitch" />
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/discountCodeSwitch"
@@ -193,19 +96,24 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-                <com.example.alaa.customViews.MyButton
-                    android:id="@+id/btn_apply_discount"
+                <com.example.alaa.custom_views.TextViewWithFont
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:text="@string/applyDiscount"
-                    android:visibility="gone"
-                    app:MyButtonFont="IRANSans_Light"
-                    app:backgroundTint="@color/alaa5"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/ed_discount"
-                    app:layout_constraintTop_toBottomOf="@id/discountCodeSwitch" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="@dimen/Margin10"
+                    android:layout_marginEnd="@dimen/Margin10"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/discountCode"
+                    android:textColor="@color/blackTitle"
+                    android:textSize="14sp"
+                    app:MyTextViewFont="IRANSans_Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/btn_apply_discount" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -229,7 +137,7 @@
                 android:layout_height="wrap_content">
 
 
-                <com.example.alaa.customViews.TextViewWithFont
+                <com.example.alaa.custom_views.TextViewWithFont
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -260,7 +168,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <com.example.alaa.customViews.TextViewWithFont
+                    <com.example.alaa.custom_views.TextViewWithFont
                         android:id="@+id/walletPrice"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -299,7 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.alaa.customViews.TextViewWithFont
+                <com.example.alaa.custom_views.TextViewWithFont
                     android:id="@+id/tx_help_alaa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -331,7 +239,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <com.example.alaa.customViews.TextViewWithFont
+                    <com.example.alaa.custom_views.TextViewWithFont
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
@@ -373,7 +281,7 @@
                     app:layout_constraintStart_toEndOf="@id/tx_help_alaa"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <com.example.alaa.customViews.TextViewWithFont
+                    <com.example.alaa.custom_views.TextViewWithFont
                         android:id="@+id/tx_donate"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -408,18 +316,110 @@
         </com.google.android.material.card.MaterialCardView>
 
 
-        <com.example.alaa.customViews.MyButton
-            android:id="@+id/byn_complete_purchase"
-            android:layout_width="match_parent"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_final_price"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/Margin10"
-            android:layoutDirection="ltr"
-            android:text="@string/purchase"
-            app:MyButtonFont="IRANSans_Medium"
-            app:backgroundTint="@color/darkGreen"
-            app:icon="@drawable/ic_chevron_left_black_24dp"
-            app:iconGravity="textStart"
-            app:layout_constraintTop_toBottomOf="@id/card_final_price" />
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/pureWhite"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="@dimen/card_dimen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/help_for_alaa">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.example.alaa.custom_views.TextViewWithFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/Margin10"
+                    android:layout_marginEnd="@dimen/Margin10"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/totalCost"
+                    android:textColor="@color/green"
+                    android:textSize="14sp"
+                    app:MyTextViewFont="IRANSans_Medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRealPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="@dimen/Margin5"
+                    app:cardBackgroundColor="@color/blackTitle"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="@dimen/Margin5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.example.alaa.custom_views.TextViewWithFont
+                        android:id="@+id/realPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/Margin10"
+                        android:layout_marginEnd="@dimen/Margin10"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/realPriceDemo"
+                        android:textColor="@color/pureWhite"
+                        android:textSize="12sp"
+                        app:MyTextViewFont="IranSansNumMedium"
+                        app:strikeThrough="true" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSalePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardBackgroundColor="@color/Red"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="@dimen/Margin5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.example.alaa.custom_views.TextViewWithFont
+                        android:id="@+id/finalPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/Margin10"
+                        android:layout_marginEnd="@dimen/Margin10"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/salePriceDemo"
+                        android:textColor="@color/pureWhite"
+                        android:textSize="14sp"
+                        app:MyTextViewFont="IranSansNumMedium" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alaa.R
-import com.example.alaa.customViews.MyButton
+import com.example.alaa.custom_views.ButtonWithFont
 
 class FilterItemAdapter(private val list: ArrayList<String>, private val listener: FilterItemListener) : RecyclerView.Adapter<FilterItemAdapter.ViewHolder>()  {
 
@@ -23,15 +23,15 @@ class FilterItemAdapter(private val list: ArrayList<String>, private val listene
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.button.text = list[position]
-        holder.button.setOnClickListener{
+        holder.buttonWithFont.text = list[position]
+        holder.buttonWithFont.setOnClickListener {
             listener.itemClicked(list[position])
         }
     }
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val button : MyButton = itemView.findViewById(R.id.filterItem)
+        val buttonWithFont: ButtonWithFont = itemView.findViewById(R.id.filterItem)
     }
 
     interface FilterItemListener{

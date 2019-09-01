@@ -19,21 +19,7 @@
         app:layout_constraintTop_toTopOf="@id/tx_title_product" />
 
 
-    <com.example.alaa.customViews.TextViewWithFont
-        android:id="@+id/tx_title_product"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="start|center_vertical"
-        android:lines="2"
-        android:text="@string/titleProductItem"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:MyTextViewFont="IRANSans_Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/checkbox"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.example.alaa.customViews.MyCardText
+    <com.example.alaa.custom_views.TextViewWithCardBackground
         android:id="@+id/salePrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +36,21 @@
         app:text_font="IranSansNumLight"
         app:text_size="5sp" />
 
-    <com.example.alaa.customViews.TextViewWithFont
+    <com.example.alaa.custom_views.TextViewWithFont
+        android:id="@+id/tx_title_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:lines="2"
+        android:text="@string/titleProductItem"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:MyTextViewFont="IRANSans_Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/checkbox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.alaa.custom_views.TextViewWithFont
         android:id="@+id/realPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

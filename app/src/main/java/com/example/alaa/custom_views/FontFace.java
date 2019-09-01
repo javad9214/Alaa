@@ -1,4 +1,4 @@
-package com.example.alaa.customViews;
+package com.example.alaa.custom_views;
 
 import android.content.Context;
 import android.graphics.Typeface;

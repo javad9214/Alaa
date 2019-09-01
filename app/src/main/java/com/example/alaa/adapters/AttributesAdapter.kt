@@ -28,8 +28,8 @@ class AttributesAdapter (private val attrList : ArrayList<AttributesModel>) : Re
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
-        val attrName: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.tx_attribute)
-        val attrValue: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.tx_attr_value)
+        val attrName: com.example.alaa.custom_views.TextViewWithFont = itemView.findViewById(R.id.tx_attribute)
+        val attrValue: com.example.alaa.custom_views.TextViewWithFont = itemView.findViewById(R.id.tx_attr_value)
 
 
     }

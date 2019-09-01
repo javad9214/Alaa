@@ -1,7 +1,6 @@
 package com.example.alaa.views.ui.product.components
 
 import android.content.Context
-import android.content.res.Resources
 import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageView
@@ -17,10 +16,9 @@ class MainProductComponent (context: Context, attr : AttributeSet) : CardView(co
         init {
             View.inflate(context , R.layout.main_product_component , this)
 
-            val  res : Resources = resources
 
-            val title: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.tx_title_product)
-           // val discount : MyCardText = findViewById(R.id.discountPercent)
+            val title: com.example.alaa.custom_views.TextViewWithFont = findViewById(R.id.tx_title_product)
+            // val discount : TextViewWithCardBackground = findViewById(R.id.discountPercent)
             photoProduct  = findViewById(R.id.thumbnail_product_photo)
 
 
