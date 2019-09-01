@@ -41,7 +41,7 @@
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_account_large" />
 
-                        <com.example.alaa.customViews.MyTextView
+                        <com.example.alaa.customViews.TextViewWithFont
                             android:id="@+id/tx_address"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

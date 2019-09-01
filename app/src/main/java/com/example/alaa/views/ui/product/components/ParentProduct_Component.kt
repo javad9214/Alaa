@@ -22,10 +22,10 @@ class ParentProduct_Component (context: Context , attributeSet: AttributeSet) : 
 
         val res : Resources = resources
 
-        val title: com.example.alaa.customViews.MyTextView = findViewById(R.id.title_parent)
-        val realPrice: com.example.alaa.customViews.MyTextView = findViewById(R.id.realPrice_parent)
-        val salePrice: com.example.alaa.customViews.MyTextView = findViewById(R.id.finalPrice_parent)
-        val discount: com.example.alaa.customViews.MyTextView = findViewById(R.id.discount_parent)
+        val title: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.title_parent)
+        val realPrice: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.realPrice_parent)
+        val salePrice: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.finalPrice_parent)
+        val discount: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.discount_parent)
 
         val childProduct_recycler : RecyclerView = findViewById(R.id.childProduct_recycler)
 
@@ -47,8 +47,8 @@ class ParentProduct_Component (context: Context , attributeSet: AttributeSet) : 
     }
 
 
-    private fun strikeThrough(textView: com.example.alaa.customViews.MyTextView) {
-        textView.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+    private fun strikeThrough(textViewWithFont: com.example.alaa.customViews.TextViewWithFont) {
+        textViewWithFont.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
     }
 
     private fun calculateDiscount(realPrice: Double, salePrice: Double): String {

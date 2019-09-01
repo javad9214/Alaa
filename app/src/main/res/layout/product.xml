@@ -15,47 +15,7 @@
         android:layout_height="match_parent">
 
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardDiscountPercent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@id/thumbnail_product"
-            android:layout_marginTop="@dimen/Margin16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:cardBackgroundColor="@color/colorAccent"
-            app:cardCornerRadius="2dp"
-            android:rotation="45"
-            android:translationX="50dp"
-            app:cardElevation="@dimen/Margin10">
-
-            <com.example.alaa.customViews.MyTextView
-                android:id="@+id/discountPercent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/Margin5"
-                android:layout_marginEnd="@dimen/Margin5"
-                android:gravity="center"
-                android:text="@string/discountPercent"
-                android:textColor="@color/pureWhite"
-                android:textSize="10sp"
-                app:MyTextViewFont="IRANSans_Bold" />
-
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/thumbnail_product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/dum_product"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.example.alaa.customViews.MyTextView
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/tx_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,6 +29,37 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/thumbnail_product" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thumbnail_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/dum_product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.alaa.customViews.TextViewWithFont
+            android:id="@+id/realPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardSalePrice"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/Margin10"
+            android:layout_marginEnd="@dimen/Margin10"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text=" 789,598 تومان"
+            android:textColor="@color/darkGreen"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:MyTextViewFont="IranSansNumLight"
+            app:strikeThrough="true" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardSalePrice"
@@ -84,7 +75,7 @@
             app:cardElevation="@dimen/Margin5"
             android:layout_marginStart="@dimen/Margin5">
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/finalSalePrice"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -104,25 +95,34 @@
         </com.google.android.material.card.MaterialCardView>
 
 
-            <com.example.alaa.customViews.MyTextView
-                android:id="@+id/realPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardSalePrice"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardDiscountPercent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/thumbnail_product"
+            android:layout_marginTop="@dimen/Margin16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="2dp"
+            android:rotation="45"
+            android:translationX="50dp"
+            app:cardElevation="@dimen/Margin10">
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:id="@+id/discountPercent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layout_marginEnd="@dimen/Margin10"
+                android:layout_marginStart="@dimen/Margin5"
+                android:layout_marginEnd="@dimen/Margin5"
                 android:gravity="center"
-                android:paddingTop="2dp"
-                android:paddingBottom="2dp"
-                android:text=" 789,598 تومان"
-                android:textColor="@color/darkGreen"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:MyTextViewFont="IranSansNumLight"
-                app:strikeThrough="true" />
+                android:text="@string/discountPercent"
+                android:textColor="@color/pureWhite"
+                android:textSize="10sp"
+                app:MyTextViewFont="IRANSans_Bold" />
+
+
+        </com.google.android.material.card.MaterialCardView>
 
 
 

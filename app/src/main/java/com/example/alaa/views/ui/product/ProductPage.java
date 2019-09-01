@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alaa.R;
-import com.example.alaa.customViews.MyTextView;
+import com.example.alaa.customViews.TextViewWithFont;
 import com.example.alaa.models.SampleVideoModel;
 import com.example.alaa.models.SelectableProductModel;
 import com.example.alaa.views.dashboard.Adapter_shop;
@@ -33,7 +33,7 @@ public class ProductPage extends AppCompatActivity {
 
 
     public static final String TAG = "===>";
-    private MyTextView txDescribe;
+    private TextViewWithFont txDescribe;
     private CardView cardSampleVideo, cardIntroVideo;
     private MaterialButton btnContinue;
     private ScrollView scrollView;
@@ -150,7 +150,7 @@ public class ProductPage extends AppCompatActivity {
         return txDescribe.isExpanded() ? getString(R.string.countinue) : getString(R.string.close);
     }
 
-    private void scrollToView(CardView cardIntroVideo) {
+    private void scrollToView(View cardIntroVideo) {
         ObjectAnimator.ofInt(scrollView, "scrollY", cardIntroVideo.getTop() - 10).setDuration(1000).start();
     }
 

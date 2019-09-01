@@ -60,9 +60,9 @@ class SelectableProductAdapter(private val context: Context , private val list :
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
-        val title : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.tx_title_product)
+        val title: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.tx_title_product)
         val salePrice : MyCardText = itemView.findViewById(R.id.salePrice)
-        val realPrice : com.example.alaa.customViews.MyTextView = itemView.findViewById(R.id.realPrice)
+        val realPrice: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.realPrice)
         val checkBox : CheckBox = itemView.findViewById(R.id.checkbox)
         val recyclerView : RecyclerView = itemView.findViewById(R.id.recycler_loops)
 

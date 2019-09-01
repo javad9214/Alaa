@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="@id/tx_title_product" />
 
 
-    <com.example.alaa.customViews.MyTextView
+    <com.example.alaa.customViews.TextViewWithFont
         android:id="@+id/tx_title_product"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
         app:text_font="IranSansNumLight"
         app:text_size="5sp" />
 
-    <com.example.alaa.customViews.MyTextView
+    <com.example.alaa.customViews.TextViewWithFont
         android:id="@+id/realPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

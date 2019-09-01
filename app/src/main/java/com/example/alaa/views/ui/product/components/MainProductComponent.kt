@@ -19,7 +19,7 @@ class MainProductComponent (context: Context, attr : AttributeSet) : CardView(co
 
             val  res : Resources = resources
 
-            val  title : com.example.alaa.customViews.MyTextView = findViewById(R.id.tx_title_product)
+            val title: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.tx_title_product)
            // val discount : MyCardText = findViewById(R.id.discountPercent)
             photoProduct  = findViewById(R.id.thumbnail_product_photo)
 
@@ -52,7 +52,7 @@ class MainProductComponent (context: Context, attr : AttributeSet) : CardView(co
     }
 
 
-    public fun setPicture (resId :Int){
+    fun setPicture(resId: Int) {
         photoProduct.setImageResource(resId)
     }
 

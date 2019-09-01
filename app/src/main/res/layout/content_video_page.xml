@@ -90,7 +90,7 @@
                     android:layout_margin="@dimen/Margin5"
                     android:orientation="vertical">
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/title"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                         android:layout_height="50dp"
                         android:src="@drawable/teacher_saniie"/>
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/tx_teacherName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
                         android:layout_marginStart="@dimen/Margin10"/>
 
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/tx_set_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
                         android:layout_marginStart="@dimen/Margin10"
                         android:textColor="@color/blueDark"/>
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/description"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"

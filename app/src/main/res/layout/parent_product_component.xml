@@ -9,19 +9,6 @@
 
 
 
-    <com.example.alaa.customViews.MyTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/discount_parent"
-        android:layout_gravity="end"
-        android:paddingStart="@dimen/Margin10"
-        android:paddingEnd="@dimen/Margin10"
-        android:text="تخفیف  40 %"
-        android:textColor="@color/alaa5"
-        android:textSize="12sp"
-        android:visibility="visible"
-        app:MyTextViewFont="estedad" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -46,18 +33,6 @@
             </RelativeLayout>
 
 
-            <com.example.alaa.customViews.MyTextView
-                android:id="@+id/title_parent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin10"
-                android:gravity="start"
-                android:text="همایش های طلایی ریاضی تجربی کنکور آقای امینی راد"
-                android:textColor="@color/blackTitle"
-                android:textSize="14sp"
-                app:MyTextViewFont="IRANSans_Bold" />
-
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -71,7 +46,7 @@
                     android:gravity="end|center_vertical"
                     android:orientation="horizontal">
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/realPrice_parent"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -82,7 +57,7 @@
                         android:textSize="16sp"
                         app:MyTextViewFont="IranSansNumUltraLight" />
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/finalPrice_parent"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -92,7 +67,7 @@
                         android:textSize="18sp"
                         app:MyTextViewFont="IranSansNum" />
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
@@ -112,6 +87,18 @@
             </RelativeLayout>
 
 
+            <com.example.alaa.customViews.TextViewWithFont
+                android:id="@+id/title_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Margin10"
+                android:gravity="start"
+                android:text="همایش های طلایی ریاضی تجربی کنکور آقای امینی راد"
+                android:textColor="@color/blackTitle"
+                android:textSize="14sp"
+                app:MyTextViewFont="IRANSans_Bold" />
+
+
         </LinearLayout>
 
 
@@ -126,7 +113,18 @@
 
     </LinearLayout>
 
-
+    <com.example.alaa.customViews.TextViewWithFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/discount_parent"
+        android:layout_gravity="end"
+        android:paddingStart="@dimen/Margin10"
+        android:paddingEnd="@dimen/Margin10"
+        android:text="تخفیف  40 %"
+        android:textColor="@color/alaa5"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:MyTextViewFont="estedad" />
 
 
 </androidx.cardview.widget.CardView>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="MyTextView">
+    <declare-styleable name="TextViewWithFont">
         <attr name="MyTextViewFont" format="enum">
             <enum name="IRANSans_Light" value="1" />
             <enum name="IRANSans_Medium" value="2" />
@@ -20,9 +20,9 @@
             <enum name="IranSansNumUltraLight" value="15" />
             <enum name="MaliBoldItalic" value="16" />
             <enum name="RubiKMono" value="17" />
-            <enum name="Dima" value="18"/>
+            <enum name="Dima" value="18" />
         </attr>
-        <attr name="strikeThrough" format="boolean"/>
+        <attr name="strikeThrough" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="MyButton">
@@ -47,7 +47,7 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="MyChip" >
+    <declare-styleable name="MyChip">
 
         <attr name="MyChipFont" format="enum">
             <enum name="IRANSans_Light" value="1" />
@@ -70,16 +70,16 @@
         </attr>
     </declare-styleable>
 
-    
-    <declare-styleable name="MyCardText" >
-        <attr name="text" format="string"/>
+
+    <declare-styleable name="MyCardText">
+        <attr name="text" format="string" />
         <attr name="card_color" format="color|reference" />
         <attr name="text_color" format="color|reference" />
-        <attr name="text_size" format="dimension"/>
-        <attr name="card_radius" format="dimension"/>
-        <attr name="leftIcon" format="reference"/>
-        <attr name="rightIcon" format="reference"/>
-        <attr name="text_font" format="enum" >
+        <attr name="text_size" format="dimension" />
+        <attr name="card_radius" format="dimension" />
+        <attr name="leftIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="text_font" format="enum">
             <enum name="IRANSans_Light" value="1" />
             <enum name="IRANSans_Medium" value="2" />
             <enum name="IRANSans_Bold" value="3" />
@@ -126,44 +126,45 @@
 
         <attr name="finalRealPrice" format="string" />
         <attr name="finalSalePrice" format="string" />
-        <attr name="realPriceSize" format="dimension"/>
-        <attr name="salePriceSize" format="dimension"/>
-        <attr name="isDiscounted" format="boolean"/>
+        <attr name="realPriceSize" format="dimension" />
+        <attr name="salePriceSize" format="dimension" />
+        <attr name="isDiscounted" format="boolean" />
 
     </declare-styleable>
 
     <declare-styleable name="SearchBarComponent">
 
-        <attr name="searchbarHint" format="string"/>
+        <attr name="searchbarHint" format="string" />
 
     </declare-styleable>
 
 
+
     <declare-styleable name="SelectableCard">
         <attr name="SelectableCard_text" format="string|reference" />
-        <attr name="SelectableCard_id" format="string"/>
+        <attr name="SelectableCard_id" format="string" />
     </declare-styleable>
 
 
     <declare-styleable name="FilterNavigation">
         <attr name="NavCurrentStep" format="enum">
-            <enum name="NavEducationSystem" value="1"/>
-            <enum name="NavGrade" value="2"/>
-            <enum name="NavMajor" value="3"/>
-            <enum name="NavLesson" value="4"/>
-            <enum name="NavTeacher" value="5"/>
+            <enum name="NavEducationSystem" value="1" />
+            <enum name="NavGrade" value="2" />
+            <enum name="NavMajor" value="3" />
+            <enum name="NavLesson" value="4" />
+            <enum name="NavTeacher" value="5" />
         </attr>
     </declare-styleable>
 
 
-    <declare-styleable name="FilteringStepGuide" >
+    <declare-styleable name="FilteringStepGuide">
 
         <attr name="FilterGuideCurrentStep" format="enum">
-            <enum name="NavEducationSystem" value="1"/>
-            <enum name="NavGrade" value="2"/>
-            <enum name="NavMajor" value="3"/>
-            <enum name="NavLesson" value="4"/>
-            <enum name="NavTeacher" value="5"/>
+            <enum name="NavEducationSystem" value="1" />
+            <enum name="NavGrade" value="2" />
+            <enum name="NavMajor" value="3" />
+            <enum name="NavLesson" value="4" />
+            <enum name="NavTeacher" value="5" />
         </attr>
 
     </declare-styleable>

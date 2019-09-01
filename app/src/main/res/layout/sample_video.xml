@@ -44,7 +44,7 @@
                 android:scaleY="0.7"/>
 
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/title_sample_video"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_sample_video">
 
-        <com.example.alaa.customViews.MyTextView
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/tx_teacherName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -22,8 +22,8 @@ class TotalPriceComponent (context: Context, attributeSet: AttributeSet) : CardV
 
         val  res : Resources = resources
 
-        val realPrice : com.example.alaa.customViews.MyTextView = findViewById(R.id.realPrice)
-        val salePrice : com.example.alaa.customViews.MyTextView = findViewById(R.id.salePrice)
+        val realPrice: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.realPrice)
+        val salePrice: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.salePrice)
 
         val attributes = context.obtainStyledAttributes(attributeSet , R.styleable.TotalPriceComponent)
 
@@ -51,8 +51,8 @@ class TotalPriceComponent (context: Context, attributeSet: AttributeSet) : CardV
     }
 
 
-    private fun strikeThrough(textView: com.example.alaa.customViews.MyTextView) {
-        textView.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+    private fun strikeThrough(textViewWithFont: com.example.alaa.customViews.TextViewWithFont) {
+        textViewWithFont.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
     }
 
 

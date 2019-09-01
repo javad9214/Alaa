@@ -32,10 +32,10 @@ class SelectableProduct : CardView {
 
         View.inflate(context , R.layout.selectable_product , this)
 
-        val title: com.example.alaa.customViews.MyTextView = findViewById(R.id.title)
-        val realPrice: com.example.alaa.customViews.MyTextView = findViewById(R.id.realPrice)
-        val salePrice: com.example.alaa.customViews.MyTextView = findViewById(R.id.salePrice)
-        val discount: com.example.alaa.customViews.MyTextView = findViewById(R.id.discountPercent)
+        val title: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.title)
+        val realPrice: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.realPrice)
+        val salePrice: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.salePrice)
+        val discount: com.example.alaa.customViews.TextViewWithFont = findViewById(R.id.discountPercent)
 
     }
 

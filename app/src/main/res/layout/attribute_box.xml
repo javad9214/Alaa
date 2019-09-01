@@ -21,7 +21,7 @@
             android:focusable="true"/>
 
 
-        <com.example.alaa.customViews.MyTextView
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/tx_attribute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
             app:MyTextViewFont="IRANSans_Light_4.1"/>
 
 
-        <com.example.alaa.customViews.MyTextView
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/colon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
             app:MyTextViewFont="IRANSans_Medium"/>
 
 
-        <com.example.alaa.customViews.MyTextView
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/tx_attr_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -21,7 +21,7 @@ class SelectableCard (context: Context, attributeSet: AttributeSet ) : CardView(
 
     private var text : String?
 
-    private val textView : com.example.alaa.customViews.MyTextView
+    private val textViewWithFont: com.example.alaa.customViews.TextViewWithFont
 
     private val TAG  = "K===>O"
 
@@ -29,13 +29,13 @@ class SelectableCard (context: Context, attributeSet: AttributeSet ) : CardView(
 
         View.inflate(context , R.layout.selectable_card_view ,this)
 
-        textView = findViewById(R.id.text)
+        textViewWithFont = findViewById(R.id.text)
 
         val typed : TypedArray = context.obtainStyledAttributes(attributeSet , R.styleable.SelectableCard , 0 , 0)
 
         text  = typed.getString(R.styleable.SelectableCard_SelectableCard_text)
 
-        textView.text = text
+        textViewWithFont.text = text
         typed.recycle()
 
     }
@@ -75,7 +75,7 @@ class SelectableCard (context: Context, attributeSet: AttributeSet ) : CardView(
     }
 
     fun setText (text: String){
-        textView.text = text
+        textViewWithFont.text = text
         this.text = text
     }
 

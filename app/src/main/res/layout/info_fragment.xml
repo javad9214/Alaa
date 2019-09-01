@@ -28,24 +28,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.example.alaa.customViews.MyTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:text="@string/proName"
-                android:textColor="@color/gray"
-                android:textSize="14sp"
-                app:MyTextViewFont="IRANSans_Light" />
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0.3dp"
-                android:background="@color/gray"></RelativeLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,7 +35,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_name"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -74,6 +56,24 @@
 
             </LinearLayout>
 
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/proName"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:MyTextViewFont="IRANSans_Light" />
+
         </LinearLayout>
 
 
@@ -95,24 +95,6 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.customViews.MyTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:text="@string/ProMajor"
-                android:textColor="@color/gray"
-                android:textSize="14sp"
-                app:MyTextViewFont="IRANSans_Light" />
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0.3dp"
-                android:background="@color/gray"></RelativeLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -120,7 +102,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_major"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -141,6 +123,24 @@
 
             </LinearLayout>
 
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/ProMajor"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:MyTextViewFont="IRANSans_Light" />
+
         </LinearLayout>
 
 
@@ -161,24 +161,6 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.customViews.MyTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:text="@string/preGender"
-                android:textColor="@color/gray"
-                android:textSize="14sp"
-                app:MyTextViewFont="IRANSans_Light" />
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0.3dp"
-                android:background="@color/gray"></RelativeLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -186,7 +168,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_gender"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -207,6 +189,24 @@
 
             </LinearLayout>
 
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/preGender"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:MyTextViewFont="IRANSans_Light" />
+
         </LinearLayout>
 
 
@@ -227,24 +227,6 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.customViews.MyTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:text="@string/proPhone"
-                android:textColor="@color/gray"
-                android:textSize="14sp"
-                app:MyTextViewFont="IRANSans_Light" />
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0.3dp"
-                android:background="@color/gray"></RelativeLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -252,7 +234,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_phone"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -274,6 +256,24 @@
 
             </LinearLayout>
 
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/proPhone"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:MyTextViewFont="IRANSans_Light" />
+
         </LinearLayout>
 
 
@@ -300,24 +300,6 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.customViews.MyTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:text="@string/proMail"
-                android:textColor="@color/gray"
-                android:textSize="14sp"
-                app:MyTextViewFont="IRANSans_Light" />
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0.3dp"
-                android:background="@color/gray"></RelativeLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -325,7 +307,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_mail"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -347,6 +329,24 @@
 
             </LinearLayout>
 
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/proMail"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:MyTextViewFont="IRANSans_Light" />
+
         </LinearLayout>
 
 
@@ -373,24 +373,6 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.customViews.MyTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:text="@string/proPostalCode"
-                android:textColor="@color/gray"
-                android:textSize="14sp"
-                app:MyTextViewFont="IRANSans_Light" />
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0.3dp"
-                android:background="@color/gray"></RelativeLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -398,7 +380,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_postalCode"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -419,6 +401,24 @@
 
 
             </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/proPostalCode"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:MyTextViewFont="IRANSans_Light" />
 
         </LinearLayout>
 
@@ -447,24 +447,6 @@
 
             android:orientation="vertical">
 
-            <com.example.alaa.customViews.MyTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:text="@string/ProAddress"
-                android:textColor="@color/gray"
-                android:textSize="14sp"
-                app:MyTextViewFont="IRANSans_Light" />
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0.3dp"
-                android:background="@color/gray"></RelativeLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -472,7 +454,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_address"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -494,6 +476,24 @@
 
 
             </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/gray"></RelativeLayout>
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:text="@string/ProAddress"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:MyTextViewFont="IRANSans_Light" />
 
         </LinearLayout>
 

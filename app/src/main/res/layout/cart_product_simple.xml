@@ -12,33 +12,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_discount_percent"
-            android:layout_width="wrap_content"
+        <com.example.alaa.customViews.TextViewWithFont
+            android:id="@+id/tx_title_product"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/colorAccent"
-            app:cardCornerRadius="3dp"
-            app:cardElevation="@dimen/Margin5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.example.alaa.customViews.MyTextView
-                android:id="@+id/discountPercent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/Margin10"
-                android:layout_marginEnd="@dimen/Margin10"
-                android:gravity="center"
-                android:paddingTop="2dp"
-                android:paddingBottom="2dp"
-                android:text="@string/discountPercent"
-                android:textColor="@color/pureWhite"
-                android:textSize="12sp"
-                app:MyTextViewFont="IRANSans_Bold" />
-
-
-        </com.google.android.material.card.MaterialCardView>
+            android:layout_margin="@dimen/Margin5"
+            android:gravity="center"
+            android:lines="3"
+            android:text="@string/titleProductItem"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:MyTextViewFont="IRANSans_Medium"
+            app:layout_constraintBottom_toBottomOf="@id/thumbnail_cart_simple_product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/thumbnail_cart_simple_product"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/thumbnail_cart_simple_product"
@@ -63,21 +51,24 @@
             app:tint="@color/black" />
 
 
-        <com.example.alaa.customViews.MyTextView
-            android:id="@+id/tx_title_product"
-            android:layout_width="0dp"
+        <com.example.alaa.customViews.TextViewWithFont
+            android:id="@+id/realPrice"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/Margin5"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/Margin10"
+            android:layout_marginEnd="@dimen/Margin10"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:lines="3"
-            android:text="@string/titleProductItem"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:MyTextViewFont="IRANSans_Medium"
-            app:layout_constraintBottom_toBottomOf="@id/thumbnail_cart_simple_product"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/thumbnail_cart_simple_product"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="@string/realPriceDemo"
+            android:textColor="@color/darkGreen"
+            android:textSize="12sp"
+            app:MyTextViewFont="IranSansNumMedium"
+            app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
+            app:layout_constraintTop_toBottomOf="@id/recycler_attribute_simple_product"
+            app:strikeThrough="true" />
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -105,7 +96,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/recycler_attribute_simple_product">
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/finalSalePrice"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -125,24 +116,33 @@
         </com.google.android.material.card.MaterialCardView>
 
 
-        <com.example.alaa.customViews.MyTextView
-            android:id="@+id/realPrice"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_discount_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/Margin10"
-            android:layout_marginEnd="@dimen/Margin10"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:text="@string/realPriceDemo"
-            android:textColor="@color/darkGreen"
-            android:textSize="12sp"
-            app:MyTextViewFont="IranSansNumMedium"
-            app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
-            app:layout_constraintTop_toBottomOf="@id/recycler_attribute_simple_product"
-            app:strikeThrough="true" />
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="@dimen/Margin5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:id="@+id/discountPercent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/Margin10"
+                android:layout_marginEnd="@dimen/Margin10"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="@string/discountPercent"
+                android:textColor="@color/pureWhite"
+                android:textSize="12sp"
+                app:MyTextViewFont="IRANSans_Bold" />
+
+
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_child_product"

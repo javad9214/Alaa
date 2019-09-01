@@ -242,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/description"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -276,36 +276,20 @@
 
             </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_sample_video"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:cardCornerRadius="3dp"
-                app:cardElevation="@dimen/card_dimen"
-                app:layout_constraintTop_toBottomOf="@id/card_txt_description"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_sample_booklet"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:cardBackgroundColor="@color/SampleVideoGreen">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/title_sample_booklet">
 
-                <com.example.alaa.customViews.MyTextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="25dp"
-                    android:gravity="start"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:text="@string/sample_videos"
-                    android:textColor="@color/pureWhite"
-                    android:textSize="14sp"
-                    app:MyTextViewFont="IRANSans_Medium" />
-
-
-
-
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.recyclerview.widget.RecyclerView>
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -324,6 +308,52 @@
             </androidx.recyclerview.widget.RecyclerView>
 
 
+            <com.example.alaa.customViews.MyCardText
+                android:id="@+id/title_sample_booklet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/Margin10"
+                app:card_color="@color/SampleVideoGreen"
+                app:card_radius="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_sample_booklet"
+                app:text="@string/sampleBooklet"
+                app:text_color="@color/pureWhite"
+                app:text_font="IRANSans_Medium"
+                app:text_size="5sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_sample_video"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="@dimen/card_dimen"
+                app:layout_constraintTop_toBottomOf="@id/card_txt_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardBackgroundColor="@color/SampleVideoGreen">
+
+                <com.example.alaa.customViews.TextViewWithFont
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="25dp"
+                    android:gravity="start"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/sample_videos"
+                    android:textColor="@color/pureWhite"
+                    android:textSize="14sp"
+                    app:MyTextViewFont="IRANSans_Medium" />
+
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_sample_booklet"
                 android:layout_width="0dp"
@@ -336,7 +366,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:cardBackgroundColor="@color/SampleVideoGreen">
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -350,22 +380,6 @@
                     app:MyTextViewFont="IRANSans_Medium" />
 
             </com.google.android.material.card.MaterialCardView>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_sample_booklet"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/card_sample_booklet">
-
-            </androidx.recyclerview.widget.RecyclerView>
 
 
 

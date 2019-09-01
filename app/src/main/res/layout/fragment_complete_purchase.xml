@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content">
 
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -66,7 +66,7 @@
                     app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/realPrice"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -100,7 +100,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/finalPrice"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -141,7 +141,7 @@
                 android:layout_height="wrap_content">
 
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -229,7 +229,7 @@
                 android:layout_height="wrap_content">
 
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -260,7 +260,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/walletPrice"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -299,35 +299,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="10dp"
-                    app:cardBackgroundColor="@color/alaa5"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="@dimen/Margin5"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <com.example.alaa.customViews.MyTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="@dimen/Margin10"
-                        android:layout_marginEnd="@dimen/Margin10"
-                        android:gravity="center"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
-                        android:text="@string/alaaHelpAmount"
-                        android:textColor="@color/pureWhite"
-                        android:textSize="14sp"
-                        app:MyTextViewFont="IranSansNumMedium" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_help_alaa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -345,6 +317,34 @@
                     app:layout_constraintEnd_toStartOf="@id/helpAlaaSwitch"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardBackgroundColor="@color/alaa5"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="@dimen/Margin5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.example.alaa.customViews.TextViewWithFont
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/Margin10"
+                        android:layout_marginEnd="@dimen/Margin10"
+                        android:gravity="center"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/alaaHelpAmount"
+                        android:textColor="@color/pureWhite"
+                        android:textSize="14sp"
+                        app:MyTextViewFont="IranSansNumMedium" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/helpAlaaSwitch"
@@ -373,7 +373,7 @@
                     app:layout_constraintStart_toEndOf="@id/tx_help_alaa"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/tx_donate"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

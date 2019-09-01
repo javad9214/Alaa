@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alaa.R;
-import com.example.alaa.customViews.MyTextView;
+import com.example.alaa.customViews.TextViewWithFont;
 import com.example.alaa.views.dashboard.Adapter_shop;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
@@ -26,7 +26,7 @@ public class VideoPage extends AppCompatActivity  {
     CardView cardView_upNext;
     private AppCompatImageView upNext_arrow;
     private RecyclerView recyclerView;
-    private MyTextView myTextView;
+    private TextViewWithFont textViewWithFont;
     private MaterialButton btnMore;
     private MaterialButton btn_bookmark, btn_download, btn_share;
 
@@ -137,20 +137,20 @@ public class VideoPage extends AppCompatActivity  {
     private void expandableTextView() {
 
 
-        myTextView = findViewById(R.id.description);
+        textViewWithFont = findViewById(R.id.description);
         btnMore = findViewById(R.id.btn_continue);
 
-        myTextView.setAnimationDuration(750L);
+        textViewWithFont.setAnimationDuration(750L);
 
         // set interpolators for both expanding and collapsing animations
-        myTextView.setInterpolator(new OvershootInterpolator());
+        textViewWithFont.setInterpolator(new OvershootInterpolator());
 
         btnMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnMore.setIconResource(myTextView.isExpanded() ? R.drawable.ic_keyboard_arrow_down_black_24dp : R.drawable.ic_keyboard_arrow_up_black_24dp);
-                btnMore.setText(myTextView.isExpanded() ? "ادامه ... " : "بستن");
-                myTextView.toggle();
+                btnMore.setIconResource(textViewWithFont.isExpanded() ? R.drawable.ic_keyboard_arrow_down_black_24dp : R.drawable.ic_keyboard_arrow_up_black_24dp);
+                btnMore.setText(textViewWithFont.isExpanded() ? "ادامه ... " : "بستن");
+                textViewWithFont.toggle();
             }
         });
 

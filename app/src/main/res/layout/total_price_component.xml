@@ -36,7 +36,7 @@
                 app:icon="@drawable/ic_add_to_cart"/>
 
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/realPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.example.alaa.customViews.MyTextView
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/salePrice"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

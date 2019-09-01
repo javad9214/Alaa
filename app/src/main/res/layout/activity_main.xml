@@ -52,7 +52,7 @@
                         android:src="@drawable/alaa_logo_black" />
 
 
-                    <com.example.alaa.customViews.MyTextView
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"

@@ -30,7 +30,7 @@ import androidx.transition.TransitionManager;
 import androidx.transition.TransitionSet;
 
 import com.example.alaa.R;
-import com.example.alaa.customViews.MyTextView;
+import com.example.alaa.customViews.TextViewWithFont;
 import com.example.alaa.tools.KeyboardHeight.KeyboardHeightObserver;
 import com.example.alaa.tools.KeyboardHeight.KeyboardHeightProvider;
 import com.example.alaa.tools.TextWatcher.MultiTextWatcher;
@@ -57,7 +57,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
     private AppCompatImageView doneIcon, doneIcon2;
     private AppCompatImageView img_profile, img_profile_Boy, img_profile_Girl;
     private ImageView img_Alaa_logo;
-    private MyTextView describe1, describe2;
+    private TextViewWithFont describe1, describe2;
     private CardView cardLogin, cardSignUp;
     private MaterialButton btn_login, btn_GoToSignUp, btn_GoToLogin;
     private ViewGroup transitionLogoContainer;

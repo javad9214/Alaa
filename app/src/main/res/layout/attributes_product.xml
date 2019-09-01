@@ -16,16 +16,6 @@
         android:orientation="vertical">
 
 
-        <com.example.alaa.customViews.MyTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|center_vertical"
-            android:layout_marginStart="16dp"
-            android:text="@string/features"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:MyTextViewFont="IRANSans_Bold" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +32,7 @@
                 android:layout_weight="0.4"
                 app:srcCompat="@drawable/ic_tick" />
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -72,7 +62,7 @@
                 android:layout_weight="0.4"
                 app:srcCompat="@drawable/ic_tick" />
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/tx_Pr_TeacherName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -106,7 +96,7 @@
                 android:layout_weight="0.4"
                 app:srcCompat="@drawable/ic_tick" />
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/tx_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -139,7 +129,7 @@
                 android:layout_weight="0.4"
                 app:srcCompat="@drawable/ic_tick" />
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -172,7 +162,7 @@
                 android:layout_weight="0.4"
                 app:srcCompat="@drawable/ic_tick" />
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -205,7 +195,7 @@
                 android:layout_weight="0.4"
                 app:srcCompat="@drawable/ic_tick" />
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -238,7 +228,7 @@
                 android:layout_weight="0.4"
                 app:srcCompat="@drawable/ic_tick" />
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -271,7 +261,7 @@
                 android:layout_weight="0.4"
                 app:srcCompat="@drawable/ic_tick" />
 
-            <com.example.alaa.customViews.MyTextView
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -286,6 +276,16 @@
 
 
         </LinearLayout>
+
+        <com.example.alaa.customViews.TextViewWithFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="@string/features"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:MyTextViewFont="IRANSans_Bold" />
 
 
     </LinearLayout>

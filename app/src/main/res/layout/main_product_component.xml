@@ -68,7 +68,7 @@
             app:text_font="IranSansNumLight"
             app:text_size="5sp" />
 
-        <com.example.alaa.customViews.MyTextView
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/tx_title_product"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
