@@ -96,7 +96,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:onClickListener="@{() -> authViewModel.onGenderSelected(false)}"
                                 app:srcCompat="@drawable/ic_girl_profile_black" />
 
-                            <com.example.alaa.custom_views.TextViewWithFont
+                            <com.example.alaa.customViews.TextViewWithFont
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
@@ -124,7 +124,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:gravity="end"
                                 android:orientation="horizontal">
 
-                                <com.example.alaa.custom_views.TextViewWithFont
+                                <com.example.alaa.customViews.TextViewWithFont
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="top"
@@ -181,7 +181,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:gravity="end"
                                 android:orientation="horizontal">
 
-                                <com.example.alaa.custom_views.TextViewWithFont
+                                <com.example.alaa.customViews.TextViewWithFont
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="top"
@@ -238,7 +238,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:orientation="horizontal">
 
 
-                                <com.example.alaa.custom_views.TextViewWithFont
+                                <com.example.alaa.customViews.TextViewWithFont
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="top"
@@ -305,7 +305,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:gravity="end"
                                 android:orientation="horizontal">
 
-                                <com.example.alaa.custom_views.TextViewWithFont
+                                <com.example.alaa.customViews.TextViewWithFont
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="top"
@@ -371,7 +371,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:gravity="end"
                                 android:orientation="horizontal">
 
-                                <com.example.alaa.custom_views.TextViewWithFont
+                                <com.example.alaa.customViews.TextViewWithFont
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="top"
@@ -429,7 +429,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:gravity="end"
                                 android:orientation="horizontal">
 
-                                <com.example.alaa.custom_views.TextViewWithFont
+                                <com.example.alaa.customViews.TextViewWithFont
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="top"

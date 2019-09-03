@@ -7,7 +7,7 @@
     android:background="@color/pureWhite"
     android:layoutDirection="rtl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".views.ui.search.Filter.FilterLesson">
+    tools:context=".views.ui.search.filter.FilterLesson">
 
 
     <androidx.recyclerview.widget.RecyclerView

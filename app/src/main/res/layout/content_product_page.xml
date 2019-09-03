@@ -48,7 +48,7 @@
                         app:singleLine="true"
                         app:singleSelection="true">
 
-                        <com.example.alaa.custom_views.ChipWithFont
+                        <com.example.alaa.customViews.ChipWithFont
                             style="@style/Widget.MaterialComponents.Chip.Action"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                             app:chipStrokeColor="@color/black"
                             app:chipStrokeWidth="1dp" />
 
-                        <com.example.alaa.custom_views.ChipWithFont
+                        <com.example.alaa.customViews.ChipWithFont
                             style="@style/Widget.MaterialComponents.Chip.Action"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
                             app:chipStrokeColor="@color/black"
                             app:chipStrokeWidth="1dp" />
 
-                        <com.example.alaa.custom_views.ChipWithFont
+                        <com.example.alaa.customViews.ChipWithFont
                             style="@style/Widget.MaterialComponents.Chip.Action"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/mainProduct">
 
-                    <com.example.alaa.custom_views.ButtonWithFont
+                    <com.example.alaa.customViews.ButtonWithFont
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
@@ -112,7 +112,7 @@
                         app:icon="@drawable/ic_features" />
 
 
-                    <com.example.alaa.custom_views.ButtonWithFont
+                    <com.example.alaa.customViews.ButtonWithFont
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
@@ -125,7 +125,7 @@
                         app:backgroundTint="@color/SampleVideoGreen"
                         app:icon="@drawable/ic_sample_file" />
 
-                    <com.example.alaa.custom_views.ButtonWithFont
+                    <com.example.alaa.customViews.ButtonWithFont
                         android:id="@+id/describe_product"
                         style="@style/AppTheme"
                         android:layout_width="0dp"
@@ -165,7 +165,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <com.example.alaa.custom_views.ButtonWithFont
+                        <com.example.alaa.customViews.ButtonWithFont
                             android:id="@+id/btn_continue"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -180,7 +180,7 @@
                             app:iconTint="@color/blackTitle" />
 
 
-                        <com.example.alaa.custom_views.TextViewWithFont
+                        <com.example.alaa.customViews.TextViewWithFont
                             android:id="@+id/description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -232,7 +232,7 @@
                 </androidx.recyclerview.widget.RecyclerView>
 
 
-                <com.example.alaa.custom_views.HeaderWithLine
+                <com.example.alaa.customViews.HeaderWithLine
                     android:id="@+id/header_sample_videos"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -244,7 +244,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/card_txt_description" />
 
-                <com.example.alaa.custom_views.HeaderWithLine
+                <com.example.alaa.customViews.HeaderWithLine
                     android:id="@+id/header_sample_booklet"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

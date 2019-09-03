@@ -59,7 +59,7 @@
                     android:orientation="vertical"
                     android:paddingBottom="10dp">
 
-                    <com.example.alaa.custom_views.HeaderWithLine
+                    <com.example.alaa.customViews.HeaderWithLine
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:header_buttonText="@string/more"
@@ -85,7 +85,7 @@
                     android:orientation="vertical"
                     android:paddingBottom="16dp">
 
-                    <com.example.alaa.custom_views.HeaderWithLine
+                    <com.example.alaa.customViews.HeaderWithLine
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:header_buttonText="@string/more"
@@ -131,7 +131,7 @@
                     android:orientation="vertical"
                     android:paddingBottom="66dp">
 
-                    <com.example.alaa.custom_views.HeaderWithLine
+                    <com.example.alaa.customViews.HeaderWithLine
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:header_buttonText="@string/more"
@@ -152,7 +152,7 @@
                 </LinearLayout>
 
 
-                <com.example.alaa.custom_views.HeaderWithLine
+                <com.example.alaa.customViews.HeaderWithLine
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:header_buttonText="@string/more"

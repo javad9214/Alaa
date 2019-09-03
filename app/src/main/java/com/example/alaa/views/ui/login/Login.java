@@ -30,7 +30,7 @@ import androidx.transition.TransitionManager;
 import androidx.transition.TransitionSet;
 
 import com.example.alaa.R;
-import com.example.alaa.custom_views.TextViewWithFont;
+import com.example.alaa.customViews.TextViewWithFont;
 import com.example.alaa.tools.KeyboardHeight.KeyboardHeightObserver;
 import com.example.alaa.tools.KeyboardHeight.KeyboardHeightProvider;
 import com.example.alaa.tools.TextWatcher.MultiTextWatcher;

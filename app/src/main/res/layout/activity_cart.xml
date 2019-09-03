@@ -9,7 +9,7 @@
     android:background="@color/grayWhite">
 
 
-    <com.example.alaa.custom_views.ButtonWithFont
+    <com.example.alaa.customViews.ButtonWithFont
         android:id="@+id/btn_complete_purchase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-                <com.example.alaa.custom_views.TextViewWithFont
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_cartTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -118,7 +118,7 @@
             android:layout_height="wrap_content">
 
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -136,7 +136,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/realPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -173,7 +173,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.example.alaa.custom_views.TextViewWithFont
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/finalPrice"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

@@ -14,7 +14,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.OnLifecycleEvent;
 
 import com.example.alaa.R;
-import com.example.alaa.views.ui.search.Filter.FilterItemSelected;
+import com.example.alaa.views.ui.search.filter.FilterItemSelected;
 
 public class SearchActivity extends AppCompatActivity implements FilterItemSelected  , LifecycleOwner {
 

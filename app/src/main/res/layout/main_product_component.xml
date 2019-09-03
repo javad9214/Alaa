@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
 
-        <com.example.alaa.custom_views.TextViewWithCardBackground
+        <com.example.alaa.customViews.TextViewWithCardBackground
             android:id="@+id/video"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             app:rightIcon="@drawable/ic_youtube_black"/>
 
 
-        <com.example.alaa.custom_views.TextViewWithCardBackground
+        <com.example.alaa.customViews.TextViewWithCardBackground
             android:id="@+id/booklet"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <com.example.alaa.custom_views.TextViewWithCardBackground
+        <com.example.alaa.customViews.TextViewWithCardBackground
             android:id="@+id/bon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
             app:text_font="IranSansNumLight"
             app:text_size="5sp" />
 
-        <com.example.alaa.custom_views.TextViewWithCardBackground
+        <com.example.alaa.customViews.TextViewWithCardBackground
             android:id="@+id/banner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
             app:rightIcon="@drawable/ic_right_quote"/>
 
 
-        <com.example.alaa.custom_views.TextViewWithFont
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/tx_title_product"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

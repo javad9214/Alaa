@@ -6,29 +6,32 @@
     android:layoutDirection="rtl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.ui.search.Filter.BaseFilterDialog"
+    tools:context=".views.ui.search.filter.BaseFilterDialog"
     android:background="@color/pureWhite">
 
-
-    <com.example.alaa.custom_views.FilteringStepGuide
-        android:id="@+id/FilteringStepGuide"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFiltering"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/Margin5"
+        android:layout_marginTop="@dimen/Margin16"
+        android:layout_marginEnd="@dimen/Margin5"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.example.alaa.customViews.FilteringStepGuide
+        android:id="@+id/FilteringStepGuide"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_height="wrap_content"
         android:layoutDirection="rtl"
         app:layout_constraintTop_toTopOf="parent"
         app:FilterGuideCurrentStep="NavEducationSystem"/>
 
 
-
-    <fragment
-        android:id="@+id/mainNavigationFragment"
-        app:layout_constraintTop_toBottomOf="@id/FilteringStepGuide"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/filter_nav_graph"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

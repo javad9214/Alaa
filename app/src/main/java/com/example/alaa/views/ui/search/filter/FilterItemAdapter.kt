@@ -1,11 +1,11 @@
-package com.example.alaa.views.ui.search.Filter
+package com.example.alaa.views.ui.search.filter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alaa.R
-import com.example.alaa.custom_views.ButtonWithFont
+import com.example.alaa.customViews.ButtonWithFont
 
 class FilterItemAdapter(private val list: ArrayList<String>, private val listener: FilterItemListener) : RecyclerView.Adapter<FilterItemAdapter.ViewHolder>()  {
 

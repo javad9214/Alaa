@@ -1,13 +1,10 @@
-package com.example.alaa.custom_views
+package com.example.alaa.customViews
 
 import android.content.Context
-import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.RelativeLayout
+import android.widget.HorizontalScrollView
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.example.alaa.R
@@ -15,7 +12,7 @@ import com.example.alaa.databinding.FilteringGuideStepBinding
 import kotlinx.android.synthetic.main.filtering_guide_step.view.*
 
 
-class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : RelativeLayout(context, attributeSet) {
+class FilteringStepGuide @JvmOverloads constructor(context: Context, attributeSet: AttributeSet? = null) : HorizontalScrollView(context, attributeSet) {
 
 
     private val TAG: String = "===>"
@@ -25,28 +22,21 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
     private var stepList = listOf<ButtonWithFont>()
     private lateinit var listener: StepSelectListener
 
-    private var myView = View.inflate(context, R.layout.filtering_guide_step, this)
-    var inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-    var mBinding: FilteringGuideStepBinding
+    private var mBinding: FilteringGuideStepBinding
 
 
     init {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.filtering_guide_step, parent as ViewGroup?, false)
-        mBinding.education = "باشه"
-
-        val typed: TypedArray = context.obtainStyledAttributes(attributeSet, R.styleable.FilteringStepGuide, 0, 0)
-        currentStep = typed.getInt(R.styleable.FilteringStepGuide_FilterGuideCurrentStep, 0)
+        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.filtering_guide_step, this, true)
+//        val typed: TypedArray = context.obtainStyledAttributes(attributeSet, R.styleable.FilteringStepGuide, 0, 0)
+//        currentStep = typed.getInt(R.styleable.FilteringStepGuide_FilterGuideCurrentStep, 0)
         Log.i(TAG, currentStep.toString())
-        typed.recycle()
+        // typed.recycle()
 
         //setButtonsListener()
 
 
     }
-
-    private fun dataBinding() {
-    }
-
     private fun setButtonsListener() {
         Step_EducationSystem.setOnClickListener { listener.onStepSelected(1) }
         Step_Grade.setOnClickListener { listener.onStepSelected(2) }

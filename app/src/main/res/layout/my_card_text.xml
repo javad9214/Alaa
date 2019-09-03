@@ -41,7 +41,7 @@
                 android:layout_marginEnd="@dimen/Margin10"
                 android:visibility="visible"/>
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/my_card_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"

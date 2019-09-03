@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alaa.R;
-import com.example.alaa.custom_views.TextViewWithFont;
+import com.example.alaa.customViews.TextViewWithFont;
 import com.example.alaa.databinding.ContentProductPageBinding;
 import com.example.alaa.models.SampleVideoModel;
 import com.example.alaa.models.SelectableProductModel;

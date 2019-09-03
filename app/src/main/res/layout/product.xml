@@ -15,7 +15,7 @@
         android:layout_height="match_parent">
 
 
-        <com.example.alaa.custom_views.TextViewWithFont
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/tx_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.example.alaa.custom_views.TextViewWithFont
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/realPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             app:cardElevation="@dimen/Margin5"
             android:layout_marginStart="@dimen/Margin5">
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/finalSalePrice"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -108,7 +108,7 @@
             android:translationX="50dp"
             app:cardElevation="@dimen/Margin10">
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/discountPercent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

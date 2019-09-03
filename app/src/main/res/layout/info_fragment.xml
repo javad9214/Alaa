@@ -35,7 +35,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.custom_views.TextViewWithFont
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_name"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -62,7 +62,7 @@
                 android:layout_height="0.3dp"
                 android:background="@color/gray"></RelativeLayout>
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -102,7 +102,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.custom_views.TextViewWithFont
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_major"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -129,7 +129,7 @@
                 android:layout_height="0.3dp"
                 android:background="@color/gray"></RelativeLayout>
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -168,7 +168,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.custom_views.TextViewWithFont
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_gender"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -195,7 +195,7 @@
                 android:layout_height="0.3dp"
                 android:background="@color/gray"></RelativeLayout>
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -234,7 +234,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.custom_views.TextViewWithFont
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_phone"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -262,7 +262,7 @@
                 android:layout_height="0.3dp"
                 android:background="@color/gray"></RelativeLayout>
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -307,7 +307,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.custom_views.TextViewWithFont
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_mail"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -335,7 +335,7 @@
                 android:layout_height="0.3dp"
                 android:background="@color/gray"></RelativeLayout>
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -380,7 +380,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.custom_views.TextViewWithFont
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_postalCode"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -408,7 +408,7 @@
                 android:layout_height="0.3dp"
                 android:background="@color/gray"></RelativeLayout>
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -454,7 +454,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp">
 
-                <com.example.alaa.custom_views.TextViewWithFont
+                <com.example.alaa.customViews.TextViewWithFont
                     android:id="@+id/tx_address"
                     android:layout_width="0dp"
                     android:layout_weight="3"
@@ -483,7 +483,7 @@
                 android:layout_height="0.3dp"
                 android:background="@color/gray"></RelativeLayout>
 
-            <com.example.alaa.custom_views.TextViewWithFont
+            <com.example.alaa.customViews.TextViewWithFont
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

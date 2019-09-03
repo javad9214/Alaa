@@ -1,4 +1,4 @@
-package com.example.alaa.views.ui.search.Filter;
+package com.example.alaa.views.ui.search.filter;
 
 /**
  * @author Alaaa2

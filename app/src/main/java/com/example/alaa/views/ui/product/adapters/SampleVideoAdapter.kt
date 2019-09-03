@@ -28,8 +28,8 @@ class SampleVideoAdapter (private val sampleList : ArrayList<SampleVideoModel>):
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
-        val title: com.example.alaa.custom_views.TextViewWithFont = itemView.findViewById(R.id.title_sample_video)
-        val teacherName: com.example.alaa.custom_views.TextViewWithFont = itemView.findViewById(R.id.tx_teacherName)
+        val title: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.title_sample_video)
+        val teacherName: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.tx_teacherName)
 
 
     }

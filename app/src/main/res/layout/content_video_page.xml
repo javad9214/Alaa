@@ -82,7 +82,7 @@
                     app:singleLine="true"
                     app:singleSelection="true">
 
-                    <com.example.alaa.custom_views.ChipWithFont
+                    <com.example.alaa.customViews.ChipWithFont
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/konkoor"
@@ -91,7 +91,7 @@
                         app:chipBackgroundColor="@color/blue"
                         app:chipCornerRadius="7dp" />
 
-                    <com.example.alaa.custom_views.ChipWithFont
+                    <com.example.alaa.customViews.ChipWithFont
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/konkoor"
@@ -100,7 +100,7 @@
                         app:chipBackgroundColor="@color/blue"
                         app:chipCornerRadius="7dp" />
 
-                    <com.example.alaa.custom_views.ChipWithFont
+                    <com.example.alaa.customViews.ChipWithFont
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/konkoor"
@@ -109,7 +109,7 @@
                         app:chipBackgroundColor="@color/blue"
                         app:chipCornerRadius="7dp" />
 
-                    <com.example.alaa.custom_views.ChipWithFont
+                    <com.example.alaa.customViews.ChipWithFont
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/konkoor"
@@ -118,7 +118,7 @@
                         app:chipBackgroundColor="@color/blue"
                         app:chipCornerRadius="7dp" />
 
-                    <com.example.alaa.custom_views.ChipWithFont
+                    <com.example.alaa.customViews.ChipWithFont
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/konkoor"
@@ -127,7 +127,7 @@
                         app:chipBackgroundColor="@color/blue"
                         app:chipCornerRadius="7dp" />
 
-                    <com.example.alaa.custom_views.ChipWithFont
+                    <com.example.alaa.customViews.ChipWithFont
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/konkoor"
@@ -164,7 +164,7 @@
                     android:layout_margin="@dimen/Margin5"
                     android:orientation="vertical">
 
-                    <com.example.alaa.custom_views.ButtonWithFont
+                    <com.example.alaa.customViews.ButtonWithFont
                         android:id="@+id/btn_continue"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -190,7 +190,7 @@
                         android:layout_height="50dp"
                         android:src="@drawable/teacher_saniie"/>
 
-                    <com.example.alaa.custom_views.TextViewWithFont
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/tx_teacherName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -203,7 +203,7 @@
                         android:layout_marginStart="@dimen/Margin10"/>
 
 
-                    <com.example.alaa.custom_views.TextViewWithFont
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/tx_set_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -214,7 +214,7 @@
                         android:layout_marginStart="@dimen/Margin10"
                         android:textColor="@color/blueDark"/>
 
-                    <com.example.alaa.custom_views.TextViewWithFont
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/description"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -233,7 +233,7 @@
                         app:animation_duration="750" />
 
 
-                    <com.example.alaa.custom_views.TextViewWithFont
+                    <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/title"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"

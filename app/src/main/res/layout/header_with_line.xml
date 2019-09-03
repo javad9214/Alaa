@@ -16,7 +16,7 @@
         app:layout_constraintStart_toEndOf="@id/tx_header"
         app:layout_constraintTop_toTopOf="@id/tx_header" />
 
-    <com.example.alaa.custom_views.ButtonWithFont
+    <com.example.alaa.customViews.ButtonWithFont
         android:id="@+id/btn_header"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tx_header" />
 
-    <com.example.alaa.custom_views.TextViewWithFont
+    <com.example.alaa.customViews.TextViewWithFont
         android:id="@+id/tx_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

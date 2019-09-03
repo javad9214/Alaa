@@ -1,4 +1,4 @@
-package com.example.alaa.views.ui.search.Filter
+package com.example.alaa.views.ui.search.filter
 
 
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.example.alaa.R
-import com.example.alaa.custom_views.ButtonWithFont
+import com.example.alaa.customViews.ButtonWithFont
 
 
 class FilterMajor : Fragment()  {

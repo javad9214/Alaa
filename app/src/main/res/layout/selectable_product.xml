@@ -17,7 +17,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.example.alaa.custom_views.TextViewWithCardBackground
+        <com.example.alaa.customViews.TextViewWithCardBackground
             android:id="@+id/salePrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             app:text_font="IranSansNumLight"
             app:text_size="6sp" />
 
-        <com.example.alaa.custom_views.TextViewWithFont
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/realPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
             app:layout_constraintTop_toBottomOf="@id/title"
             app:strikeThrough="true" />
 
-        <com.example.alaa.custom_views.TextViewWithFont
+        <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

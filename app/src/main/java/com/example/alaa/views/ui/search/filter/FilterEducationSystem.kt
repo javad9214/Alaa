@@ -1,4 +1,4 @@
-package com.example.alaa.views.ui.search.Filter
+package com.example.alaa.views.ui.search.filter
 
 import android.app.Activity
 import android.os.Bundle
@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment
 import com.example.alaa.R
-import com.example.alaa.custom_views.ButtonWithFont
+import com.example.alaa.customViews.ButtonWithFont
 import com.example.alaa.viewModels.FilteringViewModel
 
 

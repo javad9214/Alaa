@@ -13,7 +13,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.OnLifecycleEvent
 import com.example.alaa.R
-import com.example.alaa.views.ui.search.Filter.BaseFilterDialog
+import com.example.alaa.views.ui.search.filter.BaseFilterDialog
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
