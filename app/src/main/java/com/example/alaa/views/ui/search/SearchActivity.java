@@ -3,6 +3,7 @@ package com.example.alaa.views.ui.search;
 
 import android.os.Bundle;
 import android.util.Log;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -23,8 +24,6 @@ public class SearchActivity extends AppCompatActivity implements FilterItemSelec
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-
-      //  ActivityUtil.addFragmentToActivity(getSupportFragmentManager(), new SearchResults() , android.R.id.content);
 
         getLifecycle().addObserver(new SearchLifeCycleObserver());
 

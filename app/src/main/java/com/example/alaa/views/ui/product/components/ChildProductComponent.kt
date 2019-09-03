@@ -18,7 +18,7 @@ import java.util.*
 
 class ChildProductComponent(context: Context, attributeSet: AttributeSet) : ConstraintLayout(context, attributeSet) {
 
-    private var recycler :RecyclerView
+    private var recycler: RecyclerView
 
     init {
 
@@ -30,27 +30,26 @@ class ChildProductComponent(context: Context, attributeSet: AttributeSet) : Cons
         val salePrice: TextViewWithCardBackground = findViewById(R.id.salePrice)
 
         //  val discount: com.example.alaa.custom_views.TextViewWithFont = findViewById(R.id.discountPercent)
-        recycler  = findViewById(R.id.recycler_loops)
+        recycler = findViewById(R.id.recycler_loops)
 
 
+        val attributes = context.obtainStyledAttributes(attributeSet, R.styleable.ChildProductComponent)
 
-        val attributes = context.obtainStyledAttributes(attributeSet , R.styleable.ChildProductComponent)
-
-        val hasChildren : Boolean =  attributes.getBoolean(R.styleable.ChildProductComponent_hasChildren , false)
-       // val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.ChildProductComponent_realPrice_childProduct))) + " " +  res.getString(R.string.Toman)
-       // val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.ChildProductComponent_salePrice_childProduct))) + " " +  res.getString(R.string.Toman)
+        val hasChildren: Boolean = attributes.getBoolean(R.styleable.ChildProductComponent_hasChildren, false)
+        // val realPriceText = setCurrency(toDouble(attributes.getString(R.styleable.ChildProductComponent_realPrice_childProduct))) + " " +  res.getString(R.string.Toman)
+        // val salePriceText = setCurrency(toDouble(attributes.getString(R.styleable.ChildProductComponent_salePrice_childProduct))) + " " +  res.getString(R.string.Toman)
 
         val realPriceText = attributes.getString(R.styleable.ChildProductComponent_realPrice_childProduct)
         val salePriceText = attributes.getString(R.styleable.ChildProductComponent_salePrice_childProduct)
 
-      //  val discountText =  res.getString(R.string.discount) + "  " +  calculateDiscount(97600.0, 24300.0 )
+        //  val discountText =  res.getString(R.string.discount) + "  " +  calculateDiscount(97600.0, 24300.0 )
         title.text = attributes.getString(R.styleable.ChildProductComponent_title_childProduct)
-        realPrice.text =  realPriceText
+        realPrice.text = realPriceText
         salePrice.setText(salePriceText)
 
-      //  discount.text = discountText
+        //  discount.text = discountText
 
-        if (hasChildren){
+        if (hasChildren) {
             realPrice.visibility = View.GONE
             salePrice.visibility = View.GONE
         }
@@ -71,8 +70,7 @@ class ChildProductComponent(context: Context, attributeSet: AttributeSet) : Cons
         return productModel
     }
 
-
-    private fun setAdapter(){
+    private fun setAdapter() {
         val productModeList = ArrayList<SelectableProductModel>()
 
         for (i in 0..4) {
@@ -108,8 +106,6 @@ class ChildProductComponent(context: Context, attributeSet: AttributeSet) : Cons
 
         return string?.toDouble()
     }
-
-
 
 
 }

@@ -21,8 +21,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.asksira.loopingviewpager.LoopingViewPager;
 import com.example.alaa.R;
-import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ViewPager.PagerAdapter;
+import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ui.VideoPage;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
@@ -91,11 +91,9 @@ public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemCl
             FixedSpeedScroller scroller = new FixedSpeedScroller(loopingViewPager.getContext(), new DecelerateInterpolator());
             // scroller.setFixedDuration(5000);
             mScroller.set(loopingViewPager, scroller);
-        } catch (NoSuchFieldException e) {
-        } catch (IllegalArgumentException e) {
-        } catch (IllegalAccessException e) {
+        } catch (NoSuchFieldException | IllegalArgumentException | IllegalAccessException e) {
+            e.printStackTrace();
         }
-
 
 
     }

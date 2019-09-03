@@ -17,16 +17,15 @@ class HeaderWithLine(context: Context, attrs: AttributeSet) : ConstraintLayout(c
     private var _textColor: Int = ContextCompat.getColor(context, R.color.pureWhite)
     private var _textSize: Float = resources.getDimension(R.dimen.textSizeDefault)
     private var _textFont: Int = 2
-
     private var _textButton: String? = resources.getString(R.string.app_name)
-    private var _buttonColor: Int = ContextCompat.getColor(context, R.color.pureWhite)
-
+    private var _colorButton: Int = ContextCompat.getColor(context, R.color.pureWhite)
+    private var _hasButton: Boolean = false
 
     private var textView: TextViewWithFont
     private var button: ButtonWithFont
 
     init {
-        View.inflate(context, R.layout.my_header, this)
+        View.inflate(context, R.layout.header_with_line, this)
 
         textView = findViewById(R.id.tx_header)
         button = findViewById(R.id.btn_header)
@@ -45,9 +44,9 @@ class HeaderWithLine(context: Context, attrs: AttributeSet) : ConstraintLayout(c
         _textColor = a.getColor(R.styleable.HeaderWithLine_header_textColor, _textColor)
         _textFont = a.getInt(R.styleable.HeaderWithLine_header_textFont, 2)
         _textSize = a.getDimension(R.styleable.HeaderWithLine_header_textSize, _textSize)
-
+        _hasButton = a.getBoolean(R.styleable.HeaderWithLine_header_hasButton, false)
         _textButton = a.getString(R.styleable.HeaderWithLine_header_buttonText)
-        _buttonColor = a.getColor(R.styleable.HeaderWithLine_header_buttonColor, _buttonColor)
+        _colorButton = a.getColor(R.styleable.HeaderWithLine_header_buttonColor, _colorButton)
 
 
         a.recycle()
@@ -61,8 +60,12 @@ class HeaderWithLine(context: Context, attrs: AttributeSet) : ConstraintLayout(c
             it.setTextColor(_textColor)
             setTextViewTypeFace(context, it)
         }
+        button.let {
+            it.text = _textButton
+            it.setBackgroundColor(_colorButton)
+        }
 
-        button.text = _textButton
+        if (_hasButton) button.visibility = View.VISIBLE
     }
 
     private fun setTextViewTypeFace(context: Context, textView: TextViewWithFont) {

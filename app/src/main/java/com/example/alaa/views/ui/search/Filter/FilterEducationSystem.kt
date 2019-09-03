@@ -66,8 +66,6 @@ class FilterEducationSystem : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-
-
         when(v?.id){
             R.id.FilterItemNewSystem -> NavHostFragment.findNavController(this).navigate(R.id.filterGrade)
             R.id.FilterItemOldSystem -> NavHostFragment.findNavController(this).navigate(R.id.filterGrade)

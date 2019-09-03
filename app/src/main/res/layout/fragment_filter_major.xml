@@ -1,99 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/pureWhite"
     android:layoutDirection="rtl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".views.ui.search.Filter.FilterMajor"
-    android:background="@color/pureWhite">
+    tools:context=".views.ui.search.Filter.FilterMajor">
 
 
-    <LinearLayout
-        android:id="@+id/topRowMajor"
-        android:layout_width="match_parent"
+    <com.example.alaa.custom_views.ButtonWithFont
+        android:id="@+id/ItemMajorAll"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginEnd="@dimen/Margin10"
-        android:layout_marginStart="@dimen/Margin10"
-        android:paddingBottom="@dimen/Margin10">
+        android:layout_marginStart="@dimen/Margin5"
+        android:layout_marginEnd="@dimen/Margin5"
+        android:text="@string/MajorAll"
+        android:textColor="@color/alaa5"
+        app:MyButtonFont="IRANSans_Medium"
+        app:backgroundTint="@color/pureWhite"
+        app:layout_constraintEnd_toStartOf="@id/ItemMajorMath"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <com.example.alaa.custom_views.ButtonWithFont
-            android:id="@+id/ItemMajorAll"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/Margin5"
-            app:backgroundTint="@color/pureWhite"
-            android:textColor="@color/alaa5"
-            app:iconTint="@color/black"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:text="@string/MajorAll"
-            app:MyButtonFont="IRANSans_Medium"/>
-
-        <com.example.alaa.custom_views.ButtonWithFont
-            android:id="@+id/ItemMajorMath"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/Margin5"
-            app:backgroundTint="@color/pureWhite"
-            android:textColor="@color/alaa5"
-            app:iconTint="@color/black"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:text="@string/Major_Riazi"
-            app:MyButtonFont="IRANSans_Medium"/>
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <com.example.alaa.custom_views.ButtonWithFont
+        android:id="@+id/ItemMajorMath"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/topRowMajor"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginEnd="@dimen/Margin10"
-        android:layout_marginStart="@dimen/Margin10"
-        android:paddingBottom="@dimen/Margin10">
-
-        <com.example.alaa.custom_views.ButtonWithFont
-            android:id="@+id/filterMajorItem_Tajrobi"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/Margin5"
-            app:backgroundTint="@color/pureWhite"
-            android:textColor="@color/alaa5"
-            app:iconTint="@color/black"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:text="@string/Major_Tajrobi"
-            app:MyButtonFont="IRANSans_Medium"/>
-
-        <com.example.alaa.custom_views.ButtonWithFont
-            android:id="@+id/FilterItemMajor_Ensani"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/Margin5"
-            app:backgroundTint="@color/pureWhite"
-            android:textColor="@color/alaa5"
-            app:iconTint="@color/black"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:text="@string/Major_Ensani"
-            app:MyButtonFont="IRANSans_Medium"/>
+        android:layout_marginStart="@dimen/Margin5"
+        android:layout_marginEnd="@dimen/Margin5"
+        android:text="@string/Major_Riazi"
+        android:textColor="@color/alaa5"
+        app:MyButtonFont="IRANSans_Medium"
+        app:backgroundTint="@color/pureWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ItemMajorAll"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
+    <com.example.alaa.custom_views.ButtonWithFont
+        android:id="@+id/filterMajorItem_Tajrobi"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/Margin5"
+        android:layout_marginEnd="@dimen/Margin5"
+        android:text="@string/Major_Tajrobi"
+        android:textColor="@color/alaa5"
+        app:MyButtonFont="IRANSans_Medium"
+        app:backgroundTint="@color/pureWhite"
+        app:layout_constraintEnd_toStartOf="@id/FilterItemMajor_Ensani"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ItemMajorAll" />
 
-    </LinearLayout>
-
-
-
+    <com.example.alaa.custom_views.ButtonWithFont
+        android:id="@+id/FilterItemMajor_Ensani"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/Margin5"
+        android:layout_marginEnd="@dimen/Margin5"
+        android:text="@string/Major_Ensani"
+        android:textColor="@color/alaa5"
+        app:MyButtonFont="IRANSans_Medium"
+        app:backgroundTint="@color/pureWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/filterMajorItem_Tajrobi"
+        app:layout_constraintTop_toBottomOf="@id/ItemMajorMath" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

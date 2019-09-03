@@ -25,13 +25,13 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
     private var stepList = listOf<ButtonWithFont>()
     private lateinit var listener: StepSelectListener
 
-     private var myView = View.inflate(context, R.layout.filtering_guide_step, this)
-     var inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-     var mBinding : FilteringGuideStepBinding
+    private var myView = View.inflate(context, R.layout.filtering_guide_step, this)
+    var inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    var mBinding: FilteringGuideStepBinding
 
 
     init {
-        mBinding = DataBindingUtil.inflate(inflater , R.layout.filtering_guide_step , parent as ViewGroup?, false)
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.filtering_guide_step, parent as ViewGroup?, false)
         mBinding.education = "باشه"
 
         val typed: TypedArray = context.obtainStyledAttributes(attributeSet, R.styleable.FilteringStepGuide, 0, 0)
@@ -44,9 +44,7 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
 
     }
 
-    private fun dataBinding(){
-
-
+    private fun dataBinding() {
     }
 
     private fun setButtonsListener() {
@@ -81,10 +79,10 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
     }
 
     fun updateFilterStep(step: Int) {
-       // scrollToCurrentStep(stepList[step])
+        // scrollToCurrentStep(stepList[step])
+        setStepActive(stepList[step])
         when (step) {
             0 -> {
-                setStepActive(stepList[0])
                 setStepDisable(stepList[1])
                 setStepDisable(stepList[2])
                 setStepDisable(stepList[3])
@@ -92,7 +90,6 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
             }
 
             1 -> {
-                setStepActive(stepList[1])
                 setStepDisable(stepList[2])
                 setStepDisable(stepList[3])
                 setStepDisable(stepList[4])
@@ -100,7 +97,6 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
             }
 
             2 -> {
-                setStepActive(stepList[2])
                 setStepDisable(stepList[3])
                 setStepDisable(stepList[4])
                 setStepPassed(stepList[0])
@@ -108,7 +104,6 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
             }
 
             3 -> {
-                setStepActive(stepList[3])
                 setStepDisable(stepList[4])
                 setStepPassed(stepList[0])
                 setStepPassed(stepList[1])
@@ -116,7 +111,6 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
             }
 
             4 -> {
-                setStepActive(stepList[4])
                 setStepPassed(stepList[0])
                 setStepPassed(stepList[1])
                 setStepPassed(stepList[2])
@@ -125,8 +119,6 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet) : Relativ
         }
 
     }
-
-
 
 
     interface StepSelectListener {

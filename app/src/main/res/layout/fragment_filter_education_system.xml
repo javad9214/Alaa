@@ -1,60 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/pureWhite"
     android:layoutDirection="rtl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".views.ui.search.Filter.FilterEducationSystem"
-    android:background="@color/pureWhite">
+    tools:context=".views.ui.search.Filter.FilterEducationSystem">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginEnd="@dimen/Margin10"
-            android:layout_marginStart="@dimen/Margin10"
-            android:paddingBottom="@dimen/Margin10">
+    <com.example.alaa.custom_views.ButtonWithFont
+        android:id="@+id/FilterItemNewSystem"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/Margin5"
+        android:layout_marginEnd="@dimen/Margin5"
+        android:text="@string/NewSystem"
+        android:textColor="@color/alaa5"
+        app:MyButtonFont="IRANSans_Medium"
+        app:backgroundTint="@color/pureWhite"
+        app:layout_constraintEnd_toStartOf="@id/FilterItemOldSystem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <com.example.alaa.custom_views.ButtonWithFont
-                android:id="@+id/FilterItemNewSystem"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/Margin5"
-                app:backgroundTint="@color/pureWhite"
-                android:textColor="@color/alaa5"
-                app:iconTint="@color/black"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:text="@string/NewSystem"
-                app:MyButtonFont="IRANSans_Medium"/>
-
-            <com.example.alaa.custom_views.ButtonWithFont
-                android:id="@+id/FilterItemOldSystem"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/Margin5"
-                app:backgroundTint="@color/pureWhite"
-                android:textColor="@color/alaa5"
-                app:iconTint="@color/black"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:text="@string/OldSystem"
-                app:MyButtonFont="IRANSans_Medium"/>
-
-
-
-        </LinearLayout>
-
-
-
-
-
+    <com.example.alaa.custom_views.ButtonWithFont
+        android:id="@+id/FilterItemOldSystem"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/Margin5"
+        android:layout_marginEnd="@dimen/Margin5"
+        android:text="@string/OldSystem"
+        android:textColor="@color/alaa5"
+        app:MyButtonFont="IRANSans_Medium"
+        app:backgroundTint="@color/pureWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/FilterItemNewSystem"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

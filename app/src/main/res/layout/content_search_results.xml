@@ -6,15 +6,14 @@
     android:layoutDirection="rtl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/pureWhite"
         android:layout_margin="@dimen/Margin5"
         app:layout_constraintTop_toTopOf="parent"
         app:cardCornerRadius="@dimen/Margin5"
         app:cardElevation="@dimen/Margin5">
-
-
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
@@ -45,9 +44,10 @@
             android:text="@string/tabArticle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
     </com.google.android.material.tabs.TabLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/openFilter"
@@ -55,6 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/Margin16"
         android:src="@drawable/ic_set_filter"
+        android:backgroundTint="@color/alaa5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -13,10 +13,10 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.alaa.R;
 import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.dashboard.DashboardFragment;
-import com.example.alaa.views.ui.search.SearchActivity;
 import com.example.alaa.views.ui.cart.Cart;
 import com.example.alaa.views.ui.main.HomeFragment;
 import com.example.alaa.views.ui.main.ShopFragment;
+import com.example.alaa.views.ui.search.SearchActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.hzn.lib.EasyTransition;
 
@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
                 return true;
 
             case R.id.navigation_forum:
+                Intent intent = new Intent(this, SearchActivity.class);
+                startActivity(intent);
+                return true;
 
             case R.id.navigation_MyProfile:
 
@@ -95,12 +98,6 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
         Intent intent = new Intent(this, VideoPage.class);
         startActivity(intent);
     }
-
-    public void goToSearch(View view) {
-        Intent intent = new Intent(this, SearchActivity.class);
-        startActivity(intent);
-    }
-
 
     @Override
     public void onBackPressed() {

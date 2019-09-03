@@ -59,36 +59,14 @@
                     android:orientation="vertical"
                     android:paddingBottom="10dp">
 
-                    <LinearLayout
+                    <com.example.alaa.custom_views.HeaderWithLine
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.example.alaa.custom_views.ButtonWithFont
-                            android:id="@+id/btnMore"
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:layout_marginStart="0dp"
-                            android:text="@string/more"
-                            android:textColor="@color/RedLight"
-                            android:textStyle="bold"
-                            app:MyButtonFont="IRANSans_Light"
-                            app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-                        <com.example.alaa.custom_views.TextViewWithFont
-                            android:id="@+id/topic01"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end|center_vertical"
-                            android:layout_marginEnd="16dp"
-                            android:text="کنکور نظام جدید"
-                            android:textColor="@color/blackTitle"
-                            android:textSize="16sp"
-                            app:MyTextViewFont="IRANSans_Light" />
-
-                    </LinearLayout>
+                        app:header_buttonText="@string/more"
+                        app:header_hasButton="true"
+                        app:header_text="@string/demo_title_block"
+                        app:header_textColor="@color/black"
+                        app:header_textSize="6sp" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler01"
@@ -100,6 +78,31 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp">
+
+                    <com.example.alaa.custom_views.HeaderWithLine
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:header_buttonText="@string/more"
+                        app:header_hasButton="true"
+                        app:header_text="@string/demo_title_block"
+                        app:header_textColor="@color/black"
+                        app:header_textSize="6sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -108,32 +111,7 @@
                     android:orientation="vertical"
                     android:paddingBottom="16dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
-                        <com.google.android.material.button.MaterialButton
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:text="@string/more"
-                            android:textColor="@color/RedLight"
-                            app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-                        <com.example.alaa.custom_views.TextViewWithFont
-                            android:id="@+id/topic02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end|center_vertical"
-                            android:layout_marginEnd="16dp"
-                            android:text="کنکور نظام قدیم"
-                            android:textColor="@color/blackTitle"
-                            android:textSize="16sp"
-                            app:MyTextViewFont="IRANSans_Light" />
-
-                    </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler02"
@@ -151,77 +129,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:orientation="vertical"
-                    android:paddingBottom="16dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.button.MaterialButton
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:text="@string/more"
-                            app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-                        <com.example.alaa.custom_views.TextViewWithFont
-                            android:id="@+id/topic03"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end|center_vertical"
-                            android:layout_marginEnd="16dp"
-                            android:text="پایه دهم"
-                            android:textColor="@color/blackTitle"
-                            android:textSize="16sp"
-                            app:MyTextViewFont="IRANSans_Light" />
-
-                    </LinearLayout>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler03"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                    </androidx.recyclerview.widget.RecyclerView>
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical"
                     android:paddingBottom="66dp">
 
-                    <LinearLayout
+                    <com.example.alaa.custom_views.HeaderWithLine
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.button.MaterialButton
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="bottom"
-                            android:text="@string/more"
-                            app:icon="@drawable/ic_chevron_left_black_24dp" />
-
-                        <com.example.alaa.custom_views.TextViewWithFont
-                            android:id="@+id/topic04"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end|center_vertical"
-                            android:layout_marginEnd="16dp"
-                            android:text="پایه یازدهم"
-                            android:textColor="@color/blackTitle"
-                            android:textSize="16sp"
-                            app:MyTextViewFont="IRANSans_Light" />
-
-                    </LinearLayout>
+                        app:header_buttonText="@string/more"
+                        app:header_hasButton="true"
+                        app:header_text="@string/demo_title_block"
+                        app:header_textColor="@color/black"
+                        app:header_textSize="6sp" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler04"
@@ -233,6 +150,16 @@
                     </androidx.recyclerview.widget.RecyclerView>
 
                 </LinearLayout>
+
+
+                <com.example.alaa.custom_views.HeaderWithLine
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:header_buttonText="@string/more"
+                    app:header_hasButton="true"
+                    app:header_text="@string/demo_title_block"
+                    app:header_textColor="@color/black"
+                    app:header_textSize="6sp" />
 
 
             </LinearLayout>

@@ -3,16 +3,15 @@ package com.example.alaa.views.ui.search
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.OnLifecycleEvent
-
 import com.example.alaa.R
 import com.example.alaa.views.ui.search.Filter.BaseFilterDialog
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -39,7 +38,6 @@ class SearchResults : Fragment()  , SearchBarComponent.BackListener , LifecycleO
         openFilter.setOnClickListener{
            val baseFilterDialog = BaseFilterDialog()
             activity?.supportFragmentManager?.let { it1 -> baseFilterDialog.show(it1, baseFilterDialog.tag) }
-            baseFilterDialog
         }
 
         return myView
@@ -47,12 +45,7 @@ class SearchResults : Fragment()  , SearchBarComponent.BackListener , LifecycleO
 
     override fun onBackClicked() {
       val fm : FragmentManager? = activity?.supportFragmentManager
-        if (fm != null) {
-            if (fm.backStackEntryCount > 0) {
-
-                fm.popBackStack()
-            }
-        }
+        if (fm != null) if (fm.backStackEntryCount > 0) fm.popBackStack()
 
     }
 

@@ -21,11 +21,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.asksira.loopingviewpager.LoopingViewPager;
 import com.example.alaa.R;
-import com.example.alaa.custom_views.ButtonWithFont;
 import com.example.alaa.views.ViewPager.PagerAdapter;
 import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ui.product.ProductPage;
-import com.example.alaa.views.ui.search.SearchActivity;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 import org.jetbrains.annotations.NotNull;
@@ -64,13 +62,6 @@ public class ShopFragment extends Fragment  implements HomeRecyclerAdapter.ItemC
         super.onViewCreated(view, savedInstanceState);
         setAdapters();
         initViewPager();
-
-        ButtonWithFont btnMore = view.findViewById(R.id.btnMore);
-        btnMore.setOnClickListener(v -> {
-            Intent intent = new Intent(getContext() , SearchActivity.class);
-            startActivity(intent);
-        });
-
     }
 
 
