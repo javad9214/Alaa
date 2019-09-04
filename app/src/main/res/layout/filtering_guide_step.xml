@@ -5,21 +5,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data></data>
-
-    <merge
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layoutDirection="rtl"
         tools:context=".customViews.FilteringStepGuide">
 
         <HorizontalScrollView
             android:id="@+id/scrollViewFilteringStep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/Margin10"
-            android:layout_marginEnd="@dimen/Margin10"
             android:layout_marginBottom="@dimen/Margin10"
-            android:layoutDirection="rtl"
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
@@ -30,6 +26,12 @@
                 android:layoutDirection="rtl"
                 android:orientation="horizontal">
 
+                <RelativeLayout
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/Margin10"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/alaa5" />
 
                 <RelativeLayout
                     android:layout_width="2dp"
@@ -38,22 +40,35 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/alaa5" />
 
+                <RelativeLayout
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/Margin10"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/alaa5" />
+
+                <RelativeLayout
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/Margin10"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/alaa5" />
 
                 <com.example.alaa.customViews.ButtonWithFont
-                    android:id="@+id/Step_EducationSystem"
+                    android:id="@+id/Step_Major"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/Margin5"
                     android:layout_marginEnd="@dimen/Margin5"
+                    android:enabled="true"
                     android:layoutDirection="ltr"
-                    android:text="@string/EducationSystem"
-                    android:textColor="@color/pureWhite"
+                    android:text="@string/major"
+                    android:textColor="@color/blackTitle"
                     app:MyButtonFont="IranSansNumMedium"
-                    app:backgroundTint="@color/colorAccent"
+                    app:backgroundTint="@color/pureWhite"
                     app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/pureWhite" />
-
+                    app:iconTint="@color/blackTitle" />
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Grade"
@@ -64,29 +79,11 @@
                     android:layout_marginEnd="@dimen/Margin5"
                     android:layoutDirection="ltr"
                     android:text="@string/Grade"
-                    android:textColor="@color/blackTitle"
+                    android:textColor="@color/pureWhite"
                     app:MyButtonFont="IranSansNumMedium"
-                    app:backgroundTint="@color/pureWhite"
+                    app:backgroundTint="@color/alaa5"
                     app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/blackTitle"
-                    app:strokeColor="@color/pureWhite" />
-
-                <com.example.alaa.customViews.ButtonWithFont
-                    android:id="@+id/Step_Major"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/Margin5"
-                    android:layout_marginEnd="@dimen/Margin5"
-                    android:enabled="false"
-                    android:layoutDirection="ltr"
-                    android:text="@string/major"
-                    android:textColor="@color/blackTitle"
-                    app:MyButtonFont="IranSansNumMedium"
-                    app:backgroundTint="@color/pureWhite"
-                    app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/blackTitle"
-                    app:strokeColor="@color/pureWhite" />
+                    app:iconTint="@color/pureWhite" />
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Lesson"
@@ -95,15 +92,29 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/Margin5"
                     android:layout_marginEnd="@dimen/Margin5"
-                    android:enabled="false"
+                    android:enabled="true"
                     android:layoutDirection="ltr"
                     android:text="@string/Lesson"
                     android:textColor="@color/blackTitle"
                     app:MyButtonFont="IranSansNumMedium"
                     app:backgroundTint="@color/pureWhite"
                     app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/blackTitle"
-                    app:strokeColor="@color/pureWhite" />
+                    app:iconTint="@color/blackTitle" />
+
+                <com.example.alaa.customViews.ButtonWithFont
+                    android:id="@+id/Step_EducationSystem"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/Margin5"
+                    android:layout_marginEnd="@dimen/Margin5"
+                    android:layoutDirection="ltr"
+                    android:text="@string/EducationSystem"
+                    android:textColor="@color/black"
+                    app:MyButtonFont="IranSansNumMedium"
+                    app:backgroundTint="@color/pureWhite"
+                    app:icon="@drawable/ic_chevron_left_black_24dp"
+                    app:iconTint="@color/black" />
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Teacher"
@@ -112,34 +123,31 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/Margin5"
                     android:layout_marginEnd="@dimen/Margin5"
-                    android:enabled="false"
+                    android:enabled="true"
                     android:layoutDirection="ltr"
                     android:text="@string/teacher"
                     android:textColor="@color/blackTitle"
                     app:MyButtonFont="IranSansNumMedium"
                     app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/blackTitle"
-                    app:strokeColor="@color/pureWhite" />
-
-                <com.example.alaa.customViews.ButtonWithFont
-                    android:id="@+id/applyFiltering"
-                    style="@style/Widget.MaterialComponents.Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/Margin5"
-                    android:layout_marginEnd="@dimen/Margin5"
-                    android:enabled="false"
-                    android:layoutDirection="ltr"
-                    android:text="@string/ApplyFilter"
-                    android:textColor="@color/pureWhite"
-                    android:textStyle="bold"
-                    app:MyButtonFont="shabnam_light"
-                    app:icon="@drawable/ic_done_filter"
-                    app:iconTint="@color/pureWhite" />
+                    app:iconTint="@color/blackTitle" />
 
             </LinearLayout>
         </HorizontalScrollView>
-    </merge>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_filtering_step_guide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/scrollViewFilteringStep"
+            app:layout_constraintStart_toStartOf="@id/scrollViewFilteringStep"
+            app:layout_constraintTop_toBottomOf="@id/scrollViewFilteringStep" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+    </data>
+
+
 </layout>
 
 

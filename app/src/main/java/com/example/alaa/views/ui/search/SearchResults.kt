@@ -13,8 +13,6 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.OnLifecycleEvent
 import com.example.alaa.R
-import com.example.alaa.views.ui.search.filter.BaseFilterDialog
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class SearchResults : Fragment()  , SearchBarComponent.BackListener , LifecycleOwner {
@@ -32,13 +30,6 @@ class SearchResults : Fragment()  , SearchBarComponent.BackListener , LifecycleO
 
         val btnBack : SearchBarComponent  = myView.findViewById(R.id.search_bar)
         btnBack.setOnBackClickListener(this)
-
-
-        val openFilter : FloatingActionButton  = myView.findViewById(R.id.openFilter)
-        openFilter.setOnClickListener{
-           val baseFilterDialog = BaseFilterDialog()
-            activity?.supportFragmentManager?.let { it1 -> baseFilterDialog.show(it1, baseFilterDialog.tag) }
-        }
 
         return myView
     }

@@ -1,8 +1,8 @@
+
 package com.example.alaa.viewModels
 
 import androidx.lifecycle.ViewModel
-
-import java.util.ArrayList
+import java.util.*
 
 class FilteringViewModel : ViewModel() {
 
