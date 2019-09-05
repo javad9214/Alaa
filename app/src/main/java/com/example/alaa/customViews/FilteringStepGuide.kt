@@ -18,11 +18,10 @@ import kotlinx.android.synthetic.main.filtering_guide_step.view.*
 class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) : ConstraintLayout(context, attributeSet), FilterItemAdapter.FilterItemListener, View.OnClickListener {
 
 
-
     private val TAG: String = "===>"
 
     // 1 : Education System   2 : Grade   3 : Major   4 : lesson   5 : teacher
-    private var currentStep: Int = 0
+    private lateinit var currentStep: ButtonWithFont
     private var stepList = listOf<ButtonWithFont>()
 
     private var mBinding: FilteringGuideStepBinding
@@ -36,8 +35,9 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
 
 
     }
+
     private fun setButtonsListener() {
-        mBinding.StepEducationSystem.setOnClickListener(this)
+        Step_EducationSystem.setOnClickListener(this)
         Step_Grade.setOnClickListener(this)
         Step_Major.setOnClickListener(this)
         Step_Lesson.setOnClickListener(this)
@@ -46,18 +46,31 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
 
     private fun setRecycler(list: ArrayList<String>) {
         val recyclerFilterGrade: RecyclerView = mBinding.recyclerFilteringStepGuide
-        recyclerFilterGrade.layoutManager = GridLayoutManager(context, 2, RecyclerView.HORIZONTAL, false)
+        recyclerFilterGrade.layoutManager = GridLayoutManager(context, 1, RecyclerView.HORIZONTAL, false)
 
         val adapter = FilterItemAdapter(list, this)
         recyclerFilterGrade.adapter = adapter
 
     }
 
+    private fun setCurrentStep(buttonWithFont: ButtonWithFont) {
+        if (currentStep == null) currentStep = buttonWithFont
+        else setStepDeActive(currentStep)
+        currentStep = buttonWithFont
+    }
+
     private fun setStepActive(buttonWithFont: ButtonWithFont) {
-        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.alaa5)
+
+        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.green)
         buttonWithFont.setTextColor(ContextCompat.getColorStateList(context, R.color.pureWhite))
         buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.pureWhite)
-        buttonWithFont.isEnabled = true
+    }
+
+    private fun setStepDeActive(buttonWithFont: ButtonWithFont) {
+        setCurrentStep(buttonWithFont)
+        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.pureWhite)
+        buttonWithFont.setTextColor(ContextCompat.getColorStateList(context, R.color.black))
+        buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.black)
     }
 
     private fun setStepPassed(buttonWithFont: ButtonWithFont) {
@@ -75,7 +88,7 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
         buttonWithFont.isEnabled = false
     }
 
-    fun updateFilterStep(step: Int) {
+    private fun updateFilterStep(step: Int) {
         // scrollToCurrentStep(stepList[step])
         setStepActive(stepList[step])
         when (step) {
@@ -124,11 +137,26 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
     override fun onClick(view: View?) {
 
         when (view?.id) {
-            Step_EducationSystem.id -> setRecycler(setEducationSystemList())
-            Step_Grade.id -> setRecycler(setGradeListNewSystem())
-            Step_Major.id -> setRecycler(setMajorList())
-            Step_Lesson.id -> setRecycler(setLessonList())
-            Step_Teacher.id -> setRecycler(setGradeListOldSystem())
+            Step_EducationSystem.id -> {
+                setRecycler(setEducationSystemList())
+                setStepActive(Step_EducationSystem)
+            }
+            Step_Grade.id -> {
+                setRecycler(setGradeListNewSystem())
+                setStepActive(Step_Grade)
+            }
+            Step_Major.id -> {
+                setRecycler(setMajorList())
+                setStepActive(Step_Major)
+            }
+            Step_Lesson.id -> {
+                setRecycler(setLessonList())
+                setStepActive(Step_Lesson)
+            }
+            Step_Teacher.id -> {
+                setRecycler(setGradeListOldSystem())
+                setStepActive(Step_Teacher)
+            }
         }
     }
 
