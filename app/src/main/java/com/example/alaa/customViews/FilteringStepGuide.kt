@@ -1,9 +1,11 @@
 package com.example.alaa.customViews
 
+import android.animation.ObjectAnimator
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
@@ -20,9 +22,9 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
 
     private val TAG: String = "===>"
 
-    // 1 : Education System   2 : Grade   3 : Major   4 : lesson   5 : teacher
-    private lateinit var currentStep: ButtonWithFont
-    private var stepList = listOf<ButtonWithFont>()
+    // 0 : Education System   1 : Grade   2 : Major   3 : lesson   4 : teacher
+    private var currentStep: Int = 5
+    private var stepList = arrayListOf<ButtonWithFont>()
 
     private var mBinding: FilteringGuideStepBinding
 
@@ -32,8 +34,6 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
         mBinding = DataBindingUtil.inflate(inflater, R.layout.filtering_guide_step, this, true)
 
         setButtonsListener()
-
-
     }
 
     private fun setButtonsListener() {
@@ -42,124 +42,125 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
         Step_Major.setOnClickListener(this)
         Step_Lesson.setOnClickListener(this)
         Step_Teacher.setOnClickListener(this)
+        setButtonList()
     }
 
-    private fun setRecycler(list: ArrayList<String>) {
-        val recyclerFilterGrade: RecyclerView = mBinding.recyclerFilteringStepGuide
-        recyclerFilterGrade.layoutManager = GridLayoutManager(context, 1, RecyclerView.HORIZONTAL, false)
-
-        val adapter = FilterItemAdapter(list, this)
-        recyclerFilterGrade.adapter = adapter
-
+    private fun setButtonList() {
+        stepList.add(Step_EducationSystem)
+        stepList.add(Step_Grade)
+        stepList.add(Step_Major)
+        stepList.add(Step_Lesson)
+        stepList.add(Step_Teacher)
     }
-
-    private fun setCurrentStep(buttonWithFont: ButtonWithFont) {
-        if (currentStep == null) currentStep = buttonWithFont
-        else setStepDeActive(currentStep)
-        currentStep = buttonWithFont
-    }
-
-    private fun setStepActive(buttonWithFont: ButtonWithFont) {
-
-        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.green)
-        buttonWithFont.setTextColor(ContextCompat.getColorStateList(context, R.color.pureWhite))
-        buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.pureWhite)
-    }
-
-    private fun setStepDeActive(buttonWithFont: ButtonWithFont) {
-        setCurrentStep(buttonWithFont)
-        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.pureWhite)
-        buttonWithFont.setTextColor(ContextCompat.getColorStateList(context, R.color.black))
-        buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.black)
-    }
-
-    private fun setStepPassed(buttonWithFont: ButtonWithFont) {
-        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.pureWhite)
-        buttonWithFont.setTextColor(ContextCompat.getColorStateList(context, R.color.green))
-        buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.green)
-        buttonWithFont.strokeColor = ContextCompat.getColorStateList(context, R.color.default_gray)
-    }
-
-    private fun setStepDisable(buttonWithFont: ButtonWithFont) {
-        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.pureWhite)
-        buttonWithFont.setTextColor(ContextCompat.getColorStateList(context, R.color.blackTitle))
-        buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.blackTitle)
-        buttonWithFont.strokeColor = ContextCompat.getColorStateList(context, R.color.pureWhite)
-        buttonWithFont.isEnabled = false
-    }
-
-    private fun updateFilterStep(step: Int) {
-        // scrollToCurrentStep(stepList[step])
-        setStepActive(stepList[step])
-        when (step) {
-            0 -> {
-                setStepDisable(stepList[1])
-                setStepDisable(stepList[2])
-                setStepDisable(stepList[3])
-                setStepDisable(stepList[4])
-            }
-
-            1 -> {
-                setStepDisable(stepList[2])
-                setStepDisable(stepList[3])
-                setStepDisable(stepList[4])
-                setStepPassed(stepList[0])
-            }
-
-            2 -> {
-                setStepDisable(stepList[3])
-                setStepDisable(stepList[4])
-                setStepPassed(stepList[0])
-                setStepPassed(stepList[1])
-            }
-
-            3 -> {
-                setStepDisable(stepList[4])
-                setStepPassed(stepList[0])
-                setStepPassed(stepList[1])
-                setStepPassed(stepList[2])
-            }
-
-            4 -> {
-                setStepPassed(stepList[0])
-                setStepPassed(stepList[1])
-                setStepPassed(stepList[2])
-                setStepPassed(stepList[3])
-            }
-        }
-
-    }
-
 
     override fun itemClicked(itemName: String) {
+        handleItemValueClicked(itemName)
     }
 
     override fun onClick(view: View?) {
 
         when (view?.id) {
             Step_EducationSystem.id -> {
-                setRecycler(setEducationSystemList())
-                setStepActive(Step_EducationSystem)
+                setStepActivated(0)
             }
             Step_Grade.id -> {
-                setRecycler(setGradeListNewSystem())
-                setStepActive(Step_Grade)
+                setStepActivated(1)
             }
             Step_Major.id -> {
-                setRecycler(setMajorList())
-                setStepActive(Step_Major)
+                setStepActivated(2)
             }
             Step_Lesson.id -> {
-                setRecycler(setLessonList())
-                setStepActive(Step_Lesson)
+                setStepActivated(3)
             }
             Step_Teacher.id -> {
-                setRecycler(setGradeListOldSystem())
-                setStepActive(Step_Teacher)
+                setStepActivated(4)
             }
         }
     }
 
+    private fun setRecycler(list: ArrayList<String>, width: Int, spanCount: Int) {
+        val recyclerFilterGrade: RecyclerView = mBinding.recyclerFilteringStepGuide
+        recyclerFilterGrade.layoutManager = GridLayoutManager(context, spanCount, RecyclerView.HORIZONTAL, false)
+
+        val adapter = FilterItemAdapter(list, this, width)
+        recyclerFilterGrade.adapter = adapter
+    }
+
+    private fun setCurrentStep(step: Int) {
+        currentStep = step
+    }
+
+    private fun setButtonActive(buttonWithFont: ButtonWithFont) {
+        buttonWithFont.backgroundTintList = ContextCompat.getColorStateList(context, R.color.alaa5)
+        buttonWithFont.setTextColor(ContextCompat.getColorStateList(context, R.color.pureWhite))
+        buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.pureWhite)
+    }
+
+    private fun handleItemValueClicked(itemName: String) {
+        setButtonStepName(currentStep, itemName)
+        if (currentStep != 4) setStepActivated(currentStep + 1)
+        else {
+            setStepDeActive(currentStep)
+            mBinding.recyclerFilteringStepGuide.visibility = View.GONE
+        }
+    }
+
+    private fun setButtonStepName(step: Int, name: String) {
+        stepList[step].text = name
+    }
+
+    private fun setStepDeActive(step: Int) {
+        if (step != 5) {
+            stepList[step].backgroundTintList = ContextCompat.getColorStateList(context, R.color.pureWhite)
+            stepList[step].setTextColor(ContextCompat.getColorStateList(context, R.color.black))
+            stepList[step].iconTint = ContextCompat.getColorStateList(context, R.color.black)
+        }
+    }
+
+    private fun setStepActivated(step: Int) {
+        ObjectAnimator.ofInt(scrollViewFilteringStep, "scrollX", stepList[step].left - 10).setDuration(700).start()
+        setRecycler(getRecyclerItemList(step), getRecyclerItemWidth(step), getRecyclerItemSpanCount(step))
+        mBinding.recyclerFilteringStepGuide.visibility = View.VISIBLE
+        setButtonActive(stepList[step])
+        setStepDeActive(currentStep)
+        setCurrentStep(step)
+    }
+
+    private fun getRecyclerItemWidth(step: Int): Int {
+        var width: Int = ViewGroup.LayoutParams.WRAP_CONTENT
+        when (step) {
+            0 -> width = ViewGroup.LayoutParams.MATCH_PARENT
+            1 -> width = ViewGroup.LayoutParams.WRAP_CONTENT
+            2 -> width = ViewGroup.LayoutParams.WRAP_CONTENT
+            3 -> width = 150
+            4 -> width = 150
+        }
+        return width
+    }
+
+    private fun getRecyclerItemSpanCount(step: Int): Int {
+        var spanCount = 2
+        when (step) {
+            0 -> spanCount = 2
+            1 -> spanCount = 3
+            2 -> spanCount = 2
+            3 -> spanCount = 3
+            4 -> spanCount = 3
+        }
+        return spanCount
+    }
+
+    private fun getRecyclerItemList(step: Int): ArrayList<String> {
+        var itemList = ArrayList<String>()
+        when (step) {
+            0 -> itemList = setEducationSystemList()
+            1 -> itemList = setGradeListNewSystem()
+            2 -> itemList = setMajorList()
+            3 -> itemList = setLessonList()
+            4 -> itemList = setGradeListOldSystem()
+        }
+        return itemList
+    }
 
     private fun setEducationSystemList(): ArrayList<String> {
         val educationList: ArrayList<String> = ArrayList()

@@ -9,6 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layoutDirection="rtl"
+        android:animateLayoutChanges="true"
+        android:background="@color/grayWhite"
         tools:context=".customViews.FilteringStepGuide">
 
         <HorizontalScrollView
@@ -21,34 +23,32 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_filter_tracker_path"
                 android:gravity="center_vertical"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal">
 
-                <RelativeLayout
+                <View
                     android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/Margin10"
                     android:layout_marginBottom="10dp"
                     android:background="@color/alaa5" />
 
-
-                <RelativeLayout
+                <View
                     android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/Margin10"
                     android:layout_marginBottom="10dp"
                     android:background="@color/alaa5" />
 
-                <RelativeLayout
+                <View
                     android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/Margin10"
                     android:layout_marginBottom="10dp"
                     android:background="@color/alaa5" />
 
-                <RelativeLayout
+                <View
                     android:layout_width="2dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/Margin10"
@@ -69,7 +69,8 @@
                     app:MyButtonFont="IranSansNumMedium"
                     app:backgroundTint="@color/pureWhite"
                     app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/blackTitle" />
+                    app:iconTint="@color/blackTitle"
+                    app:strokeColor="@color/black" />
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Grade"
@@ -84,7 +85,9 @@
                     app:MyButtonFont="IranSansNumMedium"
                     app:backgroundTint="@color/pureWhite"
                     app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/black" />
+                    app:iconTint="@color/black"
+                    app:strokeColor="@color/black" />
+
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Lesson"
@@ -100,8 +103,8 @@
                     app:MyButtonFont="IranSansNumMedium"
                     app:backgroundTint="@color/pureWhite"
                     app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/blackTitle" />
-
+                    app:iconTint="@color/blackTitle"
+                    app:strokeColor="@color/black" />
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_EducationSystem"
@@ -116,8 +119,8 @@
                     app:MyButtonFont="IranSansNumMedium"
                     app:backgroundTint="@color/pureWhite"
                     app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/black" />
-
+                    app:iconTint="@color/black"
+                    app:strokeColor="@color/black" />
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Teacher"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -130,19 +133,32 @@
                     android:text="@string/teacher"
                     android:textColor="@color/blackTitle"
                     app:MyButtonFont="IranSansNumMedium"
+                    app:backgroundTint="@color/pureWhite"
                     app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/blackTitle" />
+                    app:iconTint="@color/blackTitle"
+                    app:strokeColor="@color/black" />
 
             </LinearLayout>
         </HorizontalScrollView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_filtering_step_guide"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_recycler_item_filtering_step"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@id/scrollViewFilteringStep"
-            app:layout_constraintStart_toStartOf="@id/scrollViewFilteringStep"
-            app:layout_constraintTop_toBottomOf="@id/scrollViewFilteringStep" />
+            android:background="@color/pureWhite"
+            app:cardCornerRadius="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scrollViewFilteringStep">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_filtering_step_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <data>
