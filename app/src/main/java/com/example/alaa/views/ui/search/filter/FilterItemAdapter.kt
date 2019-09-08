@@ -1,6 +1,5 @@
 package com.example.alaa.views.ui.search.filter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,7 +38,6 @@ class FilterItemAdapter(private val list: ArrayList<String>, private val listene
         val buttonWithFont: ButtonWithFont = itemView.findViewById(R.id.filterItem)
 
         init {
-            Log.i("====", width.toString())
             buttonWithFont.width = 250
         }
     }

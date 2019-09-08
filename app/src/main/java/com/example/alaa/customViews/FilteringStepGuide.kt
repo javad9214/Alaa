@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alaa.R
 import com.example.alaa.databinding.FilteringGuideStepBinding
+import com.example.alaa.util.StringUtil
 import com.example.alaa.views.ui.search.filter.FilterItemAdapter
 import kotlinx.android.synthetic.main.filtering_guide_step.view.*
 
@@ -28,12 +29,31 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
 
     private var mBinding: FilteringGuideStepBinding
 
+    private var mSelectedItem = arrayListOf<String>()
+
+    interface FilteringStepGuideInterface {
+        fun itemSelected(selectedItem: ArrayList<String>)
+    }
+
+    private lateinit var mCallback: FilteringStepGuideInterface
+
+    fun setFilteringStepGuideInterface(callback: FilteringStepGuideInterface) {
+        mCallback = callback
+    }
 
     init {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.filtering_guide_step, this, true)
-
+        mBinding = DataBindingUtil.inflate(inflater, com.example.alaa.R.layout.filtering_guide_step, this, true)
+        initCallback()
         setButtonsListener()
+    }
+
+    private fun initCallback() {
+        mCallback = object : FilteringStepGuideInterface {
+            override fun itemSelected(selectedItem: ArrayList<String>) {
+                //Empty
+            }
+        }
     }
 
     private fun setButtonsListener() {
@@ -96,13 +116,22 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
         buttonWithFont.iconTint = ContextCompat.getColorStateList(context, R.color.pureWhite)
     }
 
+    private fun getSlugOfItemName(str: String): String {
+        return StringUtil.slugify(str)
+    }
+
     private fun handleItemValueClicked(itemName: String) {
         setButtonStepName(currentStep, itemName)
-        if (currentStep != 4) setStepActivated(currentStep + 1)
-        else {
+
+        mSelectedItem.add(getSlugOfItemName(itemName))
+
+        if (currentStep != 4) {
+            setStepActivated(currentStep + 1)
+        } else {
             setStepDeActive(currentStep)
             mBinding.recyclerFilteringStepGuide.visibility = View.GONE
         }
+        mCallback.itemSelected(mSelectedItem)
     }
 
     private fun setButtonStepName(step: Int, name: String) {
@@ -141,7 +170,7 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
     private fun getRecyclerItemSpanCount(step: Int): Int {
         var spanCount = 2
         when (step) {
-            0 -> spanCount = 2
+            0 -> spanCount = 1
             1 -> spanCount = 3
             2 -> spanCount = 2
             3 -> spanCount = 3

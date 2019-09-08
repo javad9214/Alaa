@@ -41,37 +41,6 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/alaa5" />
 
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/Margin10"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/alaa5" />
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/Margin10"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/alaa5" />
-
-                <com.example.alaa.customViews.ButtonWithFont
-                    android:id="@+id/Step_Major"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/Margin5"
-                    android:layout_marginEnd="@dimen/Margin5"
-                    android:enabled="true"
-                    android:layoutDirection="ltr"
-                    android:text="@string/major"
-                    android:textColor="@color/blackTitle"
-                    app:MyButtonFont="IranSansNumMedium"
-                    app:backgroundTint="@color/pureWhite"
-                    app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/blackTitle"
-                    app:strokeColor="@color/black" />
-
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Grade"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -81,6 +50,37 @@
                     android:layout_marginEnd="@dimen/Margin5"
                     android:layoutDirection="ltr"
                     android:text="@string/Grade"
+                    android:textColor="@color/black"
+                    app:MyButtonFont="IranSansNumMedium"
+                    app:backgroundTint="@color/pureWhite"
+                    app:icon="@drawable/ic_chevron_left_black_24dp"
+                    app:iconTint="@color/black"
+                    app:strokeColor="@color/black" />
+
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/Margin10"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/alaa5" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/Margin10"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/alaa5" />
+
+                <com.example.alaa.customViews.ButtonWithFont
+                    android:id="@+id/Step_EducationSystem"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/Margin5"
+                    android:layout_marginEnd="@dimen/Margin5"
+                    android:layoutDirection="ltr"
+                    android:text="@string/EducationSystem"
                     android:textColor="@color/black"
                     app:MyButtonFont="IranSansNumMedium"
                     app:backgroundTint="@color/pureWhite"
@@ -107,20 +107,23 @@
                     app:strokeColor="@color/black" />
 
                 <com.example.alaa.customViews.ButtonWithFont
-                    android:id="@+id/Step_EducationSystem"
+                    android:id="@+id/Step_Major"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/Margin5"
                     android:layout_marginEnd="@dimen/Margin5"
+                    android:enabled="true"
                     android:layoutDirection="ltr"
-                    android:text="@string/EducationSystem"
-                    android:textColor="@color/black"
+                    android:text="@string/major"
+                    android:textColor="@color/blackTitle"
                     app:MyButtonFont="IranSansNumMedium"
                     app:backgroundTint="@color/pureWhite"
                     app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/black"
+                    app:iconTint="@color/blackTitle"
                     app:strokeColor="@color/black" />
+
+
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Teacher"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"

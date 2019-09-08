@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.example.alaa.customViews.ButtonWithFont
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layoutDirection="rtl"
-android:id="@+id/filterItem"
-android:layout_width="150dp"
-android:layout_height="wrap_content"
+<com.example.alaa.customViews.ButtonWithFont xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/filterItem"
+    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/Margin5"
-android:layout_marginEnd="@dimen/Margin5"
-app:backgroundTint="@color/pureWhite"
-android:textColor="@color/alaa5"
-app:MyButtonFont="IRANSans_Medium"
-style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-android:text="@string/NewSystem" />
+    android:layout_marginEnd="@dimen/Margin5"
+    android:layoutDirection="rtl"
+    android:text="@string/NewSystem"
+    android:textColor="@color/alaa5"
+    app:MyButtonFont="IRANSans_Medium"
+    app:backgroundTint="@color/pureWhite" />

@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import com.example.alaa.R
 import com.google.android.material.button.MaterialButton
 
-class ButtonWithFont(context: Context, attrs: AttributeSet) : MaterialButton(context, attrs) {
+open class ButtonWithFont(context: Context, attrs: AttributeSet) : MaterialButton(context, attrs) {
 
     private val fontOrdinal: Int
 
