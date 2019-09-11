@@ -8,9 +8,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layoutDirection="rtl"
         android:animateLayoutChanges="true"
         android:background="@color/grayWhite"
+        android:layoutDirection="rtl"
         tools:context=".customViews.FilteringStepGuide">
 
         <HorizontalScrollView
@@ -23,23 +23,11 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
                 android:gravity="center_vertical"
                 android:layoutDirection="rtl"
                 android:orientation="horizontal">
 
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/Margin10"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/alaa5" />
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/Margin10"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/alaa5" />
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Grade"
@@ -57,7 +45,6 @@
                     app:iconTint="@color/black"
                     app:strokeColor="@color/black" />
 
-
                 <View
                     android:layout_width="2dp"
                     android:layout_height="match_parent"
@@ -72,22 +59,12 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/alaa5" />
 
-                <com.example.alaa.customViews.ButtonWithFont
-                    android:id="@+id/Step_EducationSystem"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/Margin5"
-                    android:layout_marginEnd="@dimen/Margin5"
-                    android:layoutDirection="ltr"
-                    android:text="@string/EducationSystem"
-                    android:textColor="@color/black"
-                    app:MyButtonFont="IranSansNumMedium"
-                    app:backgroundTint="@color/pureWhite"
-                    app:icon="@drawable/ic_chevron_left_black_24dp"
-                    app:iconTint="@color/black"
-                    app:strokeColor="@color/black" />
-
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/Margin10"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/alaa5" />
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Lesson"
@@ -122,7 +99,6 @@
                     app:icon="@drawable/ic_chevron_left_black_24dp"
                     app:iconTint="@color/blackTitle"
                     app:strokeColor="@color/black" />
-
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Teacher"
@@ -160,8 +136,6 @@
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.card.MaterialCardView>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <data>

@@ -23,8 +23,8 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
 
     private val TAG: String = "===>"
 
-    // 0 : Education System   1 : Grade   2 : Major   3 : lesson   4 : teacher
-    private var currentStep: Int = 5
+    //  0 : Grade   1 : Major   2 : lesson   3 : teacher
+    private var currentStep: Int = 4
     private var stepList = arrayListOf<ButtonWithFont>()
 
     private var mBinding: FilteringGuideStepBinding
@@ -57,7 +57,6 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
     }
 
     private fun setButtonsListener() {
-        Step_EducationSystem.setOnClickListener(this)
         Step_Grade.setOnClickListener(this)
         Step_Major.setOnClickListener(this)
         Step_Lesson.setOnClickListener(this)
@@ -66,7 +65,6 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
     }
 
     private fun setButtonList() {
-        stepList.add(Step_EducationSystem)
         stepList.add(Step_Grade)
         stepList.add(Step_Major)
         stepList.add(Step_Lesson)
@@ -80,20 +78,17 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
     override fun onClick(view: View?) {
 
         when (view?.id) {
-            Step_EducationSystem.id -> {
+            Step_Grade.id -> {
                 setStepActivated(0)
             }
-            Step_Grade.id -> {
+            Step_Major.id -> {
                 setStepActivated(1)
             }
-            Step_Major.id -> {
+            Step_Lesson.id -> {
                 setStepActivated(2)
             }
-            Step_Lesson.id -> {
-                setStepActivated(3)
-            }
             Step_Teacher.id -> {
-                setStepActivated(4)
+                setStepActivated(3)
             }
         }
     }
@@ -125,7 +120,7 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
 
         mSelectedItem.add(getSlugOfItemName(itemName))
 
-        if (currentStep != 4) {
+        if (currentStep != 3) {
             setStepActivated(currentStep + 1)
         } else {
             setStepDeActive(currentStep)
@@ -139,7 +134,7 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
     }
 
     private fun setStepDeActive(step: Int) {
-        if (step != 5) {
+        if (step != 4) {
             stepList[step].backgroundTintList = ContextCompat.getColorStateList(context, R.color.pureWhite)
             stepList[step].setTextColor(ContextCompat.getColorStateList(context, R.color.black))
             stepList[step].iconTint = ContextCompat.getColorStateList(context, R.color.black)
@@ -158,11 +153,10 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
     private fun getRecyclerItemWidth(step: Int): Int {
         var width: Int = ViewGroup.LayoutParams.WRAP_CONTENT
         when (step) {
-            0 -> width = ViewGroup.LayoutParams.MATCH_PARENT
+            0 -> width = ViewGroup.LayoutParams.WRAP_CONTENT
             1 -> width = ViewGroup.LayoutParams.WRAP_CONTENT
-            2 -> width = ViewGroup.LayoutParams.WRAP_CONTENT
+            2 -> width = 150
             3 -> width = 150
-            4 -> width = 150
         }
         return width
     }
@@ -170,11 +164,10 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
     private fun getRecyclerItemSpanCount(step: Int): Int {
         var spanCount = 2
         when (step) {
-            0 -> spanCount = 1
-            1 -> spanCount = 3
-            2 -> spanCount = 2
+            0 -> spanCount = 3
+            1 -> spanCount = 2
+            2 -> spanCount = 3
             3 -> spanCount = 3
-            4 -> spanCount = 3
         }
         return spanCount
     }
@@ -182,21 +175,14 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
     private fun getRecyclerItemList(step: Int): ArrayList<String> {
         var itemList = ArrayList<String>()
         when (step) {
-            0 -> itemList = setEducationSystemList()
-            1 -> itemList = setGradeListNewSystem()
-            2 -> itemList = setMajorList()
-            3 -> itemList = setLessonList()
-            4 -> itemList = setGradeListOldSystem()
+            0 -> itemList = setGradeListNewSystem()
+            1 -> itemList = setMajorList()
+            2 -> itemList = setLessonList()
+            3 -> itemList = setGradeListOldSystem()
         }
         return itemList
     }
 
-    private fun setEducationSystemList(): ArrayList<String> {
-        val educationList: ArrayList<String> = ArrayList()
-        educationList.add(resources.getString(R.string.NewSystem))
-        educationList.add(resources.getString(R.string.OldSystem))
-        return educationList
-    }
 
     private fun setGradeListNewSystem(): ArrayList<String> {
         val gradeList: ArrayList<String> = ArrayList()
