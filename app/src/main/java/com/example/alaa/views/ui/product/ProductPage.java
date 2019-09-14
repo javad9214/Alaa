@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
-import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -14,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alaa.R;
 import com.example.alaa.customViews.TextViewWithFont;
-import com.example.alaa.databinding.ContentProductPageBinding;
+import com.example.alaa.databinding.ActivityProductPageBinding;
 import com.example.alaa.models.SampleVideoModel;
 import com.example.alaa.models.SelectableProductModel;
 import com.example.alaa.views.dashboard.Adapter_shop;
@@ -36,10 +35,9 @@ public class ProductPage extends AppCompatActivity {
     public static final String TAG = "===>";
     private TextViewWithFont txDescribe;
     private MaterialButton btnContinue;
-    private ScrollView scrollView;
     private RecyclerView recyclerViewSampleVideo, recyclerViewSampleBooklet;
 
-    private ContentProductPageBinding binding;
+    private ActivityProductPageBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,13 +50,10 @@ public class ProductPage extends AppCompatActivity {
     }
 
     private void init() {
-
-
-        scrollView = findViewById(R.id.scroll_product);
         txDescribe = findViewById(R.id.description);
         btnContinue = findViewById(R.id.btn_continue);
-        recyclerViewSampleVideo = findViewById(R.id.recycler_sample_videos);
-        recyclerViewSampleBooklet = findViewById(R.id.recycler_sample_booklet);
+        recyclerViewSampleVideo = binding.contentProductPage.recyclerSampleVideos;
+        recyclerViewSampleBooklet = binding.contentProductPage.recyclerSampleBooklet;
 
     }
 
@@ -120,11 +115,11 @@ public class ProductPage extends AppCompatActivity {
     }
 
     public void scrollToDescription(View view) {
-        scrollToView(binding.introVideo);
+        scrollToView(binding.contentProductPage.introVideo);
     }
 
     public void scrollToSamples(View view){
-        scrollToView(binding.headerSampleVideos);
+        scrollToView(binding.contentProductPage.headerSampleVideos);
     }
 
     private void expandableTextView() {
@@ -152,7 +147,7 @@ public class ProductPage extends AppCompatActivity {
     }
 
     private void scrollToView(View cardIntroVideo) {
-        ObjectAnimator.ofInt(scrollView, "scrollY", cardIntroVideo.getTop() - 10).setDuration(1000).start();
+        ObjectAnimator.ofInt(binding.contentProductPage.scrollProduct, "scrollY", cardIntroVideo.getTop() - 10).setDuration(1000).start();
     }
 
 }

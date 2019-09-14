@@ -13,9 +13,9 @@
         android:id="@+id/recyclerFiltering"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/Margin5"
-        android:layout_marginTop="@dimen/Margin16"
-        android:layout_marginEnd="@dimen/Margin5"
+        android:layout_marginStart="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_5dp"
         android:paddingBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

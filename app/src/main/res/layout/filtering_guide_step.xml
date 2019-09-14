@@ -17,7 +17,7 @@
             android:id="@+id/scrollViewFilteringStep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/Margin10"
+            android:layout_marginBottom="@dimen/margin_10dp"
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
@@ -29,13 +29,34 @@
                 android:orientation="horizontal">
 
 
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/alaa5" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/alaa5" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/alaa5" />
+
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Grade"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/Margin5"
-                    android:layout_marginEnd="@dimen/Margin5"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:layout_marginEnd="@dimen/margin_5dp"
                     android:layoutDirection="ltr"
                     android:text="@string/Grade"
                     android:textColor="@color/black"
@@ -45,34 +66,13 @@
                     app:iconTint="@color/black"
                     app:strokeColor="@color/black" />
 
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/Margin10"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/alaa5" />
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/Margin10"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/alaa5" />
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/Margin10"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/alaa5" />
-
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/Step_Lesson"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/Margin5"
-                    android:layout_marginEnd="@dimen/Margin5"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:layout_marginEnd="@dimen/margin_5dp"
                     android:enabled="true"
                     android:layoutDirection="ltr"
                     android:text="@string/Lesson"
@@ -88,8 +88,8 @@
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/Margin5"
-                    android:layout_marginEnd="@dimen/Margin5"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:layout_marginEnd="@dimen/margin_5dp"
                     android:enabled="true"
                     android:layoutDirection="ltr"
                     android:text="@string/major"
@@ -105,8 +105,8 @@
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/Margin5"
-                    android:layout_marginEnd="@dimen/Margin5"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:layout_marginEnd="@dimen/margin_5dp"
                     android:enabled="true"
                     android:layoutDirection="ltr"
                     android:text="@string/teacher"

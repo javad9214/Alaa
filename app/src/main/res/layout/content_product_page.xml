@@ -33,10 +33,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:layout_marginStart="@dimen/Margin10"
-                    android:layout_marginTop="@dimen/Margin5"
-                    android:layout_marginEnd="@dimen/Margin5"
-                    android:layout_marginBottom="@dimen/Margin10"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:layout_marginEnd="@dimen/margin_5dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
                     android:layoutDirection="ltr"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -149,9 +149,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="@dimen/Margin10"
+                    android:layout_marginEnd="@dimen/margin_10dp"
                     android:layout_marginBottom="10dp"
-                    android:padding="@dimen/Margin10"
+                    android:padding="@dimen/margin_10dp"
                     app:cardCornerRadius="5dp"
                     app:cardElevation="@dimen/card_dimen"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -167,10 +167,11 @@
 
                         <com.example.alaa.customViews.ButtonWithFont
                             android:id="@+id/btn_continue"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/Margin5"
-                            android:layout_marginEnd="@dimen/Margin5"
+                            android:layout_marginStart="@dimen/margin_5dp"
+                            android:layout_marginEnd="@dimen/margin_5dp"
                             android:text="@string/Continue"
                             android:textColor="@color/black"
                             android:textStyle="bold"
@@ -179,7 +180,6 @@
                             app:iconGravity="textStart"
                             app:iconTint="@color/blackTitle" />
 
-
                         <com.example.alaa.customViews.TextViewWithFont
                             android:id="@+id/description"
                             android:layout_width="wrap_content"
@@ -187,15 +187,13 @@
                             android:layout_gravity="center"
                             android:ellipsize="end"
                             android:maxLines="5"
-                            android:padding="@dimen/Margin10"
+                            android:padding="@dimen/margin_10dp"
                             android:text="@string/description"
                             android:textColor="@color/gray"
                             android:textSize="16sp"
                             app:MyTextViewFont="IRANSans_Light_4.1"
                             app:animation_duration="750" />
-
                     </LinearLayout>
-
 
                 </androidx.cardview.widget.CardView>
 
@@ -261,7 +259,7 @@
                     android:id="@+id/mainProduct"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/Margin10"
+                    android:layout_margin="@dimen/margin_10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/chips_map"
@@ -273,7 +271,7 @@
                     android:id="@+id/cardRecycler_selectableProduct"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/Margin10"
+                    android:layout_margin="@dimen/margin_10dp"
                     app:cardCornerRadius="5dp"
                     app:cardElevation="@dimen/card_dimen"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -297,9 +295,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="@dimen/Margin10"
-                    android:layout_marginBottom="@dimen/Margin10"
-                    android:padding="@dimen/Margin10"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:padding="@dimen/margin_10dp"
                     app:cardCornerRadius="5dp"
                     app:cardElevation="@dimen/card_dimen"
                     app:layout_constraintEnd_toEndOf="parent"

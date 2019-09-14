@@ -1,59 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".views.ui.product.ProductPage">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stateListAnimator="@animator/appbar_always_elevated"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        android:layout_height="match_parent"
+        tools:context=".views.ui.product.ProductPage">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@animator/appbar_always_elevated"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/search_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginStart="20dp"
-                android:src="@drawable/ic_back" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
 
-
-            <ImageView
-                android:id="@+id/alaa_logo"
-                android:onClick="goHome"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:scaleType="fitCenter"
-                android:src="@drawable/alaa_logo_colored" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginEnd="20dp"
-                android:onClick="onClickDashboard"
-                android:src="@drawable/ic_account" />
+                <ImageView
+                    android:id="@+id/alaa_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:onClick="goHome"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/alaa_logo_colored" />
 
 
-        </androidx.appcompat.widget.Toolbar>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ic_back" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:onClick="onClickDashboard"
+                    android:src="@drawable/ic_account" />
 
 
-    </com.google.android.material.appbar.AppBarLayout>
+            </androidx.appcompat.widget.Toolbar>
 
 
-    <include layout="@layout/content_product_page"/>
+        </com.google.android.material.appbar.AppBarLayout>
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <include
+            android:id="@+id/contentProductPage"
+            layout="@layout/content_product_page" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <data>
+
+    </data>
+</layout>

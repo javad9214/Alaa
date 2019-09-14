@@ -1,91 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/bottom_sheet_upnext"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:behavior_peekHeight="50dp"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="10dp"
-    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_sheet_upnext"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        app:behavior_peekHeight="50dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/navBar_lesson">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
+                android:id="@+id/navBar_lesson"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_previous"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="@string/previous"
-                    app:icon="@drawable/ic_previous"
-                    app:iconPadding="8dp"/>
+                    android:gravity="start"
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_previous"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/previous"
+                        app:icon="@drawable/ic_previous"
+                        app:iconPadding="8dp" />
 
-            <LinearLayout
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/expand_upnext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="onclickOpenUpNext"
+                        android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+                        app:tint="@color/alaa3" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_next"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layoutDirection="rtl"
+                        android:text="@string/upNext"
+                        app:icon="@drawable/ic_upnext"
+                        app:iconPadding="8dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_upnext"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
 
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/expand_upnext"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:onClick="onclick_open_upnext"
-                    app:tint="@color/alaa3"
-                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp" />
+    </androidx.cardview.widget.CardView>
 
+    <data>
 
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:orientation="horizontal">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_next"
-                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
-                    android:layoutDirection="rtl"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="@string/upNext"
-                    app:icon="@drawable/ic_upnext"
-                    app:iconPadding="8dp"/>
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_upnext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </androidx.recyclerview.widget.RecyclerView>
-
-    </LinearLayout>
-
-
-</androidx.cardview.widget.CardView>
+    </data>
+</layout>

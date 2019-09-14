@@ -105,17 +105,17 @@ public class ShopFragment extends Fragment  implements HomeRecyclerAdapter.ItemC
 
     private void setAdapters() {
 
-        final HomeRecyclerAdapter homeRecyclerAdapter = new HomeRecyclerAdapter(getContext() , R.layout.product);
+        HomeRecyclerAdapter homeRecyclerAdapter = new HomeRecyclerAdapter(getContext(), R.layout.product);
 
         RecyclerView recyclerView01 = view.findViewById(R.id.recycler01);
         RecyclerView recyclerView02 = view.findViewById(R.id.recycler02);
         RecyclerView recyclerView03 = view.findViewById(R.id.recycler03);
         RecyclerView recyclerView04 = view.findViewById(R.id.recycler04);
 
-        recyclerView01.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, true));
-        recyclerView02.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, true));
-        recyclerView03.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, true));
-        recyclerView04.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, true));
+        recyclerView01.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerView02.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerView03.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerView04.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         recyclerView01.setAdapter(homeRecyclerAdapter);
         recyclerView02.setAdapter(homeRecyclerAdapter);

@@ -1,5 +1,7 @@
 package com.example.alaa.views.ui;
 
+import android.animation.ObjectAnimator;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,11 +11,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alaa.R;
 import com.example.alaa.customViews.TextViewWithFont;
+import com.example.alaa.databinding.ActivityVideoPageBinding;
+import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.dashboard.Adapter_shop;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
@@ -23,38 +29,42 @@ public class VideoPage extends AppCompatActivity  {
 
     public static final String TAG = "===>";
     BottomSheetBehavior sheetBehavior;
-    CardView cardView_upNext;
-    private AppCompatImageView upNext_arrow;
-    private RecyclerView recyclerView;
+    CardView cardViewUpNext;
+    private AppCompatImageView upNextArrow;
     private TextViewWithFont textViewWithFont;
     private MaterialButton btnMore;
-    private MaterialButton btn_bookmark, btn_download, btn_share;
+    private RecyclerView recyclerViewRelatedProducts, recyclerViewChiBeKhonam;
+
+    private boolean isBookMarked = false;
 
 
-    private boolean isBookMarked ;
-    private boolean isDownloadCompleted ;
+    private ActivityVideoPageBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video_page);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_video_page);
 
         EasyTransition.enter(VideoPage.this);
 
-
-        init_bottomSheet();
+        init();
+        initRecyclerRelatedProduct();
+        initBottomSheet();
         expandableTextView();
     }
 
 
+    private void init() {
+        recyclerViewRelatedProducts = binding.contentVideoPage.recyclerRelatedProduct;
+    }
 
 
-    private void init_bottomSheet() {
+    private void initBottomSheet() {
 
-        cardView_upNext = findViewById(R.id.bottom_sheet_upnext);
-        sheetBehavior = BottomSheetBehavior.from(cardView_upNext);
-        upNext_arrow = findViewById(R.id.expand_upnext);
-        init_recycler();
+        cardViewUpNext = binding.upNextLessons.bottomSheetUpnext;
+        sheetBehavior = BottomSheetBehavior.from(cardViewUpNext);
+        upNextArrow = findViewById(R.id.expand_upnext);
+        initRecyclerUpNext();
 
 
         sheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
@@ -68,7 +78,7 @@ public class VideoPage extends AppCompatActivity  {
                         break;
 
                     case BottomSheetBehavior.STATE_EXPANDED:
-                        upNext_arrow.setImageResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+                        upNextArrow.setImageResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
 
                         Log.i(TAG, "onStateChanged:   state expanded");
                         break;
@@ -76,7 +86,7 @@ public class VideoPage extends AppCompatActivity  {
 
                     case BottomSheetBehavior.STATE_COLLAPSED:
 
-                        upNext_arrow.setImageResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
+                        upNextArrow.setImageResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
                         Log.i(TAG, "onStateChanged: state collapsed");
                         break;
 
@@ -106,9 +116,15 @@ public class VideoPage extends AppCompatActivity  {
         });
     }
 
-    private void init_recycler() {
+    private void initRecyclerRelatedProduct() {
+        HomeRecyclerAdapter adapter = new HomeRecyclerAdapter(this, R.layout.product);
+        recyclerViewRelatedProducts.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        recyclerViewRelatedProducts.setAdapter(adapter);
+    }
 
-        recyclerView = findViewById(R.id.recycler_upnext);
+    private void initRecyclerUpNext() {
+
+        RecyclerView recyclerView = binding.upNextLessons.recyclerUpnext;
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.canScrollVertically();
@@ -118,25 +134,23 @@ public class VideoPage extends AppCompatActivity  {
         recyclerView.setAdapter(adapter);
     }
 
-    public void onclick_back(View view) {
+    public void onclickBack(View view) {
         onBackPressed();
     }
 
-    public void onclick_open_upnext(View view) {
+    public void onclickOpenUpNext(View view) {
 
         if (sheetBehavior.getState() != BottomSheetBehavior.STATE_EXPANDED) {
             sheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-            upNext_arrow.setImageResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
+            upNextArrow.setImageResource(R.drawable.ic_keyboard_arrow_down_black_24dp);
         } else {
             sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-            upNext_arrow.setImageResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
+            upNextArrow.setImageResource(R.drawable.ic_keyboard_arrow_up_black_24dp);
 
         }
     }
 
     private void expandableTextView() {
-
-
         textViewWithFont = findViewById(R.id.description);
         btnMore = findViewById(R.id.btn_continue);
 
@@ -156,5 +170,23 @@ public class VideoPage extends AppCompatActivity  {
 
     }
 
+    public void goToDownloadBox(View view) {
+        scrollToView(view);
+    }
 
+
+    private void scrollToView(View view) {
+        ObjectAnimator.ofInt(binding.contentVideoPage.scrollVideoPage, "scrollY", view.getBottom()).setDuration(800).start();
+    }
+
+    public void onClickBookmark(View view) {
+        isBookMarked = !isBookMarked;
+        if (isBookMarked) {
+            binding.contentVideoPage.btnBookmark.setImageResource(R.drawable.ic_bookmark_black_24dp);
+            binding.contentVideoPage.btnBookmark.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.alaa2)));
+        } else {
+            binding.contentVideoPage.btnBookmark.setImageResource(R.drawable.ic_bookmark_border_black_24dp);
+            binding.contentVideoPage.btnBookmark.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.pureWhite)));
+        }
+    }
 }

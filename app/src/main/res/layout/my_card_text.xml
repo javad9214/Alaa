@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="3dp"
-        app:cardElevation="@dimen/Margin5"
+        app:cardElevation="@dimen/margin_5dp"
         app:cardBackgroundColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,8 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginStart="@dimen/Margin10"
-            android:layout_marginEnd="@dimen/Margin10"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp">
 
@@ -38,7 +38,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:srcCompat="@drawable/ic_right_quote"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="@dimen/Margin10"
+                android:layout_marginEnd="@dimen/margin_10dp"
                 android:visibility="visible"/>
 
             <com.example.alaa.customViews.TextViewWithFont
@@ -63,7 +63,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:srcCompat="@drawable/ic_left_quote"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/Margin10"
+                android:layout_marginStart="@dimen/margin_10dp"
                 android:visibility="visible"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

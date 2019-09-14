@@ -13,28 +13,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_margin="@dimen/Margin5"
+        android:layout_margin="@dimen/margin_5dp"
         app:layout_constraintBottom_toBottomOf="@id/tx_title_product"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tx_title_product" />
 
 
-    <com.example.alaa.customViews.TextViewWithCardBackground
-        android:id="@+id/salePrice"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_loops"
+        android:background="@drawable/child_product_borders"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/Margin10"
-        android:layout_marginTop="@dimen/Margin5"
-        android:layout_marginEnd="@dimen/Margin10"
-        android:layout_marginBottom="@dimen/Margin10"
-        app:card_color="@color/RedLight"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:padding="@dimen/margin_5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/realPrice"
-        app:layout_constraintTop_toBottomOf="@id/tx_title_product"
-        app:layout_constraintBottom_toTopOf="@id/recycler_loops"
-        app:text="@string/salePriceDemo"
-        app:text_font="IranSansNumLight"
-        app:text_size="5sp" />
+        app:layout_constraintStart_toEndOf="@id/checkbox"
+        app:layout_constraintTop_toBottomOf="@id/salePrice" />
 
     <com.example.alaa.customViews.TextViewWithFont
         android:id="@+id/tx_title_product"
@@ -50,13 +47,30 @@
         app:layout_constraintStart_toEndOf="@id/checkbox"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.example.alaa.customViews.TextViewWithCardBackground
+        android:id="@+id/salePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_marginEnd="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        app:card_color="@color/RedLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/realPrice"
+        app:layout_constraintTop_toBottomOf="@id/tx_title_product"
+        app:layout_constraintBottom_toTopOf="@id/recycler_loops"
+        app:text="@string/salePriceDemo"
+        app:text_font="IranSansNumLight"
+        app:text_size="5sp" />
+
     <com.example.alaa.customViews.TextViewWithFont
         android:id="@+id/realPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="@dimen/Margin10"
-        android:layout_marginEnd="@dimen/Margin10"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_10dp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
         android:paddingTop="2dp"
@@ -69,20 +83,6 @@
         app:layout_constraintTop_toBottomOf="@id/tx_title_product"
         app:layout_constraintBottom_toTopOf="@id/recycler_loops"
         app:strikeThrough="true" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_loops"
-        android:background="@drawable/child_product_borders"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/Margin5"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="@dimen/Margin10"
-        android:padding="@dimen/Margin5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/checkbox"
-        app:layout_constraintTop_toBottomOf="@id/salePrice" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

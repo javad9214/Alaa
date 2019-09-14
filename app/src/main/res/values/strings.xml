@@ -173,6 +173,15 @@
     <string name="countinue">ادامه ...</string>
     <string name="close">بستن</string>
     <string name="demo_title_block">کنکور نظام قدیم</string>
+    <string name="downloadFormHere">از اینجا دانلود کن</string>
+    <string name="quality_high">دانلود با کیفیت عالی</string>
+    <string name="download">دانلود</string>
+    <string name="quality_good">دانلود با کیفیت خوب</string>
+    <string name="quality_medium">دانلود با کیفیت متوسط</string>
+    <string name="downloadSize">حجم فایل :</string>
+    <string name="demo_goodSize">140 MB</string>
+    <string name="demo_mediumSize">75 MB</string>
+    <string name="demo_highSize">250 MB</string>
 
 
 </resources>
