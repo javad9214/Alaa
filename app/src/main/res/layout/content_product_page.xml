@@ -3,14 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
+        android:background="@color/default_gray"
+        android:backgroundTint="@color/grayWhite"
         android:layoutDirection="rtl"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -88,11 +86,11 @@
 
                 </HorizontalScrollView>
 
-
                 <LinearLayout
                     android:id="@+id/linear_buttons"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -198,61 +196,93 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_sample_booklet"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_sampleVideo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/margin_10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/header_sample_booklet">
+                    app:layout_constraintTop_toBottomOf="@id/card_txt_description">
 
-                </androidx.recyclerview.widget.RecyclerView>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_sample_videos"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/header_sample_videos">
+
+                        </androidx.recyclerview.widget.RecyclerView>
 
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_sample_videos"
+                        <com.example.alaa.customViews.HeaderWithLine
+                            android:id="@+id/header_sample_videos"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:header_text="@string/sample_videos"
+                            app:header_textColor="@color/black"
+                            app:header_textFont="IRANSans_Medium"
+                            app:header_textSize="6sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_sampleBooklet"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/margin_10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/header_sample_videos">
+                    app:layout_constraintTop_toBottomOf="@id/card_sampleVideo">
 
-                </androidx.recyclerview.widget.RecyclerView>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_sample_booklet"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/header_sample_booklet" />
 
-                <com.example.alaa.customViews.HeaderWithLine
-                    android:id="@+id/header_sample_videos"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:header_text="@string/sample_videos"
-                    app:header_textColor="@color/black"
-                    app:header_textFont="IRANSans_Medium"
-                    app:header_textSize="6sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/card_txt_description" />
+                        <com.example.alaa.customViews.HeaderWithLine
+                            android:id="@+id/header_sample_booklet"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:header_text="@string/sampleBooklet"
+                            app:header_textColor="@color/black"
+                            app:header_textFont="IRANSans_Medium"
+                            app:header_textSize="6sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                <com.example.alaa.customViews.HeaderWithLine
-                    android:id="@+id/header_sample_booklet"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:header_text="@string/sampleBooklet"
-                    app:header_textColor="@color/black"
-                    app:header_textFont="IRANSans_Medium"
-                    app:header_textSize="6sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/recycler_sample_videos" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
 
 
                 <com.example.alaa.views.ui.product.components.MainProductComponent
@@ -267,27 +297,6 @@
                     app:salePrice_mainProduct="@string/salePriceDemo"
                     app:title_mainProduct="@string/demoTitle" />
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardRecycler_selectableProduct"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/margin_10dp"
-                    app:cardCornerRadius="5dp"
-                    app:cardElevation="@dimen/card_dimen"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/recycler_sample_booklet">
-
-                    <com.example.alaa.views.ui.product.components.ChildProductComponent
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:hasChildren="true"
-                        app:realPrice_childProduct="@string/realPriceDemo"
-                        app:salePrice_childProduct="@string/salePriceDemo"
-                        app:title_childProduct="@string/titleProductItem" />
-
-                </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/intro_video"
@@ -335,6 +344,28 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRecycler_selectableProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="@dimen/card_dimen"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_sampleBooklet">
+
+                    <com.example.alaa.views.ui.product.components.ChildProductComponent
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hasChildren="true"
+                        app:realPrice_childProduct="@string/realPriceDemo"
+                        app:salePrice_childProduct="@string/salePriceDemo"
+                        app:title_childProduct="@string/titleProductItem" />
+
+                </com.google.android.material.card.MaterialCardView>
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -354,6 +385,10 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+    </data>
 
 
 </layout>

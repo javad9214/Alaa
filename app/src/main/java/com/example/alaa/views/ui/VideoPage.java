@@ -49,6 +49,7 @@ public class VideoPage extends AppCompatActivity  {
 
         init();
         initRecyclerRelatedProduct();
+        initRecyclerChiBekhonm();
         initBottomSheet();
         expandableTextView();
     }
@@ -56,6 +57,7 @@ public class VideoPage extends AppCompatActivity  {
 
     private void init() {
         recyclerViewRelatedProducts = binding.contentVideoPage.recyclerRelatedProduct;
+        recyclerViewChiBeKhonam = binding.contentVideoPage.recyclerChiBekhonm;
     }
 
 
@@ -120,6 +122,12 @@ public class VideoPage extends AppCompatActivity  {
         HomeRecyclerAdapter adapter = new HomeRecyclerAdapter(this, R.layout.product);
         recyclerViewRelatedProducts.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerViewRelatedProducts.setAdapter(adapter);
+    }
+
+    private void initRecyclerChiBekhonm() {
+        HomeRecyclerAdapter adapter = new HomeRecyclerAdapter(this, R.layout.chi_bekhonm);
+        recyclerViewChiBeKhonam.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        recyclerViewChiBeKhonam.setAdapter(adapter);
     }
 
     private void initRecyclerUpNext() {

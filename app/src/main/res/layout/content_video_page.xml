@@ -240,7 +240,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin_10dp"
-
+                    app:cardCornerRadius="5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/card_txt_description">
@@ -261,7 +261,7 @@
 
                             <com.example.alaa.customViews.ButtonWithFont
                                 android:id="@+id/btn_download_quality_high"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                style="@style/Widget.MaterialComponents.Button"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/quality_high"
@@ -312,7 +312,7 @@
 
                             <com.example.alaa.customViews.ButtonWithFont
                                 android:id="@+id/btn_download_quality_good"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                style="@style/Widget.MaterialComponents.Button"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/quality_good"
@@ -362,7 +362,7 @@
 
                             <com.example.alaa.customViews.ButtonWithFont
                                 android:id="@+id/btn_download_quality_medium"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                style="@style/Widget.MaterialComponents.Button"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/quality_medium"
@@ -405,13 +405,12 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
-
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_relatedProduct"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin_10dp"
-                    app:layout_constraintBottom_toTopOf="@id/chip_tags"
+                    app:cardCornerRadius="5dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/downloadBox">
@@ -432,7 +431,7 @@
                             android:id="@+id/header_relatedProduct"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            app:header_text="محصولات مرتبط"
+                            app:header_text="@string/RelatedProduct"
                             app:header_textColor="@color/black"
                             app:header_textFont="IRANSans_Medium"
                             app:header_textSize="6sp"
@@ -444,6 +443,44 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_chiBekhonm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10dp"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintBottom_toTopOf="@id/chip_tags"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_relatedProduct">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_5dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_chiBekhonm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_15dp"
+                            app:layout_constraintTop_toBottomOf="@id/header_chiBekhonm" />
+
+                        <com.example.alaa.customViews.HeaderWithLine
+                            android:id="@+id/header_chiBekhonm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:header_text="@string/ChiBekhonm"
+                            app:header_textColor="@color/black"
+                            app:header_textFont="IRANSans_Medium"
+                            app:header_textSize="6sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card_Video"
@@ -500,7 +537,6 @@
                     app:layout_constraintBottom_toTopOf="@id/card_txt_description"
                     app:layout_constraintStart_toStartOf="@id/card_txt_description"
                     app:layout_constraintTop_toTopOf="@id/card_txt_description" />
-
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btn_bookmark"

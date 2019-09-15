@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
 
 
 
@@ -208,79 +209,6 @@
                 app:MyTextViewFont="IRANSans_Light" />
 
         </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="10dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="@dimen/card_dimen">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
-
-                <com.example.alaa.customViews.TextViewWithFont
-                    android:id="@+id/tx_phone"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|center_vertical"
-                    android:gravity="right"
-                    android:layout_marginEnd="16dp"
-                    android:text="09390091027"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:MyTextViewFont="estedad" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.4"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_phone_colored"/>
-
-
-            </LinearLayout>
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0.3dp"
-                android:background="@color/gray"></RelativeLayout>
-
-            <com.example.alaa.customViews.TextViewWithFont
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:text="@string/proPhone"
-                android:textColor="@color/gray"
-                android:textSize="14sp"
-                app:MyTextViewFont="IRANSans_Light" />
-
-        </LinearLayout>
-
-
-
-
-
-
 
 
     </androidx.cardview.widget.CardView>

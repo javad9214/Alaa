@@ -182,6 +182,10 @@
     <string name="demo_goodSize">140 MB</string>
     <string name="demo_mediumSize">75 MB</string>
     <string name="demo_highSize">250 MB</string>
+    <string name="ChiBekhonm">تحلیل کتاب از سایت چی بخونم</string>
+    <string name="RelatedProduct">محصولات مرتبط</string>
+    <string name="demo_title_chiBekhonm">ریاضیات تجربی جامع تست خیلی سبز (جلد اول)</string>
+    <string name="userName">محمد جواد</string>
 
 
 </resources>

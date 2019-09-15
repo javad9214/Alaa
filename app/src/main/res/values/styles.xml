@@ -33,7 +33,7 @@
 
     <style name="ProfileBottomSheet" parent="AppBottomSheetDialogTheme">
         <item name="android:background">@drawable/corner_radius</item>
-        <item name="android:backgroundTint">@color/alaa5</item>
+        <item name="android:backgroundTint">@color/pureWhite</item>
     </style>
 
     <style name="RegularRoundBottomSheet" parent="AppBottomSheetDialogTheme">
