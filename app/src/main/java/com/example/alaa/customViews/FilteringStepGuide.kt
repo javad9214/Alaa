@@ -43,7 +43,7 @@ class FilteringStepGuide(context: Context, attributeSet: AttributeSet? = null) :
 
     init {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        mBinding = DataBindingUtil.inflate(inflater, com.example.alaa.R.layout.filtering_guide_step, this, true)
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.filtering_guide_step, this, true)
         initCallback()
         setButtonsListener()
     }

@@ -186,6 +186,15 @@
     <string name="RelatedProduct">محصولات مرتبط</string>
     <string name="demo_title_chiBekhonm">ریاضیات تجربی جامع تست خیلی سبز (جلد اول)</string>
     <string name="userName">محمد جواد</string>
+    <string name="demo_mobileNumber">09390091027</string>
+    <string name="mobilePhoneNumber">شماره تلفن همراه</string>
+    <string name="demo_personalNumber">0018868614</string>
+    <string name="demo_userFullName">سید محمد جواد سادات حسینی </string>
+    <string name="demo_MajorName">ریاضی و فیزیک</string>
+    <string name="demo_gender">مرد</string>
+    <string name="demo_email">JavadHosseini14@gmail.com</string>
+    <string name="demo_postCode">1456492310</string>
+    <string name="demo_address">تهران - فردوس غرب - خیابان سازمان برنامه جنوبی - کوچه شهید محمد علی بهرامی نیا - پ 12</string>
 
 
 </resources>

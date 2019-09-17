@@ -13,6 +13,7 @@ import com.example.alaa.R
 
 class HeaderWithLine(context: Context, attrs: AttributeSet) : ConstraintLayout(context, attrs) {
 
+
     private var _text: String? = resources.getString(R.string.app_name)
     private var _textColor: Int = ContextCompat.getColor(context, R.color.pureWhite)
     private var _textSize: Float = resources.getDimension(R.dimen.textSizeDefault)
@@ -30,7 +31,7 @@ class HeaderWithLine(context: Context, attrs: AttributeSet) : ConstraintLayout(c
         textView = findViewById(R.id.tx_header)
         button = findViewById(R.id.btn_header)
         loadAttributes(attrs)
-        setChanges()
+        setAttributes()
 
 
     }
@@ -53,7 +54,7 @@ class HeaderWithLine(context: Context, attrs: AttributeSet) : ConstraintLayout(c
     }
 
 
-    private fun setChanges() {
+    private fun setAttributes() {
         textView.let {
             it.text = _text
             it.textSize = _textSize

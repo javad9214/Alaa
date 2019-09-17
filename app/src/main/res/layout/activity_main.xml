@@ -94,7 +94,7 @@
                         android:background="?selectableItemBackgroundBorderless"
                         android:clickable="true"
                         android:focusable="true"
-                        android:onClick="onClickDashboard"
+                        android:onClick="onProfile"
                         android:src="@drawable/ic_account" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,17 +5,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.alaa.R;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
-public class InfoFragment extends Fragment {
+import com.example.alaa.R;
+import com.example.alaa.databinding.ProfileFragmentBinding;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-    private View view ;
+public class ProfileFragment extends BottomSheetDialogFragment {
 
-    public InfoFragment() {
+    private ProfileFragmentBinding binding;
+
+    public ProfileFragment() {
         // Required empty public constructor
     }
 
@@ -34,9 +37,21 @@ public class InfoFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.info_fragment, container, false);
+
+        binding = DataBindingUtil.inflate(inflater, R.layout.profile_fragment, container, false);
+
+        View view = binding.getRoot();
+        onClose();
 
 
-
+        return view;
     }
+
+    private void onClose() {
+        binding.closeProfile.setOnClickListener(view -> {
+            onStop();
+        });
+    }
+
+
 }

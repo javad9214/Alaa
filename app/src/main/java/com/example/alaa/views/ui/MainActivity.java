@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.alaa.R;
 import com.example.alaa.views.adapters.HomeRecyclerAdapter;
-import com.example.alaa.views.dashboard.DashboardFragment;
+import com.example.alaa.views.dashboard.ProfileFragment;
 import com.example.alaa.views.ui.cart.Cart;
 import com.example.alaa.views.ui.main.HomeFragment;
 import com.example.alaa.views.ui.main.ShopFragment;
@@ -86,12 +86,6 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
         transaction.commit();
     }
 
-
-    public void onClickDashboard(View view) {
-        DashboardFragment dashboardFragment = new DashboardFragment();
-        dashboardFragment.show(getSupportFragmentManager(), dashboardFragment.getTag());
-    }
-
     @Override
     public void onItemClick(View view, int position) {
 
@@ -110,4 +104,11 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
         Intent intent = new Intent(this, Cart.class);
         startActivity(intent);
     }
+
+    public void onProfile(View view) {
+        ProfileFragment profileFragment = new ProfileFragment();
+        profileFragment.show(getSupportFragmentManager(), profileFragment.getTag());
+    }
+
+
 }
