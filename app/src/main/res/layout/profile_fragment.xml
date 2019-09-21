@@ -2,111 +2,214 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/ProfileBottomSheet"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layoutDirection="rtl"
         android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <View
+            android:id="@+id/profile_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:background="@color/gray2"
+            android:backgroundTint="@color/gray2"
+            app:layout_constraintBottom_toTopOf="@id/btn_registerRating" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginBottom="@dimen/margin_20dp"
+            app:layout_constraintBottom_toTopOf="@id/profile_divider"
+            app:layout_constraintTop_toTopOf="parent">
 
-
-            <ProgressBar
-                android:id="@+id/profileProgress"
-                style="?android:attr/progressBarStyleHorizontal"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_16dp"
-                android:layoutDirection="ltr"
-                android:progress="60"
-                android:progressTint="@color/alaa5"
-                app:layout_constraintTop_toBottomOf="@id/profileAvatar" />
+                android:orientation="vertical">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2.5dp"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginEnd="180dp"
-                android:background="@color/gray"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ProgressBar
+                    android:id="@+id/profileProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_margin="@dimen/margin_16dp"
+                    android:layoutDirection="rtl"
+                    android:progressDrawable="@drawable/progress_drawable"
+                    android:progress="60"
+                    android:progressTint="@color/alaa5"
+                    app:layout_constraintTop_toBottomOf="@id/profileAvatar" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/profileAvatar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_16dp"
-                android:layout_marginTop="@dimen/margin_30dp"
-                android:src="@drawable/ic_account_large"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/close_Profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_16dp"
+                    android:src="@drawable/ic_cancel"
+                    android:background="?selectableItemBackgroundBorderless"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/close_Profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_16dp"
-                android:src="@drawable/ic_cancel"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_profileInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:layout_marginBottom="@dimen/margin_30dp"
+                    app:layout_constraintTop_toBottomOf="@id/InfoCard_mobileNumber" />
 
-            <com.example.alaa.customViews.InfoCard
-                android:id="@+id/InfoCard_mobileNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_10dp"
-                android:layout_marginTop="@dimen/margin_30dp"
-                android:layout_marginBottom="@dimen/margin_16dp"
-                app:icon="@drawable/ic_mobile_color"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/profileProgress"
-                app:title="@string/mobilePhoneNumber"
-                app:value="@string/demo_mobileNumber" />
+                <com.example.alaa.customViews.ButtonWithFont
+                    android:id="@+id/completeProfile"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/completeProfile"
+                    android:textColor="@color/alaa5"
+                    app:MyButtonFont="IRANSans_Light"
+                    app:layout_constraintEnd_toEndOf="@id/profileProgress"
+                    app:layout_constraintTop_toBottomOf="@id/profileProgress" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2.5dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="180dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/profileAvatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16dp"
+                    android:layout_marginTop="@dimen/margin_30dp"
+                    android:src="@drawable/ic_account_large"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.example.alaa.customViews.InfoCard
+                    android:id="@+id/infoCard_personalNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_30dp"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:layout_marginBottom="@dimen/margin_16dp"
+                    app:icon="@drawable/ic_personal_code_colored"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/InfoCard_mobileNumber"
+                    app:layout_constraintTop_toBottomOf="@id/completeProfile"
+                    app:title="@string/personal_code"
+                    app:value="@string/demo_personalNumber" />
+
+                <com.example.alaa.customViews.InfoCard
+                    android:id="@+id/InfoCard_mobileNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/margin_30dp"
+                    android:layout_marginBottom="@dimen/margin_16dp"
+                    app:icon="@drawable/ic_mobile_color"
+                    app:layout_constraintEnd_toStartOf="@id/infoCard_personalNumber"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/completeProfile"
+                    app:title="@string/mobilePhoneNumber"
+                    app:value="@string/demo_mobileNumber" />
+
+                <com.example.alaa.customViews.TextViewWithFont
+                    android:id="@+id/ProfileCompletionRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:text="@string/ProfileCompletionRate"
+                    android:textColor="@color/blackOpacity"
+                    app:MyTextViewFont="shabnam_light"
+                    app:layout_constraintStart_toStartOf="@id/profileProgress"
+                    app:layout_constraintTop_toBottomOf="@id/profileProgress" />
+
+                <com.example.alaa.customViews.TextViewWithFont
+                    android:id="@+id/ProfileCompletionRateValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:text="@string/ProfileCompletionRateValue"
+                    android:textColor="@color/BonGreen"
+                    app:MyTextViewFont="IranSansNumMedium"
+                    app:layout_constraintBottom_toBottomOf="@id/ProfileCompletionRate"
+                    app:layout_constraintStart_toEndOf="@id/ProfileCompletionRate"
+                    app:layout_constraintTop_toTopOf="@id/ProfileCompletionRate" />
+
+                <com.example.alaa.customViews.TextViewWithFont
+                    android:id="@+id/tx_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:paddingStart="@dimen/margin_10dp"
+                    android:paddingEnd="@dimen/margin_10dp"
+                    android:text="@string/demo_userFullName"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:MyTextViewFont="shekaste"
+                    app:layout_constraintBottom_toBottomOf="@id/profileAvatar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/profileAvatar"
+                    app:layout_constraintTop_toTopOf="@id/profileAvatar" />
 
 
-            <com.example.alaa.customViews.InfoCard
-                android:id="@+id/infoCard_personalNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_30dp"
-                android:layout_marginEnd="@dimen/margin_10dp"
-                android:layout_marginBottom="@dimen/margin_16dp"
-                app:icon="@drawable/ic_personal_code_colored"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/profileProgress"
-                app:title="@string/personal_code"
-                app:value="@string/demo_personalNumber" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.example.alaa.customViews.TextViewWithFont
-                android:id="@+id/tx_name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="@dimen/margin_10dp"
-                android:layout_marginEnd="@dimen/margin_10dp"
-                android:paddingStart="@dimen/margin_10dp"
-                android:paddingEnd="@dimen/margin_10dp"
-                android:text="@string/demo_userFullName"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:MyTextViewFont="shekaste"
-                app:layout_constraintBottom_toBottomOf="@id/profileAvatar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/profileAvatar"
-                app:layout_constraintTop_toTopOf="@id/profileAvatar" />
+        </androidx.core.widget.NestedScrollView>
 
+        <com.example.alaa.customViews.ButtonWithFont
+            android:id="@+id/btn_registerRating"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:enabled="true"
+            android:focusable="true"
+            android:text="@string/registerRating"
+            android:textColor="@color/blueDark"
+            app:MyButtonFont="IranSansNum"
+            app:icon="@drawable/ic_award"
+            app:iconPadding="8dp"
+            app:iconTint="@color/blueDark"
+            app:layout_constraintStart_toStartOf="@id/profile_divider"
+            app:layout_constraintTop_toBottomOf="@id/profile_divider"
+            app:strokeColor="@color/blueDark" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.example.alaa.customViews.ButtonWithFont
+            android:id="@+id/btn_myVideos"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            android:enabled="true"
+            android:focusable="true"
+            android:text="@string/myVideos"
+            android:textColor="@color/pureWhite"
+            app:backgroundTint="@color/blue"
+            app:icon="@drawable/ic_previous"
+            app:iconGravity="end"
+            app:iconPadding="8dp"
+            app:iconTint="@color/pureWhite"
+            app:layout_constraintEnd_toEndOf="@id/profile_divider"
+            app:layout_constraintTop_toBottomOf="@id/profile_divider" />
 
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <data>
 

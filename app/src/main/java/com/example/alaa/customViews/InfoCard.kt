@@ -57,4 +57,15 @@ class InfoCard(context: Context, attrs: AttributeSet? = null) : FrameLayout(cont
         iconImageView.setImageDrawable(icon)
     }
 
+    fun setTitle(text: String) {
+        titleTextView.text = text
+    }
+
+    fun setValue(text: String) {
+        valueTextView.text = text
+    }
+
+    fun setIcon(icon: Drawable?) {
+        iconImageView.setImageDrawable(icon)
+    }
 }

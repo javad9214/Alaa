@@ -12,10 +12,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.alaa.R;
 import com.example.alaa.views.adapters.HomeRecyclerAdapter;
-import com.example.alaa.views.dashboard.ProfileFragment;
 import com.example.alaa.views.ui.cart.Cart;
 import com.example.alaa.views.ui.main.HomeFragment;
 import com.example.alaa.views.ui.main.ShopFragment;
+import com.example.alaa.views.ui.profile.ProfileFragment;
 import com.example.alaa.views.ui.search.SearchActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.hzn.lib.EasyTransition;

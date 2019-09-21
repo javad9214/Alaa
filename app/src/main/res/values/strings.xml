@@ -195,6 +195,11 @@
     <string name="demo_email">JavadHosseini14@gmail.com</string>
     <string name="demo_postCode">1456492310</string>
     <string name="demo_address">تهران - فردوس غرب - خیابان سازمان برنامه جنوبی - کوچه شهید محمد علی بهرامی نیا - پ 12</string>
+    <string name="ProfileCompletionRate">میزان تکمیل پروفایل : </string>
+    <string name="ProfileCompletionRateValue">60 %</string>
+    <string name="completeProfile">تکمیل پروفایل</string>
+    <string name="myVideos">فیلم ها و جزوه های من</string>
+    <string name="registerRating">ثبت رتبه 98</string>
 
 
 </resources>
