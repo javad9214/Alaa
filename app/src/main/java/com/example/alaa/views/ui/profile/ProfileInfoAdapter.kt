@@ -8,9 +8,8 @@ import com.example.alaa.R
 import com.example.alaa.customViews.InfoCard
 import com.example.alaa.models.ProfileInfoCard
 
-class ProfileInfoAdapter(private val resource: Int) : RecyclerView.Adapter<ProfileInfoAdapter.ViewHolder>() {
+class ProfileInfoAdapter(private val infoCardList: ArrayList<ProfileInfoCard>) : RecyclerView.Adapter<ProfileInfoAdapter.ViewHolder>() {
 
-    private lateinit var infoCardList: ArrayList<ProfileInfoCard>
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

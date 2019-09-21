@@ -9,6 +9,7 @@
         android:layoutDirection="rtl"
         android:orientation="vertical">
 
+
         <View
             android:id="@+id/profile_divider"
             android:layout_width="match_parent"
@@ -24,14 +25,12 @@
             android:id="@+id/scrollProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_20dp"
-            app:layout_constraintBottom_toTopOf="@id/profile_divider"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cons_profile"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <ProgressBar
@@ -57,16 +56,20 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginStart="@dimen/margin_10dp"
                     android:id="@+id/recycler_profileInfo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/margin_20dp"
                     android:layout_marginBottom="@dimen/margin_30dp"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:visibility="visible"
                     app:layout_constraintTop_toBottomOf="@id/InfoCard_mobileNumber" />
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/completeProfile"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:background="@drawable/ripple_effect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/completeProfile"
@@ -187,7 +190,7 @@
             app:iconPadding="8dp"
             app:iconTint="@color/blueDark"
             app:layout_constraintStart_toStartOf="@id/profile_divider"
-            app:layout_constraintTop_toBottomOf="@id/profile_divider"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:strokeColor="@color/blueDark" />
 
         <com.example.alaa.customViews.ButtonWithFont
@@ -196,9 +199,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:clickable="true"
-            android:enabled="true"
-            android:focusable="true"
             android:text="@string/myVideos"
             android:textColor="@color/pureWhite"
             app:backgroundTint="@color/blue"
@@ -207,6 +207,7 @@
             app:iconPadding="8dp"
             app:iconTint="@color/pureWhite"
             app:layout_constraintEnd_toEndOf="@id/profile_divider"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/profile_divider" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
