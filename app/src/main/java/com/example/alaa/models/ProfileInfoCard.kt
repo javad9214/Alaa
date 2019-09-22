@@ -6,5 +6,6 @@ class ProfileInfoCard {
     var title: String = ""
     var value: String = ""
     var icon: Drawable? = null
+    var span: Int = 2
 
 }

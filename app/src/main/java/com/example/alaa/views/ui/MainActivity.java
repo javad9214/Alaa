@@ -79,11 +79,15 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
 
 
     private void replaceFragment(Fragment fragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out, android.R.animator.fade_in, android.R.animator.fade_out);
-        transaction.replace(R.id.container, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+        String backStateName = fragment.getClass().getName();
+        boolean fragmentPopped = getSupportFragmentManager().popBackStackImmediate(backStateName, 0);
+        if (!fragmentPopped) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out, android.R.animator.fade_in, android.R.animator.fade_out);
+            transaction.replace(R.id.container, fragment);
+            transaction.addToBackStack(backStateName);
+            transaction.commit();
+        }
     }
 
     @Override
@@ -95,8 +99,20 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        EasyTransition.exit(MainActivity.this);
+
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.container);
+        if (!(fragment instanceof IOnBackPressed) || !((IOnBackPressed) fragment).onBackPressed()) {
+            finish();
+        }
+    }
+
+    public interface IOnBackPressed {
+        /**
+         * If you return true the back press will not be taken into account, otherwise the activity will act naturally
+         *
+         * @return true if your processing has priority if not false
+         */
+        boolean onBackPressed();
     }
 
 

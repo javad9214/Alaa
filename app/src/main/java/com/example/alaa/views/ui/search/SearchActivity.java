@@ -37,7 +37,7 @@ public class SearchActivity extends AppCompatActivity implements FilterItemSelec
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        finish();
     }
 
     @Override
@@ -57,4 +57,6 @@ public class SearchActivity extends AppCompatActivity implements FilterItemSelec
            Log.i(TAG, "disconnectListener: on Pause");
        }
    }
+
+
 }

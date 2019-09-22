@@ -51,9 +51,10 @@
                     android:background="?selectableItemBackgroundBorderless"
                     android:clickable="true"
                     android:focusable="true"
-                    android:src="@drawable/ic_cancel"
+                    android:onClick="onClose"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/ic_cancel_cart"
                     app:layout_constraintTop_toTopOf="parent" />
 
 

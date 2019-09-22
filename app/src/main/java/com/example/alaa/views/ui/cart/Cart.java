@@ -42,7 +42,7 @@ public class Cart extends AppCompatActivity {
          product.setTitle("همایش طلایی ریاضی تجربی نظام قدیم کنکور 98 آلاء");
          product.setSalePrice(" 25,000 تومان");
          for (int i = 0 ; i < 5 ; i++){
-             attrList.add(setAttribute( "کنکور" , "نظام قدیم"));
+             attrList.add(setAttribute());
          }
 
          product.setAttrList(attrList);
@@ -50,20 +50,24 @@ public class Cart extends AppCompatActivity {
          return product ;
     }
 
-
-    private AttributesModel setAttribute(String attrName , String attrValue){
+    private AttributesModel setAttribute() {
         AttributesModel attribute = new AttributesModel();
-        attribute.setAttrName(attrName);
-        attribute.setAttrValue(attrValue);
+        attribute.setAttrName("کنکور");
+        attribute.setAttrValue("نظام قدیم");
         return attribute;
     }
-
-
 
     public void purchase(View view) {
         CompletePurchase completePurchase = new CompletePurchase();
         completePurchase.show(getSupportFragmentManager() , completePurchase.getTag());
     }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 
+    public void onClose(View view) {
+        finish();
+    }
 }

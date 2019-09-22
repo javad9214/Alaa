@@ -23,6 +23,7 @@ import com.asksira.loopingviewpager.LoopingViewPager;
 import com.example.alaa.R;
 import com.example.alaa.views.ViewPager.PagerAdapter;
 import com.example.alaa.views.adapters.HomeRecyclerAdapter;
+import com.example.alaa.views.ui.MainActivity;
 import com.example.alaa.views.ui.VideoPage;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
@@ -32,7 +33,7 @@ import java.lang.reflect.Field;
 import java.util.Objects;
 
 
-public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemClickListener {
+public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemClickListener, MainActivity.IOnBackPressed {
 
 
     public HomeFragment() {
@@ -42,6 +43,7 @@ public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemCl
     private View view ;
     private HomeViewModel viewModel ;
 
+    public static final String TAG = "===>";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,6 +56,7 @@ public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemCl
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_home, container, false);
+        // onBackPressed();
         return view ;
     }
 
@@ -98,8 +101,6 @@ public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemCl
 
     }
 
-
-
     private void setAdapters() {
 
         final HomeRecyclerAdapter homeRecyclerAdapter = new HomeRecyclerAdapter(getContext() , R.layout.set);
@@ -130,7 +131,12 @@ public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemCl
         startActivity(intent);
     }
 
-    public class FixedSpeedScroller extends Scroller {
+    @Override
+    public boolean onBackPressed() {
+        return false;
+    }
+
+    private class FixedSpeedScroller extends Scroller {
 
         private int mDuration = 500;
 
@@ -138,7 +144,7 @@ public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemCl
             super(context);
         }
 
-        public FixedSpeedScroller(Context context, Interpolator interpolator) {
+        FixedSpeedScroller(Context context, Interpolator interpolator) {
             super(context, interpolator);
         }
 
@@ -159,5 +165,6 @@ public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemCl
             super.startScroll(startX, startY, dx, dy, mDuration);
         }
     }
+
 
 }
