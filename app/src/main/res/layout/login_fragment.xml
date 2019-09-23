@@ -126,139 +126,28 @@
                     android:orientation="vertical">
 
 
-                    <LinearLayout
+                    <com.example.alaa.customViews.InfoForm
+                        android:id="@+id/infoForm_phoneNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-                        android:gravity="end"
-                        android:orientation="horizontal">
+                        app:hint_infoForm="@string/phoneHint"
+                        app:icon_infoForm="@drawable/ic_mobile_color"
+                        app:title_infoForm="@string/mobilePhoneNumber" />
 
 
-                        <com.example.alaa.customViews.TextViewWithFont
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:layout_marginEnd="5dp"
-                            android:text="@string/phone_number"
-                            android:textColor="@color/blackTitle"
-                            android:textSize="14sp"
-                            app:MyTextViewFont="IRANSans_Bold" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
+                    <com.example.alaa.customViews.InfoForm
+                        android:id="@+id/infoForm_personalNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/bg_edittext_box"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:paddingTop="@dimen/padding_editBox"
-                        android:paddingBottom="@dimen/padding_editBox">
-
-
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/done_icon"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:visibility="gone"
-                            app:srcCompat="@drawable/ic_done" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_phoneNumber"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="10dp"
-                            android:layout_weight="3"
-                            android:background="@android:color/transparent"
-                            android:gravity="end"
-                            android:hint="@string/phone_number"
-                            android:inputType="phone"
-                            android:maxLength="11" />
-
-
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/img_phoneNumber"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            app:srcCompat="@drawable/ic_mobile" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:gravity="end"
-                        android:orientation="horizontal">
-
-                        <com.example.alaa.customViews.TextViewWithFont
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:layout_marginEnd="5dp"
-                            android:text="@string/personal_code"
-                            android:textColor="@color/blackTitle"
-                            android:textSize="14sp"
-                            app:MyTextViewFont="IRANSans_Bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/bg_edittext_box"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:paddingTop="@dimen/padding_editBox"
-                        android:paddingBottom="@dimen/padding_editBox">
-
-
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/done_icon2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:visibility="gone"
-                            app:srcCompat="@drawable/ic_done" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/ed_personalNumber"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="10dp"
-                            android:layout_weight="3"
-                            android:background="@android:color/transparent"
-                            android:gravity="end"
-                            android:hint="@string/personalHint"
-                            android:inputType="phone"
-                            android:maxLength="10" />
-
-
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/img_personalNumber"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            app:srcCompat="@drawable/ic_personal_code" />
-
-                    </LinearLayout>
+                        app:hint_infoForm="@string/personalHint"
+                        app:icon_infoForm="@drawable/ic_personal_code_colored"
+                        app:title_infoForm="@string/personal_code" />
 
 
                 </LinearLayout>
 
 
-                <com.google.android.material.button.MaterialButton
+                <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/btn_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -266,10 +155,11 @@
                     android:enabled="true"
                     android:gravity="center"
                     android:text="@string/Login"
+                    app:MyButtonFont="IRANSans_Medium"
                     android:visibility="visible" />
 
 
-                <com.google.android.material.button.MaterialButton
+                <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/btn_GoToSignUpCard"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
                     android:layout_width="wrap_content"
@@ -280,6 +170,7 @@
                     android:gravity="center"
                     android:text="@string/GoToSignUp"
                     android:visibility="visible"
+                    app:MyButtonFont="IRANSans_Light"
                     android:onClickListener="@{() -> authViewModel.select(1)}"/>
 
             </LinearLayout>

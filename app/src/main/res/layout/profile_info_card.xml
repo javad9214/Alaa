@@ -11,9 +11,9 @@
         android:id="@+id/infoCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:icon="@drawable/ic_genders_colored"
-        app:title="@string/profileGender"
-        app:value="@string/demo_gender" />
+        app:icon_infoCard="@drawable/ic_genders_colored"
+        app:title_infoCard="@string/profileGender"
+        app:value_infoCard="@string/demo_gender" />
 
 
 </LinearLayout>

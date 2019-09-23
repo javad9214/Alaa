@@ -362,6 +362,69 @@ tools:context=".views.ui.login.SignUpFragment"
 
                             </LinearLayout>
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:gravity="end"
+                                android:orientation="horizontal">
+
+                                <com.example.alaa.customViews.TextViewWithFont
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:layout_marginEnd="5dp"
+                                    android:text="@string/profileSchool"
+                                    android:textColor="@color/blackTitle"
+                                    android:textSize="14sp"
+                                    app:MyTextViewFont="IRANSans_Bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/bg_edittext_box"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/padding_editBox"
+                                android:paddingBottom="@dimen/padding_editBox">
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:visibility="gone"
+                                    app:srcCompat="@drawable/ic_done" />
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/ed_school_signUp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="3"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="end"
+                                    android:hint="@string/personalHint"
+                                    android:inputType="phone"
+                                    android:maxLength="10"
+                                    android:maxLines="1"
+                                    android:text="@={authViewModel.personalNumber}" />
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/img_school_signUp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    app:srcCompat="@drawable/ic_school" />
+
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -511,7 +574,7 @@ tools:context=".views.ui.login.SignUpFragment"
                 </ScrollView>
 
 
-                <com.google.android.material.button.MaterialButton
+                <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/btn_signUp"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
@@ -521,11 +584,13 @@ tools:context=".views.ui.login.SignUpFragment"
                     android:enabled="true"
                     android:gravity="center"
                     android:text="@string/SignUp"
+                    app:MyButtonFont="IRANSans_Medium"
                     android:visibility="visible" />
 
-                <com.google.android.material.button.MaterialButton
+                <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/btn_GoToLoginCard"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    app:MyButtonFont="IRANSans_Light"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_gravity="center_horizontal"
