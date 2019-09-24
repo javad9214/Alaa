@@ -14,87 +14,68 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <View
             app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="0dp"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:orientation="vertical"
             android:background="@drawable/backgroundtoolbar"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            app:layout_constraintBottom_toBottomOf="@id/guidelineHalf" />
 
-
-
-
-        </LinearLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHalf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.60" />
 
         <LinearLayout
-            android:id="@+id/alaa_container"
-            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/alaa_description"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            app:layout_constraintBottom_toTopOf="@id/card_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/transition_logo"
-                android:layout_width="match_parent"
+            <com.example.alaa.customViews.TextViewWithFont
+                android:id="@+id/login_describe1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:orientation="vertical"
-                android:visibility="visible">
+                android:layout_gravity="center_horizontal"
+                android:text="@string/describe01"
+                android:textColor="@color/pureWhite"
+                android:textSize="20sp"
+                app:MyTextViewFont="IRANSans_Bold" />
 
-
-                <ImageView
-                    android:id="@+id/alaa_logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="30dp"
-                    android:contentDescription="TODO"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/alaa_logo_black"
-                    android:visibility="visible" />
-
-                <com.example.alaa.customViews.TextViewWithFont
-                    android:id="@+id/login_describe1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/describe01"
-                    android:textColor="@color/pureWhite"
-                    android:textSize="20sp"
-                    app:MyTextViewFont="IRANSans_Bold" />
-
-
-                <com.example.alaa.customViews.TextViewWithFont
-                    android:id="@+id/login_describe2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/describe02"
-                    android:textColor="@color/pureWhite"
-                    app:MyTextViewFont="IRANSans_Medium" />
-
-
-
-            </LinearLayout>
-
+            <com.example.alaa.customViews.TextViewWithFont
+                android:id="@+id/login_describe2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="@string/describe02"
+                android:textColor="@color/pureWhite"
+                app:MyTextViewFont="IRANSans_Medium" />
 
         </LinearLayout>
 
-        <androidx.cardview.widget.CardView
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTopCardLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.30" />
 
-            app:layout_constraintTop_toBottomOf="@id/alaa_container"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <androidx.cardview.widget.CardView
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineBottomCardLogin"
             android:id="@+id/card_login"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            app:layout_constraintTop_toBottomOf="@id/guidelineTopCardLogin"
             android:layout_marginStart="@dimen/cardLoginMargin"
-            android:layout_marginTop="20dp"
             android:layout_marginEnd="@dimen/cardLoginMargin"
             android:orientation="vertical"
             android:visibility="visible"
@@ -115,7 +96,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1.5"
-                    android:src="@drawable/alaa_logo_white" />
+                    android:src="@drawable/alaa_logo_black" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -132,6 +113,7 @@
                         android:layout_height="wrap_content"
                         app:hint_infoForm="@string/phoneHint"
                         app:icon_infoForm="@drawable/ic_mobile_color"
+                        app:editText_maxLine="11"
                         app:title_infoForm="@string/mobilePhoneNumber" />
 
 
@@ -141,12 +123,12 @@
                         android:layout_height="wrap_content"
                         app:hint_infoForm="@string/personalHint"
                         app:icon_infoForm="@drawable/ic_personal_code_colored"
+                        app:editText_maxLine="10"
                         app:title_infoForm="@string/personal_code" />
-
 
                 </LinearLayout>
 
-
+                l
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/btn_login"
                     android:layout_width="wrap_content"
@@ -176,6 +158,13 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottomCardLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

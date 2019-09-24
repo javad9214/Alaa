@@ -1,14 +1,11 @@
 package com.example.alaa.views.ui.login;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.text.Editable;
-import android.util.DisplayMetrics;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -413,13 +410,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Ch
         }
     }
 
-    public static float convertPixelsToDp(float px, Context context) {
-        return px / ((float) context.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
-
-    public static int dpToPx(float dp, Context context) {
-        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
-    }
-
-
 }

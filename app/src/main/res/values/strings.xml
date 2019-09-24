@@ -62,8 +62,8 @@
     <string name="Login">ورود</string>
     <string name="GoToSignUp">تابحال در آلاء ثبت نام نکردم</string>
     <string name="GoToLogin">بازگشت به صفحه ورود</string>
-    <string name="phoneHint">09** *** ****</string>
-    <string name="personalHint">(ده رقم)</string>
+    <string name="phoneHint">0912 3456789</string>
+    <string name="personalHint">123 456789 0</string>
 
     //Sign Up
     <string name="SignUp">ثبت نام</string>

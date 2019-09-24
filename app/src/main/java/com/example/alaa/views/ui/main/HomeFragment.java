@@ -23,7 +23,6 @@ import com.asksira.loopingviewpager.LoopingViewPager;
 import com.example.alaa.R;
 import com.example.alaa.views.ViewPager.PagerAdapter;
 import com.example.alaa.views.adapters.HomeRecyclerAdapter;
-import com.example.alaa.views.ui.MainActivity;
 import com.example.alaa.views.ui.VideoPage;
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
@@ -33,7 +32,7 @@ import java.lang.reflect.Field;
 import java.util.Objects;
 
 
-public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemClickListener, MainActivity.IOnBackPressed {
+public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemClickListener {
 
 
     public HomeFragment() {
@@ -129,11 +128,6 @@ public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemCl
     public void onItemClick(View view, int position) {
         Intent intent  = new Intent(getContext() , VideoPage.class);
         startActivity(intent);
-    }
-
-    @Override
-    public boolean onBackPressed() {
-        return false;
     }
 
     private class FixedSpeedScroller extends Scroller {

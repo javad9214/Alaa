@@ -184,6 +184,8 @@
         <attr name="title_infoForm" format="string|reference" />
         <attr name="hint_infoForm" format="string|reference" />
         <attr name="icon_infoForm" format="reference" />
+        <attr name="editText_maxLine" format="integer" />
+        <attr name="editText_inputType" format="enum" />
     </declare-styleable>
 
     <declare-styleable name="MainProductComponent">

@@ -26,4 +26,6 @@ class EditTextWithFont(context: Context, attrs: AttributeSet) : TextInputEditTex
         val face = FontFace.getInstance().getFontFace(context, fontOrdinal)
         this.typeface = face
     }
+
+
 }

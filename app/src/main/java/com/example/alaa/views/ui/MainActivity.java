@@ -99,22 +99,8 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
 
     @Override
     public void onBackPressed() {
-
-        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.container);
-        if (!(fragment instanceof IOnBackPressed) || !((IOnBackPressed) fragment).onBackPressed()) {
             finish();
-        }
     }
-
-    public interface IOnBackPressed {
-        /**
-         * If you return true the back press will not be taken into account, otherwise the activity will act naturally
-         *
-         * @return true if your processing has priority if not false
-         */
-        boolean onBackPressed();
-    }
-
 
     public void onClickCart(View view) {
         Intent intent = new Intent(this, Cart.class);
@@ -125,6 +111,5 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
         ProfileFragment profileFragment = new ProfileFragment();
         profileFragment.show(getSupportFragmentManager(), profileFragment.getTag());
     }
-
 
 }

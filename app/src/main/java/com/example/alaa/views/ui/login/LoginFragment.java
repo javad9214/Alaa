@@ -3,6 +3,7 @@ package com.example.alaa.views.ui.login;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,6 @@ public class LoginFragment extends Fragment {
     public LoginFragment() {
     }
 
-    private View view;
     private AuthViewModel viewModel;
     private LoginFragmentBinding binding;
     public static final String TAG = "Alaa\\LoginFragment";
@@ -40,7 +40,7 @@ public class LoginFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.login_fragment, container, false);
-        view = binding.getRoot();
+        View view = binding.getRoot();
         binding.setAuthViewModel(viewModel);
         binding.setLifecycleOwner(this);
 
@@ -57,6 +57,17 @@ public class LoginFragment extends Fragment {
             Intent intent = new Intent(getContext(), MainActivity.class);
             startActivity(intent);
         });
+
+        binding.infoFormPhoneNumber.requestFocus();
+        binding.infoFormPhoneNumber.setOnFocusChangeListener((view1, hasFocus) -> Log.i(TAG, "onFocusChange:  " + hasFocus));
+
+        binding.infoFormPersonalNumber.setOnClickListener(view12 -> Log.i(TAG, "onClick: "));
+
+        binding.infoFormPhoneNumber.setOnTouchListener((view13, motionEvent) -> {
+            Log.i(TAG, "onTouch: ");
+            return false;
+        });
+
     }
 
     @Override

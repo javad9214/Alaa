@@ -21,48 +21,62 @@
             app:MyTextViewFont="IRANSans_Medium" />
 
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/bg_edittext_box"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingTop="@dimen/padding_editBox"
-            android:paddingBottom="@dimen/padding_editBox">
+            android:gravity="center_vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icon"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                app:srcCompat="@drawable/ic_mobile" />
+                app:srcCompat="@drawable/ic_personal_code_colored" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                app:helperText="شماره موبایل 10 رقم می باشد "
+                app:helperTextEnabled="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startIconDrawable="@drawable/ic_mobile_color"
+                app:startIconTintMode="screen">
 
             <com.example.alaa.customViews.EditTextWithFont
                 android:id="@+id/ed_value"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="3"
-                android:background="@android:color/transparent"
-                android:gravity="end"
                 android:hint="@string/phoneHint"
+                android:gravity="end"
                 android:inputType="phone"
                 android:maxLength="11"
                 app:EditTextFont="IranSansNumMedium" />
 
+            </com.google.android.material.textfield.TextInputLayout>
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/done_icon"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:visibility="gone"
                 app:srcCompat="@drawable/ic_done" />
 
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>
