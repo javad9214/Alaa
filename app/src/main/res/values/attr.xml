@@ -185,7 +185,14 @@
         <attr name="hint_infoForm" format="string|reference" />
         <attr name="icon_infoForm" format="reference" />
         <attr name="editText_maxLine" format="integer" />
-        <attr name="editText_inputType" format="enum" />
+        <attr name="isNecessary" format="boolean"/>
+        <attr name="editText_inputType" format="enum" >
+            <enum name="text" value="1"/>
+            <enum name="phone" value="2" />
+            <enum name="textEmailAddress" value="3"/>
+            <enum name="textPersonName" value="4" />
+            <enum name="textPostalAddress" value="5"/>
+        </attr>
     </declare-styleable>
 
     <declare-styleable name="MainProductComponent">

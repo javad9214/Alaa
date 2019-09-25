@@ -6,6 +6,7 @@
 
     <color name="pureWhite">#ffffff</color>
     <color name="grayWhite">#A1EEEEEE</color>
+    <color name="grayHint">#FCD6D0D0</color>
     <color name="default_gray">#EEEEEE</color>
     <color name="blackTitle">#CD000000</color>
     <color name="blackOpacity">#A1000000</color>

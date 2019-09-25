@@ -60,10 +60,10 @@
     <string name="phone_number">شماره موبایل</string>
     <string name="personal_code">کد ملی</string>
     <string name="Login">ورود</string>
-    <string name="GoToSignUp">تابحال در آلاء ثبت نام نکردم</string>
+    <string name="GoToSignUp">تاکنون ثبت نام نکرده ام</string>
     <string name="GoToLogin">بازگشت به صفحه ورود</string>
     <string name="phoneHint">0912 3456789</string>
-    <string name="personalHint">123 456789 0</string>
+    <string name="personalHint">015 456789 0</string>
 
     //Sign Up
     <string name="SignUp">ثبت نام</string>
@@ -210,6 +210,9 @@
     <string name="ChiBekhonm">تحلیل کتاب از سایت چی بخونم</string>
     <string name="RelatedProduct">محصولات مرتبط</string>
     <string name="demo_title_chiBekhonm">ریاضیات تجربی جامع تست خیلی سبز (جلد اول)</string>
+    <string name="schoolHint">مثلا : صنعتی شریف</string>
+    <string name="lastNameHint">مثلا : شهلائی</string>
+    <string name="nameHint">مثلا : سجاد</string>
 
 
 </resources>

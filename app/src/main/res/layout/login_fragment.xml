@@ -114,6 +114,7 @@
                         app:hint_infoForm="@string/phoneHint"
                         app:icon_infoForm="@drawable/ic_mobile_color"
                         app:editText_maxLine="11"
+                        app:editText_inputType="phone"
                         app:title_infoForm="@string/mobilePhoneNumber" />
 
 
@@ -124,11 +125,12 @@
                         app:hint_infoForm="@string/personalHint"
                         app:icon_infoForm="@drawable/ic_personal_code_colored"
                         app:editText_maxLine="10"
+                        app:editText_inputType="phone"
                         app:title_infoForm="@string/personal_code" />
 
                 </LinearLayout>
 
-                l
+
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/btn_login"
                     android:layout_width="wrap_content"

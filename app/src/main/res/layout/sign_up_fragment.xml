@@ -67,8 +67,7 @@ tools:context=".views.ui.login.SignUpFragment"
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="0.5"
+                            android:layout_height="wrap_content"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -103,385 +102,79 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:layout_marginEnd="10dp"
                                 android:layout_weight="0.7"
                                 android:text="@string/gender"
-                                android:textColor="@color/blackTitle"
+                                android:textColor="@color/alaa5"
                                 android:textSize="14sp"
                                 app:MyTextViewFont="IRANSans_Bold" />
                         </LinearLayout>
 
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
 
 
-                            <LinearLayout
+                            <com.example.alaa.customViews.InfoForm
+                                android:id="@+id/infoForm_name"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:gravity="end"
-                                android:orientation="horizontal">
+                                app:hint_infoForm="@string/nameHint"
+                                app:icon_infoForm="@drawable/ic_name_signup_colored"
+                                app:editText_inputType="textPersonName"
+                                app:title_infoForm="@string/signUp_Name" />
 
-                                <com.example.alaa.customViews.TextViewWithFont
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="top"
-                                    android:layout_marginEnd="5dp"
-                                    android:text="@string/signUp_Name"
-                                    android:textColor="@color/blackTitle"
-                                    android:textSize="14sp"
-                                    app:MyTextViewFont="IRANSans_Bold" />
 
-                            </LinearLayout>
-
-                            <LinearLayout
+                            <com.example.alaa.customViews.InfoForm
+                                android:id="@+id/infoForm_LastName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="10dp"
-                                android:background="@drawable/bg_edittext_box"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal"
-                                android:paddingTop="@dimen/padding_editBox"
-                                android:paddingBottom="@dimen/padding_editBox">
+                                app:hint_infoForm="@string/lastNameHint"
+                                app:icon_infoForm="@drawable/ic_lastname_signup_colored"
+                                app:editText_inputType="textPersonName"
+                                app:title_infoForm="@string/signUp_LastName" />
 
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/ed_Name_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_weight="3"
-                                    android:background="@android:color/transparent"
-                                    android:gravity="start"
-                                    android:maxLines="1"
-                                    android:singleLine="true"
-                                    android:text="@={authViewModel.name}"
-                                    android:textDirection="rtl" />
-
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/img_Name_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0.5"
-                                    app:srcCompat="@drawable/ic_name_signup" />
-
-                            </LinearLayout>
-
-
-                            <LinearLayout
+                            <com.example.alaa.customViews.InfoForm
+                                android:id="@+id/infoForm_phoneNumber"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:gravity="end"
-                                android:orientation="horizontal">
+                                app:hint_infoForm="@string/phoneHint"
+                                app:icon_infoForm="@drawable/ic_mobile_color"
+                                app:editText_maxLine="11"
+                                app:editText_inputType="phone"
+                                app:title_infoForm="@string/mobilePhoneNumber" />
 
-                                <com.example.alaa.customViews.TextViewWithFont
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="top"
-                                    android:layout_marginEnd="5dp"
-                                    android:text="@string/signUp_LastName"
-                                    android:textColor="@color/blackTitle"
-                                    android:textSize="14sp"
-                                    app:MyTextViewFont="IRANSans_Bold" />
 
-                            </LinearLayout>
-
-                            <LinearLayout
+                            <com.example.alaa.customViews.InfoForm
+                                android:id="@+id/infoForm_personalNumber"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="10dp"
-                                android:background="@drawable/bg_edittext_box"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal"
-                                android:paddingTop="@dimen/padding_editBox"
-                                android:paddingBottom="@dimen/padding_editBox">
+                                app:hint_infoForm="@string/personalHint"
+                                app:icon_infoForm="@drawable/ic_personal_code_colored"
+                                app:editText_maxLine="10"
+                                app:editText_inputType="phone"
+                                app:title_infoForm="@string/personal_code" />
 
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/ed_LastName_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_weight="3"
-                                    android:background="@android:color/transparent"
-                                    android:gravity="start"
-                                    android:maxLines="1"
-                                    android:singleLine="true"
-                                    android:text="@={authViewModel.lastName}"
-                                    android:textDirection="rtl" />
-
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/img_LastName_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0.5"
-                                    app:srcCompat="@drawable/ic_lastname_signup" />
-
-                            </LinearLayout>
-
-
-                            <LinearLayout
+                            <com.example.alaa.customViews.InfoForm
+                                android:id="@+id/infoForm_school"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginEnd="10dp"
-                                android:gravity="end"
-                                android:orientation="horizontal">
+                                app:hint_infoForm="@string/schoolHint"
+                                app:icon_infoForm="@drawable/ic_school"
+                                app:editText_inputType="text"
+                                app:title_infoForm="@string/profileSchool" />
 
-
-                                <com.example.alaa.customViews.TextViewWithFont
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="top"
-                                    android:layout_marginTop="10dp"
-                                    android:layout_marginEnd="5dp"
-                                    android:text="@string/phone_number"
-                                    android:textColor="@color/blackTitle"
-                                    android:textSize="14sp"
-                                    app:MyTextViewFont="IRANSans_Bold" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
+                            <com.example.alaa.customViews.InfoForm
+                                android:id="@+id/infoForm_mail"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="10dp"
-                                android:background="@drawable/bg_edittext_box"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal"
-                                android:paddingTop="@dimen/padding_editBox"
-                                android:paddingBottom="@dimen/padding_editBox">
+                                app:hint_infoForm="@string/EmailHint"
+                                app:icon_infoForm="@drawable/ic_email_colored"
+                                app:editText_inputType="textEmailAddress"
+                                app:title_infoForm="@string/proMail" />
 
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/done_icon_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0.5"
-                                    android:visibility="gone"
-                                    app:srcCompat="@drawable/ic_done" />
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/ed_phoneNumber_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_weight="3"
-                                    android:background="@android:color/transparent"
-                                    android:gravity="end"
-                                    android:hint="@string/phone_number"
-                                    android:inputType="phone"
-                                    android:maxLength="11"
-                                    android:maxLines="1"
-                                    android:text="@={authViewModel.phoneNumber}" />
-
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/img_phoneNumber_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0.5"
-                                    app:srcCompat="@drawable/ic_mobile" />
-
-                            </LinearLayout>
-
-
-                            <LinearLayout
+                            <com.example.alaa.customViews.InfoForm
+                                android:id="@+id/infoForm_address"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:gravity="end"
-                                android:orientation="horizontal">
-
-                                <com.example.alaa.customViews.TextViewWithFont
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="top"
-                                    android:layout_marginEnd="5dp"
-                                    android:text="@string/personal_code"
-                                    android:textColor="@color/blackTitle"
-                                    android:textSize="14sp"
-                                    app:MyTextViewFont="IRANSans_Bold" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="10dp"
-                                android:background="@drawable/bg_edittext_box"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal"
-                                android:paddingTop="@dimen/padding_editBox"
-                                android:paddingBottom="@dimen/padding_editBox">
-
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/done_icon2_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0.5"
-                                    android:visibility="gone"
-                                    app:srcCompat="@drawable/ic_done" />
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/ed_personalNumber_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_weight="3"
-                                    android:background="@android:color/transparent"
-                                    android:gravity="end"
-                                    android:hint="@string/personalHint"
-                                    android:inputType="phone"
-                                    android:maxLength="10"
-                                    android:maxLines="1"
-                                    android:text="@={authViewModel.personalNumber}" />
-
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/img_personalNumber_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0.5"
-                                    app:srcCompat="@drawable/ic_personal_code" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:gravity="end"
-                                android:orientation="horizontal">
-
-                                <com.example.alaa.customViews.TextViewWithFont
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="top"
-                                    android:layout_marginEnd="5dp"
-                                    android:text="@string/profileSchool"
-                                    android:textColor="@color/blackTitle"
-                                    android:textSize="14sp"
-                                    app:MyTextViewFont="IRANSans_Bold" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="10dp"
-                                android:background="@drawable/bg_edittext_box"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal"
-                                android:paddingTop="@dimen/padding_editBox"
-                                android:paddingBottom="@dimen/padding_editBox">
-
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0.5"
-                                    android:visibility="gone"
-                                    app:srcCompat="@drawable/ic_done" />
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/ed_school_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_weight="3"
-                                    android:background="@android:color/transparent"
-                                    android:gravity="end"
-                                    android:hint="@string/personalHint"
-                                    android:inputType="phone"
-                                    android:maxLength="10"
-                                    android:maxLines="1"
-                                    android:text="@={authViewModel.personalNumber}" />
-
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/img_school_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0.5"
-                                    app:srcCompat="@drawable/ic_school" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:gravity="end"
-                                android:orientation="horizontal">
-
-                                <com.example.alaa.customViews.TextViewWithFont
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="top"
-                                    android:layout_marginEnd="5dp"
-                                    android:text="@string/signUp_Email"
-                                    android:textColor="@color/blackTitle"
-                                    android:textSize="14sp"
-                                    app:MyTextViewFont="IRANSans_Bold" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="10dp"
-                                android:background="@drawable/bg_edittext_box"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal"
-                                android:paddingTop="@dimen/padding_editBox"
-                                android:paddingBottom="@dimen/padding_editBox">
-
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/ed_Email_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_weight="3"
-                                    android:background="@android:color/transparent"
-                                    android:gravity="start"
-                                    android:hint="@string/EmailHint"
-                                    android:maxLines="1"
-                                    android:singleLine="true"
-                                    android:text="@={authViewModel.email}" />
-
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/img_Email_signUp"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0.5"
-                                    app:srcCompat="@drawable/ic_mail_signup" />
-
-                            </LinearLayout>
+                                app:icon_infoForm="@drawable/ic_home_location"
+                                app:editText_inputType="text"
+                                app:title_infoForm="@string/ProAddress" />
 
 
                             <LinearLayout
@@ -498,7 +191,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                     android:layout_gravity="top"
                                     android:layout_marginEnd="5dp"
                                     android:text="@string/major"
-                                    android:textColor="@color/blackTitle"
+                                    android:textColor="@color/alaa5"
                                     android:textSize="14sp"
                                     app:MyTextViewFont="IRANSans_Bold" />
 
@@ -565,9 +258,6 @@ tools:context=".views.ui.login.SignUpFragment"
 
 
                             </LinearLayout>
-
-
-                        </LinearLayout>
 
                     </LinearLayout>
 
