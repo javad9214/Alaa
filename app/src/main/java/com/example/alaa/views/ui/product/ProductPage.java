@@ -16,8 +16,8 @@ import com.example.alaa.customViews.TextViewWithFont;
 import com.example.alaa.databinding.ActivityProductPageBinding;
 import com.example.alaa.models.SampleVideoModel;
 import com.example.alaa.models.SelectableProductModel;
-import com.example.alaa.views.dashboard.Adapter_shop;
 import com.example.alaa.views.ui.MainActivity;
+import com.example.alaa.views.ui.dashboard.Adapter_shop;
 import com.example.alaa.views.ui.product.adapters.SampleVideoAdapter;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
@@ -119,7 +119,7 @@ public class ProductPage extends AppCompatActivity {
     }
 
     public void scrollToSamples(View view){
-        scrollToView(binding.contentProductPage.headerSampleVideos);
+        scrollToView(binding.contentProductPage.cardSampleVideo);
     }
 
     private void expandableTextView() {

@@ -115,6 +115,7 @@
                         app:icon_infoForm="@drawable/ic_mobile_color"
                         app:editText_maxLine="11"
                         app:editText_inputType="phone"
+                        app:isNecessary="true"
                         app:title_infoForm="@string/mobilePhoneNumber" />
 
 
@@ -126,6 +127,7 @@
                         app:icon_infoForm="@drawable/ic_personal_code_colored"
                         app:editText_maxLine="10"
                         app:editText_inputType="phone"
+                        app:isNecessary="true"
                         app:title_infoForm="@string/personal_code" />
 
                 </LinearLayout>

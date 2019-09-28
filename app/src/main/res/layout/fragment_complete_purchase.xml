@@ -398,6 +398,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
+
                     <com.example.alaa.customViews.TextViewWithFont
                         android:id="@+id/finalPrice"
                         android:layout_width="match_parent"

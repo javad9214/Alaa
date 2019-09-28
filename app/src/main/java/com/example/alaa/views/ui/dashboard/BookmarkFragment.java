@@ -1,17 +1,17 @@
-package com.example.alaa.views.dashboard;
+package com.example.alaa.views.ui.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.alaa.R;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.alaa.R;
 
 public class BookmarkFragment extends Fragment {
 

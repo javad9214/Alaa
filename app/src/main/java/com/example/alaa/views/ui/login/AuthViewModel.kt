@@ -24,7 +24,12 @@ class AuthViewModel : ViewModel() {
     var major = Major.RIAZI
 
 
-    var isMale = MutableLiveData(true)
+    var isMale = MutableLiveData(false)
+
+    // for set default gender null
+    var isDefault = MutableLiveData(true)
+
+
 
     /**
      * 0 : Login
@@ -33,8 +38,9 @@ class AuthViewModel : ViewModel() {
     var selectedPage = MutableLiveData(0)
 
 
+
     fun select(page: Int) {
-        selectedPage.run { setValue(page) }
+        selectedPage.run { value = page }
     }
 
     var gender: LiveData<Gender> = Transformations.map(isMale) {
@@ -44,8 +50,9 @@ class AuthViewModel : ViewModel() {
             Gender.FEMALE
     }
 
-    fun onGenderSelected(isMale: Boolean) {
+    fun onGenderSelected(isMale: Boolean, isDefault: Boolean) {
         this.isMale.value = isMale
+        this.isDefault.value = isDefault
     }
 
     fun onCheckedChangeListener(button: CompoundButton, isChecked: Boolean) {

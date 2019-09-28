@@ -4,17 +4,16 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
-import android.widget.FrameLayout
 import androidx.appcompat.widget.AppCompatImageView
-import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.example.alaa.R
+import com.google.android.material.card.MaterialCardView
 
 /**
  *   this custom view is for text on a Card view with colored background
  */
 
-class TextViewWithCardBackground(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
+class TextViewWithCardBackground(context: Context, attrs: AttributeSet) : MaterialCardView(context, attrs) {
 
 
     private var _text: String? = resources.getString(R.string.app_name)
@@ -28,7 +27,7 @@ class TextViewWithCardBackground(context: Context, attrs: AttributeSet) : FrameL
 
 
     private var textView: TextViewWithFont
-    private var cardView: CardView
+    private var cardView: MaterialCardView
     private var leftImageView: AppCompatImageView
     private var rightImageView: AppCompatImageView
 

@@ -25,7 +25,6 @@ public class SignUpFragment extends Fragment {
     public SignUpFragment(){}
 
 
-    private View view ;
     private AuthViewModel viewModel;
     private SignUpFragmentBinding binding ;
 
@@ -40,12 +39,14 @@ public class SignUpFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         binding = DataBindingUtil.inflate(inflater , R.layout.sign_up_fragment , container , false);
-        view = binding.getRoot() ;
+        View view = binding.getRoot();
 
         binding.setAuthViewModel(viewModel);
         binding.setLifecycleOwner(this);
 
-        return view ;
+        binding.imgProfileBoySignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileBoySignUp.getContext(), R.drawable.ic_profile_boy_black));
+
+        return view;
     }
 
 
@@ -54,6 +55,7 @@ public class SignUpFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         onGenderSelected();
+
         binding.btnSignUp.setOnClickListener(v -> {
             Intent intent = new Intent(getContext(), MainActivity.class);
             startActivity(intent);
@@ -65,15 +67,27 @@ public class SignUpFragment extends Fragment {
      * Method for select gender in SignUp Form ...
      */
     private void onGenderSelected() {
-        viewModel.isMale().observe(this, isMale -> {
-            if (isMale) {
-                binding.imgProfileBoySignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileBoySignUp.getContext(), R.drawable.ic_account_large));
-                binding.imgProfileGirlSignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileGirlSignUp.getContext(), R.drawable.ic_girl_profile_black));
-            } else {
-                binding.imgProfileGirlSignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileGirlSignUp.getContext(), R.drawable.ic_girl_profile));
+        /*
+            is default is for set default gender to none
+         */
+        viewModel.isDefault().observe(this, isDefault -> {
+            if (isDefault) {
                 binding.imgProfileBoySignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileBoySignUp.getContext(), R.drawable.ic_profile_boy_black));
+            } else {
+                viewModel.isMale().observe(this, isMale -> {
+                    if (isMale) {
+                        binding.imgProfileBoySignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileBoySignUp.getContext(), R.drawable.ic_account_large));
+                        binding.imgProfileGirlSignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileGirlSignUp.getContext(), R.drawable.ic_girl_profile_black));
+                    } else {
+                        binding.imgProfileGirlSignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileGirlSignUp.getContext(), R.drawable.ic_girl_profile));
+                        binding.imgProfileBoySignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileBoySignUp.getContext(), R.drawable.ic_profile_boy_black));
+                    }
+                });
             }
         });
-        binding.imgProfileBoySignUp.setImageDrawable(ContextCompat.getDrawable(binding.imgProfileBoySignUp.getContext(), R.drawable.ic_profile_boy_black));
+
+
     }
+
+
 }

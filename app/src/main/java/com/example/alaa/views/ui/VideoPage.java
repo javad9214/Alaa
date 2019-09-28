@@ -20,7 +20,7 @@ import com.example.alaa.R;
 import com.example.alaa.customViews.TextViewWithFont;
 import com.example.alaa.databinding.ActivityVideoPageBinding;
 import com.example.alaa.views.adapters.HomeRecyclerAdapter;
-import com.example.alaa.views.dashboard.Adapter_shop;
+import com.example.alaa.views.ui.dashboard.Adapter_shop;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
 import com.hzn.lib.EasyTransition;

@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.alaa.R;
 import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ui.cart.Cart;
+import com.example.alaa.views.ui.dashboard.DashboardFragment;
 import com.example.alaa.views.ui.main.HomeFragment;
 import com.example.alaa.views.ui.main.ShopFragment;
 import com.example.alaa.views.ui.profile.ProfileFragment;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
     public static final String TAG = "===>";
     private HomeFragment homeFragment;
     private ShopFragment shopFragment;
+    private DashboardFragment dashboardFragment;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = item -> {
         switch (item.getItemId()) {
@@ -45,8 +47,8 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
                 startActivity(intent);
                 return true;
 
-            case R.id.navigation_MyProfile:
-
+            case R.id.navigation_MyDashboard:
+                replaceFragment(dashboardFragment);
                 return true;
             default:
                 //TODO:// default ?
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
 
         homeFragment = new HomeFragment();
         shopFragment = new ShopFragment();
+        dashboardFragment = new DashboardFragment();
         replaceFragment(homeFragment);
 
 

@@ -62,6 +62,7 @@ class InfoForm(context: Context, attrs: AttributeSet? = null) : LinearLayout(con
         titleTextView = binding.title
         valueEditText = binding.edValue
         iconImageView = binding.icon
+        iconIsNecessaary = binding.necessaryStar
     }
 
     private fun loadAttributes(attrs: AttributeSet?) {

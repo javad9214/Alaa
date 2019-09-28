@@ -27,7 +27,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/alaa_logo_colored" />
+                    android:src="@drawable/alaa_logo_black" />
 
 
                 <androidx.appcompat.widget.AppCompatImageView

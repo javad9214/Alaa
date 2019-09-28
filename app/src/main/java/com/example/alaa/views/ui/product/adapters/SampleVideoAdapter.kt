@@ -31,6 +31,7 @@ class SampleVideoAdapter (private val sampleList : ArrayList<SampleVideoModel>):
         val title: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.title_sample_video)
         val teacherName: com.example.alaa.customViews.TextViewWithFont = itemView.findViewById(R.id.tx_teacherName)
 
-
     }
+
+
 }

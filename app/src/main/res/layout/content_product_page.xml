@@ -163,6 +163,20 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
+                        <com.example.alaa.customViews.TextViewWithFont
+                            android:id="@+id/description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:padding="@dimen/margin_10dp"
+                            android:text="@string/description"
+                            android:textColor="@color/gray"
+                            android:textSize="16sp"
+                            app:MyTextViewFont="IRANSans_Light_4.1"
+                            app:animation_duration="750" />
+
                         <com.example.alaa.customViews.ButtonWithFont
                             android:id="@+id/btn_continue"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -177,20 +191,6 @@
                             app:backgroundTint="@color/grayWhite"
                             app:iconGravity="textStart"
                             app:iconTint="@color/blackTitle" />
-
-                        <com.example.alaa.customViews.TextViewWithFont
-                            android:id="@+id/description"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:ellipsize="end"
-                            android:maxLines="5"
-                            android:padding="@dimen/margin_10dp"
-                            android:text="@string/description"
-                            android:textColor="@color/gray"
-                            android:textSize="16sp"
-                            app:MyTextViewFont="IRANSans_Light_4.1"
-                            app:animation_duration="750" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>

@@ -3,7 +3,7 @@
 
 
     <item
-        android:id="@+id/navigation_MyProfile"
+        android:id="@+id/navigation_MyDashboard"
         android:icon="@drawable/ic_myprofile_navbar"
         android:title="@string/title_myDashboard" />
 

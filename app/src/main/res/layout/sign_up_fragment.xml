@@ -80,7 +80,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:layout_marginTop="20dp"
                                 android:layout_marginEnd="5dp"
                                 android:layout_weight="1"
-                                android:onClickListener="@{() -> authViewModel.onGenderSelected(true)}"
+                                android:onClickListener="@{() -> authViewModel.onGenderSelected(true , false)}"
                                 app:srcCompat="@drawable/ic_profile_boy_black" />
 
                             <androidx.appcompat.widget.AppCompatImageView
@@ -92,7 +92,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:layout_marginTop="20dp"
                                 android:layout_marginEnd="5dp"
                                 android:layout_weight="1"
-                                android:onClickListener="@{() -> authViewModel.onGenderSelected(false)}"
+                                android:onClickListener="@{() -> authViewModel.onGenderSelected(false , false)}"
                                 app:srcCompat="@drawable/ic_girl_profile_black" />
 
                             <com.example.alaa.customViews.TextViewWithFont

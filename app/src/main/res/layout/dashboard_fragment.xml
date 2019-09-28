@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.ui.dashboard.DashboardFragment">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl">
+
+        <com.example.alaa.customViews.TextViewWithCardBackground
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16dp"
+            android:elevation="2dp"
+            app:card_color="@color/alaa5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:text="@string/myVideos"
+            app:text_color="@color/pureWhite"
+            app:text_font="shabnam_light"
+            app:text_size="7sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,4 +1,4 @@
-package com.example.alaa.views.dashboard;
+package com.example.alaa.views.ui.dashboard;
 
 import android.content.Context;
 import android.view.LayoutInflater;
