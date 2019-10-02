@@ -23,11 +23,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:text="@string/myVideos"
             app:text_color="@color/pureWhite"
-            app:text_font="shabnam_light"
+            app:text_font="IRANSans_Medium"
             app:text_size="7sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_dashboard"
+            android:paddingBottom="@dimen/paddingBottom"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="@dimen/margin_10dp"

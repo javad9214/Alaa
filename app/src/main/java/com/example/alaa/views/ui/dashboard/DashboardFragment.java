@@ -16,6 +16,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
+
 
 public class DashboardFragment extends BottomSheetDialogFragment {
 
@@ -42,13 +44,14 @@ public class DashboardFragment extends BottomSheetDialogFragment {
 
         setUpRecycler();
 
+
         return view;
     }
 
 
     private void setUpRecycler() {
 
-        MyProductsAdapter adapter = new MyProductsAdapter();
+        MyProductsAdapter adapter = new MyProductsAdapter(R.layout.my_products, Objects.requireNonNull(getActivity()));
 
         RecyclerView recyclerView = binding.recyclerDashboard;
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));

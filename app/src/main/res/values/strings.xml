@@ -215,6 +215,8 @@
     <string name="nameHint">مثلا : سجاد</string>
     <string name="booklets">جزوات</string>
     <string name="videos">فیلم ها</string>
+    <string name="doDownload">دانلود کن</string>
+    <string name="watch">تماشا کن</string>
 
 
 </resources>

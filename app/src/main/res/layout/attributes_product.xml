@@ -15,6 +15,16 @@
         android:layout_marginBottom="@dimen/margin_10dp"
         android:orientation="vertical">
 
+        <com.example.alaa.customViews.TextViewWithFont
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="@string/features"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:MyTextViewFont="IRANSans_Bold" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -276,16 +286,6 @@
 
 
         </LinearLayout>
-
-        <com.example.alaa.customViews.TextViewWithFont
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|center_vertical"
-            android:layout_marginStart="16dp"
-            android:text="@string/features"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:MyTextViewFont="IRANSans_Bold" />
 
 
     </LinearLayout>

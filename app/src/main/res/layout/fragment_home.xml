@@ -131,17 +131,6 @@
 
                 </LinearLayout>
 
-
-                <com.example.alaa.customViews.HeaderWithLine
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:header_buttonText="@string/more"
-                    app:header_hasButton="true"
-                    app:header_text="@string/demo_title_block"
-                    app:header_textColor="@color/black"
-                    app:header_textSize="6sp" />
-
-
             </LinearLayout>
 
 

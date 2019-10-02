@@ -11,14 +11,15 @@
     android:orientation="vertical"
     app:cardCornerRadius="10dp">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/thumbnail_product"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:adjustViewBounds="true"
             android:src="@drawable/dum_product"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +35,7 @@
             android:text="@string/titleProductItem"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:MyTextViewFont="IRANSans_Bold"
+            app:MyTextViewFont="IRANSans_Medium"
             app:layout_constraintBottom_toTopOf="@id/thumbnail_product"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/thumbnail_product"
@@ -46,7 +47,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/booklets"
+            android:textColor="@color/black"
+            app:MyButtonFont="IRANSans_Light"
             app:icon="@drawable/ic_sample_booklet"
+            app:iconTint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_video"
             app:layout_constraintStart_toEndOf="@id/thumbnail_product" />
@@ -56,6 +60,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/videos"
+            app:MyButtonFont="IRANSans_Light"
+            app:backgroundTint="@color/BonGreen"
             app:icon="@drawable/ic_movie_symbol_of_video_camera"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
