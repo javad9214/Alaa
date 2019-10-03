@@ -147,7 +147,7 @@
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/btn_GoToSignUpCard"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"

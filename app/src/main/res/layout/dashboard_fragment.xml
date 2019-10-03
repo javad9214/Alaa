@@ -19,10 +19,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_16dp"
             android:elevation="2dp"
-            app:card_color="@color/alaa5"
+            app:card_color="@color/pureWhite"
             app:layout_constraintTop_toTopOf="parent"
             app:text="@string/myVideos"
-            app:text_color="@color/pureWhite"
+            app:strokeColor="@color/alaa5"
+            app:text_color="@color/alaa5"
             app:text_font="IRANSans_Medium"
             app:text_size="7sp" />
 

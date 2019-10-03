@@ -1,72 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/margin_5dp"
-    android:layout_marginTop="@dimen/margin_10dp"
-    android:layout_marginEnd="@dimen/margin_5dp"
-    android:layout_marginBottom="@dimen/margin_10dp"
-    android:layoutDirection="rtl"
-    android:orientation="vertical"
-    app:cardCornerRadius="10dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/thumbnail_product"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/dum_product"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.example.alaa.customViews.TextViewWithFont
-            android:id="@+id/tx_title_product"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_5dp"
-            android:gravity="center"
-            android:lines="3"
-            android:text="@string/titleProductItem"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:MyTextViewFont="IRANSans_Medium"
-            app:layout_constraintBottom_toTopOf="@id/thumbnail_product"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/thumbnail_product"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_5dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        app:cardCornerRadius="10dp">
 
 
-        <com.example.alaa.customViews.ButtonWithFont
-            android:id="@+id/btn_booklet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/booklets"
-            android:textColor="@color/black"
-            app:MyButtonFont="IRANSans_Light"
-            app:icon="@drawable/ic_sample_booklet"
-            app:iconTint="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn_video"
-            app:layout_constraintStart_toEndOf="@id/thumbnail_product" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <com.example.alaa.customViews.ButtonWithFont
-            android:id="@+id/btn_video"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/videos"
-            app:MyButtonFont="IRANSans_Light"
-            app:backgroundTint="@color/BonGreen"
-            app:icon="@drawable/ic_movie_symbol_of_video_camera"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn_booklet" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/thumbnail_product"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/dum_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.example.alaa.customViews.TextViewWithFont
+                android:id="@+id/tx_title_product"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5dp"
+                android:gravity="center"
+                android:lines="3"
+                android:text="@string/titleProductItem"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:MyTextViewFont="IRANSans_Medium"
+                app:layout_constraintBottom_toTopOf="@id/thumbnail_product"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/thumbnail_product"
+                app:layout_constraintTop_toTopOf="parent" />
 
-</com.google.android.material.card.MaterialCardView>
+
+            <com.example.alaa.customViews.ButtonWithFont
+                android:id="@+id/btn_booklet"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/booklets"
+                android:textColor="@color/alaa5"
+                app:MyButtonFont="IRANSans_Light"
+                app:icon="@drawable/ic_pdf_file"
+                app:iconTint="@color/alaa5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_video"
+                app:layout_constraintStart_toEndOf="@id/thumbnail_product"
+                app:strokeColor="@color/alaa5" />
+
+            <com.example.alaa.customViews.ButtonWithFont
+                android:id="@+id/btn_video"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/videos"
+                android:textColor="@color/BonGreen"
+                app:MyButtonFont="IRANSans_Light"
+                app:icon="@drawable/ic_youtube_black"
+                app:iconTint="@color/BonGreen"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_booklet"
+                app:strokeColor="@color/BonGreen" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

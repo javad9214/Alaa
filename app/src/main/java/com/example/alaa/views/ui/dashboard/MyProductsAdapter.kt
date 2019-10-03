@@ -1,9 +1,11 @@
 package com.example.alaa.views.ui.dashboard
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alaa.R
 import com.example.alaa.customViews.ButtonWithFont
@@ -14,9 +16,13 @@ import com.example.alaa.customViews.ButtonWithFont
 
 class MyProductsAdapter(private val layout: Int, private val activity: FragmentActivity) : RecyclerView.Adapter<MyProductsAdapter.ViewHolder>() {
 
+    private lateinit var viewModel: DashboardViewModel
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(layout, parent, false)
+
+        viewModel = ViewModelProvider(activity).get(DashboardViewModel::class.java)
+
         return ViewHolder(v)
     }
 
@@ -27,11 +33,21 @@ class MyProductsAdapter(private val layout: Int, private val activity: FragmentA
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.btnVideos.setOnClickListener {
-            val bottomSheet = ShowSetBottomSheet()
-            bottomSheet.show(activity.supportFragmentManager, bottomSheet.tag)
+            viewModel.onTypeSelected(BottomSheetType.MyVideos)
+            showBottomSheet()
+        }
+
+        holder.btnBooklet.setOnClickListener {
+            viewModel.onTypeSelected(BottomSheetType.MyBooklets)
+            Log.i("===>", " on adapter :  ${viewModel.type}")
+            showBottomSheet()
         }
     }
 
+    private fun showBottomSheet() {
+        val bottomSheet = ShowSetBottomSheet()
+        bottomSheet.show(activity.supportFragmentManager, bottomSheet.tag)
+    }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
