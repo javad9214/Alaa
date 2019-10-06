@@ -159,7 +159,6 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
-                    android:onClickListener="@{() -> authViewModel.select(1)}"
                     android:text="@string/GoToSignUp"
                     android:visibility="visible"
                     app:MyButtonFont="IRANSans_Light" />
