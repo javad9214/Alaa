@@ -31,8 +31,9 @@ class ShowSetBottomSheet : BottomSheetDialogFragment() {
         viewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
         setUpRecycler()
 
-        Log.i("===>", viewModel.type.toString())
+        Log.i("===>", viewModel.type.value.toString())
 
+        onClose()
         return binding.root
     }
 
@@ -45,6 +46,11 @@ class ShowSetBottomSheet : BottomSheetDialogFragment() {
         recyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         recyclerView.adapter = adapter
 
+    }
+
+
+    private fun onClose() {
+        binding.close.setOnClickListener { dismiss() }
     }
 
 

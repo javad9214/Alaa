@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
                     android:text="@string/applyDiscount"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     app:MyButtonFont="IRANSans_Light"
                     app:backgroundTint="@color/alaa5"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -74,26 +74,22 @@
                     app:layout_constraintBottom_toTopOf="@id/btn_apply_discount"/>
 
 
-
-
-                <com.google.android.material.textfield.TextInputLayout
+                <com.example.alaa.customViews.EditTextWithFont
                     android:id="@+id/ed_discount"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_margin="5dp"
+                    android:gravity="center"
                     android:hint="@string/discountHint"
-                    android:visibility="gone"
+                    android:text="@={cartViewModel.discountCode}"
+                    android:textSize="16sp"
+                    app:EditTextFont="MaliBoldItalic"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/btn_apply_discount"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/discountCodeSwitch">
+                    app:layout_constraintTop_toBottomOf="@id/discountCodeSwitch" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@={cartViewModel.discountCode}"/>
 
-                </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.example.alaa.customViews.TextViewWithFont

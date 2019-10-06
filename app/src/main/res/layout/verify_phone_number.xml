@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/backgroundtoolbar"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineHalf"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHalf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.60" />
+
+        <LinearLayout
+            android:id="@+id/alaa_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/card_login">
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:id="@+id/login_describe1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/describe01"
+                android:textColor="@color/pureWhite"
+                android:textSize="20sp"
+                app:MyTextViewFont="IRANSans_Bold" />
+
+            <com.example.alaa.customViews.TextViewWithFont
+                android:id="@+id/login_describe2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="@string/describe02"
+                android:textColor="@color/pureWhite"
+                app:MyTextViewFont="IRANSans_Medium" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTopCardLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.30" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_login"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/cardLoginMargin"
+            android:layout_marginEnd="@dimen/cardLoginMargin"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/card_dimen"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineBottomCardLogin"
+            app:layout_constraintTop_toBottomOf="@id/guidelineTopCardLogin">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/alaa_logo_black" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.example.alaa.customViews.EditTextWithFont
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_box" />
+
+                    <com.example.alaa.customViews.EditTextWithFont
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_box" />
+
+                    <com.example.alaa.customViews.EditTextWithFont
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_box" />
+
+                    <com.example.alaa.customViews.EditTextWithFont
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_box" />
+
+                    <com.example.alaa.customViews.EditTextWithFont
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_box" />
+
+
+                </LinearLayout>
+
+
+                <com.example.alaa.customViews.ButtonWithFont
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:text="@string/Login"
+                    android:visibility="visible"
+                    app:MyButtonFont="IRANSans_Medium" />
+
+
+                <com.example.alaa.customViews.ButtonWithFont
+                    android:id="@+id/btn_GoToSignUpCard"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:onClickListener="@{() -> authViewModel.select(1)}"
+                    android:text="@string/GoToSignUp"
+                    android:visibility="visible"
+                    app:MyButtonFont="IRANSans_Light" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottomCardLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

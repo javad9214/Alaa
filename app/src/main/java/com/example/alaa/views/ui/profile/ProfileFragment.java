@@ -206,7 +206,7 @@ public class ProfileFragment extends BottomSheetDialogFragment {
 
     private void onClose() {
         binding.closeProfile.setOnClickListener(view -> {
-            onStop();
+            dismiss();
         });
     }
 

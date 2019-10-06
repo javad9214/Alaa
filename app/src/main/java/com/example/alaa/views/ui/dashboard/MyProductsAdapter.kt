@@ -39,7 +39,7 @@ class MyProductsAdapter(private val layout: Int, private val activity: FragmentA
 
         holder.btnBooklet.setOnClickListener {
             viewModel.onTypeSelected(BottomSheetType.MyBooklets)
-            Log.i("===>", " on adapter :  ${viewModel.type}")
+            Log.i("===>", " on adapter :  ${viewModel.type.value.toString()}")
             showBottomSheet()
         }
     }

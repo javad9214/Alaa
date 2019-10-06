@@ -25,6 +25,7 @@ public class DashboardFragment extends BottomSheetDialogFragment {
     public static final String TAG = "===>" ;
 
     private DashboardFragmentBinding binding;
+    private DashboardViewModel viewModel;
 
     public DashboardFragment() {
     }
@@ -41,7 +42,7 @@ public class DashboardFragment extends BottomSheetDialogFragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.dashboard_fragment, container, false);
         View view = binding.getRoot();
         binding.setLifecycleOwner(this);
-
+        //viewModel = ViewModelProviders.of(this).get(DashboardViewModel.class);
         setUpRecycler();
 
 

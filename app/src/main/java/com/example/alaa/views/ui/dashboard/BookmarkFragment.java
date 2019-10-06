@@ -45,7 +45,7 @@ public class BookmarkFragment extends Fragment {
         linearLayoutManager.canScrollVertically();
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        Adapter_shop adapter = new Adapter_shop(getContext() , R.layout.content_recycler_more);
+        Adapter_shop adapter = new Adapter_shop(getContext(), R.layout.content_recycler_videos_lessons);
         recyclerView.setAdapter(adapter);
     }
 

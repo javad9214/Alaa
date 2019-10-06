@@ -20,6 +20,6 @@ class MyVideosAdapter(private val layout: Int) : RecyclerView.Adapter<MyVideosAd
 
     }
 
-
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
 }

@@ -138,7 +138,7 @@ public class VideoPage extends AppCompatActivity  {
         linearLayoutManager.canScrollVertically();
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        Adapter_shop adapter = new Adapter_shop(this, R.layout.content_recycler_more);
+        Adapter_shop adapter = new Adapter_shop(this, R.layout.content_recycler_videos_lessons);
         recyclerView.setAdapter(adapter);
     }
 

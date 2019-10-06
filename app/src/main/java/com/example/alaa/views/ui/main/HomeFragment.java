@@ -24,7 +24,6 @@ import com.example.alaa.R;
 import com.example.alaa.views.ViewPager.PagerAdapter;
 import com.example.alaa.views.adapters.HomeRecyclerAdapter;
 import com.example.alaa.views.ui.VideoPage;
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -76,9 +75,6 @@ public class HomeFragment extends Fragment implements HomeRecyclerAdapter.ItemCl
         // loopingViewPager.setClipToPadding(false);
         //loopingViewPager.setPadding(50 , 0 , 50 , 0);
         // loopingViewPager.setPageMargin(-50);
-
-        DotsIndicator dotsIndicator = view.findViewById(R.id.dots_indicator);
-
 
         loopingViewPager.setAdapter(pagerAdapter);
 

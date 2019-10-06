@@ -1,5 +1,6 @@
 package com.example.alaa.views.ui.dashboard
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 /*
@@ -11,10 +12,10 @@ import androidx.lifecycle.ViewModel
 
 class DashboardViewModel : ViewModel() {
 
-    var type = BottomSheetType.Collection
+    var type = MutableLiveData<BottomSheetType>()
 
     fun onTypeSelected(type: BottomSheetType) {
-        this.type = type
+        this.type.value = type
     }
 
 }
