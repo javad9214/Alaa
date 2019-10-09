@@ -13,10 +13,10 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@drawable/backgroundtoolbar"
-            android:gravity="center_horizontal"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="@id/guidelineHalf"
+            android:background="@drawable/backgroundtoolbar"
+            android:gravity="center_horizontal"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
@@ -28,11 +28,11 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/alaa_description"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_30dp"
-            android:orientation="vertical"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintBottom_toTopOf="@id/card_login">
 
             <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/login_describe1"
@@ -56,22 +56,28 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTopCardLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.30" />
 
         <com.google.android.material.card.MaterialCardView
+            android:layout_height="0dp"
+            app:cardElevation="@dimen/card_dimen"
             android:id="@+id/card_login"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineBottomCardLogin"
             android:layout_marginStart="@dimen/cardLoginMargin"
             android:layout_marginEnd="@dimen/cardLoginMargin"
             android:orientation="vertical"
             android:visibility="visible"
             app:cardCornerRadius="10dp"
-            app:cardElevation="@dimen/card_dimen"
-            app:layout_constraintBottom_toBottomOf="@id/guidelineBottomCardLogin"
-            app:layout_constraintTop_toBottomOf="@id/alaa_description">
+            app:layout_constraintTop_toBottomOf="@id/guidelineTopCardLogin">
 
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -79,20 +85,38 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_profile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
+                    android:layout_width="220dp"
+                    android:layout_height="120dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1.5"
                     android:src="@drawable/alaa_logo_black" />
 
+                <com.example.alaa.customViews.TextViewWithFont
+                    android:id="@+id/describeCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:text="@string/enterAuthMSG"
+                    android:textColor="@color/alaa5"
+                    app:MyTextViewFont="IRANSans_Medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_profile" />
+
                 <com.chaos.view.PinView
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/btn_login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     android:id="@+id/authPinView"
                     style="@style/PinWidget.PinView"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.5"
+                    app:layout_constraintTop_toBottomOf="@id/describeCode"
                     android:cursorVisible="true"
                     android:inputType="phone"
                     android:textColor="@color/alaa5"
@@ -110,21 +134,27 @@
                     app:lineWidth="1dp"
                     app:viewType="rectangle" />
 
-
-
-                <com.example.alaa.customViews.ButtonWithFont
+                <com.example.alaa.customViews.ExtendedFloatingActionButtonWithFont
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="50dp"
                     android:id="@+id/btn_login"
+                    android:text="@string/ConfirmCode"
+                    android:textColor="@color/pureWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:enabled="true"
-                    android:gravity="center"
-                    android:text="@string/Login"
-                    android:visibility="visible"
-                    app:MyButtonFont="IRANSans_Medium" />
+                    app:MyExtendedButtonFont="IRANSans_Medium"
+                    app:backgroundTint="@color/alaa5"
+                    app:icon="@drawable/ic_done"
+                    app:iconGravity="start"
+                    app:iconTint="@color/pureWhite"
+                    app:iconTintMode="src_in"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -135,6 +165,6 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.95" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

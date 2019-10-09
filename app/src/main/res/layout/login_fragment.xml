@@ -133,21 +133,25 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-                <com.example.alaa.customViews.ButtonWithFont
+                <com.example.alaa.customViews.ExtendedFloatingActionButtonWithFont
                     android:id="@+id/btn_login"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:enabled="true"
-                    android:gravity="center"
                     android:text="@string/Login"
-                    app:MyButtonFont="IRANSans_Medium"
-                    android:visibility="visible" />
+                    android:textColor="@color/pureWhite"
+                    app:MyExtendedButtonFont="IRANSans_Medium"
+                    app:backgroundTint="@color/alaa5"
+                    app:icon="@drawable/ic_login"
+                    app:iconGravity="end"
+                    app:iconTint="@color/pureWhite"
+                    app:iconTintMode="src_in" />
 
 
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/btn_GoToSignUpCard"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
