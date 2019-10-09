@@ -12,7 +12,7 @@
         style="@style/ProfileBottomSheet"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="start"
@@ -38,9 +38,9 @@
                         app:icon="@drawable/ic_previous"
                         app:iconPadding="8dp" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal">
@@ -56,10 +56,10 @@
                         app:tint="@color/alaa3" />
 
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end"
@@ -76,7 +76,7 @@
                         app:icon="@drawable/ic_upnext"
                         app:iconPadding="8dp" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
             </RelativeLayout>
 
@@ -88,7 +88,7 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
 
     </androidx.cardview.widget.CardView>

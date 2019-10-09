@@ -26,13 +26,13 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.60" />
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/alaa_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_30dp"
+            android:layout_marginTop="@dimen/margin_30dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/card_login">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.example.alaa.customViews.TextViewWithFont
                 android:id="@+id/login_describe1"
@@ -54,16 +54,10 @@
                 android:textColor="@color/pureWhite"
                 app:MyTextViewFont="IRANSans_Medium" />
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineTopCardLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.30" />
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_login"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -74,10 +68,10 @@
             app:cardCornerRadius="10dp"
             app:cardElevation="@dimen/card_dimen"
             app:layout_constraintBottom_toBottomOf="@id/guidelineBottomCardLogin"
-            app:layout_constraintTop_toBottomOf="@id/guidelineTopCardLogin">
+            app:layout_constraintTop_toBottomOf="@id/alaa_description">
 
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -92,51 +86,30 @@
                     android:layout_weight="1.5"
                     android:src="@drawable/alaa_logo_black" />
 
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <com.chaos.view.PinView
+                    android:id="@+id/authPinView"
+                    style="@style/PinWidget.PinView"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_weight="0.5"
+                    android:cursorVisible="true"
+                    android:inputType="phone"
+                    android:textColor="@color/alaa5"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:cursorColor="@color/green"
+                    app:cursorWidth="2dp"
+                    app:hideLineWhenFilled="true"
+                    app:itemCount="5"
+                    app:itemHeight="48dp"
+                    app:itemRadius="10dp"
+                    app:itemSpacing="10dp"
+                    app:itemWidth="48dp"
+                    app:lineColor="@color/black"
+                    app:lineWidth="1dp"
+                    app:viewType="rectangle" />
 
-                    <com.example.alaa.customViews.EditTextWithFont
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/margin_10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_edittext_box" />
-
-                    <com.example.alaa.customViews.EditTextWithFont
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/margin_10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_edittext_box" />
-
-                    <com.example.alaa.customViews.EditTextWithFont
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/margin_10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_edittext_box" />
-
-                    <com.example.alaa.customViews.EditTextWithFont
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/margin_10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_edittext_box" />
-
-                    <com.example.alaa.customViews.EditTextWithFont
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/margin_10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_edittext_box" />
-
-
-                </LinearLayout>
 
 
                 <com.example.alaa.customViews.ButtonWithFont
@@ -151,21 +124,9 @@
                     app:MyButtonFont="IRANSans_Medium" />
 
 
-                <com.example.alaa.customViews.ButtonWithFont
-                    android:id="@+id/btn_GoToSignUpCard"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:text="@string/GoToSignUp"
-                    android:visibility="visible"
-                    app:MyButtonFont="IRANSans_Light" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineBottomCardLogin"
@@ -173,6 +134,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.95" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -8,13 +8,12 @@
     app:cardCornerRadius="@dimen/box_corner_radius">
 
 
-
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -39,7 +38,7 @@
                 android:layout_marginTop="@dimen/margin_5dp">
 
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -80,7 +79,7 @@
                         app:MyTextViewFont="estedad" />
 
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 
@@ -99,7 +98,7 @@
                 app:MyTextViewFont="IRANSans_Bold" />
 
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
 
        <androidx.recyclerview.widget.RecyclerView
@@ -111,7 +110,7 @@
 
        </androidx.recyclerview.widget.RecyclerView>
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <com.example.alaa.customViews.TextViewWithFont
         android:layout_width="wrap_content"

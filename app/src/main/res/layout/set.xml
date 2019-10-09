@@ -27,7 +27,7 @@
             android:src="@drawable/dum00" />
 
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/blackOpacity"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_round_playlist_play_24px"
                 app:tint="@color/pureWhite" />
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
 
         <androidx.constraintlayout.widget.Guideline

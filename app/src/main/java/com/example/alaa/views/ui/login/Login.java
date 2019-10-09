@@ -30,13 +30,14 @@ public class Login extends AppCompatActivity {
         viewModel = ViewModelProviders.of(this).get(AuthViewModel.class);
         LoginFragment loginFragment = new LoginFragment();
         SignUpFragment signUpFragment = new SignUpFragment();
+        VerifyPhoneNumberFragment verifyPhoneNumberFragment = new VerifyPhoneNumberFragment();
 
 
         viewModel.getSelectedPage().observe(this, page -> {
             if (page == 0){
                 replaceFragment(loginFragment);
             }else {
-                replaceFragment(signUpFragment);
+                replaceFragment(verifyPhoneNumberFragment);
             }
         });
 

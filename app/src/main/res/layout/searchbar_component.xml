@@ -7,8 +7,7 @@
     android:layoutDirection="rtl">
 
 
-
-        <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_5dp"
@@ -47,7 +46,7 @@
                 android:textColorHint="@color/pureWhite"
                 android:textDirection="rtl" />
 
-        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 

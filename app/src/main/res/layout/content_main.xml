@@ -13,7 +13,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -44,16 +44,14 @@
                 app:progressMode="true" />
 
 
-
-
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:orientation="vertical"
                 android:paddingBottom="10dp">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -82,7 +80,7 @@
                         android:textSize="16sp"
                         app:MyTextViewFont="IRANSans_Light" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler01"
@@ -92,17 +90,17 @@
 
                 </androidx.recyclerview.widget.RecyclerView>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:orientation="vertical"
                 android:paddingBottom="16dp">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -127,7 +125,7 @@
                         android:textSize="16sp"
                         app:MyTextViewFont="IRANSans_Light" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler02"
@@ -137,17 +135,17 @@
 
                 </androidx.recyclerview.widget.RecyclerView>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:orientation="vertical"
                 android:paddingBottom="16dp">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -171,7 +169,7 @@
                         android:textSize="16sp"
                         app:MyTextViewFont="IRANSans_Light" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler03"
@@ -181,17 +179,17 @@
 
                 </androidx.recyclerview.widget.RecyclerView>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:orientation="vertical"
                 android:paddingBottom="66dp">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -215,7 +213,7 @@
                         android:textSize="16sp"
                         app:MyTextViewFont="IRANSans_Light" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler04"
@@ -226,10 +224,10 @@
 
                 </androidx.recyclerview.widget.RecyclerView>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
 
     </ScrollView>

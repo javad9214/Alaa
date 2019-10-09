@@ -17,7 +17,7 @@ tools:context=".views.ui.login.SignUpFragment"
         android:layout_height="match_parent">
 
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
             android:layout_height="350dp"
@@ -26,7 +26,7 @@ tools:context=".views.ui.login.SignUpFragment"
             android:orientation="vertical">
 
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.cardview.widget.CardView
 
@@ -44,7 +44,7 @@ tools:context=".views.ui.login.SignUpFragment"
             app:cardElevation="@dimen/card_dimen">
 
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -58,14 +58,14 @@ tools:context=".views.ui.login.SignUpFragment"
                     android:fadingEdgeLength="130dp"
                     android:requiresFadingEdge="vertical">
 
-                    <LinearLayout
+                    <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:focusable="true"
                         android:focusableInTouchMode="true"
                         android:orientation="vertical">
 
-                        <LinearLayout
+                        <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
@@ -105,7 +105,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 android:textColor="@color/alaa5"
                                 android:textSize="14sp"
                                 app:MyTextViewFont="IRANSans_Bold" />
-                        </LinearLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 
@@ -177,7 +177,7 @@ tools:context=".views.ui.login.SignUpFragment"
                                 app:title_infoForm="@string/ProAddress" />
 
 
-                            <LinearLayout
+                        <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -195,9 +195,9 @@ tools:context=".views.ui.login.SignUpFragment"
                                     android:textSize="14sp"
                                     app:MyTextViewFont="IRANSans_Bold" />
 
-                            </LinearLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
 
-                            <LinearLayout
+                        <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
@@ -257,9 +257,9 @@ tools:context=".views.ui.login.SignUpFragment"
                                 </com.google.android.material.chip.ChipGroup>
 
 
-                            </LinearLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    </LinearLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </ScrollView>
 
@@ -290,7 +290,7 @@ tools:context=".views.ui.login.SignUpFragment"
                     android:visibility="visible"
                     android:onClickListener="@{() -> authViewModel.select(0)}"/>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.cardview.widget.CardView>
 

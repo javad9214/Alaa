@@ -32,7 +32,7 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.60" />
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/alaa_description"
             android:layout_marginBottom="@dimen/margin_30dp"
             app:layout_constraintBottom_toTopOf="@id/card_login"
@@ -60,7 +60,7 @@
                 android:textColor="@color/pureWhite"
                 app:MyTextViewFont="IRANSans_Medium" />
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineTopCardLogin"
@@ -83,7 +83,7 @@
             app:cardElevation="@dimen/card_dimen">
 
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -98,7 +98,7 @@
                     android:layout_weight="1.5"
                     android:src="@drawable/alaa_logo_black" />
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="3"
@@ -130,7 +130,7 @@
                         app:isNecessary="true"
                         app:title_infoForm="@string/personal_code" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
 
                 <com.example.alaa.customViews.ButtonWithFont
@@ -158,7 +158,7 @@
                     app:MyButtonFont="IRANSans_Light"
                     android:onClickListener="@{() -> authViewModel.select(1)}"/>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.cardview.widget.CardView>
 

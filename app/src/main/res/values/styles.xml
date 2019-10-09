@@ -17,8 +17,8 @@
         <item name="colorPrimaryDark">@color/alaa1</item>
         <item name="colorAccent">@color/alaa5</item>
 
-
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="pinViewStyle">@style/PinWidget.PinView</item>
 
     </style>
 

@@ -15,7 +15,7 @@
             app:cardCornerRadius="10dp">
 
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -75,7 +75,7 @@
                     android:textSize="14sp"
                     app:MyTextViewFont="IRANSans_Light" />
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
         </com.google.android.material.card.MaterialCardView>
