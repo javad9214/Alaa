@@ -1,5 +1,6 @@
 package com.example.alaa.views.ui.login;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,6 +29,8 @@ public class LoginFragment extends Fragment {
     private AuthViewModel viewModel;
     private LoginFragmentBinding binding;
     public static final String TAG = "Alaa\\LoginFragment";
+    private int height;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,16 +61,12 @@ public class LoginFragment extends Fragment {
             startActivity(intent);
         });
 
+        onKeyboardVisibilityChange();
+
         binding.infoFormPhoneNumber.requestFocus();
         binding.infoFormPhoneNumber.setOnFocusChangeListener((view1, hasFocus) -> Log.i(TAG, "onFocusChange:  " + hasFocus));
 
         binding.infoFormPersonalNumber.setOnClickListener(view12 -> Log.i(TAG, "onClick: "));
-
-        binding.infoFormPhoneNumber.setOnTouchListener((view13, motionEvent) -> {
-            Log.i(TAG, "onTouch: ");
-            return false;
-        });
-
 
     }
 
@@ -76,5 +75,17 @@ public class LoginFragment extends Fragment {
         super.onAttach(context);
     }
 
+    private void onKeyboardVisibilityChange() {
+        viewModel.isKeyboardVisible().observe(this, isVisible -> {
+            height = viewModel.getKeyboardHeight().getValue();
+            if (isVisible) {
+                ObjectAnimator.ofInt(binding.consLogin, "scrollY", height).setDuration(400).start();
+            } else {
+                Log.i(TAG, "onKeyboardVisibilityChange: InVisible");
+                ObjectAnimator.ofInt(binding.consLogin, "scrollY", -height).setDuration(600).start();
+            }
+        });
+
+    }
 
 }

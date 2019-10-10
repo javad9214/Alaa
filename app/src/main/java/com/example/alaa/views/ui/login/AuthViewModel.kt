@@ -23,13 +23,23 @@ class AuthViewModel : ViewModel() {
 
     var major = Major.RIAZI
 
+    var keyboardHeight = MutableLiveData(0)
+
+    fun setKeyboardHeight(height: Int) {
+        this.keyboardHeight.value = height
+    }
 
     var isMale = MutableLiveData(false)
 
     // for set default gender null
     var isDefault = MutableLiveData(true)
 
+    // for visibility keyboard
+    var isKeyboardVisible = MutableLiveData(false)
 
+    fun onKeyboardVisibilityChange(visibility: Boolean) {
+        this.isKeyboardVisible.value = visibility
+    }
 
     /**
      * 0 : Login
