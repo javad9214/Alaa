@@ -9,7 +9,7 @@
     app:cardCornerRadius="@dimen/box_corner_radius"
     android:elevation="@dimen/card_dimen">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/card_total_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,18 +22,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
-            <com.example.alaa.customViews.ButtonWithFont
+            <com.example.alaa.customViews.ExtendedFloatingActionButtonWithFont
+                android:id="@+id/btn_addToCart"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_16dp"
+                android:text="@string/AddToCart"
+                android:textColor="@color/pureWhite"
+                app:MyExtendedButtonFont="IRANSans_Medium"
+                app:backgroundTint="@color/lightGreen"
+                app:icon="@drawable/ic_add_to_cart"
+                app:iconGravity="textEnd"
+                app:iconTint="@color/pureWhite"
+                app:iconTintMode="src_in"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:text="@string/AddToCart"
-                app:backgroundTint="@color/lightGreen"
-                android:layout_marginStart="10dp"
-                app:MyButtonFont="IRANSans_Medium"
-                app:icon="@drawable/ic_add_to_cart"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <com.example.alaa.customViews.TextViewWithFont
@@ -41,19 +47,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/margin_10dp"
-                android:layout_marginEnd="@dimen/margin_10dp"
                 android:gravity="center"
                 android:paddingTop="2dp"
                 android:paddingBottom="2dp"
-                android:text=" 654,598 تومان"
+                android:text="@string/realPriceDemo"
                 android:textColor="@color/darkGreen"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:MyTextViewFont="IranSansNumMedium"
                 app:strikeThrough="true"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintEnd_toEndOf="@id/cardSalePrice"
+                app:layout_constraintStart_toStartOf="@id/cardSalePrice"
+                app:layout_constraintTop_toBottomOf="@id/cardSalePrice" />
 
 
 
@@ -69,7 +74,7 @@
                 app:cardBackgroundColor="@color/RedLight"
                 app:cardCornerRadius="3dp"
                 app:cardElevation="@dimen/margin_5dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_addToCart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -83,9 +88,9 @@
                     android:gravity="center"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    android:text=" 654,598 تومان"
+                    android:text="@string/salePriceDemo"
                     android:textColor="@color/pureWhite"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     app:MyTextViewFont="IranSansNumMedium" />
 
 
@@ -94,7 +99,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -21,6 +21,8 @@
             <enum name="MaliBoldItalic" value="16" />
             <enum name="RubiKMono" value="17" />
             <enum name="Dima" value="18" />
+            <enum name="vasir_medium" value="19" />
+            <enum name="sahel" value="19" />
         </attr>
         <attr name="strikeThrough" format="boolean" />
     </declare-styleable>

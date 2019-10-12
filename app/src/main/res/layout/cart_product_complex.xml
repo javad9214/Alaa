@@ -50,46 +50,32 @@
         android:paddingTop="2dp"
         android:paddingBottom="2dp"
         android:text="@string/realPriceDemo"
-        android:textColor="@color/darkGreen"
+        android:textColor="@color/Red"
         android:textSize="12sp"
         app:MyTextViewFont="IranSansNumMedium"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
+        app:layout_constraintEnd_toStartOf="@id/salePrice"
         app:layout_constraintTop_toBottomOf="@id/tx_title_product"
         app:strikeThrough="true" />
 
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardSalePrice"
+    <com.example.alaa.customViews.TextViewWithFont
+        android:id="@+id/salePrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:layout_marginStart="@dimen/margin_5dp"
         android:layout_marginEnd="@dimen/margin_5dp"
         android:layout_marginBottom="10dp"
-        app:cardBackgroundColor="@color/RedLight"
-        app:cardCornerRadius="@dimen/margin_5dp"
-        app:cardElevation="@dimen/margin_5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="@string/salePriceDemo"
+        android:textColor="@color/alaa5"
+        android:textSize="16sp"
+        app:MyTextViewFont="IranSansNumMedium"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tx_title_product">
-
-        <com.example.alaa.customViews.TextViewWithFont
-            android:id="@+id/salePrice"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/margin_10dp"
-            android:layout_marginEnd="@dimen/margin_10dp"
-            android:gravity="center"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:text=" 654,598 تومان"
-            android:textColor="@color/pureWhite"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:MyTextViewFont="IranSansNumLight" />
-
-
-    </com.google.android.material.card.MaterialCardView>
+        app:layout_constraintTop_toBottomOf="@id/tx_title_product"
+        app:strikeThrough="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

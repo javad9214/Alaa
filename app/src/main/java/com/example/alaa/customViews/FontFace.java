@@ -24,7 +24,9 @@ class FontFace {
             "Font/IRANSansMobile(FaNum)_UltraLight.ttf",
             "Font/Mali_BoldItalic.ttf",
             "Font/RubikMonoOne_Regular.ttf",
-            "Font/Dima.ttf"
+            "Font/Dima.ttf",
+            "Font/Vazir_Medium.sfd",
+            "Font/Sahel.sfd"
     };
 
     private FontFace() {

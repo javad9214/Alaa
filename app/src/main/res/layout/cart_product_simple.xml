@@ -52,6 +52,7 @@
 
 
         <com.example.alaa.customViews.TextViewWithFont
+            android:textColor="@color/blackTitle"
             android:id="@+id/realPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,13 +64,33 @@
             android:paddingTop="2dp"
             android:paddingBottom="2dp"
             android:text="@string/realPriceDemo"
-            android:textColor="@color/darkGreen"
+            android:visibility="invisible"
             android:textSize="12sp"
             app:MyTextViewFont="IranSansNumMedium"
-            app:layout_constraintEnd_toStartOf="@id/cardSalePrice"
+            app:layout_constraintEnd_toStartOf="@id/finalSalePrice"
             app:layout_constraintTop_toBottomOf="@id/recycler_attribute_simple_product"
             app:strikeThrough="true" />
 
+
+        <com.example.alaa.customViews.TextViewWithFont
+            android:id="@+id/finalSalePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:layout_marginEnd="@dimen/margin_5dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="@string/salePriceDemo"
+            android:textColor="@color/alaa5"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:MyTextViewFont="IranSansNumMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recycler_attribute_simple_product"
+            app:strikeThrough="true" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_attribute_simple_product"
@@ -81,40 +102,6 @@
             app:layout_constraintTop_toBottomOf="@id/thumbnail_cart_simple_product">
 
         </androidx.recyclerview.widget.RecyclerView>
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardSalePrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_5dp"
-            android:layout_marginEnd="@dimen/margin_5dp"
-            android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@color/RedLight"
-            app:cardCornerRadius="@dimen/margin_5dp"
-            app:cardElevation="@dimen/margin_5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recycler_attribute_simple_product">
-
-            <com.example.alaa.customViews.TextViewWithFont
-                android:id="@+id/finalSalePrice"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/margin_10dp"
-                android:layout_marginEnd="@dimen/margin_10dp"
-                android:gravity="center"
-                android:paddingTop="2dp"
-                android:paddingBottom="2dp"
-                android:text="@string/salePriceDemo"
-                android:textColor="@color/pureWhite"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:MyTextViewFont="IranSansNumLight" />
-
-
-        </com.google.android.material.card.MaterialCardView>
-
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_discount_percent"
@@ -148,7 +135,7 @@
             android:id="@+id/recycler_child_product"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/cardSalePrice">
+            app:layout_constraintTop_toBottomOf="@id/finalSalePrice">
 
         </androidx.recyclerview.widget.RecyclerView>
 

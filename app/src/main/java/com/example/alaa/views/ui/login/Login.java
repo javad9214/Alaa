@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity implements KeyboardHeightObserver {
             if (page == 0){
                 replaceFragment(loginFragment);
             }else {
-                replaceFragment(verifyPhoneNumberFragment);
+                replaceFragment(signUpFragment);
             }
         });
 

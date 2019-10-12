@@ -149,7 +149,6 @@
                     app:iconTint="@color/pureWhite"
                     app:iconTintMode="src_in" />
 
-
                 <com.example.alaa.customViews.ButtonWithFont
                     android:id="@+id/btn_GoToSignUpCard"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
