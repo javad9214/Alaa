@@ -29,20 +29,6 @@
                 app:scrollInterval="3000"
                 app:wrap_content="true" />
 
-            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-                android:id="@+id/dots_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center_horizontal"
-                app:dotsColor="@color/alaa0"
-                app:dotsCornerRadius="2dp"
-                app:dotsSize="10dp"
-                app:dotsSpacing="4dp"
-                app:dotsWidthFactor="2.5"
-                app:selectedDotColor="@color/alaa5"
-                app:progressMode="true" />
-
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
