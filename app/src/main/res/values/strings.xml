@@ -96,8 +96,8 @@
     <string name="sampleBooklet">نمونه جزوه</string>
     <string name="introduction_video">کلیپ معرفی</string>
     <string name="Toman">تومان</string>
-    <string name="finalPrice">قیمت نهایی :</string>
-    <string name="discount">تخفیف</string>
+    <string name="finalPrice">قیمت نهایی </string>
+    <string name="discount">(-) تخفیف </string>
 
 
     //Search Page
@@ -184,6 +184,7 @@
     <string name="purchase">پرداخت و تکمیل خرید</string>
     <string name="realPriceDemo">654,598 تومان</string>
     <string name="salePriceDemo">654,598 تومان</string>
+    <string name="discountCost">4,598 تومان</string>
     <string name="walletPriceDemo">30,000 تومان</string>
     <string name="tx_bon">1+ آلاء بٌن</string>
     <string name="sample_videos">نمونه فیلم ها</string>
@@ -219,6 +220,9 @@
     <string name="watch">تماشا کن</string>
     <string name="enterAuthMSG">لطفا کد تایید ارسال شده را وارد نمایید</string>
     <string name="ConfirmCode">تایید کد</string>
+    <string name="cost">قیمت</string>
+    <string name="productPrice">قیمت محصول</string>
+    <string name="totalPrice">قیمت کل</string>
 
 
 </resources>

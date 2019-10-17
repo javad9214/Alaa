@@ -19,7 +19,7 @@
             android:layout_height="0dp"
             android:layout_marginBottom="5dp"
             android:fillViewport="true"
-            app:layout_constraintBottom_toTopOf="@id/finalPriceDialog"
+            app:layout_constraintBottom_toTopOf="@id/card_total_price"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -334,7 +334,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/ic_play_button"
+                            app:srcCompat="@drawable/ic_play_button"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -372,16 +372,107 @@
         </ScrollView>
 
 
-        <com.example.alaa.views.ui.product.components.TotalPriceComponent
-            android:id="@+id/finalPriceDialog"
-            android:layout_width="match_parent"
+        <com.example.alaa.customViews.ExtendedFloatingActionButtonWithFont
+            android:id="@+id/btn_addToCart"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:elevation="@dimen/card_dimen"
-            app:finalRealPrice="148000"
-            app:finalSalePrice="98000"
-            app:isDiscounted="true"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_16dp"
+            android:layout_marginEnd="188dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/AddToCart"
+            android:textColor="@color/pureWhite"
+            app:MyExtendedButtonFont="IRANSans_Medium"
+            app:backgroundTint="@color/lightGreen"
+            app:icon="@drawable/ic_add_to_cart"
+            app:iconGravity="textEnd"
+            app:iconTint="@color/pureWhite"
+            app:iconTintMode="src_in"
+            app:layout_constraintBottom_toTopOf="@id/card_total_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/card_total_price" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_total_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10dp"
+            app:cardBackgroundColor="@color/alaa1"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.example.alaa.customViews.TextViewWithFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_20dp"
+                    android:layout_marginTop="@dimen/margin_30dp"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/productPrice"
+                    android:textColor="@color/gray2"
+                    android:textSize="16sp"
+                    app:MyTextViewFont="IRANSans_Medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.example.alaa.customViews.TextViewWithFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/margin_30dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/realPriceDemo"
+                    android:textColor="@color/gray2"
+                    android:textSize="14sp"
+                    app:MyTextViewFont="IranSansNumLight"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strikeThrough="true" />
+
+
+                <com.example.alaa.customViews.TextViewWithFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/margin_30dp"
+                    android:layout_marginEnd="@dimen/margin_20dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/salePriceDemo"
+                    android:textColor="@color/Red"
+                    android:textSize="16sp"
+                    app:MyTextViewFont="IranSansNumBold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

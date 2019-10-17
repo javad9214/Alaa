@@ -55,7 +55,7 @@
             android:paddingTop="2dp"
             android:paddingBottom="2dp"
             android:text="@string/realPriceDemo"
-            android:textColor="@color/darkGreen"
+            android:textColor="@color/blackTitle"
             android:textSize="13sp"
             android:textStyle="bold"
             app:MyTextViewFont="IranSansNumLight"

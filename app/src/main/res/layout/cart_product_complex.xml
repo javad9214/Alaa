@@ -37,33 +37,24 @@
         app:layout_constraintStart_toEndOf="@id/delete"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_discount_percent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/alaa3"
-        app:cardCornerRadius="3dp"
-        app:cardElevation="@dimen/margin_5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
         <com.example.alaa.customViews.TextViewWithFont
             android:id="@+id/discountPercent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_5dp"
             android:layout_marginStart="@dimen/margin_10dp"
             android:layout_marginEnd="@dimen/margin_10dp"
             android:gravity="center"
             android:paddingTop="2dp"
             android:paddingBottom="2dp"
             android:text="@string/discountPercent"
-            android:textColor="@color/pureWhite"
+            android:textColor="@color/gray"
             android:textSize="12sp"
-            app:MyTextViewFont="IRANSans_Bold" />
-
-
-    </com.google.android.material.card.MaterialCardView>
+            app:MyTextViewFont="IRANSans_Bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.example.alaa.customViews.TextViewWithFont
@@ -104,7 +95,6 @@
         app:MyTextViewFont="IranSansNumMedium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tx_title_product"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:strikeThrough="true" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
