@@ -26,7 +26,9 @@ class FontFace {
             "Font/RubikMonoOne_Regular.ttf",
             "Font/Dima.ttf",
             "Font/Vazir_Medium.sfd",
-            "Font/Sahel.sfd"
+            "Font/Sahel.sfd",
+            "Font/B_Ziba.ttf",
+            "Font/persian_badkhat2.ttf"
     };
 
     private FontFace() {

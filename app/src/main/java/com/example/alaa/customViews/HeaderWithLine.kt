@@ -21,7 +21,6 @@ class HeaderWithLine(context: Context, attrs: AttributeSet) : ConstraintLayout(c
     private var _textButton: String? = resources.getString(R.string.app_name)
     private var _colorButton: Int = ContextCompat.getColor(context, R.color.pureWhite)
     private var _hasButton: Boolean = false
-
     private var textView: TextViewWithFont
     private var button: ButtonWithFont
 
@@ -75,7 +74,6 @@ class HeaderWithLine(context: Context, attrs: AttributeSet) : ConstraintLayout(c
     }
 
     fun setText(text: String?) {
-
         textView.text = text
     }
 }

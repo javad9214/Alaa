@@ -48,8 +48,9 @@
                         app:header_buttonText="@string/more"
                         app:header_hasButton="true"
                         app:header_text="@string/demo_title_block"
-                        app:header_textColor="@color/black"
-                        app:header_textSize="6sp" />
+                        app:header_textColor="@color/alaa5"
+                        app:header_textFont="persian_badKhat2"
+                        app:header_textSize="10sp" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler01"
@@ -72,9 +73,10 @@
                         android:layout_height="wrap_content"
                         app:header_buttonText="@string/more"
                         app:header_hasButton="true"
-                        app:header_text="@string/demo_title_block"
-                        app:header_textColor="@color/black"
-                        app:header_textSize="6sp" />
+                        app:header_text="@string/nezam_new"
+                        app:header_textColor="@color/alaa5"
+                        app:header_textFont="persian_badKhat2"
+                        app:header_textSize="10sp" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler03"
@@ -117,8 +119,9 @@
                         app:header_buttonText="@string/more"
                         app:header_hasButton="true"
                         app:header_text="@string/demo_title_block"
-                        app:header_textColor="@color/black"
-                        app:header_textSize="6sp" />
+                        app:header_textColor="@color/alaa5"
+                        app:header_textFont="persian_badKhat2"
+                        app:header_textSize="10sp" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler04"

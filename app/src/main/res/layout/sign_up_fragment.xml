@@ -22,11 +22,7 @@ tools:context=".views.ui.login.SignUpFragment"
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:background="@drawable/backgroundtoolbar"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            android:gravity="center_horizontal" />
 
         <androidx.cardview.widget.CardView
 
