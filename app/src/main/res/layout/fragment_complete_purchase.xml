@@ -102,7 +102,6 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_wallet_uses"
             android:layout_width="0dp"
@@ -172,7 +171,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
-
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/help_for_alaa"
@@ -297,7 +295,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
-
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardTotalPrice"
@@ -475,7 +472,7 @@
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
                     android:text="@string/finalPrice"
-                    android:textColor="@color/green"
+                    android:textColor="@color/duxGreen2"
                     android:textSize="14sp"
                     app:MyTextViewFont="IRANSans_Medium"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -490,7 +487,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
-                    app:cardBackgroundColor="@color/BonGreen"
+                    app:cardBackgroundColor="@color/duxGreen2"
                     app:cardCornerRadius="3dp"
                     app:cardElevation="@dimen/margin_5dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -521,17 +518,22 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <com.example.alaa.customViews.ButtonWithFont
+        <com.example.alaa.customViews.ExtendedFloatingActionButtonWithFont
             android:id="@+id/byn_complete_purchase"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_margin="@dimen/margin_10dp"
             android:layoutDirection="ltr"
             android:text="@string/purchase"
             app:MyButtonFont="IRANSans_Medium"
-            app:backgroundTint="@color/lightGreen"
-            app:icon="@drawable/ic_cart_done"
+            android:textColor="@color/pureWhite"
+            app:backgroundTint="@color/duxGreen4"
+            app:icon="@drawable/ic_tick"
+            app:iconTint="@color/pureWhite"
             app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cardFinalPrice" />
 
 

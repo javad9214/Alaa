@@ -1,6 +1,5 @@
 package com.example.alaa.views.ui.dashboard
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,16 +31,10 @@ class MyProductsAdapter(private val layout: Int, private val activity: FragmentA
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.btnVideos.setOnClickListener {
-            viewModel.onTypeSelected(BottomSheetType.MyVideos)
+        holder.btnDisplay.setOnClickListener {
             showBottomSheet()
         }
 
-        holder.btnBooklet.setOnClickListener {
-            viewModel.onTypeSelected(BottomSheetType.MyBooklets)
-            Log.i("===>", " on adapter :  ${viewModel.type.value.toString()}")
-            showBottomSheet()
-        }
     }
 
     private fun showBottomSheet() {
@@ -51,8 +44,7 @@ class MyProductsAdapter(private val layout: Int, private val activity: FragmentA
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val btnVideos: ButtonWithFont = itemView.findViewById(R.id.btn_video)
-        val btnBooklet: ButtonWithFont = itemView.findViewById(R.id.btn_booklet)
+        val btnDisplay: ButtonWithFont = itemView.findViewById(R.id.btn_display)
 
     }
 }

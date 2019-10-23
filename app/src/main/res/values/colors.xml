@@ -34,6 +34,30 @@
     <color name="alaa4">#ff950b</color>
     <color name="alaa5">#ff9000</color>
 
+    <!-- dux.lab Orange Recommend Color MonoChromatic -->
+    <color name="duxOrange1">#FFBF00</color>
+    <color name="duxOrange2">#FFA000</color>
+    <color name="duxOrange3">#FF8C00</color>
+    <color name="duxOrange4">#FF6600</color>
+
+    <!-- dux.lab Green Recommend Color MonoChromatic -->
+    <color name="duxGreen1">#4CBB17</color>
+    <color name="duxGreen2">#46CB18</color>
+    <color name="duxGreen3">#138808</color>
+    <color name="duxGreen4">#006400</color>
+
+    <!-- dux.lab Blue Recommend Color MonoChromatic -->
+    <color name="duxBlue1">#3ACBE8</color>
+    <color name="duxBlue2">#0D85D8</color>
+    <color name="duxBlue3">#0160C9</color>
+    <color name="duxBlue4">#0041C7</color>
+
+    <!-- dux.lab Purple Recommend Color MonoChromatic -->
+    <color name="duxPurple1">#FFF6F6</color>
+    <color name="duxPurple2">#EEA1EB</color>
+    <color name="duxPurple3">#CB22D7</color>
+    <color name="duxPurple4">#891180</color>
+
 
     <color name="blue">#ED20A1D3</color>
     <color name="blueDark">#ED234DDF</color>

@@ -49,34 +49,18 @@
 
 
             <com.example.alaa.customViews.ButtonWithFont
-                android:id="@+id/btn_booklet"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:id="@+id/btn_display"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/booklets"
-                android:textColor="@color/alaa5"
+                android:layout_marginEnd="@dimen/margin_20dp"
+                android:text="@string/display"
+                android:textColor="@color/pureWhite"
                 app:MyButtonFont="IRANSans_Light"
-                app:icon="@drawable/ic_pdf_file"
-                app:iconTint="@color/alaa5"
+                app:backgroundTint="@color/duxBlue3"
+                app:iconTint="@color/pureWhite"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/btn_video"
-                app:layout_constraintStart_toEndOf="@id/thumbnail_product"
-                app:strokeColor="@color/alaa5" />
-
-            <com.example.alaa.customViews.ButtonWithFont
-                android:id="@+id/btn_video"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/videos"
-                android:textColor="@color/BonGreen"
-                app:MyButtonFont="IRANSans_Light"
-                app:icon="@drawable/ic_youtube_black"
-                app:iconTint="@color/BonGreen"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/btn_booklet"
-                app:strokeColor="@color/BonGreen" />
+                app:layout_constraintEnd_toEndOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

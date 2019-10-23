@@ -79,7 +79,7 @@
 
 
     //cart
-    <string name="cart">سبد خریدم </string>
+    <string name="cart">سبد خریدم   :)</string>
 
 
     //product page
@@ -223,6 +223,7 @@
     <string name="cost">قیمت</string>
     <string name="productPrice">قیمت محصول</string>
     <string name="totalPrice">قیمت کل</string>
+    <string name="display">مشاهده</string>
 
 
 </resources>
