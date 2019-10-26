@@ -166,7 +166,7 @@
                 android:paddingTop="2dp"
                 android:paddingBottom="2dp"
                 android:text="@string/realPriceDemo"
-                android:textColor="@color/duxPurple4"
+                android:textColor="@color/duxOrange4"
                 android:textSize="14sp"
                 app:MyTextViewFont="IranSansNumLight"
                 app:layout_constraintBottom_toBottomOf="parent"

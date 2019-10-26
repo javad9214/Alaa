@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -33,18 +34,20 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="?selectableItemBackgroundBorderless"
                     android:layout_gravity="start"
                     android:layout_marginStart="20dp"
                     android:onClick="onclickBack"
-                    android:src="@drawable/ic_back" />
+                    app:srcCompat="@drawable/ic_back" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_profile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="?selectableItemBackgroundBorderless"
                     android:layout_gravity="end"
                     android:layout_marginEnd="20dp"
-                    android:src="@drawable/ic_account" />
+                    app:srcCompat="@drawable/ic_account" />
 
 
             </androidx.appcompat.widget.Toolbar>
