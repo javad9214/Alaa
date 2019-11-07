@@ -24,6 +24,7 @@ open class ButtonWithFont(context: Context, attrs: AttributeSet) : MaterialButto
 
     private fun setMyButtonTypeFace(context: Context) {
         val face = FontFace.getInstance().getFontFace(context, fontOrdinal)
+
         this.typeface = face
     }
 

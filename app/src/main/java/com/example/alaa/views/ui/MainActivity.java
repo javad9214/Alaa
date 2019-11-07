@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements HomeRecyclerAdapt
         setContentView(R.layout.activity_main);
         EasyTransition.enter(MainActivity.this);
 
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
