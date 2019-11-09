@@ -92,44 +92,18 @@
         android:id="@+id/recyclerCart"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/card_total_price"
-        app:layout_constraintTop_toBottomOf="@id/appbar">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_total_price">
 
     </androidx.recyclerview.widget.RecyclerView>
-
-
-    <com.example.alaa.customViews.ExtendedFloatingActionButtonWithFont
-        android:id="@+id/btn_complete_purchase"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/margin_16dp"
-        android:layout_marginEnd="188dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="purchase"
-        android:text="@string/completeYourPurchase"
-        android:textColor="@color/pureWhite"
-        app:MyExtendedButtonFont="IRANSans_Medium"
-        app:backgroundTint="@color/duxGreen4"
-        app:icon="@drawable/ic_tick"
-        app:iconGravity="textEnd"
-        app:iconTint="@color/pureWhite"
-        app:iconTintMode="src_in"
-        app:layout_constraintTop_toTopOf="@id/card_total_price"
-        app:layout_constraintBottom_toTopOf="@id/card_total_price"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_total_price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_5dp"
         app:cardBackgroundColor="@color/pureWhite"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -201,5 +175,26 @@
 
     </androidx.cardview.widget.CardView>
 
+    <com.example.alaa.customViews.ExtendedFloatingActionButtonWithFont
+        android:id="@+id/btn_complete_purchase"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="purchase"
+        android:text="@string/completeYourPurchase"
+        android:textColor="@color/pureWhite"
+        app:MyExtendedButtonFont="IRANSans_Medium"
+        app:backgroundTint="@color/duxGreen4"
+        app:icon="@drawable/ic_chevron_left_black_24dp"
+        android:layoutDirection="ltr"
+        app:iconGravity="textStart"
+        app:iconTint="@color/pureWhite"
+        app:iconTintMode="src_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
